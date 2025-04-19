@@ -3,85 +3,114 @@
 import React, { useState, useEffect } from 'react';
 
 // --- Data Structure ---
-// Define the mission data for each game.
-// 'id' should be unique across all games.
-// 'prerequisites' is an array of 'id's of missions that must be completed first.
+// Added 'wikiUrl' for each mission.
 
 const missionsData = {
   me1: [
-    { id: 'me1_eden_prime', name: 'Prologue: Find the Beacon', prerequisites: [] },
-    { id: 'me1_citadel_expose_saren', name: 'Citadel: Expose Saren', prerequisites: ['me1_eden_prime'] },
-    { id: 'me1_find_liara', name: 'Find Liara T\'Soni', prerequisites: ['me1_citadel_expose_saren'] },
-    { id: 'me1_feros', name: 'Feros: Geth Attack', prerequisites: ['me1_citadel_expose_saren'] },
-    { id: 'me1_noveria', name: 'Noveria: Matriarch Benezia', prerequisites: ['me1_citadel_expose_saren'] },
-    { id: 'me1_virmire', name: 'Virmire: Saren\'s Plan', prerequisites: ['me1_find_liara', 'me1_feros', 'me1_noveria'] },
-    { id: 'me1_ilum', name: 'Ilos: Find the Conduit', prerequisites: ['me1_virmire'] },
-    { id: 'me1_final_battle', name: 'Race Against Time: Final Battle', prerequisites: ['me1_ilum'] },
-    // Add more ME1 missions as needed
+    { id: 'me1_eden_prime', name: 'Prologue: Find the Beacon', prerequisites: [], wikiUrl: 'https://masseffect.fandom.com/wiki/Find_the_Beacon' },
+    { id: 'me1_citadel_expose_saren', name: 'Citadel: Expose Saren', prerequisites: ['me1_eden_prime'], wikiUrl: 'https://masseffect.fandom.com/wiki/Citadel:_Expose_Saren' },
+    { id: 'me1_find_liara', name: 'Find Liara T\'Soni', prerequisites: ['me1_citadel_expose_saren'], wikiUrl: 'https://masseffect.fandom.com/wiki/Find_Liara_T%27Soni' },
+    { id: 'me1_feros', name: 'Feros: Geth Attack', prerequisites: ['me1_citadel_expose_saren'], wikiUrl: 'https://masseffect.fandom.com/wiki/Feros:_Geth_Attack' },
+    { id: 'me1_noveria', name: 'Noveria: Matriarch Benezia', prerequisites: ['me1_citadel_expose_saren'], wikiUrl: 'https://masseffect.fandom.com/wiki/Noveria#Walkthrough' }, // Link to walkthrough section
+    { id: 'me1_virmire', name: 'Virmire: Saren\'s Plan', prerequisites: ['me1_find_liara', 'me1_feros', 'me1_noveria'], wikiUrl: 'https://masseffect.fandom.com/wiki/Virmire:_Saren%27s_Plan' },
+    { id: 'me1_ilum', name: 'Ilos: Find the Conduit', prerequisites: ['me1_virmire'], wikiUrl: 'https://masseffect.fandom.com/wiki/Ilos:_Find_the_Conduit' },
+    { id: 'me1_final_battle', name: 'Race Against Time: Final Battle', prerequisites: ['me1_ilum'], wikiUrl: 'https://masseffect.fandom.com/wiki/Race_Against_Time:_Final_Battle' },
   ],
   me2: [
-    { id: 'me2_prologue', name: 'Prologue: Awakening', prerequisites: [] },
-    { id: 'me2_freedom', name: 'Freedom\'s Progress', prerequisites: ['me2_prologue'] },
-    { id: 'me2_citadel_anderson', name: 'Citadel: Captain Anderson', prerequisites: ['me2_freedom'] },
-    { id: 'me2_recruit_archangel', name: 'Recruitment: Archangel', prerequisites: ['me2_freedom'] },
-    { id: 'me2_recruit_professor', name: 'Recruitment: The Professor', prerequisites: ['me2_freedom'] },
-    { id: 'me2_recruit_warlord', name: 'Recruitment: The Warlord', prerequisites: ['me2_freedom'] },
-    { id: 'me2_recruit_convict', name: 'Recruitment: The Convict', prerequisites: ['me2_freedom'] },
-    { id: 'me2_horizon', name: 'Horizon', prerequisites: ['me2_recruit_archangel', 'me2_recruit_professor', 'me2_recruit_warlord', 'me2_recruit_convict'] }, // Simplified prerequisite
-    { id: 'me2_recruit_assassin', name: 'Recruitment: The Assassin', prerequisites: ['me2_horizon'] },
-    { id: 'me2_recruit_justicar', name: 'Recruitment: The Justicar', prerequisites: ['me2_horizon'] },
-    { id: 'me2_recruit_tali', name: 'Recruitment: Tali', prerequisites: ['me2_horizon'] },
-    { id: 'me2_collector_ship', name: 'Collector Ship', prerequisites: ['me2_horizon'] }, // Simplified prerequisite
-    { id: 'me2_iff', name: 'Acquire Reaper IFF', prerequisites: ['me2_collector_ship'] }, // Simplified prerequisite
-    { id: 'me2_suicide_mission', name: 'Suicide Mission', prerequisites: ['me2_iff'] },
-    // Add more ME2 missions and loyalty missions as needed
+    { id: 'me2_prologue', name: 'Prologue: Awakening', prerequisites: [], wikiUrl: 'https://masseffect.fandom.com/wiki/Prologue:_Awakening' },
+    { id: 'me2_freedom', name: 'Freedom\'s Progress', prerequisites: ['me2_prologue'], wikiUrl: 'https://masseffect.fandom.com/wiki/Freedom%27s_Progress' },
+    { id: 'me2_citadel_anderson', name: 'Citadel: Captain Anderson', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Citadel:_Captain_Anderson' }, // Might be part of other quests
+    { id: 'me2_recruit_archangel', name: 'Recruitment: Archangel', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_Archangel' },
+    { id: 'me2_recruit_professor', name: 'Recruitment: The Professor', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Professor' },
+    { id: 'me2_recruit_warlord', name: 'Recruitment: The Warlord', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Warlord' },
+    { id: 'me2_recruit_convict', name: 'Recruitment: The Convict', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Convict' },
+    { id: 'me2_horizon', name: 'Horizon', prerequisites: ['me2_recruit_archangel', 'me2_recruit_professor', 'me2_recruit_warlord', 'me2_recruit_convict'], wikiUrl: 'https://masseffect.fandom.com/wiki/Horizon_(mission)' },
+    { id: 'me2_recruit_assassin', name: 'Recruitment: The Assassin', prerequisites: ['me2_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Assassin' },
+    { id: 'me2_recruit_justicar', name: 'Recruitment: The Justicar', prerequisites: ['me2_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Justicar' },
+    { id: 'me2_recruit_tali', name: 'Recruitment: Tali', prerequisites: ['me2_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_Tali' },
+    { id: 'me2_collector_ship', name: 'Collector Ship', prerequisites: ['me2_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Collector_Ship_(mission)' },
+    { id: 'me2_iff', name: 'Acquire Reaper IFF', prerequisites: ['me2_collector_ship'], wikiUrl: 'https://masseffect.fandom.com/wiki/Reaper_IFF_(mission)' },
+    { id: 'me2_suicide_mission', name: 'Suicide Mission', prerequisites: ['me2_iff'], wikiUrl: 'https://masseffect.fandom.com/wiki/Suicide_Mission' },
   ],
   me3: [
-    { id: 'me3_prologue', name: 'Prologue: Earth', prerequisites: [] },
-    { id: 'me3_mars', name: 'Priority: Mars', prerequisites: ['me3_prologue'] },
-    { id: 'me3_citadel1', name: 'Priority: The Citadel I', prerequisites: ['me3_mars'] },
-    { id: 'me3_palaven', name: 'Priority: Palaven', prerequisites: ['me3_citadel1'] },
-    { id: 'me3_surkesh', name: 'Priority: Sur\'Kesh', prerequisites: ['me3_palaven'] }, // Or Grissom Academy
-    { id: 'me3_tuchanka', name: 'Priority: Tuchanka', prerequisites: ['me3_surkesh'] },
-    { id: 'me3_citadel2', name: 'Priority: The Citadel II', prerequisites: ['me3_tuchanka'] },
-    { id: 'me3_perseus_veil', name: 'Priority: Perseus Veil', prerequisites: ['me3_citadel2'] }, // Rannoch or Geth Dreadnought
-    { id: 'me3_rannoch', name: 'Priority: Rannoch', prerequisites: ['me3_perseus_veil']},
-    { id: 'me3_thessia', name: 'Priority: Thessia', prerequisites: ['me3_rannoch'] },
-    { id: 'me3_horizon', name: 'Priority: Horizon', prerequisites: ['me3_thessia'] },
-    { id: 'me3_cerberus_hq', name: 'Priority: Cerberus Headquarters', prerequisites: ['me3_horizon'] },
-    { id: 'me3_earth', name: 'Priority: Earth', prerequisites: ['me3_cerberus_hq'] },
-    // Add more ME3 missions as needed
+    { id: 'me3_prologue', name: 'Prologue: Earth', prerequisites: [], wikiUrl: 'https://masseffect.fandom.com/wiki/Prologue:_Earth' },
+    { id: 'me3_mars', name: 'Priority: Mars', prerequisites: ['me3_prologue'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Mars' },
+    { id: 'me3_citadel1', name: 'Priority: The Citadel I', prerequisites: ['me3_mars'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_The_Citadel_I' },
+    { id: 'me3_palaven', name: 'Priority: Palaven', prerequisites: ['me3_citadel1'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Palaven' },
+    { id: 'me3_surkesh', name: 'Priority: Sur\'Kesh', prerequisites: ['me3_palaven'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Sur%27Kesh' },
+    { id: 'me3_tuchanka', name: 'Priority: Tuchanka', prerequisites: ['me3_surkesh'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Tuchanka' },
+    { id: 'me3_citadel2', name: 'Priority: The Citadel II', prerequisites: ['me3_tuchanka'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_The_Citadel_II' },
+    { id: 'me3_perseus_veil', name: 'Priority: Perseus Veil', prerequisites: ['me3_citadel2'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Geth_Dreadnought' }, // Using Geth Dreadnought mission
+    { id: 'me3_rannoch', name: 'Priority: Rannoch', prerequisites: ['me3_perseus_veil'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Rannoch' },
+    { id: 'me3_thessia', name: 'Priority: Thessia', prerequisites: ['me3_rannoch'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Thessia' },
+    { id: 'me3_horizon', name: 'Priority: Horizon', prerequisites: ['me3_thessia'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Horizon' },
+    { id: 'me3_cerberus_hq', name: 'Priority: Cerberus Headquarters', prerequisites: ['me3_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Cerberus_Headquarters' },
+    { id: 'me3_earth', name: 'Priority: Earth', prerequisites: ['me3_cerberus_hq'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Earth_(mission)' },
   ],
 };
 
 // --- Components ---
 
-// MissionItem Component: Renders a single mission with a checkbox
+// WikiLinkIcon Component: Renders the SVG icon for the wiki link
+const WikiLinkIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 1 1 1.414-1.414L8 9.586l4.293-4.293ZM18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-2 0a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z" clipRule="evenodd" />
+     {/* Alternative: External Link Icon */}
+     {/* <path fillRule="evenodd" d="M8.25 3.75H6a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 6 18.75h10.5A2.25 2.25 0 0 0 18.75 16.5V14.25a.75.75 0 0 0-1.5 0V16.5a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h2.25a.75.75 0 0 0 0-1.5Z" clipRule="evenodd" />
+     <path fillRule="evenodd" d="M14.25 3.75a.75.75 0 0 0 0 1.5h1.69L9.72 11.47a.75.75 0 1 0 1.06 1.06l6.22-6.22v1.69a.75.75 0 0 0 1.5 0V3.75h-3.75Z" clipRule="evenodd" /> */}
+     {/* Alternative: Information Circle Icon */}
+     {/* <path fillRule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z" clipRule="evenodd" /> */}
+  </svg>
+);
+
+
+// MissionItem Component: Renders a single mission with checkbox and wiki link
 const MissionItem = ({ mission, completed, onToggle, prerequisitesMet }) => {
   const handleChange = () => {
-    // Allow toggling only if prerequisites are met OR if the item is already completed (to allow unchecking)
     if (prerequisitesMet || completed) {
       onToggle(mission.id);
     }
   };
 
+  // Determine if interaction is allowed (for styling consistency)
+  const canInteract = prerequisitesMet || completed;
+
   return (
-    <li className={`py-2 px-3 flex items-center border-b border-gray-700 last:border-b-0 ${!prerequisitesMet && !completed ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-700'}`}>
-      <input
-        type="checkbox"
-        id={mission.id}
-        checked={completed}
-        onChange={handleChange}
-        // Disable checkbox only if prerequisites are not met AND it's not already completed
-        disabled={!prerequisitesMet && !completed}
-        className={`mr-3 h-5 w-5 rounded border-gray-500 text-blue-500 focus:ring-blue-600 bg-gray-600 disabled:opacity-70 ${prerequisitesMet || completed ? 'cursor-pointer' : 'cursor-not-allowed'}`}
-      />
-      <label
-        htmlFor={mission.id}
-        className={`flex-grow ${completed ? 'line-through text-gray-400' : 'text-gray-100'} ${prerequisitesMet || completed ? 'cursor-pointer' : 'cursor-not-allowed'}`}
-      >
-        {mission.name}
-      </label>
+    <li className={`py-2 px-3 flex items-center justify-between border-b border-gray-700 last:border-b-0 ${!canInteract ? 'opacity-50' : 'hover:bg-gray-700'}`}>
+      {/* Left side: Checkbox and Label */}
+      <div className="flex items-center flex-grow mr-2"> {/* Added mr-2 for spacing */}
+          <input
+            type="checkbox"
+            id={mission.id}
+            checked={completed}
+            onChange={handleChange}
+            disabled={!canInteract}
+            className={`mr-3 h-5 w-5 rounded border-gray-500 text-blue-500 focus:ring-blue-600 bg-gray-600 disabled:opacity-70 flex-shrink-0 ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'}`}
+          />
+          <label
+            htmlFor={mission.id}
+            className={`flex-grow ${completed ? 'line-through text-gray-400' : 'text-gray-100'} ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'}`}
+          >
+            {mission.name}
+          </label>
+      </div>
+
+      {/* Right side: Wiki Link Button */}
+      {mission.wikiUrl && ( // Only render if wikiUrl exists
+        <a
+          href={mission.wikiUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={`View "${mission.name}" on Mass Effect Wiki`} // Tooltip
+          // Basic button styling using Tailwind
+          className="p-1 rounded-full text-gray-400 hover:bg-gray-600 hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-blue-500 transition-colors flex-shrink-0"
+          // Prevent click event from bubbling up to the li/label/checkbox handlers
+          onClick={(e) => e.stopPropagation()}
+        >
+          <WikiLinkIcon />
+          <span className="sr-only">Wiki Link</span> {/* Screen reader text */}
+        </a>
+      )}
     </li>
   );
 };
@@ -156,67 +185,45 @@ export default function App() {
   }, [completedMissions]);
 
   // --- Recursive Unchecking Helper Function (Corrected) ---
-  // This function now directly modifies the 'stateToModify' object.
   const recursivelyUncheckDependents = (missionIdToUncheck, stateToModify) => {
-    // Iterate through all missions across all games
     Object.keys(missionsData).forEach(gameKey => {
       missionsData[gameKey].forEach(mission => {
-        // Check if this mission ('mission') depends on the 'missionIdToUncheck'
-        // AND if this mission ('mission') is currently marked as completed in the state object being modified.
         if (mission.prerequisites.includes(missionIdToUncheck) && stateToModify[mission.id]) {
-          // If both conditions are true, it means this mission is a direct dependent that needs unchecking.
-          console.log(`Recursively unchecking "${mission.name}" because prerequisite "${missionIdToUncheck}" was unchecked.`);
-
-          // Uncheck this dependent mission by deleting its key from the state object.
+          // console.log(`Recursively unchecking "${mission.name}" because prerequisite "${missionIdToUncheck}" was unchecked.`); // Keep console logs minimal unless debugging
           delete stateToModify[mission.id];
-
-          // *** Recursive Call ***
-          // Immediately call the function again for the mission we just unchecked ('mission.id').
-          // This ensures we go down the dependency chain.
-          // Pass the same 'stateToModify' object, which now reflects the latest unchecking.
           recursivelyUncheckDependents(mission.id, stateToModify);
         }
       });
     });
-    // No return value needed as the stateToModify object is mutated directly.
   };
   // --- End Helper Function ---
 
 
   const handleToggleMission = (missionId) => {
     setCompletedMissions(prev => {
-      let newState = { ...prev }; // Start with a copy of the previous state
+      let newState = { ...prev };
 
       if (newState[missionId]) {
         // --- Unchecking Logic ---
-        console.log(`Unchecking mission: ${missionId}`);
-        delete newState[missionId]; // Uncheck the primary mission first
-
-        // Call the recursive function to handle dependents.
-        // Pass the 'newState' object, which will be modified directly by the function.
+        // console.log(`Unchecking mission: ${missionId}`); // Keep console logs minimal
+        delete newState[missionId];
         recursivelyUncheckDependents(missionId, newState);
 
       } else {
         // --- Checking Logic ---
-        // Find the mission info to check prerequisites
         const missionInfo = Object.values(missionsData).flat().find(m => m.id === missionId);
-        if (!missionInfo) return prev; // Should not happen, but safety check
+        if (!missionInfo) return prev;
 
-        // Check if all prerequisites are present in the *previous* state (before this toggle)
         const prerequisitesMet = missionInfo.prerequisites.every(prereqId => prev[prereqId]);
 
         if (prerequisitesMet) {
-             console.log(`Checking mission: ${missionId}`);
-             newState[missionId] = true; // Check: add to state
+             // console.log(`Checking mission: ${missionId}`); // Keep console logs minimal
+             newState[missionId] = true;
         } else {
             console.warn(`Cannot check ${missionId}, prerequisites not met.`);
-            // Important: If check is disallowed, return the original 'prev' state, discarding 'newState'
             return prev;
         }
       }
-
-      // Return the final 'newState' object, which now contains all modifications
-      // from the initial toggle and any recursive unchecking.
       return newState;
     });
   };
