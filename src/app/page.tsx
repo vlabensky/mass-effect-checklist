@@ -51,15 +51,12 @@ const missionsData = {
 
 // --- Components ---
 
-// WikiLinkIcon Component: Renders the SVG icon for the wiki link
+// WikiLinkIcon Component: Renders the selected SVG icon for the wiki link
 const WikiLinkIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 1 1 1.414-1.414L8 9.586l4.293-4.293ZM18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-2 0a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z" clipRule="evenodd" />
-     {/* Alternative: External Link Icon */}
-     {/* <path fillRule="evenodd" d="M8.25 3.75H6a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 6 18.75h10.5A2.25 2.25 0 0 0 18.75 16.5V14.25a.75.75 0 0 0-1.5 0V16.5a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h2.25a.75.75 0 0 0 0-1.5Z" clipRule="evenodd" />
-     <path fillRule="evenodd" d="M14.25 3.75a.75.75 0 0 0 0 1.5h1.69L9.72 11.47a.75.75 0 1 0 1.06 1.06l6.22-6.22v1.69a.75.75 0 0 0 1.5 0V3.75h-3.75Z" clipRule="evenodd" /> */}
-     {/* Alternative: Information Circle Icon */}
-     {/* <path fillRule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z" clipRule="evenodd" /> */}
+     {/* Selected: External Link Icon */}
+     <path fillRule="evenodd" d="M8.25 3.75H6a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 6 18.75h10.5A2.25 2.25 0 0 0 18.75 16.5V14.25a.75.75 0 0 0-1.5 0V16.5a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h2.25a.75.75 0 0 0 0-1.5Z" clipRule="evenodd" />
+     <path fillRule="evenodd" d="M14.25 3.75a.75.75 0 0 0 0 1.5h1.69L9.72 11.47a.75.75 0 1 0 1.06 1.06l6.22-6.22v1.69a.75.75 0 0 0 1.5 0V3.75h-3.75Z" clipRule="evenodd" />
   </svg>
 );
 
@@ -102,8 +99,8 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet }) => {
           target="_blank"
           rel="noopener noreferrer"
           title={`View "${mission.name}" on Mass Effect Wiki`} // Tooltip
-          // Basic button styling using Tailwind
-          className="p-1 rounded-full text-gray-400 hover:bg-gray-600 hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-blue-500 transition-colors flex-shrink-0"
+          // Updated button styling: rounded-md instead of rounded-full
+          className="p-1 rounded-md text-gray-400 hover:bg-gray-600 hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-blue-500 transition-colors flex-shrink-0"
           // Prevent click event from bubbling up to the li/label/checkbox handlers
           onClick={(e) => e.stopPropagation()}
         >
