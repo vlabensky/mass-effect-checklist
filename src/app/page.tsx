@@ -3,10 +3,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 
 // --- Data Structure ---
-// Restructured data to include mission groups.
-// Each game now has an object where keys are group names
-// and values are arrays of mission objects.
-
+// (Data remains the same as the previous version)
 const missionsData = {
   me1: {
     "Prologue": [
@@ -21,7 +18,6 @@ const missionsData = {
         { id: 'me1_ilum', name: 'Ilos: Find the Conduit', prerequisites: ['me1_virmire'], wikiUrl: 'https://masseffect.fandom.com/wiki/Ilos:_Find_the_Conduit' },
         { id: 'me1_final_battle', name: 'Race Against Time: Final Battle', prerequisites: ['me1_ilum'], wikiUrl: 'https://masseffect.fandom.com/wiki/Race_Against_Time:_Final_Battle' },
     ]
-    // Could add groups like "Assignments" later
   },
   me2: {
     "Prologue & Freedom": [
@@ -48,7 +44,6 @@ const missionsData = {
         { id: 'me2_iff', name: 'Acquire Reaper IFF', prerequisites: ['me2_collector_ship'], wikiUrl: 'https://masseffect.fandom.com/wiki/Reaper_IFF_(mission)' },
         { id: 'me2_suicide_mission', name: 'Suicide Mission', prerequisites: ['me2_iff'], wikiUrl: 'https://masseffect.fandom.com/wiki/Suicide_Mission' },
     ]
-    // Could add groups like "Loyalty Missions", "N7 Missions" later
   },
   me3: {
     "Opening Missions": [
@@ -70,9 +65,15 @@ const missionsData = {
         { id: 'me3_cerberus_hq', name: 'Priority: Cerberus Headquarters', prerequisites: ['me3_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Cerberus_Headquarters' },
         { id: 'me3_earth', name: 'Priority: Earth', prerequisites: ['me3_cerberus_hq'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Earth_(mission)' },
     ]
-    // Could add groups like "N7 Missions", "DLC", "Citadel Side Missions" later
   },
 };
+
+// --- Constants ---
+const FONT_SIZE_STEP = 0.1;
+const MIN_FONT_SIZE_MULTIPLIER = 0.7;
+const MAX_FONT_SIZE_MULTIPLIER = 1.5;
+const DEFAULT_FONT_SIZE_MULTIPLIER = 1.0;
+const BASE_HTML_FONT_SIZE_PX = 16; // Default browser font size
 
 // --- Components ---
 
@@ -92,8 +93,7 @@ const ChevronIcon = ({ expanded }) => (
     </svg>
 );
 
-
-// MissionItem Component (No changes needed here for grouping)
+// MissionItem Component
 const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNameMap, completedMissions }) => {
   const [isPrereqsExpanded, setIsPrereqsExpanded] = useState(false);
 
@@ -182,46 +182,39 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNa
   );
 };
 
-// MissionList Component: Updated to handle grouped missions
+// MissionList Component
 const MissionList = ({ gameId, groupedMissions, completedMissions, onToggleMission }) => {
 
-  // Create a map of mission IDs to names from the grouped structure
   const missionNameMap = useMemo(() => {
       const map = {};
-      // Iterate through groups, then missions within each group
       Object.values(groupedMissions).forEach(missionArray => {
           missionArray.forEach(mission => {
               map[mission.id] = mission.name;
           });
       });
       return map;
-  }, [groupedMissions]); // Recalculate if groupedMissions changes
+  }, [groupedMissions]);
 
-  // Function to check if prerequisites for a mission are met
   const checkPrerequisites = (mission) => {
     if (!mission.prerequisites || mission.prerequisites.length === 0) {
-      return true; // No prerequisites
+      return true;
     }
     return mission.prerequisites.every(prereqId => completedMissions.hasOwnProperty(prereqId));
   };
 
-  // Get the list of group names (keys) from the groupedMissions object
   const groupNames = Object.keys(groupedMissions);
 
   return (
-    <div className="bg-gray-800 rounded-lg shadow-md"> {/* Changed from ul to div */}
+    <div className="bg-gray-800 rounded-lg shadow-md">
       {groupNames.map((groupName, index) => (
-        // Render each group section
         <section key={groupName} aria-labelledby={`group-header-${gameId}-${index}`}>
-          {/* Group Header */}
           <h3
             id={`group-header-${gameId}-${index}`}
-            className="text-lg font-semibold text-blue-300 bg-gray-700 px-3 py-2 sticky top-0 z-10 border-b border-t border-gray-600 first:border-t-0" // Styling for the header
+            className="text-lg font-semibold text-blue-300 bg-gray-700 px-3 py-2 sticky top-0 z-10 border-b border-t border-gray-600 first:border-t-0"
           >
             {groupName}
           </h3>
-          {/* List of missions within the group */}
-          <ul className="list-none p-0 m-0"> {/* Use ul here for mission items */}
+          <ul className="list-none p-0 m-0">
             {groupedMissions[groupName].map((mission) => (
               <MissionItem
                 key={mission.id}
@@ -244,14 +237,17 @@ const MissionList = ({ gameId, groupedMissions, completedMissions, onToggleMissi
 export default function App() {
   const [activeTab, setActiveTab] = useState('me1');
   const [completedMissions, setCompletedMissions] = useState({});
+  // State for font size multiplier
+  const [fontSizeMultiplier, setFontSizeMultiplier] = useState(DEFAULT_FONT_SIZE_MULTIPLIER);
 
-  // Load state from localStorage
+  // Load state from localStorage (including font size)
   useEffect(() => {
     if (typeof window !== 'undefined') {
-        const savedState = localStorage.getItem('massEffectChecklistState');
-        if (savedState) {
+        // Load mission completion state
+        const savedCompletionState = localStorage.getItem('massEffectChecklistState');
+        if (savedCompletionState) {
           try {
-            const parsedState = JSON.parse(savedState);
+            const parsedState = JSON.parse(savedCompletionState);
             if (typeof parsedState === 'object' && parsedState !== null) {
                setCompletedMissions(parsedState);
             } else {
@@ -261,25 +257,58 @@ export default function App() {
             localStorage.removeItem('massEffectChecklistState'); setCompletedMissions({});
           }
         }
+        // Load font size state
+        const savedFontSize = localStorage.getItem('massEffectFontSizeMultiplier');
+        if (savedFontSize) {
+            const parsedSize = parseFloat(savedFontSize);
+            if (!isNaN(parsedSize) && parsedSize >= MIN_FONT_SIZE_MULTIPLIER && parsedSize <= MAX_FONT_SIZE_MULTIPLIER) {
+                setFontSizeMultiplier(parsedSize);
+            } else {
+                 localStorage.removeItem('massEffectFontSizeMultiplier'); // Remove invalid value
+            }
+        }
     }
-  }, []);
+  }, []); // Run only on initial mount
 
-  // Save state to localStorage
+  // Save completion state to localStorage
   useEffect(() => {
      if (typeof window !== 'undefined') {
         if (Object.keys(completedMissions).length > 0) {
-           try { localStorage.setItem('massEffectChecklistState', JSON.stringify(completedMissions)); } catch (error) { console.error("Failed to save state:", error); }
+           try { localStorage.setItem('massEffectChecklistState', JSON.stringify(completedMissions)); } catch (error) { console.error("Failed to save completion state:", error); }
         } else {
             localStorage.removeItem('massEffectChecklistState');
         }
      }
   }, [completedMissions]);
 
+  // Save font size state to localStorage AND update HTML root font size
+   useEffect(() => {
+     if (typeof window !== 'undefined') {
+        // Save to localStorage
+        try {
+            localStorage.setItem('massEffectFontSizeMultiplier', fontSizeMultiplier.toString());
+        } catch (error) {
+            console.error("Failed to save font size state:", error);
+        }
+        // Apply to HTML root element
+        const newSize = BASE_HTML_FONT_SIZE_PX * fontSizeMultiplier;
+        document.documentElement.style.fontSize = `${newSize}px`;
+        console.log(`HTML root font size set to: ${newSize}px (Multiplier: ${fontSizeMultiplier})`);
+     }
+     // Cleanup function to reset font size when component unmounts (optional)
+     return () => {
+         if (typeof window !== 'undefined') {
+            // document.documentElement.style.fontSize = ''; // Reset to browser default
+         }
+     };
+   }, [fontSizeMultiplier]); // Run whenever fontSizeMultiplier changes
+
+
   // Recursive unchecking logic
   const recursivelyUncheckDependents = (missionIdToUncheck, stateToModify) => {
-    Object.values(missionsData).forEach(gameGroups => { // Iterate through games
-        Object.values(gameGroups).forEach(missionArray => { // Iterate through groups in a game
-            missionArray.forEach(mission => { // Iterate through missions in a group
+    Object.values(missionsData).forEach(gameGroups => {
+        Object.values(gameGroups).forEach(missionArray => {
+            missionArray.forEach(mission => {
                 if (mission.prerequisites.includes(missionIdToUncheck) && stateToModify[mission.id]) {
                     delete stateToModify[mission.id];
                     recursivelyUncheckDependents(mission.id, stateToModify);
@@ -293,7 +322,7 @@ export default function App() {
   const handleToggleMission = (missionId) => {
     setCompletedMissions(prev => {
       let newState = { ...prev };
-      const missionInfo = Object.values(missionsData) // Find mission across all games/groups
+      const missionInfo = Object.values(missionsData)
                                 .flatMap(gameGroups => Object.values(gameGroups))
                                 .flat()
                                 .find(m => m.id === missionId);
@@ -308,16 +337,27 @@ export default function App() {
              newState[missionId] = true;
         } else {
             console.warn(`Cannot check ${missionId}, prerequisites not met.`);
-            return prev; // Prevent checking if prereqs not met
+            return prev;
         }
       }
       return newState;
     });
   };
 
+  // --- Font Size Control Functions ---
+  const increaseFontSize = () => {
+      setFontSizeMultiplier(prev => Math.min(MAX_FONT_SIZE_MULTIPLIER, prev + FONT_SIZE_STEP));
+  };
+
+  const decreaseFontSize = () => {
+      setFontSizeMultiplier(prev => Math.max(MIN_FONT_SIZE_MULTIPLIER, prev - FONT_SIZE_STEP));
+  };
+  // --- End Font Size Control ---
+
+
   // Get grouped missions for the active tab
   const getMissionsForTab = () => {
-    return missionsData[activeTab] || {}; // Return the group object or empty object
+    return missionsData[activeTab] || {};
   };
 
   // Tab Button Component
@@ -333,13 +373,24 @@ export default function App() {
     </button>
   );
 
+  // Font Size Control Button Component
+  const FontSizeButton = ({ onClick, children, ariaLabel, disabled }) => (
+      <button
+          onClick={onClick}
+          disabled={disabled}
+          aria-label={ariaLabel}
+          className={`px-2 py-1 mx-1 rounded-md border border-gray-600 text-gray-300 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed`}
+      >
+          {children}
+      </button>
+  );
+
   return (
     <>
       <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white p-4 sm:p-8">
         <style jsx global>{`
           body { font-family: 'Inter', sans-serif; }
           .transition-max-height { transition-property: max-height; }
-          /* Basic sticky header styling */
           .sticky { position: sticky; }
           .top-0 { top: 0; }
           .z-10 { z-index: 10; }
@@ -348,9 +399,31 @@ export default function App() {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
 
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-blue-300">
-            Mass Effect Legendary Edition Checklist
-          </h1>
+            {/* Header Row with Title and Font Controls */}
+            <div className="flex justify-between items-center mb-8">
+                <h1 className="text-3xl sm:text-4xl font-bold text-blue-300">
+                    Mass Effect Checklist
+                </h1>
+                {/* Font Size Controls */}
+                <div className="flex items-center">
+                    <span className="text-sm mr-2 text-gray-400">Font Size:</span>
+                    <FontSizeButton
+                        onClick={decreaseFontSize}
+                        ariaLabel="Decrease font size"
+                        disabled={fontSizeMultiplier <= MIN_FONT_SIZE_MULTIPLIER}
+                    >
+                        A-
+                    </FontSizeButton>
+                     <FontSizeButton
+                        onClick={increaseFontSize}
+                        ariaLabel="Increase font size"
+                        disabled={fontSizeMultiplier >= MAX_FONT_SIZE_MULTIPLIER}
+                    >
+                        A+
+                    </FontSizeButton>
+                </div>
+            </div>
+
 
           <div className="mb-6 border-b border-gray-700 flex space-x-1">
             <TabButton gameId="me1" label="Mass Effect 1" />
@@ -359,7 +432,6 @@ export default function App() {
           </div>
 
           <div>
-            {/* Pass the grouped missions to MissionList */}
             <MissionList
               gameId={activeTab}
               groupedMissions={getMissionsForTab()}
