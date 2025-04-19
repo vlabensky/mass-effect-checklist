@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react'; // Added useMemo
 
 // --- Data Structure ---
 // Added 'wikiUrl' for each mission.
@@ -60,71 +60,142 @@ const WikiLinkIcon = () => (
   </svg>
 );
 
+// ChevronIcon Component: Renders a chevron icon for collapse/expand toggle
+const ChevronIcon = ({ expanded }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+         className={`w-4 h-4 transition-transform duration-200 ease-in-out ${expanded ? 'rotate-180' : ''}`}>
+        <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
+    </svg>
+);
 
-// MissionItem Component: Renders a single mission with checkbox and wiki link
-const MissionItem = ({ mission, completed, onToggle, prerequisitesMet }) => {
+
+// MissionItem Component: Renders a single mission with checkbox, wiki link, and collapsible prerequisites
+// Added completedMissions prop
+const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNameMap, completedMissions }) => {
+  const [isPrereqsExpanded, setIsPrereqsExpanded] = useState(false); // State for prerequisites visibility
+
   const handleChange = () => {
     if (prerequisitesMet || completed) {
       onToggle(mission.id);
     }
   };
 
+  const togglePrereqs = (e) => {
+      e.stopPropagation(); // Prevent triggering label/checkbox click
+      setIsPrereqsExpanded(!isPrereqsExpanded);
+  };
+
   // Determine if interaction is allowed (for styling consistency)
   const canInteract = prerequisitesMet || completed;
+  const hasPrerequisites = mission.prerequisites && mission.prerequisites.length > 0;
 
   return (
-    <li className={`py-2 px-3 flex items-center justify-between border-b border-gray-700 last:border-b-0 ${!canInteract ? 'opacity-50' : 'hover:bg-gray-700'}`}>
-      {/* Left side: Checkbox and Label */}
-      <div className="flex items-center flex-grow mr-2"> {/* Added mr-2 for spacing */}
-          <input
-            type="checkbox"
-            id={mission.id}
-            checked={completed}
-            onChange={handleChange}
-            disabled={!canInteract}
-            className={`mr-3 h-5 w-5 rounded border-gray-500 text-blue-500 focus:ring-blue-600 bg-gray-600 disabled:opacity-70 flex-shrink-0 ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'}`}
-          />
-          <label
-            htmlFor={mission.id}
-            className={`flex-grow ${completed ? 'line-through text-gray-400' : 'text-gray-100'} ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'}`}
-          >
-            {mission.name}
-          </label>
-      </div>
+    // Use React Fragment to group the main row and the collapsible section
+    <>
+        <li className={`flex items-center justify-between border-b border-gray-700 last:border-b-0 transition-colors duration-150 ${!canInteract ? 'opacity-50' : 'hover:bg-gray-700'}`}>
+            {/* Main content row */}
+            <div className="flex items-center flex-grow py-2 px-3 min-w-0"> {/* Added min-w-0 for flex-grow */}
+                {/* Checkbox */}
+                <input
+                    type="checkbox"
+                    id={mission.id}
+                    checked={completed}
+                    onChange={handleChange}
+                    disabled={!canInteract}
+                    className={`mr-3 h-5 w-5 rounded border-gray-500 text-blue-500 focus:ring-blue-600 bg-gray-600 disabled:opacity-70 flex-shrink-0 ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'}`}
+                />
+                {/* Prerequisite Toggle Button (only if prerequisites exist) */}
+                {hasPrerequisites && (
+                    <button
+                        onClick={togglePrereqs}
+                        className="mr-2 p-0.5 rounded text-gray-400 hover:bg-gray-600 hover:text-blue-300 focus:outline-none focus:ring-1 focus:ring-blue-500 flex-shrink-0"
+                        aria-expanded={isPrereqsExpanded}
+                        aria-controls={`prereqs-${mission.id}`} // For accessibility
+                        title={isPrereqsExpanded ? "Hide prerequisites" : "Show prerequisites"}
+                    >
+                        <ChevronIcon expanded={isPrereqsExpanded} />
+                        <span className="sr-only">{isPrereqsExpanded ? "Hide prerequisites" : "Show prerequisites"}</span>
+                    </button>
+                )}
+                 {/* Spacer if no prerequisites, to maintain alignment */}
+                 {!hasPrerequisites && <div className="w-4 mr-2 flex-shrink-0" style={{marginLeft: '0.125rem', marginRight: '0.625rem'}}></div>}
 
-      {/* Right side: Wiki Link Button */}
-      {mission.wikiUrl && ( // Only render if wikiUrl exists
-        <a
-          href={mission.wikiUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          title={`View "${mission.name}" on Mass Effect Wiki`} // Tooltip
-          // Updated button styling: rounded-md instead of rounded-full
-          className="p-1 rounded-md text-gray-400 hover:bg-gray-600 hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-blue-500 transition-colors flex-shrink-0"
-          // Prevent click event from bubbling up to the li/label/checkbox handlers
-          onClick={(e) => e.stopPropagation()}
-        >
-          <WikiLinkIcon />
-          <span className="sr-only">Wiki Link</span> {/* Screen reader text */}
-        </a>
-      )}
-    </li>
+                {/* Label */}
+                <label
+                    htmlFor={mission.id}
+                    className={`flex-grow ${completed ? 'line-through text-gray-400' : 'text-gray-100'} ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'} truncate`} // Added truncate
+                >
+                    {mission.name}
+                </label>
+            </div>
+
+            {/* Wiki Link Button (remains on the far right) */}
+            {mission.wikiUrl && (
+                <div className="py-2 px-3 flex-shrink-0"> {/* Wrapper div for padding consistency */}
+                    <a
+                    href={mission.wikiUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={`View "${mission.name}" on Mass Effect Wiki`}
+                    className="p-1 rounded-md text-gray-400 hover:bg-gray-600 hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-blue-500 transition-colors flex-shrink-0 inline-block" // Use inline-block
+                    onClick={(e) => e.stopPropagation()}
+                    >
+                        <WikiLinkIcon />
+                        <span className="sr-only">Wiki Link</span>
+                    </a>
+                </div>
+            )}
+        </li>
+
+        {/* Collapsible Prerequisites Section */}
+        {hasPrerequisites && (
+            <div
+                id={`prereqs-${mission.id}`} // For aria-controls
+                // Use max-height transition for collapse/expand effect
+                className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isPrereqsExpanded ? 'max-h-96' : 'max-h-0'}`}
+                style={{transitionProperty: 'max-height'}} // Ensure transition applies
+            >
+                <ul className="pt-1 pb-2 pl-12 pr-3 bg-gray-800 border-b border-gray-700"> {/* Indent and style */}
+                    <li className="text-xs text-gray-500 mb-1">Prerequisites:</li>
+                    {mission.prerequisites.map(prereqId => {
+                        // Check if this prerequisite mission is completed
+                        const isPrereqCompleted = completedMissions.hasOwnProperty(prereqId);
+                        return (
+                            <li key={prereqId} className={`text-sm py-0.5 ${isPrereqCompleted ? 'text-gray-500 line-through' : 'text-gray-400'}`}> {/* Apply line-through if completed */}
+                               - {missionNameMap[prereqId] || 'Unknown Mission'} {/* Lookup name */}
+                            </li>
+                        );
+                    })}
+                </ul>
+            </div>
+        )}
+    </>
   );
 };
 
 // MissionList Component: Renders the list of missions for the selected game
+// Passes completedMissions down to MissionItem
 const MissionList = ({ gameId, missions, completedMissions, onToggleMission }) => {
+
+  // Create a map of mission IDs to names for easy lookup in MissionItem
+  const missionNameMap = useMemo(() => {
+      const map = {};
+      Object.values(missionsData).flat().forEach(mission => {
+          map[mission.id] = mission.name;
+      });
+      return map;
+  }, []);
+
   // Function to check if prerequisites for a mission are met
   const checkPrerequisites = (mission) => {
     if (!mission.prerequisites || mission.prerequisites.length === 0) {
       return true; // No prerequisites
     }
-    // Check if *all* prerequisite IDs exist as keys in completedMissions
     return mission.prerequisites.every(prereqId => completedMissions.hasOwnProperty(prereqId));
   };
 
   return (
-    <ul className="bg-gray-800 rounded-lg shadow-md overflow-hidden">
+    <ul className="bg-gray-800 rounded-lg shadow-md">
       {missions.map((mission) => (
         <MissionItem
           key={mission.id}
@@ -132,6 +203,8 @@ const MissionList = ({ gameId, missions, completedMissions, onToggleMission }) =
           completed={!!completedMissions[mission.id]}
           onToggle={onToggleMission}
           prerequisitesMet={checkPrerequisites(mission)}
+          missionNameMap={missionNameMap}
+          completedMissions={completedMissions} // Pass down the main completion state
         />
       ))}
     </ul>
@@ -253,6 +326,10 @@ export default function App() {
         <style jsx global>{`
           body {
             font-family: 'Inter', sans-serif; /* Example font */
+          }
+          /* Add transition property for max-height */
+          .transition-max-height {
+            transition-property: max-height;
           }
         `}</style>
         <script src="https://cdn.tailwindcss.com"></script>
