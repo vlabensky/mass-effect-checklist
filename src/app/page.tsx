@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 
 // --- Data Structure ---
-// (Data remains the same as the previous version)
+// (Data remains the same)
 const missionsData = {
   me1: {
     "Prologue": [
@@ -73,7 +73,14 @@ const FONT_SIZE_STEP = 0.1;
 const MIN_FONT_SIZE_MULTIPLIER = 0.7;
 const MAX_FONT_SIZE_MULTIPLIER = 1.5;
 const DEFAULT_FONT_SIZE_MULTIPLIER = 1.0;
-const BASE_HTML_FONT_SIZE_PX = 16; // Default browser font size
+const BASE_HTML_FONT_SIZE_PX = 16;
+const DEFAULT_THEME = 'theme-dark'; // Default theme identifier
+const THEMES = { // Theme identifiers and display names
+    'theme-dark': 'Dark',
+    'theme-light': 'Light',
+    'theme-hc-dark': 'High Contrast Dark',
+    'theme-hc-light': 'High Contrast Light',
+};
 
 // --- Components ---
 
@@ -93,7 +100,7 @@ const ChevronIcon = ({ expanded }) => (
     </svg>
 );
 
-// MissionItem Component
+// MissionItem Component - Updated classes to use CSS variables
 const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNameMap, completedMissions }) => {
   const [isPrereqsExpanded, setIsPrereqsExpanded] = useState(false);
 
@@ -113,20 +120,23 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNa
 
   return (
     <>
-        <li className={`flex items-center justify-between border-b border-gray-700 last:border-b-0 transition-colors duration-150 ${!canInteract ? 'opacity-50' : 'hover:bg-gray-700'}`}>
+        {/* Use theme variables for border and hover background */}
+        <li className={`flex items-center justify-between border-b border-border last:border-b-0 transition-colors duration-150 ${!canInteract ? 'opacity-50' : 'hover:bg-background-hover'}`}>
             <div className="flex items-center flex-grow py-2 px-3 min-w-0">
+                {/* Use theme variable for checkbox focus ring and color */}
                 <input
                     type="checkbox"
                     id={mission.id}
                     checked={completed}
                     onChange={handleChange}
                     disabled={!canInteract}
-                    className={`mr-3 h-5 w-5 rounded border-gray-500 text-blue-500 focus:ring-blue-600 bg-gray-600 disabled:opacity-70 flex-shrink-0 ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'}`}
+                    className={`mr-3 h-5 w-5 rounded border-border-input text-accent focus:ring-accent bg-input-bg disabled:opacity-70 flex-shrink-0 ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'}`}
                 />
                 {hasPrerequisites && (
+                    // Use theme variables for toggle button colors
                     <button
                         onClick={togglePrereqs}
-                        className="mr-2 p-0.5 rounded text-gray-400 hover:bg-gray-600 hover:text-blue-300 focus:outline-none focus:ring-1 focus:ring-blue-500 flex-shrink-0"
+                        className="mr-2 p-0.5 rounded text-text-secondary hover:bg-background-hover hover:text-accent focus:outline-none focus:ring-1 focus:ring-accent flex-shrink-0"
                         aria-expanded={isPrereqsExpanded}
                         aria-controls={`prereqs-${mission.id}`}
                         title={isPrereqsExpanded ? "Hide prerequisites" : "Show prerequisites"}
@@ -136,21 +146,23 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNa
                     </button>
                 )}
                  {!hasPrerequisites && <div className="w-4 mr-2 flex-shrink-0" style={{marginLeft: '0.125rem', marginRight: '0.625rem'}}></div>}
+                {/* Use theme variables for label text colors */}
                 <label
                     htmlFor={mission.id}
-                    className={`flex-grow ${completed ? 'line-through text-gray-400' : 'text-gray-100'} ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'} truncate`}
+                    className={`flex-grow ${completed ? 'line-through text-text-disabled' : 'text-text-primary'} ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'} truncate`}
                 >
                     {mission.name}
                 </label>
             </div>
             {mission.wikiUrl && (
                 <div className="py-2 px-3 flex-shrink-0">
+                     {/* Use theme variables for wiki link colors */}
                     <a
                     href={mission.wikiUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     title={`View "${mission.name}" on Mass Effect Wiki`}
-                    className="p-1 rounded-md text-gray-400 hover:bg-gray-600 hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-blue-500 transition-colors flex-shrink-0 inline-block"
+                    className="p-1 rounded-md text-text-secondary hover:bg-background-hover hover:text-accent focus:outline-none focus:ring-2 focus:ring-offset-background focus:ring-accent transition-colors flex-shrink-0 inline-block"
                     onClick={(e) => e.stopPropagation()}
                     >
                         <WikiLinkIcon />
@@ -165,12 +177,13 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNa
                 className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isPrereqsExpanded ? 'max-h-96' : 'max-h-0'}`}
                 style={{transitionProperty: 'max-height'}}
             >
-                <ul className="pt-1 pb-2 pl-12 pr-3 bg-gray-800 border-b border-gray-700">
-                    <li className="text-xs text-gray-500 mb-1">Prerequisites:</li>
+                 {/* Use theme variables for prerequisite list background, border, text colors */}
+                <ul className="pt-1 pb-2 pl-12 pr-3 bg-background-subtle border-b border-border">
+                    <li className="text-xs text-text-secondary mb-1">Prerequisites:</li>
                     {mission.prerequisites.map(prereqId => {
                         const isPrereqCompleted = completedMissions.hasOwnProperty(prereqId);
                         return (
-                            <li key={prereqId} className={`text-sm py-0.5 ${isPrereqCompleted ? 'text-gray-500 line-through' : 'text-gray-400'}`}>
+                            <li key={prereqId} className={`text-sm py-0.5 ${isPrereqCompleted ? 'text-text-disabled line-through' : 'text-text-secondary'}`}>
                                - {missionNameMap[prereqId] || 'Unknown Mission'}
                             </li>
                         );
@@ -182,7 +195,7 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNa
   );
 };
 
-// MissionList Component
+// MissionList Component - Updated classes to use CSS variables
 const MissionList = ({ gameId, groupedMissions, completedMissions, onToggleMission }) => {
 
   const missionNameMap = useMemo(() => {
@@ -205,12 +218,14 @@ const MissionList = ({ gameId, groupedMissions, completedMissions, onToggleMissi
   const groupNames = Object.keys(groupedMissions);
 
   return (
-    <div className="bg-gray-800 rounded-lg shadow-md">
+    // Use theme variable for main background
+    <div className="bg-background-list rounded-lg shadow-md">
       {groupNames.map((groupName, index) => (
         <section key={groupName} aria-labelledby={`group-header-${gameId}-${index}`}>
+          {/* Use theme variables for group header background, text, border */}
           <h3
             id={`group-header-${gameId}-${index}`}
-            className="text-lg font-semibold text-blue-300 bg-gray-700 px-3 py-2 sticky top-0 z-10 border-b border-t border-gray-600 first:border-t-0"
+            className="text-lg font-semibold text-accent bg-background-header px-3 py-2 sticky top-0 z-10 border-b border-t border-border first:border-t-0"
           >
             {groupName}
           </h3>
@@ -233,153 +248,85 @@ const MissionList = ({ gameId, groupedMissions, completedMissions, onToggleMissi
   );
 };
 
-// Main App Component
+// Main App Component - Added Theme State and Controls
 export default function App() {
   const [activeTab, setActiveTab] = useState('me1');
   const [completedMissions, setCompletedMissions] = useState({});
-  // State for font size multiplier
   const [fontSizeMultiplier, setFontSizeMultiplier] = useState(DEFAULT_FONT_SIZE_MULTIPLIER);
+  // State for active theme
+  const [activeTheme, setActiveTheme] = useState(DEFAULT_THEME);
 
-  // Load state from localStorage (including font size)
+  // Load state from localStorage (completion, font size, theme)
   useEffect(() => {
     if (typeof window !== 'undefined') {
         // Load mission completion state
         const savedCompletionState = localStorage.getItem('massEffectChecklistState');
-        if (savedCompletionState) {
-          try {
-            const parsedState = JSON.parse(savedCompletionState);
-            if (typeof parsedState === 'object' && parsedState !== null) {
-               setCompletedMissions(parsedState);
-            } else {
-                 localStorage.removeItem('massEffectChecklistState'); setCompletedMissions({});
-            }
-          } catch (error) {
-            localStorage.removeItem('massEffectChecklistState'); setCompletedMissions({});
-          }
-        }
+        if (savedCompletionState) { try { const d = JSON.parse(savedCompletionState); if(typeof d === 'object' && d !== null) setCompletedMissions(d); else localStorage.removeItem('massEffectChecklistState'); } catch (e) { localStorage.removeItem('massEffectChecklistState'); } }
         // Load font size state
         const savedFontSize = localStorage.getItem('massEffectFontSizeMultiplier');
-        if (savedFontSize) {
-            const parsedSize = parseFloat(savedFontSize);
-            if (!isNaN(parsedSize) && parsedSize >= MIN_FONT_SIZE_MULTIPLIER && parsedSize <= MAX_FONT_SIZE_MULTIPLIER) {
-                setFontSizeMultiplier(parsedSize);
-            } else {
-                 localStorage.removeItem('massEffectFontSizeMultiplier'); // Remove invalid value
-            }
-        }
+        if (savedFontSize) { const s = parseFloat(savedFontSize); if(!isNaN(s) && s >= MIN_FONT_SIZE_MULTIPLIER && s <= MAX_FONT_SIZE_MULTIPLIER) setFontSizeMultiplier(s); else localStorage.removeItem('massEffectFontSizeMultiplier'); }
+        // Load theme state
+        const savedTheme = localStorage.getItem('massEffectActiveTheme');
+        if (savedTheme && THEMES[savedTheme]) { setActiveTheme(savedTheme); } else { localStorage.removeItem('massEffectActiveTheme'); } // Use default if invalid
     }
   }, []); // Run only on initial mount
 
   // Save completion state to localStorage
-  useEffect(() => {
-     if (typeof window !== 'undefined') {
-        if (Object.keys(completedMissions).length > 0) {
-           try { localStorage.setItem('massEffectChecklistState', JSON.stringify(completedMissions)); } catch (error) { console.error("Failed to save completion state:", error); }
-        } else {
-            localStorage.removeItem('massEffectChecklistState');
-        }
-     }
-  }, [completedMissions]);
+  useEffect(() => { if (typeof window !== 'undefined') { if (Object.keys(completedMissions).length > 0) { try { localStorage.setItem('massEffectChecklistState', JSON.stringify(completedMissions)); } catch (e) { console.error("Failed to save completion state:", e); } } else { localStorage.removeItem('massEffectChecklistState'); } } }, [completedMissions]);
 
   // Save font size state to localStorage AND update HTML root font size
-   useEffect(() => {
-     if (typeof window !== 'undefined') {
-        // Save to localStorage
-        try {
-            localStorage.setItem('massEffectFontSizeMultiplier', fontSizeMultiplier.toString());
-        } catch (error) {
-            console.error("Failed to save font size state:", error);
-        }
-        // Apply to HTML root element
-        const newSize = BASE_HTML_FONT_SIZE_PX * fontSizeMultiplier;
-        document.documentElement.style.fontSize = `${newSize}px`;
-        console.log(`HTML root font size set to: ${newSize}px (Multiplier: ${fontSizeMultiplier})`);
-     }
-     // Cleanup function to reset font size when component unmounts (optional)
-     return () => {
-         if (typeof window !== 'undefined') {
-            // document.documentElement.style.fontSize = ''; // Reset to browser default
-         }
-     };
-   }, [fontSizeMultiplier]); // Run whenever fontSizeMultiplier changes
+  useEffect(() => { if (typeof window !== 'undefined') { try { localStorage.setItem('massEffectFontSizeMultiplier', fontSizeMultiplier.toString()); } catch (e) { console.error("Failed to save font size state:", e); } const newSize = BASE_HTML_FONT_SIZE_PX * fontSizeMultiplier; document.documentElement.style.fontSize = `${newSize}px`; } }, [fontSizeMultiplier]);
 
+  // Save theme state to localStorage AND update HTML class list
+  useEffect(() => {
+      if (typeof window !== 'undefined') {
+          // Save theme
+          try { localStorage.setItem('massEffectActiveTheme', activeTheme); } catch (e) { console.error("Failed to save theme state:", e); }
+          // Update HTML class
+          const root = document.documentElement;
+          // Remove previous theme classes
+          Object.keys(THEMES).forEach(themeKey => root.classList.remove(themeKey));
+          // Add current theme class
+          root.classList.add(activeTheme);
+          console.log(`Theme set to: ${activeTheme}`);
+      }
+  }, [activeTheme]); // Run whenever activeTheme changes
 
   // Recursive unchecking logic
-  const recursivelyUncheckDependents = (missionIdToUncheck, stateToModify) => {
-    Object.values(missionsData).forEach(gameGroups => {
-        Object.values(gameGroups).forEach(missionArray => {
-            missionArray.forEach(mission => {
-                if (mission.prerequisites.includes(missionIdToUncheck) && stateToModify[mission.id]) {
-                    delete stateToModify[mission.id];
-                    recursivelyUncheckDependents(mission.id, stateToModify);
-                }
-            });
-        });
-    });
-  };
+  const recursivelyUncheckDependents = (missionIdToUncheck, stateToModify) => { Object.values(missionsData).forEach(gameGroups => { Object.values(gameGroups).forEach(missionArray => { missionArray.forEach(mission => { if (mission.prerequisites.includes(missionIdToUncheck) && stateToModify[mission.id]) { delete stateToModify[mission.id]; recursivelyUncheckDependents(mission.id, stateToModify); } }); }); }); };
 
   // Toggle mission completion state
-  const handleToggleMission = (missionId) => {
-    setCompletedMissions(prev => {
-      let newState = { ...prev };
-      const missionInfo = Object.values(missionsData)
-                                .flatMap(gameGroups => Object.values(gameGroups))
-                                .flat()
-                                .find(m => m.id === missionId);
-      if (!missionInfo) return prev;
+  const handleToggleMission = (missionId) => { setCompletedMissions(prev => { let newState = { ...prev }; const missionInfo = Object.values(missionsData).flatMap(g => Object.values(g)).flat().find(m => m.id === missionId); if (!missionInfo) return prev; if (newState[missionId]) { delete newState[missionId]; recursivelyUncheckDependents(missionId, newState); } else { const prereqsMet = missionInfo.prerequisites.every(id => prev[id]); if (prereqsMet) { newState[missionId] = true; } else { console.warn(`Cannot check ${missionId}, prerequisites not met.`); return prev; } } return newState; }); };
 
-      if (newState[missionId]) { // Unchecking
-        delete newState[missionId];
-        recursivelyUncheckDependents(missionId, newState);
-      } else { // Checking
-        const prerequisitesMet = missionInfo.prerequisites.every(prereqId => prev[prereqId]);
-        if (prerequisitesMet) {
-             newState[missionId] = true;
-        } else {
-            console.warn(`Cannot check ${missionId}, prerequisites not met.`);
-            return prev;
-        }
-      }
-      return newState;
-    });
-  };
-
-  // --- Font Size Control Functions ---
-  const increaseFontSize = () => {
-      setFontSizeMultiplier(prev => Math.min(MAX_FONT_SIZE_MULTIPLIER, prev + FONT_SIZE_STEP));
-  };
-
-  const decreaseFontSize = () => {
-      setFontSizeMultiplier(prev => Math.max(MIN_FONT_SIZE_MULTIPLIER, prev - FONT_SIZE_STEP));
-  };
-  // --- End Font Size Control ---
-
+  // Font Size Control Functions
+  const increaseFontSize = () => { setFontSizeMultiplier(prev => Math.min(MAX_FONT_SIZE_MULTIPLIER, prev + FONT_SIZE_STEP)); };
+  const decreaseFontSize = () => { setFontSizeMultiplier(prev => Math.max(MIN_FONT_SIZE_MULTIPLIER, prev - FONT_SIZE_STEP)); };
 
   // Get grouped missions for the active tab
-  const getMissionsForTab = () => {
-    return missionsData[activeTab] || {};
-  };
+  const getMissionsForTab = () => { return missionsData[activeTab] || {}; };
 
-  // Tab Button Component
+  // Tab Button Component - Updated classes to use CSS variables
   const TabButton = ({ gameId, label }) => (
     <button
       onClick={() => setActiveTab(gameId)}
-      className={`px-4 py-2 font-semibold rounded-t-lg focus:outline-none transition-colors duration-200 ease-in-out
+      // Use theme variables for background, text, border, hover
+      className={`px-4 py-2 font-semibold rounded-t-lg focus:outline-none transition-colors duration-200 ease-in-out border-b-2
                   ${activeTab === gameId
-                    ? 'bg-gray-800 text-white border-b-2 border-blue-500'
-                    : 'bg-gray-600 text-gray-300 hover:bg-gray-700'}`}
+                    ? 'bg-background-list text-text-primary border-accent' // Active tab style
+                    : 'bg-background-header text-text-secondary border-transparent hover:bg-background-hover hover:text-text-primary'}`} // Inactive tab style
     >
       {label}
     </button>
   );
 
-  // Font Size Control Button Component
+  // Font Size Control Button Component - Updated classes to use CSS variables
   const FontSizeButton = ({ onClick, children, ariaLabel, disabled }) => (
       <button
           onClick={onClick}
           disabled={disabled}
           aria-label={ariaLabel}
-          className={`px-2 py-1 mx-1 rounded-md border border-gray-600 text-gray-300 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed`}
+          // Use theme variables for border, text, hover background, focus ring
+          className={`px-2 py-1 mx-1 rounded-md border border-border-input text-text-secondary hover:bg-background-hover focus:outline-none focus:ring-2 focus:ring-accent disabled:opacity-50 disabled:cursor-not-allowed`}
       >
           {children}
       </button>
@@ -387,45 +334,192 @@ export default function App() {
 
   return (
     <>
-      <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white p-4 sm:p-8">
-        <style jsx global>{`
-          body { font-family: 'Inter', sans-serif; }
+       {/* Inject theme styles and CSS variables */}
+       <style jsx global>{`
+          :root {
+            /* Default values (matching theme-dark initially) */
+            --color-background: #111827; /* gray-900 */
+            --color-background-gradient-end: #000000; /* black */
+            --color-background-list: #1f2937; /* gray-800 */
+            --color-background-header: #374151; /* gray-700 */
+            --color-background-hover: #4b5563; /* gray-600 */
+            --color-background-subtle: #1f2937; /* gray-800 */
+            --color-input-bg: #4b5563; /* gray-600 */
+
+            --color-text-primary: #f9fafb; /* gray-50 */
+            --color-text-secondary: #d1d5db; /* gray-300 */
+            --color-text-disabled: #6b7280; /* gray-500 */
+            --color-text-footer: #6b7280; /* gray-500 */
+            --color-text-accent: #93c5fd; /* blue-300 */
+
+            --color-border: #374151; /* gray-700 */
+            --color-border-input: #6b7280; /* gray-500 */
+            --color-border-tab-active: #3b82f6; /* blue-500 */
+            --color-border-tab-inactive: transparent;
+
+            --color-accent: #3b82f6; /* blue-500 */
+            --color-focus-ring: #3b82f6; /* blue-500 */
+          }
+
+          /* Light Theme */
+          html.theme-light {
+            --color-background: #f9fafb; /* gray-50 */
+            --color-background-gradient-end: #e5e7eb; /* gray-200 */
+            --color-background-list: #ffffff; /* white */
+            --color-background-header: #f3f4f6; /* gray-100 */
+            --color-background-hover: #e5e7eb; /* gray-200 */
+            --color-background-subtle: #ffffff; /* white */
+            --color-input-bg: #e5e7eb; /* gray-200 */
+
+            --color-text-primary: #111827; /* gray-900 */
+            --color-text-secondary: #374151; /* gray-700 */
+            --color-text-disabled: #9ca3af; /* gray-400 */
+            --color-text-footer: #6b7280; /* gray-500 */
+            --color-text-accent: #2563eb; /* blue-600 */
+
+            --color-border: #e5e7eb; /* gray-200 */
+            --color-border-input: #9ca3af; /* gray-400 */
+            --color-border-tab-active: #2563eb; /* blue-600 */
+
+            --color-accent: #2563eb; /* blue-600 */
+            --color-focus-ring: #2563eb; /* blue-600 */
+          }
+
+          /* High Contrast Dark Theme */
+          html.theme-hc-dark {
+            --color-background: #000000; /* black */
+            --color-background-gradient-end: #000000; /* black */
+            --color-background-list: #000000; /* black */
+            --color-background-header: #000000; /* black */
+            --color-background-hover: #333333; /* dark gray */
+            --color-background-subtle: #000000; /* black */
+            --color-input-bg: #000000; /* black */
+
+            --color-text-primary: #ffffff; /* white */
+            --color-text-secondary: #ffff00; /* yellow */
+            --color-text-disabled: #aaaaaa; /* light gray */
+            --color-text-footer: #aaaaaa; /* light gray */
+            --color-text-accent: #ffff00; /* yellow */
+
+            --color-border: #ffffff; /* white */
+            --color-border-input: #ffffff; /* white */
+            --color-border-tab-active: #ffff00; /* yellow */
+
+            --color-accent: #ffff00; /* yellow */
+            --color-focus-ring: #ffff00; /* yellow */
+          }
+
+           /* High Contrast Light Theme */
+          html.theme-hc-light {
+            --color-background: #ffffff; /* white */
+            --color-background-gradient-end: #ffffff; /* white */
+            --color-background-list: #ffffff; /* white */
+            --color-background-header: #ffffff; /* white */
+            --color-background-hover: #eeeeee; /* light gray */
+            --color-background-subtle: #ffffff; /* white */
+            --color-input-bg: #ffffff; /* white */
+
+            --color-text-primary: #000000; /* black */
+            --color-text-secondary: #0000ff; /* blue */
+            --color-text-disabled: #555555; /* dark gray */
+            --color-text-footer: #555555; /* dark gray */
+            --color-text-accent: #0000ff; /* blue */
+
+            --color-border: #000000; /* black */
+            --color-border-input: #000000; /* black */
+            --color-border-tab-active: #0000ff; /* blue */
+
+            --color-accent: #0000ff; /* blue */
+            --color-focus-ring: #0000ff; /* blue */
+          }
+
+
+          /* Apply base background using variables */
+          body {
+             font-family: 'Inter', sans-serif;
+             background-color: var(--color-background); /* Base background */
+          }
           .transition-max-height { transition-property: max-height; }
           .sticky { position: sticky; }
           .top-0 { top: 0; }
           .z-10 { z-index: 10; }
+
+          /* Tailwind utility classes using CSS variables */
+          .bg-background { background-color: var(--color-background); }
+          .bg-gradient-to-b { /* Assuming you still want a gradient */
+              background-image: linear-gradient(to bottom, var(--color-background), var(--color-background-gradient-end));
+          }
+          .bg-background-list { background-color: var(--color-background-list); }
+          .bg-background-header { background-color: var(--color-background-header); }
+          .bg-background-hover { background-color: var(--color-background-hover); }
+          .bg-background-subtle { background-color: var(--color-background-subtle); }
+          .bg-input-bg { background-color: var(--color-input-bg); }
+
+          .text-text-primary { color: var(--color-text-primary); }
+          .text-text-secondary { color: var(--color-text-secondary); }
+          .text-text-disabled { color: var(--color-text-disabled); }
+          .text-text-footer { color: var(--color-text-footer); }
+          .text-accent { color: var(--color-text-accent); }
+
+          .border-border { border-color: var(--color-border); }
+          .border-border-input { border-color: var(--color-border-input); }
+          .border-accent { border-color: var(--color-accent); }
+          .border-transparent { border-color: transparent; } /* Keep transparent */
+
+          .focus\\:ring-accent:focus { /* Manual focus ring color */
+              --tw-ring-color: var(--color-focus-ring);
+               box-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+          }
+           .focus\\:ring-offset-background:focus { /* Manual focus ring offset color */
+              --tw-ring-offset-color: var(--color-background);
+          }
+           .text-accent { /* Checkbox color */
+              color: var(--color-accent);
+           }
+
+
         `}</style>
+      {/* Use theme variable for main background gradient */}
+      <main className="min-h-screen bg-gradient-to-b text-text-primary p-4 sm:p-8">
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
 
         <div className="max-w-4xl mx-auto">
-            {/* Header Row with Title and Font Controls */}
-            <div className="flex justify-between items-center mb-8">
-                <h1 className="text-3xl sm:text-4xl font-bold text-blue-300">
+            {/* Header Row */}
+            <div className="flex flex-wrap justify-between items-center mb-8 gap-4"> {/* Added flex-wrap and gap */}
+                {/* Title */}
+                <h1 className="text-3xl sm:text-4xl font-bold text-accent"> {/* Use accent color for title */}
                     Mass Effect Checklist
                 </h1>
-                {/* Font Size Controls */}
-                <div className="flex items-center">
-                    <span className="text-sm mr-2 text-gray-400">Font Size:</span>
-                    <FontSizeButton
-                        onClick={decreaseFontSize}
-                        ariaLabel="Decrease font size"
-                        disabled={fontSizeMultiplier <= MIN_FONT_SIZE_MULTIPLIER}
-                    >
-                        A-
-                    </FontSizeButton>
-                     <FontSizeButton
-                        onClick={increaseFontSize}
-                        ariaLabel="Increase font size"
-                        disabled={fontSizeMultiplier >= MAX_FONT_SIZE_MULTIPLIER}
-                    >
-                        A+
-                    </FontSizeButton>
-                </div>
+                 {/* Controls Container */}
+                 <div className="flex items-center gap-4"> {/* Group controls */}
+                    {/* Font Size Controls */}
+                    <div className="flex items-center">
+                        <span className="text-sm mr-2 text-text-secondary">Font Size:</span>
+                        <FontSizeButton onClick={decreaseFontSize} ariaLabel="Decrease font size" disabled={fontSizeMultiplier <= MIN_FONT_SIZE_MULTIPLIER}>A-</FontSizeButton>
+                        <FontSizeButton onClick={increaseFontSize} ariaLabel="Increase font size" disabled={fontSizeMultiplier >= MAX_FONT_SIZE_MULTIPLIER}>A+</FontSizeButton>
+                    </div>
+                    {/* Theme Selector */}
+                    <div className="flex items-center">
+                         <label htmlFor="theme-select" className="text-sm mr-2 text-text-secondary">Theme:</label>
+                         <select
+                             id="theme-select"
+                             value={activeTheme}
+                             onChange={(e) => setActiveTheme(e.target.value)}
+                             // Use theme variables for select styling
+                             className="px-2 py-1 rounded-md border border-border-input bg-input-bg text-text-primary focus:outline-none focus:ring-2 focus:ring-accent"
+                         >
+                             {Object.entries(THEMES).map(([themeKey, themeName]) => (
+                                 <option key={themeKey} value={themeKey}>{themeName}</option>
+                             ))}
+                         </select>
+                    </div>
+                 </div>
             </div>
 
 
-          <div className="mb-6 border-b border-gray-700 flex space-x-1">
+          {/* Use theme variable for tab area border */}
+          <div className="mb-6 border-b border-border flex flex-wrap space-x-1"> {/* Added flex-wrap */}
             <TabButton gameId="me1" label="Mass Effect 1" />
             <TabButton gameId="me2" label="Mass Effect 2" />
             <TabButton gameId="me3" label="Mass Effect 3" />
@@ -440,7 +534,8 @@ export default function App() {
             />
           </div>
 
-           <footer className="mt-12 text-center text-gray-500 text-sm">
+           {/* Use theme variable for footer text */}
+           <footer className="mt-12 text-center text-text-footer text-sm">
              <p>Mission data based on Mass Effect Wiki. Dependencies are simplified examples.</p>
              <p>Your progress is saved locally in your browser.</p>
            </footer>
