@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useMemo, useRef, useContext, createContext } from 'react'; // Added useContext, createContext
 import { missionsData } from './resx/data';
 import { LanguageProvider, useTranslations } from './components/language';
-import { SettingsIcon } from './components/icons';
+import { NewTabLinkIcon, SettingsIcon } from './components/icons';
 
 // Function to generate a safe key from a display name
 const generateKeyFromName = (name) => name.replace(/[^a-zA-Z0-9]/g, '');
@@ -20,7 +20,6 @@ const FONT_SIZE_STEP = 0.1; const MIN_FONT_SIZE_MULTIPLIER = 0.7; const MAX_FONT
 // --- Components ---
 
 // WikiLinkIcon Component
-const WikiLinkIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"> <path fillRule="evenodd" d="M8.25 3.75H6a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 6 18.75h10.5A2.25 2.25 0 0 0 18.75 16.5V14.25a.75.75 0 0 0-1.5 0V16.5a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h2.25a.75.75 0 0 0 0-1.5Z" clipRule="evenodd" /> <path fillRule="evenodd" d="M14.25 3.75a.75.75 0 0 0 0 1.5h1.69L9.72 11.47a.75.75 0 1 0 1.06 1.06l6.22-6.22v1.69a.75.75 0 0 0 1.5 0V3.75h-3.75Z" clipRule="evenodd" /> </svg> );
 // ChevronIcon Component
 const ChevronIcon = ({ expanded }) => ( <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={`w-4 h-4 transition-transform duration-200 ease-in-out ${expanded ? 'rotate-180' : ''}`}> <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" /> </svg> );
 
@@ -43,7 +42,7 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNa
                 {!hasPrerequisites && <div className="w-4 mr-2 flex-shrink-0" style={{marginLeft: '0.125rem', marginRight: '0.625rem'}}></div>}
                 <label htmlFor={mission.id} className={`flex-grow ${completed ? 'line-through text-text-disabled' : 'text-text-primary'} ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'} truncate`} > {missionTitle} </label>
             </div>
-            {mission.wikiUrl && ( <div className="py-2 px-3 flex-shrink-0"> <a href={mission.wikiUrl} target="_blank" rel="noopener noreferrer" title={`View "${missionTitle}" on Mass Effect Wiki`} className="p-1 rounded-md text-text-secondary hover:bg-background-hover hover:text-accent focus:outline-none focus:ring-2 focus:ring-offset-background focus:ring-accent transition-colors flex-shrink-0 inline-block" onClick={(e) => e.stopPropagation()} > <WikiLinkIcon /> <span className="sr-only">{t('wikiLinkAlt')}</span> </a> </div> )}
+            {mission.wikiUrl && ( <div className="py-2 px-3 flex-shrink-0"> <a href={mission.wikiUrl} target="_blank" rel="noopener noreferrer" title={`View "${missionTitle}" on Mass Effect Wiki`} className="p-1 rounded-md text-text-secondary hover:bg-background-hover hover:text-accent focus:outline-none focus:ring-2 focus:ring-offset-background focus:ring-accent transition-colors flex-shrink-0 inline-block" onClick={(e) => e.stopPropagation()} > <NewTabLinkIcon /> <span className="sr-only">{t('wikiLinkAlt')}</span> </a> </div> )}
         </li>
         {hasPrerequisites && (
             <div id={`prereqs-${mission.id}`} className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isPrereqsExpanded ? 'max-h-96' : 'max-h-0'}`} style={{transitionProperty: 'max-height'}} >
