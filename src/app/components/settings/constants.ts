@@ -1,8 +1,8 @@
 export enum Theme {
-  dark = 'theme-dark',
-  light = 'theme-light',
-  highContrastDark = 'theme-hc-dark',
-  highContrastLight = 'theme-hc-light',
+  dark = 'theme_dark',
+  light = 'theme_light',
+  highContrastDark = 'theme_hc_dark',
+  highContrastLight = 'theme_hc_light',
 };
 
 export const DEFAULT_FONT_SIZE_MULTIPLIER = 1.0;

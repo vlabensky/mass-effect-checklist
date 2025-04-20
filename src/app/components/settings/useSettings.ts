@@ -7,7 +7,11 @@ const useSettings = () => {
     throw Error('useSettings hook can be used only in scope of the SettingsContext. Make sure you\'re using SettingsProvider.');
 
   return {
-    a: false,
+    fontSizeMultiplier: context.fontSizeMultiplier,
+    increaseFontSize: context.increaseFontSize,
+    decreaseFontSize: context.decreaseFontSize,
+    activeTheme: context.activeTheme,
+    setActiveTheme: context.setActiveTheme,
   };
 };
 
