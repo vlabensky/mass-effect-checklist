@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useMemo, useRef, useContext, createContext } from 'react'; // Added useContext, createContext
 import { missionsData } from './resx/data';
 import { LanguageProvider, useTranslations } from './components/language';
-import { NewTabLinkIcon, SettingsIcon } from './components/icons';
+import { ChevronIcon, NewTabLinkIcon, SettingsIcon } from './components/icons';
 
 // Function to generate a safe key from a display name
 const generateKeyFromName = (name) => name.replace(/[^a-zA-Z0-9]/g, '');
@@ -11,17 +11,7 @@ const generateKeyFromName = (name) => name.replace(/[^a-zA-Z0-9]/g, '');
 // --- Constants ---
 const FONT_SIZE_STEP = 0.1; const MIN_FONT_SIZE_MULTIPLIER = 0.7; const MAX_FONT_SIZE_MULTIPLIER = 1.5; const DEFAULT_FONT_SIZE_MULTIPLIER = 1.0; const BASE_HTML_FONT_SIZE_PX = 16; const DEFAULT_THEME = 'theme-dark'; const THEMES = { 'theme-dark': 'Dark', 'theme-light': 'Light', 'theme-hc-dark': 'High Contrast Dark', 'theme-hc-light': 'High Contrast Light', }; const SHORT_ID_DELIMITER = ';'; const LOCAL_STORAGE_COMPLETION_KEY = 'massEffectChecklistStateShort'; const LOCAL_STORAGE_FONT_KEY = 'massEffectFontSizeMultiplier'; const LOCAL_STORAGE_THEME_KEY = 'massEffectActiveTheme';
 
-
-
-
-
-
-
 // --- Components ---
-
-// WikiLinkIcon Component
-// ChevronIcon Component
-const ChevronIcon = ({ expanded }) => ( <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={`w-4 h-4 transition-transform duration-200 ease-in-out ${expanded ? 'rotate-180' : ''}`}> <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" /> </svg> );
 
 // MissionItem Component - Uses useTranslations hook
 const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNameMap, completedMissions }) => {
