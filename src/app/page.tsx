@@ -1,78 +1,19 @@
 'use client'
 
 import React, { useState, useEffect, useMemo, useRef, useContext, createContext } from 'react'; // Added useContext, createContext
-import { translations } from './resx/text';
 import { missionsData } from './resx/data';
+import { LanguageProvider, useTranslations } from './components/language';
 
 // Function to generate a safe key from a display name
 const generateKeyFromName = (name) => name.replace(/[^a-zA-Z0-9]/g, '');
 
 // --- Constants ---
-const FONT_SIZE_STEP = 0.1; const MIN_FONT_SIZE_MULTIPLIER = 0.7; const MAX_FONT_SIZE_MULTIPLIER = 1.5; const DEFAULT_FONT_SIZE_MULTIPLIER = 1.0; const BASE_HTML_FONT_SIZE_PX = 16; const DEFAULT_THEME = 'theme-dark'; const THEMES = { 'theme-dark': 'Dark', 'theme-light': 'Light', 'theme-hc-dark': 'High Contrast Dark', 'theme-hc-light': 'High Contrast Light', }; const SHORT_ID_DELIMITER = ';'; const LOCAL_STORAGE_COMPLETION_KEY = 'massEffectChecklistStateShort'; const LOCAL_STORAGE_FONT_KEY = 'massEffectFontSizeMultiplier'; const LOCAL_STORAGE_THEME_KEY = 'massEffectActiveTheme'; const LOCAL_STORAGE_LANG_KEY = 'massEffectLanguage'; const DEFAULT_LANGUAGE = 'en'; const SUPPORTED_LANGUAGES = { en: 'English', es: 'Español' };
+const FONT_SIZE_STEP = 0.1; const MIN_FONT_SIZE_MULTIPLIER = 0.7; const MAX_FONT_SIZE_MULTIPLIER = 1.5; const DEFAULT_FONT_SIZE_MULTIPLIER = 1.0; const BASE_HTML_FONT_SIZE_PX = 16; const DEFAULT_THEME = 'theme-dark'; const THEMES = { 'theme-dark': 'Dark', 'theme-light': 'Light', 'theme-hc-dark': 'High Contrast Dark', 'theme-hc-light': 'High Contrast Light', }; const SHORT_ID_DELIMITER = ';'; const LOCAL_STORAGE_COMPLETION_KEY = 'massEffectChecklistStateShort'; const LOCAL_STORAGE_FONT_KEY = 'massEffectFontSizeMultiplier'; const LOCAL_STORAGE_THEME_KEY = 'massEffectActiveTheme';
 
-// --- Language Context & Provider ---
-const LanguageContext = createContext();
 
-const LanguageProvider = ({ children }) => {
-  const [currentLanguage, setCurrentLanguage] = useState(DEFAULT_LANGUAGE);
 
-  // Load language from local storage on mount
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const savedLang = localStorage.getItem(LOCAL_STORAGE_LANG_KEY);
-      if (savedLang && SUPPORTED_LANGUAGES[savedLang]) {
-        setCurrentLanguage(savedLang);
-      }
-    }
-  }, []);
 
-  // Save language to local storage when it changes
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      try {
-        localStorage.setItem(LOCAL_STORAGE_LANG_KEY, currentLanguage);
-      } catch (e) {
-        console.error("Failed to save language state:", e);
-      }
-    }
-  }, [currentLanguage]);
 
-  // Translation function 't'
-  const t = useMemo(() => (key, fallback = '') => {
-    const langTranslations = translations[currentLanguage] || translations[DEFAULT_LANGUAGE];
-    const defaultLangTranslations = translations[DEFAULT_LANGUAGE];
-    let text = langTranslations[key] || defaultLangTranslations[key];
-
-    if (text === undefined) {
-      console.warn(`Missing translation for key: ${key} in language: ${currentLanguage}`);
-      text = fallback || defaultLangTranslations.missingTranslation?.replace('{key}', key) || key;
-    }
-    return text;
-  }, [currentLanguage]); // Recreate 't' function only when language changes
-
-  const value = {
-    currentLanguage,
-    setCurrentLanguage,
-    t,
-    supportedLanguages: SUPPORTED_LANGUAGES
-  };
-
-  return (
-    <LanguageContext.Provider value={value}>
-      {children}
-    </LanguageContext.Provider>
-  );
-};
-
-// --- Custom Hook for Translations ---
-const useTranslations = () => {
-  const context = useContext(LanguageContext);
-  if (context === undefined) {
-    throw new Error('useTranslations must be used within a LanguageProvider');
-  }
-  // Return only the 't' function as requested, but context has more if needed
-  return { t: context.t, currentLanguage: context.currentLanguage, setLanguage: context.setCurrentLanguage, supportedLanguages: context.supportedLanguages };
-};
 
 
 // --- Components ---
@@ -175,8 +116,8 @@ const SettingsMenu = ({ isOpen, menuRef, buttonRef, closeMenu }) => {
             <div>
                 <label htmlFor="language-select" className="block text-sm font-medium text-text-secondary mb-2">{t('languageLabel')}</label>
                 <select id="language-select" value={currentLanguage} onChange={(e) => setLanguage(e.target.value)} className="w-full px-2 py-1 rounded-md border border-border-input bg-input-bg text-text-primary focus:outline-none focus:ring-2 focus:ring-accent">
-                    {Object.entries(supportedLanguages).map(([langCode, langName]) => (
-                        <option key={langCode} value={langCode}>{langName}</option>
+                    {supportedLanguages.map(({ code, displayName }) => (
+                        <option key={code} value={code}>{displayName}</option>
                     ))}
                 </select>
             </div>

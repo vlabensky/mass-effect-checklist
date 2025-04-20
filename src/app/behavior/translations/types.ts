@@ -1,0 +1,81 @@
+export type LanguageCode =
+  | 'en'
+  | 'es';
+
+export type Translations = {
+  readonly [key in LanguageCode]: TranslationMap;
+}
+
+export type TranslationMap = {
+  readonly [key in TextKey]: string;
+};
+
+export type TextKey = keyof TextStrings;
+
+export type TextStrings = {
+  languageDisplayName: string;
+  pageTitle: string;
+  settingsLabel: string;
+  fontSizeLabel: string;
+  themeLabel: string;
+  languageLabel: string;
+  prerequisitesLabel: string;
+  wikiLinkAlt: string;
+  hidePrereqsTitle: string;
+  showPrereqsTitle: string;
+  footerSource: string;
+  footerSave: string;
+  tabME1: string;
+  tabME2: string;
+  tabME3: string;
+  themeName_theme_dark: string;
+  themeName_theme_light: string;
+  themeName_theme_hc_dark: string;
+  themeName_theme_hc_light: string;
+  group_me1_Prologue: string;
+  group_me1_MainStory: string;
+  group_me2_PrologueFreedom: string;
+  group_me2_RecruitmentDossiersPart1: string;
+  group_me2_PlotMissionsMidGame: string;
+  group_me2_RecruitmentDossiersPart2: string;
+  group_me2_PlotMissionsLateGame: string;
+  group_me3_OpeningMissions: string;
+  group_me3_MainStoryArc: string;
+  group_me3_EndGame: string;
+  mission_me1_eden_prime: string;
+  mission_me1_citadel_expose_saren: string;
+  mission_me1_find_liara: string;
+  mission_me1_feros: string;
+  mission_me1_noveria: string;
+  mission_me1_virmire: string;
+  mission_me1_ilum: string;
+  mission_me1_final_battle: string;
+  mission_me2_prologue: string;
+  mission_me2_freedom: string;
+  mission_me2_citadel_anderson: string;
+  mission_me2_recruit_archangel: string;
+  mission_me2_recruit_professor: string;
+  mission_me2_recruit_warlord: string;
+  mission_me2_recruit_convict: string;
+  mission_me2_horizon: string;
+  mission_me2_recruit_assassin: string;
+  mission_me2_recruit_justicar: string;
+  mission_me2_recruit_tali: string;
+  mission_me2_collector_ship: string;
+  mission_me2_iff: string;
+  mission_me2_suicide_mission: string;
+  mission_me3_prologue: string;
+  mission_me3_mars: string;
+  mission_me3_citadel1: string;
+  mission_me3_palaven: string;
+  mission_me3_surkesh: string;
+  mission_me3_tuchanka: string;
+  mission_me3_citadel2: string;
+  mission_me3_perseus_veil: string;
+  mission_me3_rannoch: string;
+  mission_me3_thessia: string;
+  mission_me3_horizon: string;
+  mission_me3_cerberus_hq: string;
+  mission_me3_earth: string;
+  unknownMission: string;
+};
