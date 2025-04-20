@@ -14,37 +14,7 @@ const FONT_SIZE_STEP = 0.1; const MIN_FONT_SIZE_MULTIPLIER = 0.7; const MAX_FONT
 // --- Components ---
 
 // MissionItem Component - Uses useTranslations hook
-const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNameMap, completedMissions }) => {
-  const { t } = useTranslations(); // Get translation function from hook
-  const [isPrereqsExpanded, setIsPrereqsExpanded] = useState(false);
-  const handleChange = () => { if (prerequisitesMet || completed) { onToggle(mission.id); } };
-  const togglePrereqs = (e) => { e.stopPropagation(); setIsPrereqsExpanded(!isPrereqsExpanded); };
-  const canInteract = prerequisitesMet || completed;
-  const hasPrerequisites = mission.prerequisites && mission.prerequisites.length > 0;
-  const missionTitle = t(`mission_${mission.id}`, mission.name);
 
-  return (
-    <>
-        <li className={`flex items-center justify-between border-b border-border last:border-b-0 transition-colors duration-150 ${!canInteract ? 'opacity-50' : 'hover:bg-background-hover'}`}>
-            <div className="flex items-center flex-grow py-2 px-3 min-w-0">
-                <input type="checkbox" id={mission.id} checked={completed} onChange={handleChange} disabled={!canInteract} className={`mr-3 h-5 w-5 rounded border-border-input text-accent focus:ring-accent bg-input-bg disabled:opacity-70 flex-shrink-0 ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'}`} />
-                {hasPrerequisites && ( <button onClick={togglePrereqs} className="mr-2 p-0.5 rounded text-text-secondary hover:bg-background-hover hover:text-accent focus:outline-none focus:ring-1 focus:ring-accent flex-shrink-0" aria-expanded={isPrereqsExpanded} aria-controls={`prereqs-${mission.id}`} title={isPrereqsExpanded ? t('hidePrereqsTitle') : t('showPrereqsTitle')} > <ChevronIcon expanded={isPrereqsExpanded} /> <span className="sr-only">{isPrereqsExpanded ? t('hidePrereqsTitle') : t('showPrereqsTitle')}</span> </button> )}
-                {!hasPrerequisites && <div className="w-4 mr-2 flex-shrink-0" style={{marginLeft: '0.125rem', marginRight: '0.625rem'}}></div>}
-                <label htmlFor={mission.id} className={`flex-grow ${completed ? 'line-through text-text-disabled' : 'text-text-primary'} ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'} truncate`} > {missionTitle} </label>
-            </div>
-            {mission.wikiUrl && ( <div className="py-2 px-3 flex-shrink-0"> <a href={mission.wikiUrl} target="_blank" rel="noopener noreferrer" title={`View "${missionTitle}" on Mass Effect Wiki`} className="p-1 rounded-md text-text-secondary hover:bg-background-hover hover:text-accent focus:outline-none focus:ring-2 focus:ring-offset-background focus:ring-accent transition-colors flex-shrink-0 inline-block" onClick={(e) => e.stopPropagation()} > <NewTabLinkIcon /> <span className="sr-only">{t('wikiLinkAlt')}</span> </a> </div> )}
-        </li>
-        {hasPrerequisites && (
-            <div id={`prereqs-${mission.id}`} className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isPrereqsExpanded ? 'max-h-96' : 'max-h-0'}`} style={{transitionProperty: 'max-height'}} >
-                <ul className="pt-1 pb-2 pl-12 pr-3 bg-background-subtle border-b border-border">
-                    <li className="text-xs text-text-secondary mb-1">{t('prerequisitesLabel')}</li>
-                    {mission.prerequisites.map(prereqId => { const isPrereqCompleted = completedMissions.hasOwnProperty(prereqId); const prereqName = t(`mission_${prereqId}`, missionNameMap[prereqId] || t('unknownMission')); return ( <li key={prereqId} className={`text-sm py-0.5 ${isPrereqCompleted ? 'text-text-disabled line-through' : 'text-text-secondary'}`}> - {prereqName} </li> ); })}
-                </ul>
-            </div>
-        )}
-    </>
-  );
-};
 
 // MissionList Component - Uses useTranslations hook
 const MissionList = ({ gameId, groupedMissions, completedMissions, onToggleMission }) => {

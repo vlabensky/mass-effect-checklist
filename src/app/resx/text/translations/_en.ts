@@ -11,8 +11,7 @@ const strings: TextStrings = {
   wikiLinkAlt: "Wiki Link",
   hidePrereqsTitle: "Hide prerequisites",
   showPrereqsTitle: "Show prerequisites",
-  footerSource:
-    "Mission data based on Mass Effect Wiki. Dependencies are simplified examples.",
+  footerSource: "Mission data based on Mass Effect Wiki. Dependencies are simplified examples.",
   footerSave: "Your progress is saved locally in your browser.",
   tabME1: "Mass Effect 1",
   tabME2: "Mass Effect 2",
