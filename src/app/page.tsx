@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useMemo, useRef, useContext, createContext } from 'react'; // Added useContext, createContext
 import { missionsData } from './resx/data';
 import { LanguageProvider, useTranslations } from './components/language';
+import { SettingsIcon } from './components/icons';
 
 // Function to generate a safe key from a display name
 const generateKeyFromName = (name) => name.replace(/[^a-zA-Z0-9]/g, '');
@@ -18,8 +19,6 @@ const FONT_SIZE_STEP = 0.1; const MIN_FONT_SIZE_MULTIPLIER = 0.7; const MAX_FONT
 
 // --- Components ---
 
-// SettingsIcon Component
-const SettingsIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"> <path fillRule="evenodd" d="M11.49 3.17a.75.75 0 0 1 1.02.67l.09 1.12a1.75 1.75 0 0 0 2.44 1.44l1.06-.53a.75.75 0 1 1 .67 1.02l-.53 1.06a1.75 1.75 0 0 0 1.44 2.44l1.12.09a.75.75 0 0 1 .67 1.02l-.09 1.12a1.75 1.75 0 0 0-1.44 2.44l.53 1.06a.75.75 0 1 1-1.02.67l-1.06-.53a1.75 1.75 0 0 0-2.44 1.44l-.09 1.12a.75.75 0 0 1-1.02.67l-1.12-.09a1.75 1.75 0 0 0-2.44-1.44l-1.06.53a.75.75 0 1 1-.67-1.02l.53-1.06a1.75 1.75 0 0 0-1.44-2.44l-1.12-.09a.75.75 0 0 1-.67-1.02l.09-1.12a1.75 1.75 0 0 0 1.44-2.44l-.53-1.06a.75.75 0 1 1 1.02-.67l1.06.53a1.75 1.75 0 0 0 2.44-1.44l.09-1.12a.75.75 0 0 1 .67-1.02l1.12.09Zm-1.98 7.72a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5Z" clipRule="evenodd" /> </svg> );
 // WikiLinkIcon Component
 const WikiLinkIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"> <path fillRule="evenodd" d="M8.25 3.75H6a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 6 18.75h10.5A2.25 2.25 0 0 0 18.75 16.5V14.25a.75.75 0 0 0-1.5 0V16.5a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h2.25a.75.75 0 0 0 0-1.5Z" clipRule="evenodd" /> <path fillRule="evenodd" d="M14.25 3.75a.75.75 0 0 0 0 1.5h1.69L9.72 11.47a.75.75 0 1 0 1.06 1.06l6.22-6.22v1.69a.75.75 0 0 0 1.5 0V3.75h-3.75Z" clipRule="evenodd" /> </svg> );
 // ChevronIcon Component
