@@ -1,200 +1,106 @@
 'use client'
 
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useMemo, useRef, useContext, createContext } from 'react'; // Added useContext, createContext
 
 // --- I18n Data ---
-const translations = {
+const translations = { /* ... same translation data as previous version ... */
   en: {
-    // General UI
-    pageTitle: "Mass Effect Checklist",
-    settingsLabel: "Settings",
-    fontSizeLabel: "Font Size",
-    themeLabel: "Theme",
-    languageLabel: "Language",
-    prerequisitesLabel: "Prerequisites:",
-    wikiLinkAlt: "Wiki Link",
-    hidePrereqsTitle: "Hide prerequisites",
-    showPrereqsTitle: "Show prerequisites",
-    footerSource: "Mission data based on Mass Effect Wiki. Dependencies are simplified examples.",
-    footerSave: "Your progress is saved locally in your browser.",
-    // Tabs
-    tabME1: "Mass Effect 1",
-    tabME2: "Mass Effect 2",
-    tabME3: "Mass Effect 3",
-    // Themes
-    themeName_theme_dark: "Dark",
-    themeName_theme_light: "Light",
-    themeName_theme_hc_dark: "High Contrast Dark",
-    themeName_theme_hc_light: "High Contrast Light",
-    // Mission Groups (Keys derived from missionsData keys, removing spaces/special chars)
-    group_me1_Prologue: "Prologue",
-    group_me1_MainStory: "Main Story",
-    group_me2_PrologueFreedom: "Prologue & Freedom",
-    group_me2_RecruitmentDossiersPart1: "Recruitment (Dossiers - Part 1)",
-    group_me2_PlotMissionsMidGame: "Plot Missions (Mid-Game)",
-    group_me2_RecruitmentDossiersPart2: "Recruitment (Dossiers - Part 2)",
-    group_me2_PlotMissionsLateGame: "Plot Missions (Late-Game)",
-    group_me3_OpeningMissions: "Opening Missions",
-    group_me3_MainStoryArc: "Main Story Arc",
-    group_me3_EndGame: "End Game",
-    // Missions (Keys are 'mission_' + original ID)
-    mission_me1_eden_prime: "Find the Beacon",
-    mission_me1_citadel_expose_saren: "Citadel: Expose Saren",
-    mission_me1_find_liara: "Find Liara T'Soni",
-    mission_me1_feros: "Feros: Geth Attack",
-    mission_me1_noveria: "Noveria: Matriarch Benezia",
-    mission_me1_virmire: "Virmire: Saren's Plan",
-    mission_me1_ilum: "Ilos: Find the Conduit",
-    mission_me1_final_battle: "Race Against Time: Final Battle",
-    mission_me2_prologue: "Prologue: Awakening",
-    mission_me2_freedom: "Freedom's Progress",
-    mission_me2_citadel_anderson: "Citadel: Captain Anderson",
-    mission_me2_recruit_archangel: "Dossier: Archangel",
-    mission_me2_recruit_professor: "Dossier: The Professor",
-    mission_me2_recruit_warlord: "Dossier: The Warlord",
-    mission_me2_recruit_convict: "Dossier: The Convict",
-    mission_me2_horizon: "Horizon",
-    mission_me2_recruit_assassin: "Dossier: The Assassin",
-    mission_me2_recruit_justicar: "Dossier: The Justicar",
-    mission_me2_recruit_tali: "Dossier: Tali",
-    mission_me2_collector_ship: "Collector Ship",
-    mission_me2_iff: "Acquire Reaper IFF",
-    mission_me2_suicide_mission: "Suicide Mission",
-    mission_me3_prologue: "Prologue: Earth",
-    mission_me3_mars: "Priority: Mars",
-    mission_me3_citadel1: "Priority: The Citadel I",
-    mission_me3_palaven: "Priority: Palaven",
-    mission_me3_surkesh: "Priority: Sur'Kesh",
-    mission_me3_tuchanka: "Priority: Tuchanka",
-    mission_me3_citadel2: "Priority: The Citadel II",
-    mission_me3_perseus_veil: "Priority: Perseus Veil",
-    mission_me3_rannoch: "Priority: Rannoch",
-    mission_me3_thessia: "Priority: Thessia",
-    mission_me3_horizon: "Priority: Horizon",
-    mission_me3_cerberus_hq: "Priority: Cerberus Headquarters",
-    mission_me3_earth: "Priority: Earth",
-    // Fallback / Error
-    unknownMission: "Unknown Mission",
-    missingTranslation: "[missing translation: {key}]",
+    pageTitle: "Mass Effect Checklist", settingsLabel: "Settings", fontSizeLabel: "Font Size", themeLabel: "Theme", languageLabel: "Language", prerequisitesLabel: "Prerequisites:", wikiLinkAlt: "Wiki Link", hidePrereqsTitle: "Hide prerequisites", showPrereqsTitle: "Show prerequisites", footerSource: "Mission data based on Mass Effect Wiki. Dependencies are simplified examples.", footerSave: "Your progress is saved locally in your browser.",
+    tabME1: "Mass Effect 1", tabME2: "Mass Effect 2", tabME3: "Mass Effect 3",
+    themeName_theme_dark: "Dark", themeName_theme_light: "Light", themeName_theme_hc_dark: "High Contrast Dark", themeName_theme_hc_light: "High Contrast Light",
+    group_me1_Prologue: "Prologue", group_me1_MainStory: "Main Story", group_me2_PrologueFreedom: "Prologue & Freedom", group_me2_RecruitmentDossiersPart1: "Recruitment (Dossiers - Part 1)", group_me2_PlotMissionsMidGame: "Plot Missions (Mid-Game)", group_me2_RecruitmentDossiersPart2: "Recruitment (Dossiers - Part 2)", group_me2_PlotMissionsLateGame: "Plot Missions (Late-Game)", group_me3_OpeningMissions: "Opening Missions", group_me3_MainStoryArc: "Main Story Arc", group_me3_EndGame: "End Game",
+    mission_me1_eden_prime: "Find the Beacon", mission_me1_citadel_expose_saren: "Citadel: Expose Saren", mission_me1_find_liara: "Find Liara T'Soni", mission_me1_feros: "Feros: Geth Attack", mission_me1_noveria: "Noveria: Matriarch Benezia", mission_me1_virmire: "Virmire: Saren's Plan", mission_me1_ilum: "Ilos: Find the Conduit", mission_me1_final_battle: "Race Against Time: Final Battle",
+    mission_me2_prologue: "Prologue: Awakening", mission_me2_freedom: "Freedom's Progress", mission_me2_citadel_anderson: "Citadel: Captain Anderson", mission_me2_recruit_archangel: "Dossier: Archangel", mission_me2_recruit_professor: "Dossier: The Professor", mission_me2_recruit_warlord: "Dossier: The Warlord", mission_me2_recruit_convict: "Dossier: The Convict", mission_me2_horizon: "Horizon", mission_me2_recruit_assassin: "Dossier: The Assassin", mission_me2_recruit_justicar: "Dossier: The Justicar", mission_me2_recruit_tali: "Dossier: Tali", mission_me2_collector_ship: "Collector Ship", mission_me2_iff: "Acquire Reaper IFF", mission_me2_suicide_mission: "Suicide Mission",
+    mission_me3_prologue: "Prologue: Earth", mission_me3_mars: "Priority: Mars", mission_me3_citadel1: "Priority: The Citadel I", mission_me3_palaven: "Priority: Palaven", mission_me3_surkesh: "Priority: Sur'Kesh", mission_me3_tuchanka: "Priority: Tuchanka", mission_me3_citadel2: "Priority: The Citadel II", mission_me3_perseus_veil: "Priority: Perseus Veil", mission_me3_rannoch: "Priority: Rannoch", mission_me3_thessia: "Priority: Thessia", mission_me3_horizon: "Priority: Horizon", mission_me3_cerberus_hq: "Priority: Cerberus Headquarters", mission_me3_earth: "Priority: Earth",
+    unknownMission: "Unknown Mission", missingTranslation: "[missing translation: {key}]",
   },
   es: {
-    // General UI
-    pageTitle: "Lista de Misiones Mass Effect",
-    settingsLabel: "Ajustes",
-    fontSizeLabel: "Tamaño de Fuente",
-    themeLabel: "Tema",
-    languageLabel: "Idioma",
-    prerequisitesLabel: "Prerrequisitos:",
-    wikiLinkAlt: "Enlace Wiki",
-    hidePrereqsTitle: "Ocultar prerrequisitos",
-    showPrereqsTitle: "Mostrar prerrequisitos",
-    footerSource: "Datos de misiones basados en Mass Effect Wiki. Las dependencias son ejemplos simplificados.",
-    footerSave: "Tu progreso se guarda localmente en tu navegador.",
-    // Tabs
-    tabME1: "Mass Effect 1",
-    tabME2: "Mass Effect 2",
-    tabME3: "Mass Effect 3",
-    // Themes
-    themeName_theme_dark: "Oscuro",
-    themeName_theme_light: "Claro",
-    themeName_theme_hc_dark: "Alto Contraste Oscuro",
-    themeName_theme_hc_light: "Alto Contraste Claro",
-     // Mission Groups
-    group_me1_Prologue: "Prólogo",
-    group_me1_MainStory: "Historia Principal",
-    group_me2_PrologueFreedom: "Prólogo y Libertad",
-    group_me2_RecruitmentDossiersPart1: "Reclutamiento (Dosieres - Parte 1)",
-    group_me2_PlotMissionsMidGame: "Misiones de Trama (Mitad de Juego)",
-    group_me2_RecruitmentDossiersPart2: "Reclutamiento (Dosieres - Parte 2)",
-    group_me2_PlotMissionsLateGame: "Misiones de Trama (Final de Juego)",
-    group_me3_OpeningMissions: "Misiones Iniciales",
-    group_me3_MainStoryArc: "Arco Principal",
-    group_me3_EndGame: "Final del Juego",
-    // Missions
-    mission_me1_eden_prime: "Encuentra la Baliza",
-    mission_me1_citadel_expose_saren: "Ciudadela: Exponer a Saren",
-    mission_me1_find_liara: "Encontrar a Liara T'Soni",
-    mission_me1_feros: "Feros: Ataque Geth",
-    mission_me1_noveria: "Noveria: Matriarca Benezia",
-    mission_me1_virmire: "Virmire: El Plan de Saren",
-    mission_me1_ilum: "Ilos: Encontrar el Conducto",
-    mission_me1_final_battle: "Carrera Contra el Tiempo: Batalla Final",
-    mission_me2_prologue: "Prólogo: Despertar",
-    mission_me2_freedom: "El Progreso de la Libertad",
-    mission_me2_citadel_anderson: "Ciudadela: Capitán Anderson",
-    mission_me2_recruit_archangel: "Dosier: Arcángel",
-    mission_me2_recruit_professor: "Dosier: El Profesor",
-    mission_me2_recruit_warlord: "Dosier: El Señor de la Guerra",
-    mission_me2_recruit_convict: "Dosier: El Convicto",
-    mission_me2_horizon: "Horizonte",
-    mission_me2_recruit_assassin: "Dosier: La Asesina",
-    mission_me2_recruit_justicar: "Dosier: La Justiciera",
-    mission_me2_recruit_tali: "Dosier: Tali",
-    mission_me2_collector_ship: "Nave Recolectora",
-    mission_me2_iff: "Adquirir NRR Segador",
-    mission_me2_suicide_mission: "Misión Suicida",
-    mission_me3_prologue: "Prólogo: Tierra",
-    mission_me3_mars: "Prioridad: Marte",
-    mission_me3_citadel1: "Prioridad: La Ciudadela I",
-    mission_me3_palaven: "Prioridad: Palaven",
-    mission_me3_surkesh: "Prioridad: Sur'Kesh",
-    mission_me3_tuchanka: "Prioridad: Tuchanka",
-    mission_me3_citadel2: "Prioridad: La Ciudadela II",
-    mission_me3_perseus_veil: "Prioridad: Velo de Perseo",
-    mission_me3_rannoch: "Prioridad: Rannoch",
-    mission_me3_thessia: "Prioridad: Thessia",
-    mission_me3_horizon: "Prioridad: Horizonte",
-    mission_me3_cerberus_hq: "Prioridad: Cuartel General de Cerberus",
-    mission_me3_earth: "Prioridad: Tierra",
-    // Fallback / Error
-    unknownMission: "Misión Desconocida",
-    missingTranslation: "[falta traducción: {key}]",
+    pageTitle: "Lista de Misiones Mass Effect", settingsLabel: "Ajustes", fontSizeLabel: "Tamaño de Fuente", themeLabel: "Tema", languageLabel: "Idioma", prerequisitesLabel: "Prerrequisitos:", wikiLinkAlt: "Enlace Wiki", hidePrereqsTitle: "Ocultar prerrequisitos", showPrereqsTitle: "Mostrar prerrequisitos", footerSource: "Datos de misiones basados en Mass Effect Wiki. Las dependencias son ejemplos simplificados.", footerSave: "Tu progreso se guarda localmente en tu navegador.",
+    tabME1: "Mass Effect 1", tabME2: "Mass Effect 2", tabME3: "Mass Effect 3",
+    themeName_theme_dark: "Oscuro", themeName_theme_light: "Claro", themeName_theme_hc_dark: "Alto Contraste Oscuro", themeName_theme_hc_light: "Alto Contraste Claro",
+    group_me1_Prologue: "Prólogo", group_me1_MainStory: "Historia Principal", group_me2_PrologueFreedom: "Prólogo y Libertad", group_me2_RecruitmentDossiersPart1: "Reclutamiento (Dosieres - Parte 1)", group_me2_PlotMissionsMidGame: "Misiones de Trama (Mitad de Juego)", group_me2_RecruitmentDossiersPart2: "Reclutamiento (Dosieres - Parte 2)", group_me2_PlotMissionsLateGame: "Misiones de Trama (Final de Juego)", group_me3_OpeningMissions: "Misiones Iniciales", group_me3_MainStoryArc: "Arco Principal", group_me3_EndGame: "Final del Juego",
+    mission_me1_eden_prime: "Encuentra la Baliza", mission_me1_citadel_expose_saren: "Ciudadela: Exponer a Saren", mission_me1_find_liara: "Encontrar a Liara T'Soni", mission_me1_feros: "Feros: Ataque Geth", mission_me1_noveria: "Noveria: Matriarca Benezia", mission_me1_virmire: "Virmire: El Plan de Saren", mission_me1_ilum: "Ilos: Encontrar el Conducto", mission_me1_final_battle: "Carrera Contra el Tiempo: Batalla Final",
+    mission_me2_prologue: "Prólogo: Despertar", mission_me2_freedom: "El Progreso de la Libertad", mission_me2_citadel_anderson: "Ciudadela: Capitán Anderson", mission_me2_recruit_archangel: "Dosier: Arcángel", mission_me2_recruit_professor: "Dosier: El Profesor", mission_me2_recruit_warlord: "Dosier: El Señor de la Guerra", mission_me2_recruit_convict: "Dosier: El Convicto", mission_me2_horizon: "Horizonte", mission_me2_recruit_assassin: "Dosier: La Asesina", mission_me2_recruit_justicar: "Dosier: La Justiciera", mission_me2_recruit_tali: "Dosier: Tali", mission_me2_collector_ship: "Nave Recolectora", mission_me2_iff: "Adquirir NRR Segador", mission_me2_suicide_mission: "Misión Suicida",
+    mission_me3_prologue: "Prólogo: Tierra", mission_me3_mars: "Prioridad: Marte", mission_me3_citadel1: "Prioridad: La Ciudadela I", mission_me3_palaven: "Prioridad: Palaven", mission_me3_surkesh: "Prioridad: Sur'Kesh", mission_me3_tuchanka: "Prioridad: Tuchanka", mission_me3_citadel2: "Prioridad: La Ciudadela II", mission_me3_perseus_veil: "Prioridad: Velo de Perseo", mission_me3_rannoch: "Prioridad: Rannoch", mission_me3_thessia: "Prioridad: Thessia", mission_me3_horizon: "Prioridad: Horizonte", mission_me3_cerberus_hq: "Prioridad: Cuartel General de Cerberus", mission_me3_earth: "Prioridad: Tierra",
+    unknownMission: "Misión Desconocida", missingTranslation: "[falta traducción: {key}]",
   }
 };
 
-// Function to generate a safe key from a display name (e.g., group name)
-const generateKeyFromName = (name) => {
-    return name.replace(/[^a-zA-Z0-9]/g, ''); // Remove non-alphanumeric chars
-};
+// Function to generate a safe key from a display name
+const generateKeyFromName = (name) => name.replace(/[^a-zA-Z0-9]/g, '');
 
 // --- Data Structure (Missions) ---
-// (Data remains the same - uses original, readable IDs for structure/logic)
 const missionsData = { /* ... same as previous version ... */
-  me1: {
-    "Prologue": [ { id: 'me1_eden_prime', name: 'Find the Beacon', prerequisites: [], wikiUrl: 'https://masseffect.fandom.com/wiki/Find_the_Beacon' }, ],
-    "Main Story": [ { id: 'me1_citadel_expose_saren', name: 'Citadel: Expose Saren', prerequisites: ['me1_eden_prime'], wikiUrl: 'https://masseffect.fandom.com/wiki/Citadel:_Expose_Saren' }, { id: 'me1_find_liara', name: 'Find Liara T\'Soni', prerequisites: ['me1_citadel_expose_saren'], wikiUrl: 'https://masseffect.fandom.com/wiki/Find_Liara_T%27Soni' }, { id: 'me1_feros', name: 'Feros: Geth Attack', prerequisites: ['me1_citadel_expose_saren'], wikiUrl: 'https://masseffect.fandom.com/wiki/Feros:_Geth_Attack' }, { id: 'me1_noveria', name: 'Noveria: Matriarch Benezia', prerequisites: ['me1_citadel_expose_saren'], wikiUrl: 'https://masseffect.fandom.com/wiki/Noveria#Walkthrough' }, { id: 'me1_virmire', name: 'Virmire: Saren\'s Plan', prerequisites: ['me1_find_liara', 'me1_feros', 'me1_noveria'], wikiUrl: 'https://masseffect.fandom.com/wiki/Virmire:_Saren%27s_Plan' }, { id: 'me1_ilum', name: 'Ilos: Find the Conduit', prerequisites: ['me1_virmire'], wikiUrl: 'https://masseffect.fandom.com/wiki/Ilos:_Find_the_Conduit' }, { id: 'me1_final_battle', name: 'Race Against Time: Final Battle', prerequisites: ['me1_ilum'], wikiUrl: 'https://masseffect.fandom.com/wiki/Race_Against_Time:_Final_Battle' }, ]
-  },
-  me2: {
-    "Prologue & Freedom": [ { id: 'me2_prologue', name: 'Prologue: Awakening', prerequisites: [], wikiUrl: 'https://masseffect.fandom.com/wiki/Prologue:_Awakening' }, { id: 'me2_freedom', name: 'Freedom\'s Progress', prerequisites: ['me2_prologue'], wikiUrl: 'https://masseffect.fandom.com/wiki/Freedom%27s_Progress' }, { id: 'me2_citadel_anderson', name: 'Citadel: Captain Anderson', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Citadel:_Captain_Anderson' }, ],
-    "Recruitment (Dossiers - Part 1)": [ { id: 'me2_recruit_archangel', name: 'Dossier: Archangel', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_Archangel' }, { id: 'me2_recruit_professor', name: 'Dossier: The Professor', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Professor' }, { id: 'me2_recruit_warlord', name: 'Dossier: The Warlord', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Warlord' }, { id: 'me2_recruit_convict', name: 'Dossier: The Convict', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Convict' }, ],
-    "Plot Missions (Mid-Game)": [ { id: 'me2_horizon', name: 'Horizon', prerequisites: ['me2_recruit_archangel', 'me2_recruit_professor', 'me2_recruit_warlord', 'me2_recruit_convict'], wikiUrl: 'https://masseffect.fandom.com/wiki/Horizon_(mission)' }, ],
-    "Recruitment (Dossiers - Part 2)": [ { id: 'me2_recruit_assassin', name: 'Dossier: The Assassin', prerequisites: ['me2_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Assassin' }, { id: 'me2_recruit_justicar', name: 'Dossier: The Justicar', prerequisites: ['me2_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Justicar' }, { id: 'me2_recruit_tali', name: 'Dossier: Tali', prerequisites: ['me2_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_Tali' }, ],
-     "Plot Missions (Late-Game)": [ { id: 'me2_collector_ship', name: 'Collector Ship', prerequisites: ['me2_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Collector_Ship_(mission)' }, { id: 'me2_iff', name: 'Acquire Reaper IFF', prerequisites: ['me2_collector_ship'], wikiUrl: 'https://masseffect.fandom.com/wiki/Reaper_IFF_(mission)' }, { id: 'me2_suicide_mission', name: 'Suicide Mission', prerequisites: ['me2_iff'], wikiUrl: 'https://masseffect.fandom.com/wiki/Suicide_Mission' }, ]
-  },
-  me3: {
-    "Opening Missions": [ { id: 'me3_prologue', name: 'Prologue: Earth', prerequisites: [], wikiUrl: 'https://masseffect.fandom.com/wiki/Prologue:_Earth' }, { id: 'me3_mars', name: 'Priority: Mars', prerequisites: ['me3_prologue'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Mars' }, { id: 'me3_citadel1', name: 'Priority: The Citadel I', prerequisites: ['me3_mars'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_The_Citadel_I' }, ],
-    "Main Story Arc": [ { id: 'me3_palaven', name: 'Priority: Palaven', prerequisites: ['me3_citadel1'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Palaven' }, { id: 'me3_surkesh', name: 'Priority: Sur\'Kesh', prerequisites: ['me3_palaven'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Sur%27Kesh' }, { id: 'me3_tuchanka', name: 'Priority: Tuchanka', prerequisites: ['me3_surkesh'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Tuchanka' }, { id: 'me3_citadel2', name: 'Priority: The Citadel II', prerequisites: ['me3_tuchanka'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_The_Citadel_II' }, { id: 'me3_perseus_veil', name: 'Priority: Perseus Veil', prerequisites: ['me3_citadel2'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Geth_Dreadnought' }, { id: 'me3_rannoch', name: 'Priority: Rannoch', prerequisites: ['me3_perseus_veil'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Rannoch' }, { id: 'me3_thessia', name: 'Priority: Thessia', prerequisites: ['me3_rannoch'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Thessia' }, { id: 'me3_horizon', name: 'Priority: Horizon', prerequisites: ['me3_thessia'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Horizon' }, ],
-    "End Game": [ { id: 'me3_cerberus_hq', name: 'Priority: Cerberus Headquarters', prerequisites: ['me3_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Cerberus_Headquarters' }, { id: 'me3_earth', name: 'Priority: Earth', prerequisites: ['me3_cerberus_hq'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Earth_(mission)' }, ]
-  },
+  me1: { "Prologue": [ { id: 'me1_eden_prime', name: 'Find the Beacon', prerequisites: [], wikiUrl: 'https://masseffect.fandom.com/wiki/Find_the_Beacon' }, ], "Main Story": [ { id: 'me1_citadel_expose_saren', name: 'Citadel: Expose Saren', prerequisites: ['me1_eden_prime'], wikiUrl: 'https://masseffect.fandom.com/wiki/Citadel:_Expose_Saren' }, { id: 'me1_find_liara', name: 'Find Liara T\'Soni', prerequisites: ['me1_citadel_expose_saren'], wikiUrl: 'https://masseffect.fandom.com/wiki/Find_Liara_T%27Soni' }, { id: 'me1_feros', name: 'Feros: Geth Attack', prerequisites: ['me1_citadel_expose_saren'], wikiUrl: 'https://masseffect.fandom.com/wiki/Feros:_Geth_Attack' }, { id: 'me1_noveria', name: 'Noveria: Matriarch Benezia', prerequisites: ['me1_citadel_expose_saren'], wikiUrl: 'https://masseffect.fandom.com/wiki/Noveria#Walkthrough' }, { id: 'me1_virmire', name: 'Virmire: Saren\'s Plan', prerequisites: ['me1_find_liara', 'me1_feros', 'me1_noveria'], wikiUrl: 'https://masseffect.fandom.com/wiki/Virmire:_Saren%27s_Plan' }, { id: 'me1_ilum', name: 'Ilos: Find the Conduit', prerequisites: ['me1_virmire'], wikiUrl: 'https://masseffect.fandom.com/wiki/Ilos:_Find_the_Conduit' }, { id: 'me1_final_battle', name: 'Race Against Time: Final Battle', prerequisites: ['me1_ilum'], wikiUrl: 'https://masseffect.fandom.com/wiki/Race_Against_Time:_Final_Battle' }, ] },
+  me2: { "Prologue & Freedom": [ { id: 'me2_prologue', name: 'Prologue: Awakening', prerequisites: [], wikiUrl: 'https://masseffect.fandom.com/wiki/Prologue:_Awakening' }, { id: 'me2_freedom', name: 'Freedom\'s Progress', prerequisites: ['me2_prologue'], wikiUrl: 'https://masseffect.fandom.com/wiki/Freedom%27s_Progress' }, { id: 'me2_citadel_anderson', name: 'Citadel: Captain Anderson', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Citadel:_Captain_Anderson' }, ], "Recruitment (Dossiers - Part 1)": [ { id: 'me2_recruit_archangel', name: 'Dossier: Archangel', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_Archangel' }, { id: 'me2_recruit_professor', name: 'Dossier: The Professor', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Professor' }, { id: 'me2_recruit_warlord', name: 'Dossier: The Warlord', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Warlord' }, { id: 'me2_recruit_convict', name: 'Dossier: The Convict', prerequisites: ['me2_freedom'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Convict' }, ], "Plot Missions (Mid-Game)": [ { id: 'me2_horizon', name: 'Horizon', prerequisites: ['me2_recruit_archangel', 'me2_recruit_professor', 'me2_recruit_warlord', 'me2_recruit_convict'], wikiUrl: 'https://masseffect.fandom.com/wiki/Horizon_(mission)' }, ], "Recruitment (Dossiers - Part 2)": [ { id: 'me2_recruit_assassin', name: 'Dossier: The Assassin', prerequisites: ['me2_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Assassin' }, { id: 'me2_recruit_justicar', name: 'Dossier: The Justicar', prerequisites: ['me2_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Justicar' }, { id: 'me2_recruit_tali', name: 'Dossier: Tali', prerequisites: ['me2_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_Tali' }, ], "Plot Missions (Late-Game)": [ { id: 'me2_collector_ship', name: 'Collector Ship', prerequisites: ['me2_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Collector_Ship_(mission)' }, { id: 'me2_iff', name: 'Acquire Reaper IFF', prerequisites: ['me2_collector_ship'], wikiUrl: 'https://masseffect.fandom.com/wiki/Reaper_IFF_(mission)' }, { id: 'me2_suicide_mission', name: 'Suicide Mission', prerequisites: ['me2_iff'], wikiUrl: 'https://masseffect.fandom.com/wiki/Suicide_Mission' }, ] },
+  me3: { "Opening Missions": [ { id: 'me3_prologue', name: 'Prologue: Earth', prerequisites: [], wikiUrl: 'https://masseffect.fandom.com/wiki/Prologue:_Earth' }, { id: 'me3_mars', name: 'Priority: Mars', prerequisites: ['me3_prologue'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Mars' }, { id: 'me3_citadel1', name: 'Priority: The Citadel I', prerequisites: ['me3_mars'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_The_Citadel_I' }, ], "Main Story Arc": [ { id: 'me3_palaven', name: 'Priority: Palaven', prerequisites: ['me3_citadel1'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Palaven' }, { id: 'me3_surkesh', name: 'Priority: Sur\'Kesh', prerequisites: ['me3_palaven'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Sur%27Kesh' }, { id: 'me3_tuchanka', name: 'Priority: Tuchanka', prerequisites: ['me3_surkesh'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Tuchanka' }, { id: 'me3_citadel2', name: 'Priority: The Citadel II', prerequisites: ['me3_tuchanka'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_The_Citadel_II' }, { id: 'me3_perseus_veil', name: 'Priority: Perseus Veil', prerequisites: ['me3_citadel2'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Geth_Dreadnought' }, { id: 'me3_rannoch', name: 'Priority: Rannoch', prerequisites: ['me3_perseus_veil'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Rannoch' }, { id: 'me3_thessia', name: 'Priority: Thessia', prerequisites: ['me3_rannoch'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Thessia' }, { id: 'me3_horizon', name: 'Priority: Horizon', prerequisites: ['me3_thessia'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Horizon' }, ], "End Game": [ { id: 'me3_cerberus_hq', name: 'Priority: Cerberus Headquarters', prerequisites: ['me3_horizon'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Cerberus_Headquarters' }, { id: 'me3_earth', name: 'Priority: Earth', prerequisites: ['me3_cerberus_hq'], wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Earth_(mission)' }, ] },
 };
 
 // --- Constants ---
-const FONT_SIZE_STEP = 0.1;
-const MIN_FONT_SIZE_MULTIPLIER = 0.7;
-const MAX_FONT_SIZE_MULTIPLIER = 1.5;
-const DEFAULT_FONT_SIZE_MULTIPLIER = 1.0;
-const BASE_HTML_FONT_SIZE_PX = 16;
-const DEFAULT_THEME = 'theme-dark';
-const THEMES = { 'theme-dark': 'Dark', 'theme-light': 'Light', 'theme-hc-dark': 'High Contrast Dark', 'theme-hc-light': 'High Contrast Light', };
-const SHORT_ID_DELIMITER = ';';
-const LOCAL_STORAGE_COMPLETION_KEY = 'massEffectChecklistStateShort';
-const LOCAL_STORAGE_FONT_KEY = 'massEffectFontSizeMultiplier';
-const LOCAL_STORAGE_THEME_KEY = 'massEffectActiveTheme';
-const LOCAL_STORAGE_LANG_KEY = 'massEffectLanguage'; // Key for language
-const DEFAULT_LANGUAGE = 'en';
-const SUPPORTED_LANGUAGES = { // Language codes and display names
-    en: 'English',
-    es: 'Español'
+const FONT_SIZE_STEP = 0.1; const MIN_FONT_SIZE_MULTIPLIER = 0.7; const MAX_FONT_SIZE_MULTIPLIER = 1.5; const DEFAULT_FONT_SIZE_MULTIPLIER = 1.0; const BASE_HTML_FONT_SIZE_PX = 16; const DEFAULT_THEME = 'theme-dark'; const THEMES = { 'theme-dark': 'Dark', 'theme-light': 'Light', 'theme-hc-dark': 'High Contrast Dark', 'theme-hc-light': 'High Contrast Light', }; const SHORT_ID_DELIMITER = ';'; const LOCAL_STORAGE_COMPLETION_KEY = 'massEffectChecklistStateShort'; const LOCAL_STORAGE_FONT_KEY = 'massEffectFontSizeMultiplier'; const LOCAL_STORAGE_THEME_KEY = 'massEffectActiveTheme'; const LOCAL_STORAGE_LANG_KEY = 'massEffectLanguage'; const DEFAULT_LANGUAGE = 'en'; const SUPPORTED_LANGUAGES = { en: 'English', es: 'Español' };
+
+// --- Language Context & Provider ---
+const LanguageContext = createContext();
+
+const LanguageProvider = ({ children }) => {
+  const [currentLanguage, setCurrentLanguage] = useState(DEFAULT_LANGUAGE);
+
+  // Load language from local storage on mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedLang = localStorage.getItem(LOCAL_STORAGE_LANG_KEY);
+      if (savedLang && SUPPORTED_LANGUAGES[savedLang]) {
+        setCurrentLanguage(savedLang);
+      }
+    }
+  }, []);
+
+  // Save language to local storage when it changes
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.setItem(LOCAL_STORAGE_LANG_KEY, currentLanguage);
+      } catch (e) {
+        console.error("Failed to save language state:", e);
+      }
+    }
+  }, [currentLanguage]);
+
+  // Translation function 't'
+  const t = useMemo(() => (key, fallback = '') => {
+    const langTranslations = translations[currentLanguage] || translations[DEFAULT_LANGUAGE];
+    const defaultLangTranslations = translations[DEFAULT_LANGUAGE];
+    let text = langTranslations[key] || defaultLangTranslations[key];
+
+    if (text === undefined) {
+      console.warn(`Missing translation for key: ${key} in language: ${currentLanguage}`);
+      text = fallback || defaultLangTranslations.missingTranslation?.replace('{key}', key) || key;
+    }
+    return text;
+  }, [currentLanguage]); // Recreate 't' function only when language changes
+
+  const value = {
+    currentLanguage,
+    setCurrentLanguage,
+    t,
+    supportedLanguages: SUPPORTED_LANGUAGES
+  };
+
+  return (
+    <LanguageContext.Provider value={value}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+// --- Custom Hook for Translations ---
+const useTranslations = () => {
+  const context = useContext(LanguageContext);
+  if (context === undefined) {
+    throw new Error('useTranslations must be used within a LanguageProvider');
+  }
+  // Return only the 't' function as requested, but context has more if needed
+  return { t: context.t, currentLanguage: context.currentLanguage, setLanguage: context.setCurrentLanguage, supportedLanguages: context.supportedLanguages };
 };
 
 
@@ -207,14 +113,15 @@ const WikiLinkIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 
 // ChevronIcon Component
 const ChevronIcon = ({ expanded }) => ( <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={`w-4 h-4 transition-transform duration-200 ease-in-out ${expanded ? 'rotate-180' : ''}`}> <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" /> </svg> );
 
-// MissionItem Component - Updated to use translation function 't'
-const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNameMap, completedMissions, t }) => {
+// MissionItem Component - Uses useTranslations hook
+const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNameMap, completedMissions }) => {
+  const { t } = useTranslations(); // Get translation function from hook
   const [isPrereqsExpanded, setIsPrereqsExpanded] = useState(false);
   const handleChange = () => { if (prerequisitesMet || completed) { onToggle(mission.id); } };
   const togglePrereqs = (e) => { e.stopPropagation(); setIsPrereqsExpanded(!isPrereqsExpanded); };
   const canInteract = prerequisitesMet || completed;
   const hasPrerequisites = mission.prerequisites && mission.prerequisites.length > 0;
-  const missionTitle = t(`mission_${mission.id}`, mission.name); // Translate mission name, fallback to original if needed
+  const missionTitle = t(`mission_${mission.id}`, mission.name);
 
   return (
     <>
@@ -223,19 +130,15 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNa
                 <input type="checkbox" id={mission.id} checked={completed} onChange={handleChange} disabled={!canInteract} className={`mr-3 h-5 w-5 rounded border-border-input text-accent focus:ring-accent bg-input-bg disabled:opacity-70 flex-shrink-0 ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'}`} />
                 {hasPrerequisites && ( <button onClick={togglePrereqs} className="mr-2 p-0.5 rounded text-text-secondary hover:bg-background-hover hover:text-accent focus:outline-none focus:ring-1 focus:ring-accent flex-shrink-0" aria-expanded={isPrereqsExpanded} aria-controls={`prereqs-${mission.id}`} title={isPrereqsExpanded ? t('hidePrereqsTitle') : t('showPrereqsTitle')} > <ChevronIcon expanded={isPrereqsExpanded} /> <span className="sr-only">{isPrereqsExpanded ? t('hidePrereqsTitle') : t('showPrereqsTitle')}</span> </button> )}
                 {!hasPrerequisites && <div className="w-4 mr-2 flex-shrink-0" style={{marginLeft: '0.125rem', marginRight: '0.625rem'}}></div>}
-                <label htmlFor={mission.id} className={`flex-grow ${completed ? 'line-through text-text-disabled' : 'text-text-primary'} ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'} truncate`} > {missionTitle} </label> {/* Use translated name */}
+                <label htmlFor={mission.id} className={`flex-grow ${completed ? 'line-through text-text-disabled' : 'text-text-primary'} ${canInteract ? 'cursor-pointer' : 'cursor-not-allowed'} truncate`} > {missionTitle} </label>
             </div>
             {mission.wikiUrl && ( <div className="py-2 px-3 flex-shrink-0"> <a href={mission.wikiUrl} target="_blank" rel="noopener noreferrer" title={`View "${missionTitle}" on Mass Effect Wiki`} className="p-1 rounded-md text-text-secondary hover:bg-background-hover hover:text-accent focus:outline-none focus:ring-2 focus:ring-offset-background focus:ring-accent transition-colors flex-shrink-0 inline-block" onClick={(e) => e.stopPropagation()} > <WikiLinkIcon /> <span className="sr-only">{t('wikiLinkAlt')}</span> </a> </div> )}
         </li>
         {hasPrerequisites && (
             <div id={`prereqs-${mission.id}`} className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isPrereqsExpanded ? 'max-h-96' : 'max-h-0'}`} style={{transitionProperty: 'max-height'}} >
                 <ul className="pt-1 pb-2 pl-12 pr-3 bg-background-subtle border-b border-border">
-                    <li className="text-xs text-text-secondary mb-1">{t('prerequisitesLabel')}</li> {/* Translate label */}
-                    {mission.prerequisites.map(prereqId => {
-                        const isPrereqCompleted = completedMissions.hasOwnProperty(prereqId);
-                        const prereqName = t(`mission_${prereqId}`, missionNameMap[prereqId] || t('unknownMission')); // Translate prerequisite name
-                        return ( <li key={prereqId} className={`text-sm py-0.5 ${isPrereqCompleted ? 'text-text-disabled line-through' : 'text-text-secondary'}`}> - {prereqName} </li> );
-                    })}
+                    <li className="text-xs text-text-secondary mb-1">{t('prerequisitesLabel')}</li>
+                    {mission.prerequisites.map(prereqId => { const isPrereqCompleted = completedMissions.hasOwnProperty(prereqId); const prereqName = t(`mission_${prereqId}`, missionNameMap[prereqId] || t('unknownMission')); return ( <li key={prereqId} className={`text-sm py-0.5 ${isPrereqCompleted ? 'text-text-disabled line-through' : 'text-text-secondary'}`}> - {prereqName} </li> ); })}
                 </ul>
             </div>
         )}
@@ -243,8 +146,9 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, missionNa
   );
 };
 
-// MissionList Component - Updated to use translation function 't'
-const MissionList = ({ gameId, groupedMissions, completedMissions, onToggleMission, t }) => {
+// MissionList Component - Uses useTranslations hook
+const MissionList = ({ gameId, groupedMissions, completedMissions, onToggleMission }) => {
+  const { t } = useTranslations(); // Get translation function from hook
   const missionNameMap = useMemo(() => { const map = {}; Object.values(groupedMissions).forEach(arr => arr.forEach(m => map[m.id] = m.name)); return map; }, [groupedMissions]);
   const checkPrerequisites = (mission) => { if (!mission.prerequisites || mission.prerequisites.length === 0) return true; return mission.prerequisites.every(id => completedMissions.hasOwnProperty(id)); };
   const groupNames = Object.keys(groupedMissions);
@@ -252,14 +156,11 @@ const MissionList = ({ gameId, groupedMissions, completedMissions, onToggleMissi
   return (
     <div className="bg-background-list rounded-lg shadow-md">
       {groupNames.map((groupName, index) => {
-          // Generate a translation key for the group name
           const groupKey = `group_${gameId}_${generateKeyFromName(groupName)}`;
           return (
             <section key={groupName} aria-labelledby={`group-header-${gameId}-${index}`}>
-              <h3 id={`group-header-${gameId}-${index}`} className="text-lg font-semibold text-accent bg-background-header px-3 py-2 sticky top-0 z-10 border-b border-t border-border first:border-t-0" >
-                  {t(groupKey, groupName)} {/* Translate group name, fallback to original */}
-              </h3>
-              <ul className="list-none p-0 m-0"> {groupedMissions[groupName].map((mission) => ( <MissionItem key={mission.id} mission={mission} completed={!!completedMissions[mission.id]} onToggle={onToggleMission} prerequisitesMet={checkPrerequisites(mission)} missionNameMap={missionNameMap} completedMissions={completedMissions} t={t} /* Pass t down */ /> ))} </ul>
+              <h3 id={`group-header-${gameId}-${index}`} className="text-lg font-semibold text-accent bg-background-header px-3 py-2 sticky top-0 z-10 border-b border-t border-border first:border-t-0" > {t(groupKey, groupName)} </h3>
+              <ul className="list-none p-0 m-0"> {groupedMissions[groupName].map((mission) => ( <MissionItem key={mission.id} mission={mission} completed={!!completedMissions[mission.id]} onToggle={onToggleMission} prerequisitesMet={checkPrerequisites(mission)} missionNameMap={missionNameMap} completedMissions={completedMissions} /* Removed t prop */ /> ))} </ul>
             </section>
           );
       })}
@@ -267,57 +168,84 @@ const MissionList = ({ gameId, groupedMissions, completedMissions, onToggleMissi
   );
 };
 
-// Main App Component - Added Language State and Translation
-export default function App() {
+// Settings Menu Component - Moved from App for clarity, uses useTranslations
+const SettingsMenu = ({ isOpen, menuRef, buttonRef, closeMenu }) => {
+    const { t, currentLanguage, setLanguage, supportedLanguages } = useTranslations();
+    const { fontSizeMultiplier, increaseFontSize, decreaseFontSize, activeTheme, setActiveTheme } = useContext(SettingsContext); // Get settings state via context
+
+    if (!isOpen) return null;
+
+    return (
+        <div
+            ref={menuRef}
+            id="settings-menu"
+            role="menu"
+            className="absolute top-full right-0 mt-2 w-64 p-4 rounded-md shadow-lg bg-background-list border border-border z-20"
+        >
+            {/* Font Size Controls */}
+            <div className="mb-4">
+                <label className="block text-sm font-medium text-text-secondary mb-2">{t('fontSizeLabel')}</label>
+                <div className="flex items-center justify-center">
+                    <FontSizeButton onClick={decreaseFontSize} ariaLabel="Decrease font size" disabled={fontSizeMultiplier <= MIN_FONT_SIZE_MULTIPLIER}>A-</FontSizeButton>
+                    <span className="mx-2 text-text-primary tabular-nums">{(fontSizeMultiplier * 100).toFixed(0)}%</span>
+                    <FontSizeButton onClick={increaseFontSize} ariaLabel="Increase font size" disabled={fontSizeMultiplier >= MAX_FONT_SIZE_MULTIPLIER}>A+</FontSizeButton>
+                </div>
+            </div>
+            {/* Theme Selector */}
+            <div className="mb-4">
+                <label htmlFor="theme-select" className="block text-sm font-medium text-text-secondary mb-2">{t('themeLabel')}</label>
+                <select id="theme-select" value={activeTheme} onChange={(e) => setActiveTheme(e.target.value)} className="w-full px-2 py-1 rounded-md border border-border-input bg-input-bg text-text-primary focus:outline-none focus:ring-2 focus:ring-accent">
+                    {Object.entries(THEMES).map(([themeKey, themeDisplayName]) => (
+                        <option key={themeKey} value={themeKey}>{t(`themeName_${themeKey.replace(/-/g, '_')}`, themeDisplayName)}</option>
+                    ))}
+                </select>
+            </div>
+            {/* Language Selector */}
+            <div>
+                <label htmlFor="language-select" className="block text-sm font-medium text-text-secondary mb-2">{t('languageLabel')}</label>
+                <select id="language-select" value={currentLanguage} onChange={(e) => setLanguage(e.target.value)} className="w-full px-2 py-1 rounded-md border border-border-input bg-input-bg text-text-primary focus:outline-none focus:ring-2 focus:ring-accent">
+                    {Object.entries(supportedLanguages).map(([langCode, langName]) => (
+                        <option key={langCode} value={langCode}>{langName}</option>
+                    ))}
+                </select>
+            </div>
+        </div>
+    );
+};
+
+// Settings Context for Font Size and Theme (to avoid drilling them into SettingsMenu)
+const SettingsContext = createContext();
+
+// Main App Component - Refactored to use LanguageProvider and SettingsContext
+function AppContent() {
+  // Get translation function via hook
+  const { t } = useTranslations();
   const [activeTab, setActiveTab] = useState('me1');
   const [completedMissions, setCompletedMissions] = useState({});
-  const [fontSizeMultiplier, setFontSizeMultiplier] = useState(DEFAULT_FONT_SIZE_MULTIPLIER);
-  const [activeTheme, setActiveTheme] = useState(DEFAULT_THEME);
   const [isSettingsMenuOpen, setIsSettingsMenuOpen] = useState(false);
-  // State for current language
-  const [currentLanguage, setCurrentLanguage] = useState(DEFAULT_LANGUAGE);
   const settingsMenuRef = useRef(null);
   const settingsButtonRef = useRef(null);
 
-  // --- Translation Function ---
-  const t = (key, fallback = '') => {
-      const langTranslations = translations[currentLanguage] || translations[DEFAULT_LANGUAGE];
-      const defaultLangTranslations = translations[DEFAULT_LANGUAGE];
-      let text = langTranslations[key] || defaultLangTranslations[key]; // Try current lang, then default
-
-      if (text === undefined) {
-          console.warn(`Missing translation for key: ${key} in language: ${currentLanguage}`);
-          text = fallback || translations[DEFAULT_LANGUAGE].missingTranslation?.replace('{key}', key) || key; // Use fallback or placeholder
-      }
-      return text;
-  };
+  // Settings state moved to SettingsProvider below
+  const { fontSizeMultiplier, activeTheme } = useContext(SettingsContext);
 
   // --- Short ID Generation and Mapping ---
-  const { originalIdToShortIdMap, shortIdToOriginalIdMap } = useMemo(() => { /* ... same as previous ... */
+  const { originalIdToShortIdMap, shortIdToOriginalIdMap } = useMemo(() => { /* ... same generation logic ... */
     const originalToShort = {}; const shortToOriginal = {}; let gameIndex = 1; const gameKeys = ['me1', 'me2', 'me3'];
     gameKeys.forEach(gameKey => { const gameData = missionsData[gameKey]; let missionIndex = 1; Object.keys(gameData).forEach(groupKey => { gameData[groupKey].forEach(mission => { const shortId = `${gameIndex}.${missionIndex}`; originalToShort[mission.id] = shortId; shortToOriginal[shortId] = mission.id; missionIndex++; }); }); gameIndex++; });
     return { originalIdToShortIdMap: originalToShort, shortIdToOriginalIdMap: shortToOriginal };
   }, []);
 
-  // Load state from localStorage (including language)
+  // Load only completion state here (settings loaded in providers)
   useEffect(() => {
     if (typeof window !== 'undefined') {
-        const savedCompletionString = localStorage.getItem(LOCAL_STORAGE_COMPLETION_KEY); const initialCompletedMissions = {}; if (savedCompletionString) { try { const shortIds = savedCompletionString.split(SHORT_ID_DELIMITER).filter(id => id); shortIds.forEach(shortId => { const originalId = shortIdToOriginalIdMap[shortId]; if (originalId) { initialCompletedMissions[originalId] = true; } else { console.warn(`Could not find original ID for short ID: ${shortId}`); } }); } catch (e) { localStorage.removeItem(LOCAL_STORAGE_COMPLETION_KEY); } } setCompletedMissions(initialCompletedMissions);
-        const savedFontSize = localStorage.getItem(LOCAL_STORAGE_FONT_KEY); if (savedFontSize) { const s = parseFloat(savedFontSize); if(!isNaN(s) && s >= MIN_FONT_SIZE_MULTIPLIER && s <= MAX_FONT_SIZE_MULTIPLIER) setFontSizeMultiplier(s); else localStorage.removeItem(LOCAL_STORAGE_FONT_KEY); }
-        const savedTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY); if (savedTheme && THEMES[savedTheme]) { setActiveTheme(savedTheme); } else { localStorage.removeItem(LOCAL_STORAGE_THEME_KEY); }
-        // Load Language
-        const savedLang = localStorage.getItem(LOCAL_STORAGE_LANG_KEY); if (savedLang && SUPPORTED_LANGUAGES[savedLang]) { setCurrentLanguage(savedLang); } else { localStorage.removeItem(LOCAL_STORAGE_LANG_KEY); }
+        const savedCompletionString = localStorage.getItem(LOCAL_STORAGE_COMPLETION_KEY); const initialCompletedMissions = {}; if (savedCompletionString) { try { const shortIds = savedCompletionString.split(SHORT_ID_DELIMITER).filter(id => id); shortIds.forEach(shortId => { const originalId = shortIdToOriginalIdMap[shortId]; if (originalId) { initialCompletedMissions[originalId] = true; } }); } catch (e) { localStorage.removeItem(LOCAL_STORAGE_COMPLETION_KEY); } } setCompletedMissions(initialCompletedMissions);
     }
-  }, [originalIdToShortIdMap, shortIdToOriginalIdMap]); // Add maps as dependencies
+  }, [originalIdToShortIdMap, shortIdToOriginalIdMap]); // Depend on maps
 
   // Save completion state
   useEffect(() => { if (typeof window !== 'undefined') { const completedOriginalIds = Object.keys(completedMissions).filter(id => completedMissions[id]); if (completedOriginalIds.length > 0) { try { const completedShortIds = completedOriginalIds.map(originalId => originalIdToShortIdMap[originalId]).filter(id => id); const storageString = completedShortIds.join(SHORT_ID_DELIMITER) + SHORT_ID_DELIMITER; localStorage.setItem(LOCAL_STORAGE_COMPLETION_KEY, storageString); } catch (e) { console.error("Failed to save completion state string:", e); } } else { localStorage.removeItem(LOCAL_STORAGE_COMPLETION_KEY); } } }, [completedMissions, originalIdToShortIdMap]);
-  // Save font size state & apply
-  useEffect(() => { if (typeof window !== 'undefined') { try { localStorage.setItem(LOCAL_STORAGE_FONT_KEY, fontSizeMultiplier.toString()); } catch (e) { console.error("Failed to save font size state:", e); } const newSize = BASE_HTML_FONT_SIZE_PX * fontSizeMultiplier; document.documentElement.style.fontSize = `${newSize}px`; } }, [fontSizeMultiplier]);
-  // Save theme state & apply
-  useEffect(() => { if (typeof window !== 'undefined') { try { localStorage.setItem(LOCAL_STORAGE_THEME_KEY, activeTheme); } catch (e) { console.error("Failed to save theme state:", e); } const root = document.documentElement; Object.keys(THEMES).forEach(themeKey => root.classList.remove(themeKey)); root.classList.add(activeTheme); } }, [activeTheme]);
-  // Save language state
-  useEffect(() => { if (typeof window !== 'undefined') { try { localStorage.setItem(LOCAL_STORAGE_LANG_KEY, currentLanguage); } catch (e) { console.error("Failed to save language state:", e); } } }, [currentLanguage]);
+
   // Effect to handle clicks outside settings menu
   useEffect(() => { const handleClickOutside = (event) => { if (settingsMenuRef.current && !settingsMenuRef.current.contains(event.target) && settingsButtonRef.current && !settingsButtonRef.current.contains(event.target)) { setIsSettingsMenuOpen(false); } }; if (isSettingsMenuOpen) { document.addEventListener('mousedown', handleClickOutside); } else { document.removeEventListener('mousedown', handleClickOutside); } return () => { document.removeEventListener('mousedown', handleClickOutside); }; }, [isSettingsMenuOpen]);
 
@@ -325,22 +253,20 @@ export default function App() {
   const recursivelyUncheckDependents = (missionIdToUncheck, stateToModify) => { Object.values(missionsData).forEach(gameGroups => { Object.values(gameGroups).forEach(missionArray => { missionArray.forEach(mission => { if (mission.prerequisites.includes(missionIdToUncheck) && stateToModify[mission.id]) { delete stateToModify[mission.id]; recursivelyUncheckDependents(mission.id, stateToModify); } }); }); }); };
   // Toggle mission completion state
   const handleToggleMission = (missionId) => { setCompletedMissions(prev => { let newState = { ...prev }; const missionInfo = Object.values(missionsData).flatMap(g => Object.values(g)).flat().find(m => m.id === missionId); if (!missionInfo) return prev; if (newState[missionId]) { delete newState[missionId]; recursivelyUncheckDependents(missionId, newState); } else { const prereqsMet = missionInfo.prerequisites.every(id => prev[id]); if (prereqsMet) { newState[missionId] = true; } else { console.warn(`Cannot check ${missionId}, prerequisites not met.`); return prev; } } return newState; }); };
-  // Font Size Control Functions
-  const increaseFontSize = () => { setFontSizeMultiplier(prev => Math.min(MAX_FONT_SIZE_MULTIPLIER, prev + FONT_SIZE_STEP)); };
-  const decreaseFontSize = () => { setFontSizeMultiplier(prev => Math.max(MIN_FONT_SIZE_MULTIPLIER, prev - FONT_SIZE_STEP)); };
   // Toggle settings menu
   const toggleSettingsMenu = () => { setIsSettingsMenuOpen(prev => !prev); };
   // Get grouped missions for the active tab
   const getMissionsForTab = () => { return missionsData[activeTab] || {}; };
 
-  // Tab Button Component - Updated to use 't' function
-  const TabButton = ({ gameId, labelKey }) => ( <button onClick={() => setActiveTab(gameId)} className={`px-4 py-2 font-semibold rounded-t-lg focus:outline-none transition-colors duration-200 ease-in-out border-b-2 ${activeTab === gameId ? 'bg-background-list text-text-primary border-accent' : 'bg-background-header text-text-secondary border-transparent hover:bg-background-hover hover:text-text-primary'}`} > {t(labelKey)} </button> );
-  // Font Size Control Button Component
-  const FontSizeButton = ({ onClick, children, ariaLabel, disabled }) => ( <button onClick={onClick} disabled={disabled} aria-label={ariaLabel} className={`px-2 py-1 mx-1 rounded-md border border-border-input text-text-secondary hover:bg-background-hover focus:outline-none focus:ring-2 focus:ring-accent disabled:opacity-50 disabled:cursor-not-allowed`} > {children} </button> );
+  // Tab Button Component - Uses useTranslations hook
+  const TabButton = ({ gameId, labelKey }) => {
+      const { t } = useTranslations();
+      return ( <button onClick={() => setActiveTab(gameId)} className={`px-4 py-2 font-semibold rounded-t-lg focus:outline-none transition-colors duration-200 ease-in-out border-b-2 ${activeTab === gameId ? 'bg-background-list text-text-primary border-accent' : 'bg-background-header text-text-secondary border-transparent hover:bg-background-hover hover:text-text-primary'}`} > {t(labelKey)} </button> );
+  }
 
   return (
     <>
-       {/* Inject theme styles and CSS variables */}
+       {/* Theme styles are now global, injected once */}
        <style jsx global>{` /* ... CSS Variables and Theme Styles ... */
           :root { /* CSS Variables */
             --color-background: #111827; --color-background-gradient-end: #000000; --color-background-list: #1f2937; --color-background-header: #374151; --color-background-hover: #4b5563; --color-background-subtle: #1f2937; --color-input-bg: #4b5563;
@@ -374,58 +300,26 @@ export default function App() {
           .border-border { border-color: var(--color-border); } .border-border-input { border-color: var(--color-border-input); } .border-accent { border-color: var(--color-accent); } .border-transparent { border-color: transparent; }
           .focus\\:ring-accent:focus { --tw-ring-color: var(--color-focus-ring); box-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color); } .focus\\:ring-offset-background:focus { --tw-ring-offset-color: var(--color-background); } .text-accent { color: var(--color-accent); }
         `}</style>
-
       <main className="min-h-screen bg-gradient-to-b text-text-primary p-4 sm:p-8">
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
 
         <div className="max-w-4xl mx-auto">
-            {/* Header Row */}
             <div className="flex flex-wrap justify-between items-center mb-8 gap-4 relative">
-                <h1 className="text-3xl sm:text-4xl font-bold text-accent"> {t('pageTitle')} </h1> {/* Use translation */}
+                <h1 className="text-3xl sm:text-4xl font-bold text-accent"> {t('pageTitle')} </h1>
                  <div className="relative">
                      <button ref={settingsButtonRef} onClick={toggleSettingsMenu} aria-label={t('settingsLabel')} aria-expanded={isSettingsMenuOpen} aria-controls="settings-menu" className="p-2 rounded-md text-text-secondary hover:bg-background-hover hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent" > <SettingsIcon /> </button>
-                     {isSettingsMenuOpen && (
-                         <div ref={settingsMenuRef} id="settings-menu" role="menu" className="absolute top-full right-0 mt-2 w-64 p-4 rounded-md shadow-lg bg-background-list border border-border z-20" >
-                             {/* Font Size Controls */}
-                             <div className="mb-4">
-                                 <label className="block text-sm font-medium text-text-secondary mb-2">{t('fontSizeLabel')}</label> {/* Use translation */}
-                                 <div className="flex items-center justify-center">
-                                     <FontSizeButton onClick={decreaseFontSize} ariaLabel="Decrease font size" disabled={fontSizeMultiplier <= MIN_FONT_SIZE_MULTIPLIER}>A-</FontSizeButton>
-                                     <span className="mx-2 text-text-primary tabular-nums">{(fontSizeMultiplier * 100).toFixed(0)}%</span>
-                                     <FontSizeButton onClick={increaseFontSize} ariaLabel="Increase font size" disabled={fontSizeMultiplier >= MAX_FONT_SIZE_MULTIPLIER}>A+</FontSizeButton>
-                                 </div>
-                             </div>
-                             {/* Theme Selector */}
-                             <div className="mb-4"> {/* Add margin bottom */}
-                                  <label htmlFor="theme-select" className="block text-sm font-medium text-text-secondary mb-2">{t('themeLabel')}</label> {/* Use translation */}
-                                  <select id="theme-select" value={activeTheme} onChange={(e) => setActiveTheme(e.target.value)} className="w-full px-2 py-1 rounded-md border border-border-input bg-input-bg text-text-primary focus:outline-none focus:ring-2 focus:ring-accent" >
-                                      {Object.entries(THEMES).map(([themeKey, themeDisplayName]) => (
-                                          <option key={themeKey} value={themeKey}>{t(`themeName_${themeKey.replace(/-/g, '_')}`, themeDisplayName)}</option> /* Translate theme name */
-                                      ))}
-                                  </select>
-                             </div>
-                             {/* Language Selector */}
-                             <div>
-                                  <label htmlFor="language-select" className="block text-sm font-medium text-text-secondary mb-2">{t('languageLabel')}</label> {/* Use translation */}
-                                  <select
-                                      id="language-select"
-                                      value={currentLanguage}
-                                      onChange={(e) => setCurrentLanguage(e.target.value)}
-                                      className="w-full px-2 py-1 rounded-md border border-border-input bg-input-bg text-text-primary focus:outline-none focus:ring-2 focus:ring-accent"
-                                  >
-                                      {Object.entries(SUPPORTED_LANGUAGES).map(([langCode, langName]) => (
-                                          <option key={langCode} value={langCode}>{langName}</option> // Display native lang name
-                                      ))}
-                                  </select>
-                             </div>
-                         </div>
-                     )}
+                     {/* Settings Menu Component - Pass state down */}
+                     <SettingsMenu
+                        isOpen={isSettingsMenuOpen}
+                        menuRef={settingsMenuRef}
+                        buttonRef={settingsButtonRef}
+                        closeMenu={() => setIsSettingsMenuOpen(false)}
+                     />
                  </div>
             </div>
 
           <div className="mb-6 border-b border-border flex flex-wrap space-x-1">
-            {/* Use translation keys for tab labels */}
             <TabButton gameId="me1" labelKey="tabME1" />
             <TabButton gameId="me2" labelKey="tabME2" />
             <TabButton gameId="me3" labelKey="tabME3" />
@@ -437,16 +331,67 @@ export default function App() {
               groupedMissions={getMissionsForTab()}
               completedMissions={completedMissions}
               onToggleMission={handleToggleMission}
-              t={t} // Pass translation function down
+              // Removed t prop
             />
           </div>
 
            <footer className="mt-12 text-center text-text-footer text-sm">
-             <p>{t('footerSource')}</p> {/* Use translation */}
-             <p>{t('footerSave')}</p> {/* Use translation */}
+             <p>{t('footerSource')}</p>
+             <p>{t('footerSave')}</p>
            </footer>
         </div>
       </main>
     </>
   );
+}
+
+// Settings Provider Component to manage Font Size and Theme state
+const SettingsProvider = ({ children }) => {
+    const [fontSizeMultiplier, setFontSizeMultiplier] = useState(DEFAULT_FONT_SIZE_MULTIPLIER);
+    const [activeTheme, setActiveTheme] = useState(DEFAULT_THEME);
+
+    // Load settings from localStorage
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const savedFontSize = localStorage.getItem(LOCAL_STORAGE_FONT_KEY); if (savedFontSize) { const s = parseFloat(savedFontSize); if(!isNaN(s) && s >= MIN_FONT_SIZE_MULTIPLIER && s <= MAX_FONT_SIZE_MULTIPLIER) setFontSizeMultiplier(s); else localStorage.removeItem(LOCAL_STORAGE_FONT_KEY); }
+            const savedTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY); if (savedTheme && THEMES[savedTheme]) { setActiveTheme(savedTheme); } else { localStorage.removeItem(LOCAL_STORAGE_THEME_KEY); }
+        }
+    }, []);
+
+    // Save font size state & apply
+    useEffect(() => { if (typeof window !== 'undefined') { try { localStorage.setItem(LOCAL_STORAGE_FONT_KEY, fontSizeMultiplier.toString()); } catch (e) { console.error("Failed to save font size state:", e); } const newSize = BASE_HTML_FONT_SIZE_PX * fontSizeMultiplier; document.documentElement.style.fontSize = `${newSize}px`; } }, [fontSizeMultiplier]);
+    // Save theme state & apply
+    useEffect(() => { if (typeof window !== 'undefined') { try { localStorage.setItem(LOCAL_STORAGE_THEME_KEY, activeTheme); } catch (e) { console.error("Failed to save theme state:", e); } const root = document.documentElement; Object.keys(THEMES).forEach(themeKey => root.classList.remove(themeKey)); root.classList.add(activeTheme); } }, [activeTheme]);
+
+    const increaseFontSize = () => { setFontSizeMultiplier(prev => Math.min(MAX_FONT_SIZE_MULTIPLIER, prev + FONT_SIZE_STEP)); };
+    const decreaseFontSize = () => { setFontSizeMultiplier(prev => Math.max(MIN_FONT_SIZE_MULTIPLIER, prev - FONT_SIZE_STEP)); };
+
+    const value = {
+        fontSizeMultiplier,
+        increaseFontSize,
+        decreaseFontSize,
+        activeTheme,
+        setActiveTheme
+    };
+
+    return (
+        <SettingsContext.Provider value={value}>
+            {children}
+        </SettingsContext.Provider>
+    );
+};
+
+// Font Size Button (no changes needed, but keep it defined)
+const FontSizeButton = ({ onClick, children, ariaLabel, disabled }) => ( <button onClick={onClick} disabled={disabled} aria-label={ariaLabel} className={`px-2 py-1 mx-1 rounded-md border border-border-input text-text-secondary hover:bg-background-hover focus:outline-none focus:ring-2 focus:ring-accent disabled:opacity-50 disabled:cursor-not-allowed`} > {children} </button> );
+
+
+// Export the main App component wrapped in Providers
+export default function RootApp() {
+    return (
+        <LanguageProvider>
+            <SettingsProvider>
+                <AppContent />
+            </SettingsProvider>
+        </LanguageProvider>
+    );
 }
