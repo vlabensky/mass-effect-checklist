@@ -32,7 +32,6 @@ export type MissionId =
   | 'me2_recruit_professor'
   | 'me2_recruit_warlord'
   | 'me2_recruit_convict'
-  | 'me2_stop_the_collectors_go_to_horizon'
   | 'me2_horizon'
   | 'me2_recruit_assassin'
   | 'me2_recruit_justicar'

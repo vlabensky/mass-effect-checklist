@@ -38,7 +38,6 @@ const strings: TextStrings = {
   mission_me2_freedoms_progress: "Freedom's Progress",
   mission_me2_omega_aria_tloak: "Omega: Aria T'Loak",
   mission_me2_citadel_anderson: "Citadel: Captain Anderson",
-  mission_me2_stop_the_collectors_go_to_horizon: "Stop the Collectors: Go to Horizon",
   mission_me2_recruit_archangel: "Dossier: Archangel",
   mission_me2_recruit_professor: "Dossier: The Professor",
   mission_me2_recruit_warlord: "Dossier: The Warlord",

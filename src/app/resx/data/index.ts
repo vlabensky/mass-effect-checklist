@@ -69,10 +69,6 @@ const data: GameData = {
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Citadel:_Captain_Anderson'),
       }, {
-        id: 'me2_stop_the_collectors_go_to_horizon',
-        prerequisites: ['me2_freedoms_progress'],
-        wikiUrl: w('Stop_the_Collectors#Go_to_Horizon'),
-      }, {
         id: 'me2_horizon',
         prerequisites: [
           'me2_recruit_archangel',
