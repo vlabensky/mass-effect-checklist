@@ -37,7 +37,7 @@ const MissionList = ({ game, completedMissions, onToggleMission }: Props) => {
                 <MissionItem
                   key={mission.id}
                   mission={mission}
-                  completed={completedMissions[mission.id]}
+                  completed={!!completedMissions[mission.id]}
                   onToggle={onToggleMission}
                   prerequisitesMet={checkPrerequisites(mission)}
                   completedMissions={completedMissions}
