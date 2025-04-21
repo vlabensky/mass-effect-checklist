@@ -191,6 +191,10 @@ const data: GameData = {
         id: 'me2_loyalty_thane',
         prerequisites: ['me2_recruit_assassin'],
         wikiUrl: w('Thane:_Sins_of_the_Father'),
+      }, {
+        id: 'me2_loyalty_legion',
+        prerequisites: ['me2_iff'],
+        wikiUrl: w('Legion:_A_House_Divided'),
       }],
     }, {
       id: 'me2_citadel',

@@ -63,6 +63,7 @@ export type MissionId =
   | 'me2_loyalty_samara'
   | 'me2_loyalty_tali'
   | 'me2_loyalty_thane'
+  | 'me2_loyalty_legion'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'
