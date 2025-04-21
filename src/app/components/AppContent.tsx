@@ -31,9 +31,9 @@ const AppContent = () => {
     const shortIdToOriginalIdMap: Record<string, string> = {};
 
     gameData.games.forEach(({ sections }, gameIndex) => {
-      sections.forEach(({ missions }) => {
+      sections.forEach(({ missions }, sectionIndex) => {
         missions.forEach(({ id: missionId }, missionIndex) => {
-          const shortId = `${gameIndex}.${missionIndex}`;
+          const shortId = `${gameIndex}.${sectionIndex}.${missionIndex}`;
           originalIdToShortIdMap[missionId] = shortId;
           shortIdToOriginalIdMap[shortId] = missionId;
         });
