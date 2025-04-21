@@ -139,9 +139,11 @@ const data: GameData = {
       }],
     }, {
       id: 'me2_citadel',
-      missions: [
-
-      ],
+      missions: [{
+        id: 'me2_citadel_crime_in_progress',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('Citadel:_Crime_in_Progress'),
+      }],
     }],
   }, {
     id: 'me3',
