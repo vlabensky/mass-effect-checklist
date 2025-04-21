@@ -146,6 +146,9 @@ const data: GameData = {
         wikiUrl: w('Dossier:_Tali'),
       }],
     }, {
+      id: 'me2_loyalty',
+      missions: [],
+    }, {
       id: 'me2_citadel',
       missions: [{
         id: 'me2_citadel_crime_in_progress',

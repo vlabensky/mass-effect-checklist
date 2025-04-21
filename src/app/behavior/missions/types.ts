@@ -10,6 +10,7 @@ export type SectionId =
   | 'me2_plot'
   | 'me2_dossiers'
   | 'me2_citadel'
+  | 'me2_loyalty'
   | 'me3_priority'
   ;
 
