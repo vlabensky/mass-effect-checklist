@@ -171,6 +171,10 @@ const data: GameData = {
         id: 'me2_loyalty_mordin',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Mordin:_Old_Blood'),
+      }, {
+        id: 'me2_loyalty_samara',
+        prerequisites: ['me2_recruit_justicar'],
+        wikiUrl: w('Samara:_The_Ardat-Yakshi'),
       }],
     }, {
       id: 'me2_citadel',

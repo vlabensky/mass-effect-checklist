@@ -68,6 +68,7 @@ const strings: TextStrings = {
   mission_me2_loyalty_jacob: "Jacob: The Gift of Greatness",
   mission_me2_loyalty_miranda: "Miranda: The Prodigal",
   mission_me2_loyalty_mordin: "Mordin: Old Blood",
+  mission_me2_loyalty_samara: "Samara: The Ardat-Yakshi",
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",
