@@ -94,9 +94,9 @@ const data: GameData = {
         prerequisites: ['me2_await_iff'],
         wikiUrl: w('Stop_the_Collectors#Use_Omega_4_Relay'),
       }, {
-        id: 'me2_suicide_mission',
+        id: 'me2_suicide_mission_infiltration',
         prerequisites: ['me2_use_omega4_relay'],
-        wikiUrl: w('Suicide_Mission'),
+        wikiUrl: w('Collector_Base:_Infiltration'),
       }],
     }, {
       id: 'me2_dossiers',

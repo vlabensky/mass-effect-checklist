@@ -50,7 +50,7 @@ const strings: TextStrings = {
   mission_me2_iff: "Stop the Collectors: Acquire Reaper IFF",
   mission_me2_await_iff: "Stop the Collectors: Await IFF Installation",
   mission_me2_use_omega4_relay: "Stop the Collectors: Use Omega-4 Relay",
-  mission_me2_suicide_mission: "Stop the Collectors: Suicide Mission",
+  mission_me2_suicide_mission_infiltration: "Suicide Mission: Infiltration",
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",

@@ -62,7 +62,7 @@ export type TextStrings = {
   mission_me2_iff: string;
   mission_me2_await_iff: string;
   mission_me2_use_omega4_relay: string;
-  mission_me2_suicide_mission: string;
+  mission_me2_suicide_mission_infiltration: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;
