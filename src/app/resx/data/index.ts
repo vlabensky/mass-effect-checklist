@@ -179,6 +179,10 @@ const data: GameData = {
         id: 'me2_loyalty_tali',
         prerequisites: ['me2_recruit_tali'],
         wikiUrl: w('Tali:_Treason'),
+      }, {
+        id: 'me2_loyalty_thane',
+        prerequisites: ['me2_recruit_assassin'],
+        wikiUrl: w('Thane:_Sins_of_the_Father'),
       }],
     }, {
       id: 'me2_citadel',
