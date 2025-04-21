@@ -1,3 +1,17 @@
+export type GameId =
+  | 'me1'
+  | 'me2'
+  | 'me3'
+  ;
+
+export type SectionId =
+  | 'me1_prologue'
+  | 'me1_story'
+  | 'me2_plot'
+  | 'me2_dossiers'
+  | 'me3_priority'
+  ;
+
 export type MissionId =
   | 'me1_eden_prime'
   | 'me1_citadel_expose_saren'
@@ -44,12 +58,14 @@ export type Mission = {
   wikiUrl: string;
 };
 
-export type GameData = {
-  games: {
-    id: string;
-    sections: {
-      id: string;
-      missions: Mission[];
-    }[];
+export type Game = {
+  id: GameId;
+  sections: {
+    id: SectionId;
+    missions: Mission[];
   }[];
+};
+
+export type GameData = {
+  games: Game[];
 };

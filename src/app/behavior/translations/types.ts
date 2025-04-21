@@ -32,16 +32,11 @@ export type TextStrings = {
   themeName_theme_light: string;
   themeName_theme_hc_dark: string;
   themeName_theme_hc_light: string;
-  group_me1_Prologue: string;
-  group_me1_MainStory: string;
-  group_me2_PrologueFreedom: string;
-  group_me2_RecruitmentDossiersPart1: string;
-  group_me2_PlotMissionsMidGame: string;
-  group_me2_RecruitmentDossiersPart2: string;
-  group_me2_PlotMissionsLateGame: string;
-  group_me3_OpeningMissions: string;
-  group_me3_MainStoryArc: string;
-  group_me3_EndGame: string;
+  group_me1_prologue: string,
+  group_me1_story: string,
+  group_me2_plot: string,
+  group_me2_dossiers: string,
+  group_me3_priority: string,
   mission_me1_eden_prime: string;
   mission_me1_citadel_expose_saren: string;
   mission_me1_find_liara: string;

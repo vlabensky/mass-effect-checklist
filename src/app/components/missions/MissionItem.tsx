@@ -6,12 +6,12 @@ import { ChevronIcon, NewTabLinkIcon } from '../icons';
 type Props = {
   mission: Mission;
   completed: boolean;
-  onToggle: (missionId: string) => void;
+  onToggle: (missionId: MissionId) => void;
   prerequisitesMet: boolean;
-  completedMissionIds: MissionId[];
+  completedMissions: Record<MissionId, boolean>;
 };
 
-const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, completedMissionIds }: Props) => {
+const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, completedMissions }: Props) => {
   const { t } = useTranslations();
   const [isPrereqsExpanded, setIsPrereqsExpanded] = useState(false);
   const handleChange = () => void ((prerequisitesMet || completed) && onToggle(mission.id));
@@ -83,7 +83,7 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, completed
           <ul className="pt-1 pb-2 pl-12 pr-3 bg-background-subtle border-b border-border">
             <li className="text-xs text-text-secondary mb-1">{t('prerequisitesLabel')}</li>
             {mission.prerequisites.map(prerequisiteId => {
-              const isPrereqCompleted = completedMissionIds.some(id => id === prerequisiteId);
+              const isPrereqCompleted = completedMissions[prerequisiteId];
               const prerequisiteName = t(`mission_${prerequisiteId}`);
               return (
                 <li key={prerequisiteId} className={`text-sm py-0.5 ${isPrereqCompleted ? 'text-text-disabled line-through' : 'text-text-secondary'}`}> - {prerequisiteName}</li>
