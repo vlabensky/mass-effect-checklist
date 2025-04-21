@@ -2,8 +2,8 @@ const Styles = () => {
   return (
     <style jsx global>
       {` /* ... CSS Variables and Theme Styles ... */
-        :root {
-          /* CSS Variables */
+        /* CSS Variables */
+        html.theme_dark {
           --color-background: #111827;
           --color-background-gradient-end: #000000;
           --color-background-list: #1f2937;
@@ -23,8 +23,7 @@ const Styles = () => {
           --color-accent: #3b82f6;
           --color-focus-ring: #3b82f6;
         }
-        html.theme-light {
-          /* Light Theme */
+        html.theme_light {
           --color-background: #f9fafb;
           --color-background-gradient-end: #e5e7eb;
           --color-background-list: #ffffff;
@@ -43,8 +42,7 @@ const Styles = () => {
           --color-accent: #2563eb;
           --color-focus-ring: #2563eb;
         }
-        html.theme-hc-dark {
-          /* HC Dark Theme */
+        html.theme_hc_dark {
           --color-background: #000000;
           --color-background-gradient-end: #000000;
           --color-background-list: #000000;
@@ -63,8 +61,7 @@ const Styles = () => {
           --color-accent: #ffff00;
           --color-focus-ring: #ffff00;
         }
-        html.theme-hc-light {
-          /* HC Light Theme */
+        html.theme_hc_light {
           --color-background: #ffffff;
           --color-background-gradient-end: #ffffff;
           --color-background-list: #ffffff;
