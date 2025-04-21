@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: #111827; /* gray-900 */
+  --color-background-gradient-end: #000000; /* black */
+  --color-background-list: #1f2937; /* gray-800 */
+  --color-background-header: #374151; /* gray-700 */
+  --color-background-hover: #4b5563; /* gray-600 */
+  --color-background-subtle: #1f2937; /* gray-800 */
+  --color-input-bg: #4b5563; /* gray-600 */
+  --color-text-primary: #f9fafb; /* gray-50 */
+  --color-text-secondary: #d1d5db; /* gray-300 */
+  --color-text-disabled: #6b7280; /* gray-500 */
+  --color-text-footer: #6b7280; /* gray-500 */
+  --color-text-accent: #93c5fd; /* blue-300 */
+  --color-border: #374151; /* gray-700 */
+  --color-border-input: #6b7280; /* gray-500 */
+  --color-border-tab-active: #3b82f6; /* blue-500 */
+  --color-border-tab-inactive: transparent;
+  --color-accent: #3b82f6; /* blue-500 */
+  --color-focus-ring: #3b82f6; /* blue-500 */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  [data-theme="theme_light"] {
+    --color-background: #f9fafb; /* gray-50 */
+    --color-background-gradient-end: #e5e7eb; /* gray-200 */
+    --color-background-list: #ffffff; /* white */
+    --color-background-header: #f3f4f6; /* gray-100 */
+    --color-background-hover: #e5e7eb; /* gray-200 */
+    --color-background-subtle: #ffffff; /* white */
+    --color-input-bg: #e5e7eb; /* gray-200 */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-text-primary: #111827; /* gray-900 */
+    --color-text-secondary: #374151; /* gray-700 */
+    --color-text-disabled: #9ca3af; /* gray-400 */
+    --color-text-footer: #6b7280; /* gray-500 */
+    --color-text-accent: #2563eb; /* blue-600 */
+
+    --color-border: #e5e7eb; /* gray-200 */
+    --color-border-input: #9ca3af; /* gray-400 */
+    --color-border-tab-active: #2563eb; /* blue-600 */
+
+    --color-accent: #2563eb; /* blue-600 */
+    --color-focus-ring: #2563eb; /* blue-600 */
+  }
+
+  [data-theme="theme_hc_dark"] {
+    --color-background: #000000; /* black */
+    --color-background-gradient-end: #000000; /* black */
+    --color-background-list: #000000; /* black */
+    --color-background-header: #000000; /* black */
+    --color-background-hover: #333333; /* dark gray */
+    --color-background-subtle: #000000; /* black */
+    --color-input-bg: #000000; /* black */
+
+    --color-text-primary: #ffffff; /* white */
+    --color-text-secondary: #ffff00; /* yellow */
+    --color-text-disabled: #aaaaaa; /* light gray */
+    --color-text-footer: #aaaaaa; /* light gray */
+    --color-text-accent: #ffff00; /* yellow */
+
+    --color-border: #ffffff; /* white */
+    --color-border-input: #ffffff; /* white */
+    --color-border-tab-active: #ffff00; /* yellow */
+
+    --color-accent: #ffff00; /* yellow */
+    --color-focus-ring: #ffff00; /* yellow */
+  }
+
+  [data-theme="theme_hc_light"] {
+    --color-background: #ffffff; /* white */
+    --color-background-gradient-end: #ffffff; /* white */
+    --color-background-list: #ffffff; /* white */
+    --color-background-header: #ffffff; /* white */
+    --color-background-hover: #eeeeee; /* light gray */
+    --color-background-subtle: #ffffff; /* white */
+    --color-input-bg: #ffffff; /* white */
+
+    --color-text-primary: #000000; /* black */
+    --color-text-secondary: #0000ff; /* blue */
+    --color-text-disabled: #555555; /* dark gray */
+    --color-text-footer: #555555; /* dark gray */
+    --color-text-accent: #0000ff; /* blue */
+
+    --color-border: #000000; /* black */
+    --color-border-input: #000000; /* black */
+    --color-border-tab-active: #0000ff; /* blue */
+
+    --color-accent: #0000ff; /* blue */
+    --color-focus-ring: #0000ff; /* blue */
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
 }
+
+select, button {
+  cursor: pointer;
+}
+
+.sticky { position: sticky; }
+.top-0 { top: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }

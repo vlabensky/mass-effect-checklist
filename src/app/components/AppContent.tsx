@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslations } from './language';
 import { SettingsMenu } from './settings';
@@ -9,10 +10,9 @@ import {
   getGameData
 } from '@/app/behavior/missions';
 import { LOCAL_STORAGE_COMPLETION_KEY, SHORT_ID_DELIMITER } from './constants';
-import { Styles, TabButton } from './layout';
+import { TabButton } from './layout';
 import { MissionList } from './missions';
 import { SettingsIcon } from './icons';
-import Script from 'next/script';
 
 const AppContent = () => {
   const { t } = useTranslations();
@@ -160,9 +160,7 @@ const AppContent = () => {
 
   return (
     <>
-      <Styles />
       <main className="min-h-screen bg-gradient-to-b text-text-primary p-4 sm:p-8">
-        <script src="https://cdn.tailwindcss.com" async></script>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
         <div className="max-w-4xl mx-auto">

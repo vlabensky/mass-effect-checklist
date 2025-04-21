@@ -61,9 +61,10 @@ const SettingsProvider = ({ children }: { children: ReactNode }) => {
 
     localStorage.setItem(LOCAL_STORAGE_THEME_KEY, activeTheme);
 
-    const root = document.documentElement;
-    Object.values(Theme).forEach((themeKey) => root.classList.remove(themeKey));
-    root.classList.add(activeTheme);
+    const root = document.body;
+    const attribute = document.createAttribute('data-theme');
+    attribute.value = activeTheme;
+    root.attributes.setNamedItem(attribute);
   }, [activeTheme]);
 
   const increaseFontSize = () => setFontSizeMultiplier(prev => Math.min(MAX_FONT_SIZE_MULTIPLIER, prev + FONT_SIZE_STEP));
