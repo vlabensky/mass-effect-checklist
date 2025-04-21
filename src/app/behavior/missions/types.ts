@@ -26,6 +26,7 @@ export type MissionId =
   | 'me2_prologue_save_joker'
   | 'me2_prologue_awakening'
   | 'me2_freedoms_progress'
+  | 'me2_omega_aria_tloak'
   | 'me2_citadel_anderson'
   | 'me2_recruit_archangel'
   | 'me2_recruit_professor'

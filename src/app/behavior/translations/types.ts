@@ -48,6 +48,7 @@ export type TextStrings = {
   mission_me2_prologue_save_joker: string,
   mission_me2_prologue_awakening: string;
   mission_me2_freedoms_progress: string;
+  mission_me2_omega_aria_tloak: string;
   mission_me2_citadel_anderson: string;
   mission_me2_recruit_archangel: string;
   mission_me2_recruit_professor: string;
