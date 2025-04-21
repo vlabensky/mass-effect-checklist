@@ -90,8 +90,12 @@ const data: GameData = {
         prerequisites: ['me2_iff'],
         wikiUrl: w('Stop_the_Collectors#Await_IFF_Installation'),
       }, {
-        id: 'me2_suicide_mission',
+        id: 'me2_use_omega4_relay',
         prerequisites: ['me2_await_iff'],
+        wikiUrl: w('Stop_the_Collectors#Use_Omega_4_Relay'),
+      }, {
+        id: 'me2_suicide_mission',
+        prerequisites: ['me2_use_omega4_relay'],
         wikiUrl: w('Suicide_Mission'),
       }],
     }, {
