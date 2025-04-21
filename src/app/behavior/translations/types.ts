@@ -50,6 +50,7 @@ export type TextStrings = {
   mission_me2_freedoms_progress: string;
   mission_me2_omega_aria_tloak: string;
   mission_me2_citadel_anderson: string;
+  mission_me2_stop_the_collectors_go_to_horizon: string;
   mission_me2_recruit_archangel: string;
   mission_me2_recruit_professor: string;
   mission_me2_recruit_warlord: string;
