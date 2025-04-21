@@ -53,6 +53,7 @@ export type MissionId =
   | 'me2_dossier_the_master_thief'
   | 'me2_dossier_the_veteran'
   | 'me2_loyalty_kasumi'
+  | 'me2_loyalty_zaeed'
   | 'me2_loyalty_garrus'
   | 'me2_loyalty_grunt'
   | 'me2_loyalty_jack'

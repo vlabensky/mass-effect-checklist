@@ -63,6 +63,7 @@ const strings: TextStrings = {
   mission_me2_citadel_captain_bailey: "Citadel: Captain Bailey",
   mission_me2_citadel_the_council: "Citadel: The Council",
   mission_me2_loyalty_kasumi: "Kasumi: Stealing Memory",
+  mission_me2_loyalty_zaeed: "Zaeed: The Price of Revenge",
   mission_me2_loyalty_garrus: "Garrus: Eye for an Eye",
   mission_me2_loyalty_grunt: "Grunt: Rite of Passage",
   mission_me2_loyalty_jack: "Jack: Subject Zero",

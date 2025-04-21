@@ -152,6 +152,10 @@ const data: GameData = {
         prerequisites: ['me2_dossier_the_master_thief'],
         wikiUrl: w('Kasumi:_Stealing_Memory'),
       }, {
+        id: 'me2_loyalty_zaeed',
+        prerequisites: ['me2_dossier_the_veteran'],
+        wikiUrl: w('Zaeed:_The_Price_of_Revenge'),
+      }, {
         id: 'me2_loyalty_garrus',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Garrus:_Eye_for_an_Eye'),
