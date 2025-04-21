@@ -11,6 +11,7 @@ import {
 import { LOCAL_STORAGE_COMPLETION_KEY, SHORT_ID_DELIMITER } from './constants';
 import { TabButton } from './layout';
 import { MissionList } from './missions';
+import { SettingsIcon } from './icons';
 
 const AppContent = () => {
   const { t } = useTranslations();
@@ -152,8 +153,8 @@ const AppContent = () => {
 
   return (
     <>
-       {/* Theme styles are now global, injected once */}
-       <style jsx global>{` /* ... CSS Variables and Theme Styles ... */
+      {/* Theme styles are now global, injected once */}
+      <style jsx global>{` /* ... CSS Variables and Theme Styles ... */
           :root { /* CSS Variables */
             --color-background: #111827; --color-background-gradient-end: #000000; --color-background-list: #1f2937; --color-background-header: #374151; --color-background-hover: #4b5563; --color-background-subtle: #1f2937; --color-input-bg: #4b5563;
             --color-text-primary: #f9fafb; --color-text-secondary: #d1d5db; --color-text-disabled: #6b7280; --color-text-footer: #6b7280; --color-text-accent: #93c5fd;
@@ -188,25 +189,32 @@ const AppContent = () => {
         `}</style>
       <main className="min-h-screen bg-gradient-to-b text-text-primary p-4 sm:p-8">
         <script src="https://cdn.tailwindcss.com"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
         <div className="max-w-4xl mx-auto">
-            <div className="flex flex-wrap justify-between items-center mb-8 gap-4 relative">
-                <h1 className="text-3xl sm:text-4xl font-bold text-accent"> {t('pageTitle')} </h1>
-                 <div className="relative">
-                     <button onClick={toggleSettingsMenu} aria-label={t('settingsLabel')} aria-expanded={isSettingsMenuOpen} aria-controls="settings-menu" className="p-2 rounded-md text-text-secondary hover:bg-background-hover hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent" > <SettingsIcon /> </button>
-                     {/* Settings Menu Component - Pass state down */}
-                     <SettingsMenu
-                        isOpen={isSettingsMenuOpen}
-                        menuRef={settingsMenuRef}
-                     />
-                 </div>
+          <div className="flex flex-wrap justify-between items-center mb-8 gap-4 relative">
+            <h1 className="text-3xl sm:text-4xl font-bold text-accent">{t('pageTitle')}</h1>
+            <div className="relative">
+              <button
+                onClick={toggleSettingsMenu}
+                aria-label={t('settingsLabel')}
+                aria-expanded={isSettingsMenuOpen}
+                aria-controls="settings-menu"
+                className="p-2 rounded-md text-text-secondary hover:bg-background-hover hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent"
+              >
+                <SettingsIcon />
+              </button>
+              <SettingsMenu
+                isOpen={isSettingsMenuOpen}
+                menuRef={settingsMenuRef}
+              />
             </div>
+          </div>
 
           <div className="mb-6 border-b border-border flex flex-wrap space-x-1">
             <TabButton labelKey="tabME1" onClick={() => setActiveTab("me1")} isActiveTab={activeTab === "me1"} />
-            <TabButton labelKey="tabME2" onClick={() => setActiveTab("me2")} isActiveTab={activeTab === "me2"}/>
-            <TabButton labelKey="tabME3" onClick={() => setActiveTab("me3")} isActiveTab={activeTab === "me3"}/>
+            <TabButton labelKey="tabME2" onClick={() => setActiveTab("me2")} isActiveTab={activeTab === "me2"} />
+            <TabButton labelKey="tabME3" onClick={() => setActiveTab("me3")} isActiveTab={activeTab === "me3"} />
           </div>
 
           <div>
@@ -217,10 +225,10 @@ const AppContent = () => {
             />
           </div>
 
-           <footer className="mt-12 text-center text-text-footer text-sm">
-             <p>{t('footerSource')}</p>
-             <p>{t('footerSave')}</p>
-           </footer>
+          <footer className="mt-12 text-center text-text-footer text-sm">
+            <p>{t('footerSource')}</p>
+            <p>{t('footerSave')}</p>
+          </footer>
         </div>
       </main>
     </>
