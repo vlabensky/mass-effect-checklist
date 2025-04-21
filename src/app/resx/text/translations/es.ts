@@ -33,6 +33,7 @@ const strings: TextStrings = {
   mission_me1_virmire: "Virmire: El Plan de Saren",
   mission_me1_ilos: "Ilos: Encontrar el Conducto",
   mission_me1_final_battle: "Carrera Contra el Tiempo: Batalla Final",
+  mission_me2_prologue_save_joker: "Prólogo: Salvar Joker",
   mission_me2_prologue_awakening: "Prólogo: Despertar",
   mission_me2_freedoms_progress: "El Progreso de la Libertad",
   mission_me2_citadel_anderson: "Ciudadela: Capitán Anderson",

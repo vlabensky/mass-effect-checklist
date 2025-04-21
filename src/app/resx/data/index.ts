@@ -49,8 +49,12 @@ const data: GameData = {
     sections: [{
       id: 'me2_plot',
       missions: [{
-        id: 'me2_prologue_awakening',
+        id: 'me2_prologue_save_joker',
         prerequisites: [],
+        wikiUrl: w('Prologue:_Save_Joker'),
+      }, {
+        id: 'me2_prologue_awakening',
+        prerequisites: ['me2_prologue_save_joker'],
         wikiUrl: w('Prologue:_Awakening'),
       }, {
         id: 'me2_freedoms_progress',

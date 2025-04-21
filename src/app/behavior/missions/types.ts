@@ -23,6 +23,7 @@ export type MissionId =
   | 'me1_virmire'
   | 'me1_ilos'
   | 'me1_final_battle'
+  | 'me2_prologue_save_joker'
   | 'me2_prologue_awakening'
   | 'me2_freedoms_progress'
   | 'me2_citadel_anderson'
