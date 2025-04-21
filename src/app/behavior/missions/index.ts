@@ -3,3 +3,9 @@ export type {
   Mission,
   GameData,
 } from './types';
+
+export {
+  getGameData,
+  findMission,
+  forEachMission,
+} from './data';
