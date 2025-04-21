@@ -3,6 +3,26 @@ const Styles = () => {
     <style jsx global>
       {` /* ... CSS Variables and Theme Styles ... */
         /* CSS Variables */
+        :root {
+          --color-background: #111827;
+          --color-background-gradient-end: #000000;
+          --color-background-list: #1f2937;
+          --color-background-header: #374151;
+          --color-background-hover: #4b5563;
+          --color-background-subtle: #1f2937;
+          --color-input-bg: #4b5563;
+          --color-text-primary: #f9fafb;
+          --color-text-secondary: #d1d5db;
+          --color-text-disabled: #6b7280;
+          --color-text-footer: #6b7280;
+          --color-text-accent: #93c5fd;
+          --color-border: #374151;
+          --color-border-input: #6b7280;
+          --color-border-tab-active: #3b82f6;
+          --color-border-tab-inactive: transparent;
+          --color-accent: #3b82f6;
+          --color-focus-ring: #3b82f6;
+        }
         html.theme_dark {
           --color-background: #111827;
           --color-background-gradient-end: #000000;
