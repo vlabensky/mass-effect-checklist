@@ -7,7 +7,7 @@ import FontSizeButton from './FontSizeButton';
 
 type Props = {
   isOpen: boolean;
-  menuRef: RefObject<HTMLDivElement>;
+  menuRef: RefObject<HTMLDivElement | null>;
 };
 
 const SettingsMenu = ({ isOpen, menuRef }: Props) => {
