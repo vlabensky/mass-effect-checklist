@@ -38,6 +38,7 @@ export type MissionId =
   | 'me2_recruit_tali'
   | 'me2_collector_ship'
   | 'me2_iff'
+  | 'me2_await_iff'
   | 'me2_suicide_mission'
   | 'me3_prologue'
   | 'me3_mars'
