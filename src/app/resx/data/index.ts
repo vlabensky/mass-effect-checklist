@@ -156,6 +156,10 @@ const data: GameData = {
         id: 'me2_citadel_captain_bailey',
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Citadel:_Captain_Bailey'),
+      }, {
+        id: 'me2_citadel_the_council',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('Citadel:_The_Council'),
       }],
     }],
   }, {

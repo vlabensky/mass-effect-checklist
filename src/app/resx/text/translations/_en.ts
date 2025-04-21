@@ -58,6 +58,7 @@ const strings: TextStrings = {
   mission_me2_citadel_found_forged_id: "Citadel: Found Forged ID",
   mission_me2_citadel_krogan_sushi: "Citadel: Krogan Sushi",
   mission_me2_citadel_captain_bailey: "Citadel: Captain Bailey",
+  mission_me2_citadel_the_council: "Citadel: The Council",
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",
