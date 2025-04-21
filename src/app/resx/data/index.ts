@@ -1,6 +1,7 @@
 import type { GameData } from '@/app/behavior/missions';
 
-// TODO: DRY with the base URL
+const w = (path: string) => `https://masseffect.fandom.com/wiki/${path}`;
+
 const data: GameData = {
   games: [{
     id: 'me1',
@@ -9,38 +10,38 @@ const data: GameData = {
       missions: [{
         id: 'me1_eden_prime',
         prerequisites: [],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Find_the_Beacon',
+        wikiUrl: w('Find_the_Beacon'),
       }],
     }, {
       id: 'me1_story',
       missions: [{
         id: 'me1_citadel_expose_saren',
         prerequisites: ['me1_eden_prime'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Citadel:_Expose_Saren',
+        wikiUrl: w('Citadel:_Expose_Saren'),
       }, {
         id: 'me1_find_liara',
         prerequisites: ['me1_citadel_expose_saren'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Find_Liara_T%27Soni',
+        wikiUrl: w('Find_Liara_T%27Soni'),
       }, {
         id: 'me1_feros',
         prerequisites: ['me1_citadel_expose_saren'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Feros:_Geth_Attack',
+        wikiUrl: w('Feros:_Geth_Attack'),
       }, {
         id: 'me1_noveria',
         prerequisites: ['me1_citadel_expose_saren'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Noveria#Walkthrough',
+        wikiUrl: w('Noveria#Walkthrough'),
       }, {
         id: 'me1_virmire',
         prerequisites: ['me1_find_liara', 'me1_feros', 'me1_noveria'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Virmire:_Saren%27s_Plan',
+        wikiUrl: w('Virmire:_Saren%27s_Plan'),
       }, {
         id: 'me1_ilos',
         prerequisites: ['me1_virmire'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Ilos:_Find_the_Conduit',
+        wikiUrl: w('Ilos:_Find_the_Conduit'),
       }, {
         id: 'me1_final_battle',
         prerequisites: ['me1_ilos'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Race_Against_Time:_Final_Battle',
+        wikiUrl: w('Race_Against_Time:_Final_Battle'),
       }],
     }],
   }, {
@@ -50,15 +51,15 @@ const data: GameData = {
       missions: [{
         id: 'me2_prologue',
         prerequisites: [],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Prologue:_Awakening',
+        wikiUrl: w('Prologue:_Awakening'),
       }, {
         id: 'me2_freedoms_progress',
         prerequisites: ['me2_prologue'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Freedom%27s_Progress',
+        wikiUrl: w('Freedom%27s_Progress'),
       }, {
         id: 'me2_citadel_anderson',
         prerequisites: ['me2_freedoms_progress'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Citadel:_Captain_Anderson',
+        wikiUrl: w('Citadel:_Captain_Anderson'),
       }, {
         id: 'me2_horizon',
         prerequisites: [
@@ -67,50 +68,50 @@ const data: GameData = {
           'me2_recruit_warlord',
           'me2_recruit_convict',
         ],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Horizon_(mission)',
+        wikiUrl: w('Horizon_(mission)'),
       }, {
         id: 'me2_collector_ship',
         prerequisites: ['me2_horizon'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Collector_Ship_(mission)',
+        wikiUrl: w('Collector_Ship_(mission)'),
       }, {
         id: 'me2_iff',
         prerequisites: ['me2_collector_ship'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Reaper_IFF_(mission)',
+        wikiUrl: w('Reaper_IFF_(mission)'),
       }, {
         id: 'me2_suicide_mission',
         prerequisites: ['me2_iff'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Suicide_Mission',
+        wikiUrl: w('Suicide_Mission'),
       }],
     }, {
       id: 'me2_dossiers',
       missions: [{
         id: 'me2_recruit_archangel',
         prerequisites: ['me2_freedoms_progress'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_Archangel',
+        wikiUrl: w('Dossier:_Archangel'),
       }, {
         id: 'me2_recruit_professor',
         prerequisites: ['me2_freedoms_progress'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Professor',
+        wikiUrl: w('Dossier:_The_Professor'),
       }, {
         id: 'me2_recruit_warlord',
         prerequisites: ['me2_freedoms_progress'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Warlord',
+        wikiUrl: w('Dossier:_The_Warlord'),
       }, {
         id: 'me2_recruit_convict',
         prerequisites: ['me2_freedoms_progress'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Convict',
+        wikiUrl: w('Dossier:_The_Convict'),
       }, {
         id: 'me2_recruit_assassin',
         prerequisites: ['me2_horizon'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Assassin',
+        wikiUrl: w('Dossier:_The_Assassin'),
       }, {
         id: 'me2_recruit_justicar',
         prerequisites: ['me2_horizon'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_The_Justicar',
+        wikiUrl: w('Dossier:_The_Justicar'),
       }, {
         id: 'me2_recruit_tali',
         prerequisites: ['me2_horizon'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Dossier:_Tali',
+        wikiUrl: w('Dossier:_Tali'),
       }],
     }],
   }, {
@@ -120,57 +121,57 @@ const data: GameData = {
       missions: [{
         id: 'me3_prologue',
         prerequisites: [],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Prologue:_Earth',
+        wikiUrl: w('Prologue:_Earth'),
       }, {
         id: 'me3_mars',
         prerequisites: ['me3_prologue'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Mars',
+        wikiUrl: w('Priority:_Mars'),
       }, {
         id: 'me3_citadel1',
         prerequisites: ['me3_mars'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_The_Citadel_I',
+        wikiUrl: w('Priority:_The_Citadel_I'),
       }, {
         id: 'me3_palaven',
         prerequisites: ['me3_citadel1'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Palaven',
+        wikiUrl: w('Priority:_Palaven'),
       }, {
         id: 'me3_surkesh',
         prerequisites: ['me3_palaven'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Sur%27Kesh',
+        wikiUrl: w('Priority:_Sur%27Kesh'),
       }, {
         id: 'me3_tuchanka',
         prerequisites: ['me3_surkesh'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Tuchanka',
+        wikiUrl: w('Priority:_Tuchanka'),
       }, {
         id: 'me3_citadel2',
         prerequisites: ['me3_tuchanka'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_The_Citadel_II',
+        wikiUrl: w('Priority:_The_Citadel_II'),
       }, {
         id: 'me3_perseus_veil',
         prerequisites: ['me3_citadel2'],
         wikiUrl:
-          'https://masseffect.fandom.com/wiki/Priority:_Geth_Dreadnought',
+          w('Priority:_Geth_Dreadnought'),
       }, {
         id: 'me3_rannoch',
         prerequisites: ['me3_perseus_veil'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Rannoch',
+        wikiUrl: w('Priority:_Rannoch'),
       }, {
         id: 'me3_thessia',
         prerequisites: ['me3_rannoch'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Thessia',
+        wikiUrl: w('Priority:_Thessia'),
       }, {
         id: 'me3_horizon',
         prerequisites: ['me3_thessia'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Horizon',
+        wikiUrl: w('Priority:_Horizon'),
       }, {
         id: 'me3_cerberus_hq',
         prerequisites: ['me3_horizon'],
         wikiUrl:
-          'https://masseffect.fandom.com/wiki/Priority:_Cerberus_Headquarters',
+          w('Priority:_Cerberus_Headquarters'),
       }, {
         id: 'me3_earth',
         prerequisites: ['me3_cerberus_hq'],
-        wikiUrl: 'https://masseffect.fandom.com/wiki/Priority:_Earth_(mission)',
+        wikiUrl: w('Priority:_Earth_(mission)'),
       }],
     }],
   }],
