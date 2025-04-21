@@ -56,6 +56,7 @@ const strings: TextStrings = {
   mission_me2_suicide_mission_final_battle: "Suicide Mission: Final Battle",
   mission_me2_citadel_crime_in_progress: "Citadel: Crime in Progress",
   mission_me2_citadel_found_forged_id: "Citadel: Found Forged ID",
+  mission_me2_citadel_krogan_sushi: "Citadel: Krogan Sushi",
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",

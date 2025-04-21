@@ -148,6 +148,10 @@ const data: GameData = {
         // TODO: add 'me2_loyalty_garrus' OR 'me2_loyalty_thane'
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Citadel:_Found_Forged_ID'),
+      }, {
+        id: 'me2_citadel_krogan_sushi',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('Citadel:_Krogan_Sushi'),
       }],
     }],
   }, {

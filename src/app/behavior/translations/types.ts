@@ -68,6 +68,7 @@ export type TextStrings = {
   mission_me2_suicide_mission_final_battle: string;
   mission_me2_citadel_crime_in_progress: string;
   mission_me2_citadel_found_forged_id: string;
+  mission_me2_citadel_krogan_sushi: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;
