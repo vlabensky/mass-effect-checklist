@@ -155,6 +155,10 @@ const data: GameData = {
         id: 'me2_loyalty_grunt',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Grunt:_Rite_of_Passage'),
+      }, {
+        id: 'me2_loyalty_jack',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Jack:_Subject_Zero'),
       }],
     }, {
       id: 'me2_citadel',
