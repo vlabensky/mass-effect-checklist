@@ -16,7 +16,7 @@ const MissionList = ({ game, completedMissions, onToggleMission }: Props) => {
     if (!mission.prerequisites || mission.prerequisites.length === 0)
       return true;
 
-    return mission.prerequisites.every(completedMissions.hasOwnProperty);
+    return mission.prerequisites.every(id => completedMissions.hasOwnProperty(id));
   };
 
   return (
