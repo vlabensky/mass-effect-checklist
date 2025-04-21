@@ -175,6 +175,10 @@ const data: GameData = {
         id: 'me2_loyalty_samara',
         prerequisites: ['me2_recruit_justicar'],
         wikiUrl: w('Samara:_The_Ardat-Yakshi'),
+      }, {
+        id: 'me2_loyalty_tali',
+        prerequisites: ['me2_recruit_tali'],
+        wikiUrl: w('Tali:_Treason'),
       }],
     }, {
       id: 'me2_citadel',

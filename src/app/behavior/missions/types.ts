@@ -59,6 +59,7 @@ export type MissionId =
   | 'me2_loyalty_miranda'
   | 'me2_loyalty_mordin'
   | 'me2_loyalty_samara'
+  | 'me2_loyalty_tali'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'
