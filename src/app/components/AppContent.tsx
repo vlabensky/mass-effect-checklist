@@ -162,7 +162,7 @@ const AppContent = () => {
     <>
       <Styles />
       <main className="min-h-screen bg-gradient-to-b text-text-primary p-4 sm:p-8">
-        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com" async></script>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
         <div className="max-w-4xl mx-auto">
