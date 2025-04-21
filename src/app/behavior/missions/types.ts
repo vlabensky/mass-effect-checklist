@@ -9,6 +9,7 @@ export type SectionId =
   | 'me1_story'
   | 'me2_plot'
   | 'me2_dossiers'
+  | 'me2_citadel'
   | 'me3_priority'
   ;
 
@@ -43,6 +44,7 @@ export type MissionId =
   | 'me2_suicide_mission_infiltration'
   | 'me2_suicide_mission_the_long_walk'
   | 'me2_suicide_mission_final_battle'
+  | 'me2_citadel_crime_in_progress'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'

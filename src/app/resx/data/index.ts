@@ -137,6 +137,11 @@ const data: GameData = {
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Dossier:_Tali'),
       }],
+    }, {
+      id: 'me2_citadel',
+      missions: [
+
+      ],
     }],
   }, {
     id: 'me3',
