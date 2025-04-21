@@ -152,6 +152,10 @@ const data: GameData = {
         id: 'me2_citadel_krogan_sushi',
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Citadel:_Krogan_Sushi'),
+      }, {
+        id: 'me2_citadel_captain_bailey',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('Citadel:_Captain_Bailey'),
       }],
     }],
   }, {

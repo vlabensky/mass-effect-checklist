@@ -47,6 +47,7 @@ export type MissionId =
   | 'me2_citadel_crime_in_progress'
   | 'me2_citadel_found_forged_id'
   | 'me2_citadel_krogan_sushi'
+  | 'me2_citadel_captain_bailey'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'
