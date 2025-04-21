@@ -40,6 +40,7 @@ const strings: TextStrings = {
   mission_me2_omega_aria_tloak: "Omega: Aria T'Loak",
   mission_me2_citadel_anderson: "Citadel: Captain Anderson",
   mission_me2_dossier_the_master_thief: "Dossier: The Master Thief",
+  mission_me2_dossier_the_veteran: "Dossier: The Veteran",
   mission_me2_recruit_archangel: "Dossier: Archangel",
   mission_me2_recruit_professor: "Dossier: The Professor",
   mission_me2_recruit_warlord: "Dossier: The Warlord",

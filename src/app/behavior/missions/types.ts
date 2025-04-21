@@ -50,6 +50,7 @@ export type MissionId =
   | 'me2_citadel_captain_bailey'
   | 'me2_citadel_the_council'
   | 'me2_dossier_the_master_thief'
+  | 'me2_dossier_the_veteran'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'

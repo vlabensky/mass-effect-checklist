@@ -113,6 +113,10 @@ const data: GameData = {
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Dossier:_The_Master_Thief'),
       }, {
+        id: 'me2_dossier_the_veteran',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('Dossier:_The_Veteran'),
+      }, {
         id: 'me2_recruit_archangel',
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Dossier:_Archangel'),

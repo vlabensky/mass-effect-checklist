@@ -52,6 +52,7 @@ export type TextStrings = {
   mission_me2_omega_aria_tloak: string;
   mission_me2_citadel_anderson: string;
   mission_me2_dossier_the_master_thief: string;
+  mission_me2_dossier_the_veteran: string;
   mission_me2_recruit_archangel: string;
   mission_me2_recruit_professor: string;
   mission_me2_recruit_warlord: string;
