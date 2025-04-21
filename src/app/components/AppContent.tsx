@@ -20,6 +20,7 @@ const AppContent = () => {
   const [completedMissions, setCompletedMissions] = useState<Record<string, boolean>>({});
   const [isSettingsMenuOpen, setIsSettingsMenuOpen] = useState(false);
   const settingsMenuRef = useRef<HTMLDivElement>(null);
+  const settingsButtonRef = useRef<HTMLButtonElement>(null);
 
   const gameData = getGameData();
 
@@ -93,8 +94,13 @@ const AppContent = () => {
 
   // Effect to handle clicks outside settings menu
   useEffect(() => {
-    const handleClickOutside = () => {
-      if (settingsMenuRef.current)
+    const handleClickOutside = (event: MouseEvent) => {
+      const isOutside = settingsMenuRef.current
+        && !settingsMenuRef.current.contains(event.target as Node)
+        && settingsButtonRef.current
+        && !settingsButtonRef.current.contains(event.target as Node);
+
+      if (isOutside)
         setIsSettingsMenuOpen(false);
     };
 
@@ -164,6 +170,7 @@ const AppContent = () => {
             <h1 className="text-3xl sm:text-4xl font-bold text-accent">{t('pageTitle')}</h1>
             <div className="relative">
               <button
+                ref={settingsButtonRef}
                 onClick={toggleSettingsMenu}
                 aria-label={t('settingsLabel')}
                 aria-expanded={isSettingsMenuOpen}
