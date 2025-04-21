@@ -147,7 +147,11 @@ const data: GameData = {
       }],
     }, {
       id: 'me2_loyalty',
-      missions: [],
+      missions: [{
+        id: 'me2_loyalty_garrus',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Garrus:_Eye_for_an_Eye'),
+      }],
     }, {
       id: 'me2_citadel',
       missions: [{
