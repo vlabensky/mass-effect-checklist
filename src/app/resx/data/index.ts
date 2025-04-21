@@ -34,12 +34,12 @@ const data: GameData = {
         prerequisites: ["me1_find_liara", "me1_feros", "me1_noveria"],
         wikiUrl: "https://masseffect.fandom.com/wiki/Virmire:_Saren%27s_Plan",
       }, {
-        id: "me1_ilum",
+        id: "me1_ilos",
         prerequisites: ["me1_virmire"],
         wikiUrl: "https://masseffect.fandom.com/wiki/Ilos:_Find_the_Conduit",
       }, {
         id: "me1_final_battle",
-        prerequisites: ["me1_ilum"],
+        prerequisites: ["me1_ilos"],
         wikiUrl: "https://masseffect.fandom.com/wiki/Race_Against_Time:_Final_Battle",
       }],
     }],

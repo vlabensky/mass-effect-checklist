@@ -21,7 +21,7 @@ export type MissionId =
   | 'me1_feros'
   | 'me1_noveria'
   | 'me1_virmire'
-  | 'me1_ilum'
+  | 'me1_ilos'
   | 'me1_final_battle'
   | 'me2_prologue'
   | 'me2_freedom'

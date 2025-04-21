@@ -31,7 +31,7 @@ const strings: TextStrings = {
   mission_me1_feros: "Feros: Geth Attack",
   mission_me1_noveria: "Noveria: Matriarch Benezia",
   mission_me1_virmire: "Virmire: Saren's Plan",
-  mission_me1_ilum: "Ilos: Find the Conduit",
+  mission_me1_ilos: "Ilos: Find the Conduit",
   mission_me1_final_battle: "Race Against Time: Final Battle",
   mission_me2_prologue: "Prologue: Awakening",
   mission_me2_freedom: "Freedom's Progress",
