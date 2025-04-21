@@ -163,6 +163,10 @@ const data: GameData = {
         id: 'me2_loyalty_jacob',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Jacob:_The_Gift_of_Greatness'),
+      }, {
+        id: 'me2_loyalty_miranda',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Miranda:_The_Prodigal'),
       }],
     }, {
       id: 'me2_citadel',

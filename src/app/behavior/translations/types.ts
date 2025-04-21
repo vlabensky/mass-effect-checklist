@@ -78,6 +78,7 @@ export type TextStrings = {
   mission_me2_loyalty_grunt: string;
   mission_me2_loyalty_jack: string;
   mission_me2_loyalty_jacob: string;
+  mission_me2_loyalty_miranda: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;
