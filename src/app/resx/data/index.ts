@@ -97,6 +97,10 @@ const data: GameData = {
         id: 'me2_suicide_mission_infiltration',
         prerequisites: ['me2_use_omega4_relay'],
         wikiUrl: w('Collector_Base:_Infiltration'),
+      }, {
+        id: 'me2_suicide_mission_the_long_walk',
+        prerequisites: ['me2_suicide_mission_infiltration'],
+        wikiUrl: w('Collector_Base:_The_Long_Walk'),
       }],
     }, {
       id: 'me2_dossiers',

@@ -41,6 +41,7 @@ export type MissionId =
   | 'me2_await_iff'
   | 'me2_use_omega4_relay'
   | 'me2_suicide_mission_infiltration'
+  | 'me2_suicide_mission_the_long_walk'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'
