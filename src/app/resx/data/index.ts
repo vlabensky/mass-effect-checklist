@@ -84,7 +84,7 @@ const data: GameData = {
       }, {
         id: 'me2_iff',
         prerequisites: ['me2_collector_ship'],
-        wikiUrl: w('Reaper_IFF_(mission)'),
+        wikiUrl: w('Reaper_IFF'),
       }, {
         id: 'me2_suicide_mission',
         prerequisites: ['me2_iff'],
