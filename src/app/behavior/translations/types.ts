@@ -1,6 +1,6 @@
 export type LanguageCode =
   | 'en'
-  | 'es';
+  ;
 
 export type Translations = {
   readonly [key in LanguageCode]: TranslationMap;
