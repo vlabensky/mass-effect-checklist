@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "ME Checklist",
-  description: "Checklist application for Mass Effect: Legendary Edition. Helpful for completionist players and players how want to pre-plan their Mass Effect Trilogy playthrough.",
+  description: "Checklist application for Mass Effect: Legendary Edition. Helpful for completionist players and players who want to pre-plan their Mass Effect Trilogy playthrough.",
 };
 
 export default function RootLayout({
