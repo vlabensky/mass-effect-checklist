@@ -52,6 +52,7 @@ const strings: TextStrings = {
   mission_me2_use_omega4_relay: "Stop the Collectors: Use Omega-4 Relay",
   mission_me2_suicide_mission_infiltration: "Suicide Mission: Infiltration",
   mission_me2_suicide_mission_the_long_walk: "Suicide Mission: The Long Walk",
+  mission_me2_suicide_mission_final_battle: "Suicide Mission: Final Battle",
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",

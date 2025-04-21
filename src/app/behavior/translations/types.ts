@@ -64,6 +64,7 @@ export type TextStrings = {
   mission_me2_use_omega4_relay: string;
   mission_me2_suicide_mission_infiltration: string;
   mission_me2_suicide_mission_the_long_walk: string;
+  mission_me2_suicide_mission_final_battle: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;

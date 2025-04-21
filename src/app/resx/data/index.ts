@@ -101,6 +101,10 @@ const data: GameData = {
         id: 'me2_suicide_mission_the_long_walk',
         prerequisites: ['me2_suicide_mission_infiltration'],
         wikiUrl: w('Collector_Base:_The_Long_Walk'),
+      }, {
+        id: 'me2_suicide_mission_final_battle',
+        prerequisites: ['me2_suicide_mission_the_long_walk'],
+        wikiUrl: w('Collector_Base:_Final_Battle'),
       }],
     }, {
       id: 'me2_dossiers',
