@@ -52,12 +52,12 @@ const data: GameData = {
         prerequisites: [],
         wikiUrl: "https://masseffect.fandom.com/wiki/Prologue:_Awakening",
       }, {
-        id: "me2_freedom",
+        id: "me2_freedoms_progress",
         prerequisites: ["me2_prologue"],
         wikiUrl: "https://masseffect.fandom.com/wiki/Freedom%27s_Progress",
       }, {
         id: "me2_citadel_anderson",
-        prerequisites: ["me2_freedom"],
+        prerequisites: ["me2_freedoms_progress"],
         wikiUrl: "https://masseffect.fandom.com/wiki/Citadel:_Captain_Anderson",
       }, {
         id: "me2_horizon",
@@ -85,19 +85,19 @@ const data: GameData = {
       id: 'me2_dossiers',
       missions: [{
         id: "me2_recruit_archangel",
-        prerequisites: ["me2_freedom"],
+        prerequisites: ["me2_freedoms_progress"],
         wikiUrl: "https://masseffect.fandom.com/wiki/Dossier:_Archangel",
       }, {
         id: "me2_recruit_professor",
-        prerequisites: ["me2_freedom"],
+        prerequisites: ["me2_freedoms_progress"],
         wikiUrl: "https://masseffect.fandom.com/wiki/Dossier:_The_Professor",
       }, {
         id: "me2_recruit_warlord",
-        prerequisites: ["me2_freedom"],
+        prerequisites: ["me2_freedoms_progress"],
         wikiUrl: "https://masseffect.fandom.com/wiki/Dossier:_The_Warlord",
       }, {
         id: "me2_recruit_convict",
-        prerequisites: ["me2_freedom"],
+        prerequisites: ["me2_freedoms_progress"],
         wikiUrl: "https://masseffect.fandom.com/wiki/Dossier:_The_Convict",
       }, {
         id: "me2_recruit_assassin",

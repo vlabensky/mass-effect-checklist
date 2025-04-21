@@ -24,7 +24,7 @@ export type MissionId =
   | 'me1_ilos'
   | 'me1_final_battle'
   | 'me2_prologue'
-  | 'me2_freedom'
+  | 'me2_freedoms_progress'
   | 'me2_citadel_anderson'
   | 'me2_recruit_archangel'
   | 'me2_recruit_professor'
