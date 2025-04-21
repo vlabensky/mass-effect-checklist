@@ -49,12 +49,12 @@ const data: GameData = {
     sections: [{
       id: 'me2_plot',
       missions: [{
-        id: 'me2_prologue',
+        id: 'me2_prologue_awakening',
         prerequisites: [],
         wikiUrl: w('Prologue:_Awakening'),
       }, {
         id: 'me2_freedoms_progress',
-        prerequisites: ['me2_prologue'],
+        prerequisites: ['me2_prologue_awakening'],
         wikiUrl: w('Freedom%27s_Progress'),
       }, {
         id: 'me2_citadel_anderson',
