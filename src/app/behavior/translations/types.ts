@@ -74,6 +74,7 @@ export type TextStrings = {
   mission_me2_citadel_krogan_sushi: string;
   mission_me2_citadel_captain_bailey: string;
   mission_me2_citadel_the_council: string;
+  mission_me2_loyalty_kasumi: string;
   mission_me2_loyalty_garrus: string;
   mission_me2_loyalty_grunt: string;
   mission_me2_loyalty_jack: string;

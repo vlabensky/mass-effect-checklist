@@ -148,6 +148,10 @@ const data: GameData = {
     }, {
       id: 'me2_loyalty',
       missions: [{
+        id: 'me2_loyalty_kasumi',
+        prerequisites: ['me2_dossier_the_master_thief'],
+        wikiUrl: w('Kasumi:_Stealing_Memory'),
+      }, {
         id: 'me2_loyalty_garrus',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Garrus:_Eye_for_an_Eye'),
