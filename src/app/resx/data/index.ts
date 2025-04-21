@@ -167,6 +167,10 @@ const data: GameData = {
         id: 'me2_loyalty_miranda',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Miranda:_The_Prodigal'),
+      }, {
+        id: 'me2_loyalty_mordin',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Mordin:_Old_Blood'),
       }],
     }, {
       id: 'me2_citadel',
