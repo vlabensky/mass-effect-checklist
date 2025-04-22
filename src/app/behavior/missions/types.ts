@@ -88,6 +88,7 @@ export type MissionId =
   | 'me2_n7_blood_pack_base'
   | 'me2_n7_blood_pack_communications_relay'
   | 'me2_n7_quarian_crash_site'
+  | 'me2_n7_imminent_ship_crash'
   | 'me2_n7_archeological_dig_site'
   | 'me2_n7_msv_strontium_mule'
   | 'me2_n7_blue_suns_base'

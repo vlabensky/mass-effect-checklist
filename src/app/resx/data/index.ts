@@ -314,6 +314,10 @@ const data: GameData = {
         prerequisites: ['me2_horizon'],
         wikiUrl: w('N7:_Quarian_Crash_Site'),
       }, {
+        id: 'me2_n7_imminent_ship_crash',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('N7:_Imminent_Ship_Crash'),
+      }, {
         id: 'me2_n7_archeological_dig_site',
         prerequisites: ['me2_loyalty_jacob'],
         wikiUrl: w('N7:_Archeological_Dig_Site'),
