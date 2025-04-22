@@ -343,6 +343,11 @@ const data: GameData = {
         // TODO: me2_collector_ship or Rosalie Lost after horizon
         prerequisites: ['me2_collector_ship'],
         wikiUrl: w('N7:_Endangered_Research_Station'),
+      }, {
+        id: 'me2_n7_mining_the_canyon',
+        // TODO: me2_collector_ship or Rosalie Lost after horizon
+        prerequisites: ['me2_collector_ship'],
+        wikiUrl: w('N7:_Mining_the_Canyon'),
       }],
     }],
   }, {

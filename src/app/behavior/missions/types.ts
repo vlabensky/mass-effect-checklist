@@ -95,6 +95,7 @@ export type MissionId =
   | 'me2_n7_javelin_missiles_launched'
   | 'me2_n7_captured_mining_facility'
   | 'me2_n7_endangered_research_station'
+  | 'me2_n7_mining_the_canyon'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'
