@@ -199,21 +199,17 @@ const data: GameData = {
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Omega:_Aria_T\'Loak'),
       }, {
-        id: 'me2_omega_archangel_datapad_recovered',
-        prerequisites: ['me2_recruit_archangel'],
-        wikiUrl: w('Omega:_Archangel:_Datapad_Recovered'),
-      }, {
         id: 'me2_omega_batarian_bartender',
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Omega:_Batarian_Bartender'),
       }, {
-        id: 'me2_omega_packages_for_ish',
-        prerequisites: ['me2_horizon'],
-        wikiUrl: w('Omega:_Packages_for_Ish'),
-      }, {
         id: 'me2_omega_struggling_quarian',
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Omega:_Struggling_Quarian'),
+      }, {
+        id: 'me2_omega_archangel_datapad_recovered',
+        prerequisites: ['me2_recruit_archangel'],
+        wikiUrl: w('Omega:_Archangel:_Datapad_Recovered'),
       }, {
         id: 'me2_omega_the_patriarch',
         // TODO: me2_recruit_archangel OR me2_recruit_professor
@@ -223,6 +219,10 @@ const data: GameData = {
         id: 'me2_omega_the_professor_missing_assistant',
         prerequisites: ['me2_recruit_professor'],
         wikiUrl: w('Omega:_The_Professor:_Missing_Assistant'),
+      }, {
+        id: 'me2_omega_packages_for_ish',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Omega:_Packages_for_Ish'),
       }],
     }, {
       id: 'me2_citadel',
