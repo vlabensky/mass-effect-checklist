@@ -108,6 +108,7 @@ export type TextStrings = {
   mission_me2_n7_abandoned_mine: string;
   mission_me2_n7_anomalous_weather_detected: string;
   mission_me2_n7_blood_pack_base: string;
+  mission_me2_n7_blood_pack_communications_relay: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;

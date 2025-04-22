@@ -305,6 +305,10 @@ const data: GameData = {
         id: 'me2_n7_blood_pack_base',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('N7:_Blood_Pack_Base'),
+      }, {
+        id: 'me2_n7_blood_pack_communications_relay',
+        prerequisites: ['me2_n7_blood_pack_base'],
+        wikiUrl: w('N7:_Blood_Pack_Communications_Relay'),
       }],
     }],
   }, {

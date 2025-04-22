@@ -96,6 +96,7 @@ const strings: TextStrings = {
   mission_me2_n7_abandoned_mine: 'N7: Abandoned Mine',
   mission_me2_n7_anomalous_weather_detected: 'N7: Anomalous Weather Detected',
   mission_me2_n7_blood_pack_base: 'N7: Blood Pack Base',
+  mission_me2_n7_blood_pack_communications_relay: 'N7: Blood Pack Communications Relay',
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",
