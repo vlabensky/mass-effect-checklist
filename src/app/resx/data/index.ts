@@ -202,6 +202,10 @@ const data: GameData = {
         id: 'me2_omega_archangel_datapad_recovered',
         prerequisites: ['me2_recruit_archangel'],
         wikiUrl: w('Omega:_Archangel:_Datapad_Recovered'),
+      }, {
+        id: 'me2_omega_batarian_bartender',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('Omega:_Batarian_Bartender'),
       }],
     }, {
       id: 'me2_citadel',
