@@ -334,6 +334,11 @@ const data: GameData = {
         id: 'me2_n7_captured_mining_facility',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('N7:_Captured_Mining_Facility'),
+      }, {
+        id: 'me2_n7_endangered_research_station',
+        // TODO: me2_collector_ship or Rosalie Lost after horizon
+        prerequisites: ['me2_collector_ship'],
+        wikiUrl: w('N7:_Endangered_Research_Station'),
       }],
     }],
   }, {
