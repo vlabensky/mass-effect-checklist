@@ -83,6 +83,7 @@ const strings: TextStrings = {
   mission_me2_omega_the_patriarch: "Omega: The Patriarch",
   mission_me2_omega_the_professor_missing_assistant: "Omega: The Professor: Missing Assistant",
   mission_me2_normandy_fba_couplings: "Normandy: FBA Couplings",
+  mission_me2_normandy_serrice_ice_brandy: "Normandy: Serrice Ice Brandy",
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",

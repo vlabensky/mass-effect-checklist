@@ -254,6 +254,10 @@ const data: GameData = {
         id: 'me2_normandy_fba_couplings',
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Normandy:_FBA_Couplings'),
+      }, {
+        id: 'me2_normandy_serrice_ice_brandy',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('Normandy:_Serrice_Ice_Brandy'),
       }],
     }],
   }, {
