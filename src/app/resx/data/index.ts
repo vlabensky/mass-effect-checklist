@@ -214,6 +214,11 @@ const data: GameData = {
         id: 'me2_omega_struggling_quarian',
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Omega:_Struggling_Quarian'),
+      }, {
+        id: 'me2_omega_the_patriarch',
+        // TODO: me2_recruit_archangel OR me2_recruit_professor
+        prerequisites: ['me2_recruit_archangel'],
+        wikiUrl: w('Omega:_The_Patriarch'),
       }],
     }, {
       id: 'me2_citadel',

@@ -69,6 +69,7 @@ export type MissionId =
   | 'me2_omega_batarian_bartender'
   | 'me2_omega_packages_for_ish'
   | 'me2_omega_struggling_quarian'
+  | 'me2_omega_the_patriarch'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'
