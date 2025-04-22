@@ -61,10 +61,6 @@ const data: GameData = {
         prerequisites: ['me2_prologue_awakening'],
         wikiUrl: w('Freedom%27s_Progress'),
       }, {
-        id: 'me2_omega_aria_tloak',
-        prerequisites: ['me2_freedoms_progress'],
-        wikiUrl: w('Omega:_Aria_T\'Loak'),
-      }, {
         id: 'me2_citadel_anderson',
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Citadel:_Captain_Anderson'),
@@ -198,7 +194,11 @@ const data: GameData = {
       }],
     }, {
       id: 'me2_omega',
-      missions: [],
+      missions: [{
+        id: 'me2_omega_aria_tloak',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('Omega:_Aria_T\'Loak'),
+      }],
     }, {
       id: 'me2_citadel',
       missions: [{
