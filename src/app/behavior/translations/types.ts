@@ -103,6 +103,7 @@ export type TextStrings = {
   mission_me2_n7_abandoned_research_station: string;
   mission_me2_n7_hahne_kedar_facility: string;
   mission_me2_n7_msv_estevanico: string;
+  mission_me2_n7_eclipse_smuggling_depot: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;

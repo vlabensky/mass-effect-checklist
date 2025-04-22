@@ -285,6 +285,10 @@ const data: GameData = {
         id: 'me2_n7_msv_estevanico',
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('N7:_MSV_Estevanico'),
+      }, {
+        id: 'me2_n7_eclipse_smuggling_depot',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('N7:_Eclipse_Smuggling_Depot'),
       }],
     }],
   }, {
