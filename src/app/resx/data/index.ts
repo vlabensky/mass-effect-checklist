@@ -330,6 +330,10 @@ const data: GameData = {
         // TODO: check me2_n7_msv_strontium_mule OR me2_n7_blue_suns_base
         prerequisites: ['me2_n7_msv_strontium_mule'],
         wikiUrl: w('N7:_Javelin_Missiles_Launched'),
+      }, {
+        id: 'me2_n7_captured_mining_facility',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('N7:_Captured_Mining_Facility'),
       }],
     }],
   }, {
