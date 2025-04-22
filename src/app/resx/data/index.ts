@@ -210,6 +210,10 @@ const data: GameData = {
         id: 'me2_omega_packages_for_ish',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Omega:_Packages_for_Ish'),
+      }, {
+        id: 'me2_omega_struggling_quarian',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('Omega:_Struggling_Quarian'),
       }],
     }, {
       id: 'me2_citadel',
