@@ -219,6 +219,10 @@ const data: GameData = {
         // TODO: me2_recruit_archangel OR me2_recruit_professor
         prerequisites: ['me2_recruit_archangel'],
         wikiUrl: w('Omega:_The_Patriarch'),
+      }, {
+        id: 'me2_omega_the_professor_missing_assistant',
+        prerequisites: ['me2_recruit_professor'],
+        wikiUrl: w('Omega:_The_Professor:_Missing_Assistant'),
       }],
     }, {
       id: 'me2_citadel',

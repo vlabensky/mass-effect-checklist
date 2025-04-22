@@ -80,6 +80,7 @@ const strings: TextStrings = {
   mission_me2_omega_packages_for_ish: "Omega: Packages for Ish",
   mission_me2_omega_struggling_quarian: "Omega: Struggling Quarian",
   mission_me2_omega_the_patriarch: "Omega: The Patriarch",
+  mission_me2_omega_the_professor_missing_assistant: "Omega: The Professor: Missing Assistant",
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",
