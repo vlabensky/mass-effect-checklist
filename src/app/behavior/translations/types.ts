@@ -39,6 +39,7 @@ export type TextStrings = {
   group_me2_citadel: string,
   group_me2_loyalty: string,
   group_me2_omega: string,
+  group_me2_normandy: string,
   group_me3_priority: string,
   mission_me1_eden_prime: string;
   mission_me1_citadel_expose_saren: string;

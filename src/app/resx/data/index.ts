@@ -248,6 +248,9 @@ const data: GameData = {
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Citadel:_The_Council'),
       }],
+    }, {
+      id: 'me2_normandy',
+      missions: [],
     }],
   }, {
     id: 'me3',
