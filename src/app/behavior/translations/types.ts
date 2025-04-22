@@ -111,6 +111,7 @@ export type TextStrings = {
   mission_me2_n7_blood_pack_communications_relay: string;
   mission_me2_n7_quarian_crash_site: string;
   mission_me2_n7_archeological_dig_site: string;
+  mission_me2_n7_msv_strontium_mule: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;

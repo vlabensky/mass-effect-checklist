@@ -317,6 +317,10 @@ const data: GameData = {
         id: 'me2_n7_archeological_dig_site',
         prerequisites: ['me2_loyalty_jacob'],
         wikiUrl: w('N7:_Archeological_Dig_Site'),
+      }, {
+        id: 'me2_n7_msv_strontium_mule',
+        prerequisites: ['me2_n7_archeological_dig_site'],
+        wikiUrl: w('N7:_MSV_Strontium_Mule'),
       }],
     }],
   }, {
