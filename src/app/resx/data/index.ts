@@ -270,6 +270,10 @@ const data: GameData = {
     }, {
       id: 'me2_n7',
       missions: [{
+        id: 'me2_n7_wrecked_merchant_freighter',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('N7:_Wrecked_Merchant_Freighter'),
+      }, {
         id: 'me2_n7_abandoned_research_station',
         prerequisites: ['me2_n7_wrecked_merchant_freighter'],
         wikiUrl: w('N7:_Abandoned_Research_Station'),
