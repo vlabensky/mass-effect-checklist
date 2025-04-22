@@ -321,6 +321,10 @@ const data: GameData = {
         id: 'me2_n7_msv_strontium_mule',
         prerequisites: ['me2_n7_archeological_dig_site'],
         wikiUrl: w('N7:_MSV_Strontium_Mule'),
+      }, {
+        id: 'me2_n7_blue_suns_base',
+        prerequisites: ['me2_n7_msv_strontium_mule'],
+        wikiUrl: w('N7:_Blue_Suns_Base'),
       }],
     }],
   }, {

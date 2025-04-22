@@ -90,6 +90,7 @@ export type MissionId =
   | 'me2_n7_quarian_crash_site'
   | 'me2_n7_archeological_dig_site'
   | 'me2_n7_msv_strontium_mule'
+  | 'me2_n7_blue_suns_base'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'
