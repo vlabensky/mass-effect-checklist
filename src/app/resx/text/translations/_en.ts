@@ -26,6 +26,7 @@ const strings: TextStrings = {
   group_me2_dossiers: "Dossiers",
   group_me2_citadel: "Citadel",
   group_me2_loyalty: "Loyalty",
+  group_me2_omega: "Omega",
   group_me3_priority: "Priority",
   mission_me1_eden_prime: "Find the Beacon",
   mission_me1_citadel_expose_saren: "Citadel: Expose Saren",

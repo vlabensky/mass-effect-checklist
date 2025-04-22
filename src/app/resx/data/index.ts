@@ -197,6 +197,9 @@ const data: GameData = {
         wikiUrl: w('Legion:_A_House_Divided'),
       }],
     }, {
+      id: 'me2_omega',
+      missions: [],
+    }, {
       id: 'me2_citadel',
       missions: [{
         id: 'me2_citadel_crime_in_progress',

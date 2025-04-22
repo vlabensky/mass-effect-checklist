@@ -11,6 +11,7 @@ export type SectionId =
   | 'me2_dossiers'
   | 'me2_citadel'
   | 'me2_loyalty'
+  | 'me2_omega'
   | 'me3_priority'
   ;
 
