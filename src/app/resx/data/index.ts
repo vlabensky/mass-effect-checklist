@@ -281,6 +281,10 @@ const data: GameData = {
         id: 'me2_n7_hahne_kedar_facility',
         prerequisites: ['me2_n7_abandoned_research_station'],
         wikiUrl: w('N7:_Hahne-Kedar_Facility'),
+      }, {
+        id: 'me2_n7_msv_estevanico',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('N7:_MSV_Estevanico'),
       }],
     }],
   }, {

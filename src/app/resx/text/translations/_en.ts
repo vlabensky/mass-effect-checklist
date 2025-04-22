@@ -90,6 +90,7 @@ const strings: TextStrings = {
   mission_me2_n7_wrecked_merchant_freighter: "N7: Wrecked Merchant Freighter",
   mission_me2_n7_abandoned_research_station: "N7: Abandoned Research Station",
   mission_me2_n7_hahne_kedar_facility: "N7: Hahne-Kedar Facility",
+  mission_me2_n7_msv_estevanico: "N7: MSV Estevanico",
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",
