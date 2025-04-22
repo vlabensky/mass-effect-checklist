@@ -301,6 +301,10 @@ const data: GameData = {
         id: 'me2_n7_anomalous_weather_detected',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('N7:_Anomalous_Weather_Detected'),
+      }, {
+        id: 'me2_n7_blood_pack_base',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('N7:_Blood_Pack_Base'),
       }],
     }],
   }, {

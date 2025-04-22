@@ -85,6 +85,7 @@ export type MissionId =
   | 'me2_n7_lost_operative'
   | 'me2_n7_abandoned_mine'
   | 'me2_n7_anomalous_weather_detected'
+  | 'me2_n7_blood_pack_base'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'
