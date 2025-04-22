@@ -297,6 +297,10 @@ const data: GameData = {
         id: 'me2_n7_abandoned_mine',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('N7:_Abandoned_Mine'),
+      }, {
+        id: 'me2_n7_anomalous_weather_detected',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('N7:_Anomalous_Weather_Detected'),
       }],
     }],
   }, {
