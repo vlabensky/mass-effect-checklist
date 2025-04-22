@@ -82,6 +82,7 @@ export type MissionId =
   | 'me2_n7_hahne_kedar_facility'
   | 'me2_n7_msv_estevanico'
   | 'me2_n7_eclipse_smuggling_depot'
+  | 'me2_n7_lost_operative'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'
