@@ -262,6 +262,10 @@ const data: GameData = {
         id: 'me2_normandy_special_ingredients',
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Normandy:_Special_Ingredients'),
+      }, {
+        id: 'me2_normandy_crash_site',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('Normandy_Crash_Site_(assignment)'),
       }],
     }],
   }, {

@@ -75,6 +75,7 @@ export type MissionId =
   | 'me2_normandy_fba_couplings'
   | 'me2_normandy_serrice_ice_brandy'
   | 'me2_normandy_special_ingredients'
+  | 'me2_normandy_crash_site'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'

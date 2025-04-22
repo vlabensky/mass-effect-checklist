@@ -85,6 +85,7 @@ const strings: TextStrings = {
   mission_me2_normandy_fba_couplings: "Normandy: FBA Couplings",
   mission_me2_normandy_serrice_ice_brandy: "Normandy: Serrice Ice Brandy",
   mission_me2_normandy_special_ingredients: "Normandy: Special Ingredients",
+  mission_me2_normandy_crash_site: "Normandy Crash Site",
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",
