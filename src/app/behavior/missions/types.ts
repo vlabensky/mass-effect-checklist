@@ -13,6 +13,7 @@ export type SectionId =
   | 'me2_loyalty'
   | 'me2_omega'
   | 'me2_normandy'
+  | 'me2_n7'
   | 'me3_priority'
   ;
 

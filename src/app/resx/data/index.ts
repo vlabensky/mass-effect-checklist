@@ -267,6 +267,9 @@ const data: GameData = {
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Normandy_Crash_Site_(assignment)'),
       }],
+    }, {
+      id: 'me2_n7',
+      missions: [],
     }],
   }, {
     id: 'me3',
