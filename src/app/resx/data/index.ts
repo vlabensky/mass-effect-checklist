@@ -293,6 +293,10 @@ const data: GameData = {
         id: 'me2_n7_lost_operative',
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('N7:_Lost_Operative'),
+      }, {
+        id: 'me2_n7_abandoned_mine',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('N7:_Abandoned_Mine'),
       }],
     }],
   }, {
