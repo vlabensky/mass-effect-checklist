@@ -72,6 +72,7 @@ export type MissionId =
   | 'me2_omega_struggling_quarian'
   | 'me2_omega_the_patriarch'
   | 'me2_omega_the_professor_missing_assistant'
+  | 'me2_normandy_fba_couplings'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'

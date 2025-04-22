@@ -250,7 +250,11 @@ const data: GameData = {
       }],
     }, {
       id: 'me2_normandy',
-      missions: [],
+      missions: [{
+        id: 'me2_normandy_fba_couplings',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('Normandy:_FBA_Couplings'),
+      }],
     }],
   }, {
     id: 'me3',
