@@ -198,6 +198,10 @@ const data: GameData = {
         id: 'me2_omega_aria_tloak',
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Omega:_Aria_T\'Loak'),
+      }, {
+        id: 'me2_omega_archangel_datapad_recovered',
+        prerequisites: ['me2_recruit_archangel'],
+        wikiUrl: w('Omega:_Archangel:_Datapad_Recovered'),
       }],
     }, {
       id: 'me2_citadel',

@@ -65,6 +65,7 @@ export type MissionId =
   | 'me2_loyalty_thane'
   | 'me2_loyalty_legion'
   | 'me2_omega_aria_tloak'
+  | 'me2_omega_archangel_datapad_recovered'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'

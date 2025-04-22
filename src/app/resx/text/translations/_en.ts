@@ -75,6 +75,7 @@ const strings: TextStrings = {
   mission_me2_loyalty_thane: "Thane: Sins of the Father",
   mission_me2_loyalty_legion: "Legion: A House Divided",
   mission_me2_omega_aria_tloak: "Omega: Aria T'Loak",
+  mission_me2_omega_archangel_datapad_recovered: "Omega: Archangel: Datapad Recovered",
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",
