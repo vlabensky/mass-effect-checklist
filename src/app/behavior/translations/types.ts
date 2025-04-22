@@ -99,6 +99,7 @@ export type TextStrings = {
   mission_me2_normandy_serrice_ice_brandy: string;
   mission_me2_normandy_special_ingredients: string;
   mission_me2_normandy_crash_site: string;
+  mission_me2_n7_abandoned_research_station: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;

@@ -77,6 +77,7 @@ export type MissionId =
   | 'me2_normandy_serrice_ice_brandy'
   | 'me2_normandy_special_ingredients'
   | 'me2_normandy_crash_site'
+  | 'me2_n7_abandoned_research_station'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'

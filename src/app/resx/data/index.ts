@@ -269,7 +269,11 @@ const data: GameData = {
       }],
     }, {
       id: 'me2_n7',
-      missions: [],
+      missions: [{
+        id: 'me2_n7_abandoned_research_station',
+        prerequisites: ['me2_n7_wrecked_merchant_freighter'],
+        wikiUrl: w('N7:_Abandoned_Research_Station'),
+      }],
     }],
   }, {
     id: 'me3',
