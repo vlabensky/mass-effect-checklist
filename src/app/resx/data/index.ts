@@ -325,6 +325,11 @@ const data: GameData = {
         id: 'me2_n7_blue_suns_base',
         prerequisites: ['me2_n7_msv_strontium_mule'],
         wikiUrl: w('N7:_Blue_Suns_Base'),
+      }, {
+        id: 'me2_n7_javelin_missiles_launched',
+        // TODO: check me2_n7_msv_strontium_mule OR me2_n7_blue_suns_base
+        prerequisites: ['me2_n7_msv_strontium_mule'],
+        wikiUrl: w('N7:_Javelin_Missiles_Launched'),
       }],
     }],
   }, {

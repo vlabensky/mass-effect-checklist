@@ -101,6 +101,7 @@ const strings: TextStrings = {
   mission_me2_n7_archeological_dig_site: 'N7: Archeological Dig Site',
   mission_me2_n7_msv_strontium_mule: 'N7: MSV Strontium Mule',
   mission_me2_n7_blue_suns_base: 'N7: Blue Suns Base',
+  mission_me2_n7_javelin_missiles_launched: 'N7: Javelin Missiles Launched',
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",
