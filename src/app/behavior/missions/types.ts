@@ -79,6 +79,7 @@ export type MissionId =
   | 'me2_normandy_crash_site'
   | 'me2_n7_wrecked_merchant_freighter'
   | 'me2_n7_abandoned_research_station'
+  | 'me2_n7_hahne_kedar_facility'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'

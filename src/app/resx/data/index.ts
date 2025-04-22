@@ -277,6 +277,10 @@ const data: GameData = {
         id: 'me2_n7_abandoned_research_station',
         prerequisites: ['me2_n7_wrecked_merchant_freighter'],
         wikiUrl: w('N7:_Abandoned_Research_Station'),
+      }, {
+        id: 'me2_n7_hahne_kedar_facility',
+        prerequisites: ['me2_n7_abandoned_research_station'],
+        wikiUrl: w('N7:_Hahne-Kedar_Facility'),
       }],
     }],
   }, {
