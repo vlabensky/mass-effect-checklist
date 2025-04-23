@@ -433,6 +433,10 @@ const data: GameData = {
         id: 'me2_project_firewalker_volcano_station',
         prerequisites: ['me2_project_firewalker_rosalie_lost'],
         wikiUrl: w('Project_Firewalker:_Volcano_Station'),
+      }, {
+        id: 'me2_project_firewalker_prothean_site',
+        prerequisites: ['me2_project_firewalker_volcano_station'],
+        wikiUrl: w('Project_Firewalker:_Prothean_Site'),
       }],
     }],
   }, {
