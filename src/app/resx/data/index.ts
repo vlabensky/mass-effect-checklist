@@ -415,6 +415,9 @@ const data: GameData = {
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Tuchanka:_Urdnot_Wrex'),
       }],
+    }, {
+      id: 'me2_firewalker',
+      missions: [],
     }],
   }, {
     id: 'me3',

@@ -43,6 +43,7 @@ export type TextStrings = {
   group_me2_n7: string;
   group_me2_illium: string;
   group_me2_tuchanka: string;
+  group_me2_firewalker: string;
   group_me3_priority: string,
   mission_me1_eden_prime: string;
   mission_me1_citadel_expose_saren: string;
