@@ -165,4 +165,6 @@ export type TextStrings = {
   mission_me3_cerberus_hq: string;
   mission_me3_earth: string;
   unknownMission: string;
+
+  additional_info_me2_horizon: string;
 };

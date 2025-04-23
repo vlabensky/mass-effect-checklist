@@ -1,3 +1,5 @@
+import type { TextKey } from "../translations";
+
 export type GameId =
   | 'me1'
   | 'me2'
@@ -146,6 +148,7 @@ export type MissionId =
 export type Mission = {
   id: MissionId;
   prerequisites: MissionId[];
+  additionalInfo?: TextKey;
   wikiUrl: string;
 };
 

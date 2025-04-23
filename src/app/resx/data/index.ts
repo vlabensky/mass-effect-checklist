@@ -73,6 +73,7 @@ const data: GameData = {
           'me2_recruit_convict',
         ],
         wikiUrl: w('Horizon_(mission)'),
+        additionalInfo: 'additional_info_me2_horizon',
       }, {
         id: 'me2_collector_ship',
         prerequisites: ['me2_horizon'],

@@ -24,6 +24,7 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, completed
   const canInteract = prerequisitesMet || completed;
   const hasPrerequisites = mission.prerequisites && mission.prerequisites.length > 0;
   const missionTitle = t(`mission_${mission.id}`);
+  const hasAdditionalInfo = !!mission.additionalInfo;
 
   return (
     <>
@@ -60,7 +61,7 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, completed
           </label>
         </div>
         <div className="py-2 px-3 flex-shrink-0 flex items-center space-x-2">
-          {hasPrerequisites && (
+          {hasAdditionalInfo && (
             <button
               onClick={togglePrereqs}
               title={t('infoButtonAlt')}
@@ -85,22 +86,34 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, completed
           </a>
         </div>
       </li>
-      {hasPrerequisites && (
+      {(hasPrerequisites || hasAdditionalInfo) && (
         <div
           id={`prereqs-${mission.id}`}
           className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isPrereqsExpanded ? 'max-h-96' : 'max-h-0'}`}
           style={{ transitionProperty: 'max-height' }}
         >
-          <ul className="pt-1 pb-2 pl-12 pr-3 bg-background-subtle border-b border-border">
-            <li className="text-xs text-text-secondary mb-1">{t('prerequisitesLabel')}</li>
-            {mission.prerequisites.map(prerequisiteId => {
-              const isPrereqCompleted = completedMissions[prerequisiteId];
-              const prerequisiteName = t(`mission_${prerequisiteId}`);
-              return (
-                <li key={prerequisiteId} className={`text-sm py-0.5 ${isPrereqCompleted ? 'text-text-disabled line-through' : 'text-text-secondary'}`}> - {prerequisiteName}</li>
-              );
-            })}
-          </ul>
+          <div className="pt-1 pb-2 pl-12 pr-3 bg-background-subtle border-b border-border">
+            {hasPrerequisites &&
+              <ul>
+                <li className="text-xs text-text-secondary mb-1">{t('prerequisitesLabel')}</li>
+                {mission.prerequisites.map(prerequisiteId => {
+                  const isPrereqCompleted = completedMissions[prerequisiteId];
+                  const prerequisiteName = t(`mission_${prerequisiteId}`);
+                  return (
+                    <li
+                      key={prerequisiteId}
+                      className={`text-sm py-0.5 ${isPrereqCompleted ? 'text-text-disabled line-through' : 'text-text-secondary'}`}
+                    >
+                      - {prerequisiteName}
+                    </li>
+                  );
+                })}
+              </ul>
+            }
+            {hasAdditionalInfo &&
+              <p className="text-sm text-text-secondary mt-2 mb-1">{t(mission.additionalInfo!)}</p>
+            }
+          </div>
         </div>
       )}
     </>

@@ -153,6 +153,8 @@ const strings: TextStrings = {
   mission_me3_cerberus_hq: "Priority: Cerberus Headquarters",
   mission_me3_earth: "Priority: Earth",
   unknownMission: "Unknown Mission",
+
+  additional_info_me2_horizon: 'This mission will be triggered automatically as soon as the player completes four main dossiers. So after recruiting Archangel, Jack, and Mordin Solus, as well as recovering Grunt in his tank from Korlus (note that waking up Grunt is not necessary), the player will be forced to play this mission.',
 };
 
 export default strings;
