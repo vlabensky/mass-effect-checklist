@@ -102,6 +102,7 @@ export type MissionId =
   | 'me2_illium_gianna_parasini'
   | 'me2_illium_indentured_service'
   | 'me2_illium_medical_scans'
+  | 'me2_illium_the_assassin_salarian_family_data'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'

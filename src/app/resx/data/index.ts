@@ -371,6 +371,10 @@ const data: GameData = {
         id: 'me2_illium_medical_scans',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Illium:_Medical_Scans'),
+      }, {
+        id: 'me2_illium_the_assassin_salarian_family_data',
+        prerequisites: ['me2_recruit_assassin'],
+        wikiUrl: w('Illium:_The_Assassin:_Salarian_Family_Data'),
       }],
     }],
   }, {
