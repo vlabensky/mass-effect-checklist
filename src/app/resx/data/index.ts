@@ -448,6 +448,10 @@ const data: GameData = {
         id: 'me2_overlord_atlas_station',
         prerequisites: ['me2_overlord'],
         wikiUrl: w('Overlord:_Atlas_Station'),
+      }, {
+        id: 'me2_overlord_prometheus_station',
+        prerequisites: ['me2_overlord'],
+        wikiUrl: w('Overlord:_Prometheus_Station'),
       }],
     }],
   }, {

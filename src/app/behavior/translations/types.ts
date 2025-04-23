@@ -144,6 +144,7 @@ export type TextStrings = {
   mission_me2_project_firewalker_prothean_site: string;
   mission_me2_overlord: string;
   mission_me2_overlord_atlas_station: string;
+  mission_me2_overlord_prometheus_station: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;
