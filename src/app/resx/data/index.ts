@@ -440,7 +440,11 @@ const data: GameData = {
       }],
     }, {
       id: 'me2_project_overlord',
-      missions: [],
+      missions: [{
+        id: 'me2_overlord',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('Overlord_(assignment)'),
+      }],
     }],
   }, {
     id: 'me3',
