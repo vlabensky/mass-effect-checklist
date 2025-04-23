@@ -1,6 +1,6 @@
 import type { Mission, MissionId } from '@/app/behavior/missions';
 import { useTranslations } from '@/app/components/language';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { ChevronIcon, InformationIcon, NewTabLinkIcon } from '../icons';
 
 type Props = {
@@ -15,10 +15,33 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, completed
   const { t } = useTranslations();
   const [isPrereqsExpanded, setIsPrereqsExpanded] = useState(false);
   const handleChange = () => void ((prerequisitesMet || completed) && onToggle(mission.id));
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
+  const [isHighlighted, setIsHighlighted] = useState(false);
 
   const togglePrereqs = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
     setIsPrereqsExpanded(!isPrereqsExpanded);
+  };
+
+  const toggleInfo = (e: React.MouseEvent<HTMLButtonElement>) => {
+    togglePrereqs(e);
+
+    if (isPrereqsExpanded)
+      return;
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      setIsHighlighted(false);
+    }
+
+    setTimeout(() => {
+      setIsHighlighted(true);
+
+      timeoutRef.current = setTimeout(() => {
+        setIsHighlighted(false);
+        timeoutRef.current = null;
+      }, 1000);
+    }, 10);
   };
 
   const canInteract = prerequisitesMet || completed;
@@ -63,7 +86,7 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, completed
         <div className="py-2 px-3 flex-shrink-0 flex items-center space-x-2">
           {hasAdditionalInfo && (
             <button
-              onClick={togglePrereqs}
+              onClick={toggleInfo}
               title={t('infoButtonAlt')}
               aria-label={t('infoButtonAlt')}
               className="p-1 rounded-md text-text-secondary hover:bg-background-hover hover:text-accent focus:outline-none focus:ring-2 focus:ring-offset-background focus:ring-accent transition-colors"
@@ -111,7 +134,7 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, completed
               </ul>
             }
             {hasAdditionalInfo &&
-              <p className="text-sm text-text-secondary mt-2 mb-1">{t(mission.additionalInfo!)}</p>
+              <p className={`text-sm text-text-secondary mt-2 mb-1 ${isHighlighted ? 'animate-highlight-fade' : ''}`}>{t(mission.additionalInfo!)}</p>
             }
           </div>
         </div>

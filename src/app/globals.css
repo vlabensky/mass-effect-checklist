@@ -106,3 +106,13 @@ select, button {
 .top-0 { top: 0; }
 .z-10 { z-index: 10; }
 .z-20 { z-index: 20; }
+
+@keyframes highlight-fade {
+  0% { background-color: var(--color-background-hover); }
+  25% { background-color: var(--color-background-hover); }
+  100% { background-color: transparent; }
+}
+
+.animate-highlight-fade {
+  animation: highlight-fade 1s ease-out;
+}
