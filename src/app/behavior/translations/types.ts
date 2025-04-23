@@ -125,6 +125,7 @@ export type TextStrings = {
   mission_me2_illium_indentured_service: string;
   mission_me2_illium_medical_scans: string;
   mission_me2_illium_the_assassin_salarian_family_data: string;
+  mission_me2_illium_the_justicar_smuggling_evidence: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;

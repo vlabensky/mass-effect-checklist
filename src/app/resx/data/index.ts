@@ -375,6 +375,10 @@ const data: GameData = {
         id: 'me2_illium_the_assassin_salarian_family_data',
         prerequisites: ['me2_recruit_assassin'],
         wikiUrl: w('Illium:_The_Assassin:_Salarian_Family_Data'),
+      }, {
+        id: 'me2_illium_the_justicar_smuggling_evidence',
+        prerequisites: ['me2_recruit_justicar'],
+        wikiUrl: w('Illium:_The_Justicar:_Smuggling_Evidence'),
       }],
     }],
   }, {
