@@ -460,6 +460,9 @@ const data: GameData = {
     }, {
       id: 'me2_lair_of_the_shadow_broker',
       missions: [],
+    }, {
+      id: 'me2_arrival',
+      missions: [],
     }],
   }, {
     id: 'me3',

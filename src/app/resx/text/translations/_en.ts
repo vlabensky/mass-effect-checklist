@@ -34,6 +34,7 @@ const strings: TextStrings = {
   group_me2_project_firewalker: "Project Firewalker",
   group_me2_project_overlord: "Project Overlord",
   group_me2_lair_of_the_shadow_broker: "Lair of the Shadow Broker",
+  group_me2_arrival: "Arrival",
   group_me3_priority: "Priority",
   mission_me1_eden_prime: "Find the Beacon",
   mission_me1_citadel_expose_saren: "Citadel: Expose Saren",

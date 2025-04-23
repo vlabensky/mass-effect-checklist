@@ -46,6 +46,7 @@ export type TextStrings = {
   group_me2_project_firewalker: string;
   group_me2_project_overlord: string;
   group_me2_lair_of_the_shadow_broker: string;
+  group_me2_arrival: string;
   group_me3_priority: string,
   mission_me1_eden_prime: string;
   mission_me1_citadel_expose_saren: string;

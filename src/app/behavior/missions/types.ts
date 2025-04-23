@@ -19,6 +19,7 @@ export type SectionId =
   | 'me2_project_firewalker'
   | 'me2_project_overlord'
   | 'me2_lair_of_the_shadow_broker'
+  | 'me2_arrival'
   | 'me3_priority'
   ;
 
