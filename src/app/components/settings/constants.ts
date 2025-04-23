@@ -3,6 +3,9 @@ export enum Theme {
   light = 'theme_light',
   highContrastDark = 'theme_hc_dark',
   highContrastLight = 'theme_hc_light',
+  massEffect1 = 'theme_me1',
+  massEffect2 = 'theme_me2',
+  massEffect3 = 'theme_me3',
 };
 
 export const DEFAULT_FONT_SIZE_MULTIPLIER = 1.0;

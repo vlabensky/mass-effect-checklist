@@ -90,6 +90,75 @@
     --color-accent: #0000ff; /* blue */
     --color-focus-ring: #0000ff; /* blue */
   }
+
+  [data-theme="theme_me1"] {
+    --color-background: #0E162E;
+    --color-background-gradient-end: #0858A0;
+    --color-background-list: #112B43;
+    --color-background-header: #243B60;
+    --color-background-hover: #205E88;
+    --color-background-subtle: #18455E;
+    --color-input-bg: #122C47;
+
+    --color-text-primary: #CCFFFF;
+    --color-text-secondary: #3199C6;
+    --color-text-disabled: #3199C6;
+    --color-text-footer: #6b7280;
+    --color-text-accent: #0ea5e9;
+
+    --color-border: #3199C6;
+    --color-border-input: #3199C6;
+    --color-border-tab-active: #F7AC22;
+
+    --color-accent: #CCFFFF;
+    --color-focus-ring: #F7AC22;
+  }
+
+  [data-theme="theme_me2"] {
+    --color-background: #170D0E;
+    --color-background-gradient-end: #5E371A;
+    --color-background-list: #4D240B;
+    --color-background-header: #622F15;
+    --color-background-hover: #85C466;
+    --color-background-subtle: #342423;
+    --color-input-bg: #342423;
+
+    --color-text-primary: #FFD8B8;
+    --color-text-secondary: #F49954;
+    --color-text-disabled: #9E7559;
+    --color-text-footer: #6C6263;
+    --color-text-accent: #96F966;
+
+    --color-border: #E8A678;
+    --color-border-input: #8b949e;
+    --color-border-tab-active: #E8A678;
+
+    --color-accent: #96F966;
+    --color-focus-ring: #fca31f;
+  }
+
+  [data-theme="theme_me3"] {
+    --color-background: #05081B;
+    --color-background-gradient-end: #0B122D;
+    --color-background-list: #133361;
+    --color-background-header: #194984;
+    --color-background-hover: #780911;
+    --color-background-subtle: #2d3748;
+    --color-input-bg: #4a5568;
+
+    --color-text-primary: #FBFFFF;
+    --color-text-secondary: #A6E8F7;
+    --color-text-disabled: #6D97BD;
+    --color-text-footer: #6D97BD;
+    --color-text-accent: #63b3ed;
+
+    --color-border: #568AD1;
+    --color-border-input: #568AD1;
+    --color-border-tab-active: #568AD1;
+
+    --color-accent: #63b3ed;
+    --color-focus-ring: #63b3ed;
+  }
 }
 
 body {
