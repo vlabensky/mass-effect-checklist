@@ -351,7 +351,11 @@ const data: GameData = {
       }],
     }, {
       id: 'me2_illium',
-      missions: [],
+      missions: [{
+        id: 'me2_illium_a_troublemaker',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Illium:_A_Troublemaker'),
+      }],
     }],
   }, {
     id: 'me3',
