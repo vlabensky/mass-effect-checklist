@@ -373,12 +373,16 @@ const data: GameData = {
         wikiUrl: w('Illium:_Medical_Scans'),
       }, {
         id: 'me2_illium_the_assassin_salarian_family_data',
-        prerequisites: ['me2_recruit_assassin'],
+        prerequisites: ['me2_horizon'],
         wikiUrl: w('Illium:_The_Assassin:_Salarian_Family_Data'),
       }, {
         id: 'me2_illium_the_justicar_smuggling_evidence',
-        prerequisites: ['me2_recruit_justicar'],
+        prerequisites: ['me2_horizon'],
         wikiUrl: w('Illium:_The_Justicar:_Smuggling_Evidence'),
+      }, {
+        id: 'me2_illium_the_justicar_stolen_goods_found',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Illium:_The_Justicar:_Stolen_Goods_Found'),
       }],
     }],
   }, {
