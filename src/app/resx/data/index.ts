@@ -438,6 +438,9 @@ const data: GameData = {
         prerequisites: ['me2_project_firewalker_volcano_station'],
         wikiUrl: w('Project_Firewalker:_Prothean_Site'),
       }],
+    }, {
+      id: 'me2_project_overlord',
+      missions: [],
     }],
   }, {
     id: 'me3',

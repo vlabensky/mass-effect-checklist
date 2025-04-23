@@ -17,6 +17,7 @@ export type SectionId =
   | 'me2_illium'
   | 'me2_tuchanka'
   | 'me2_project_firewalker'
+  | 'me2_project_overlord'
   | 'me3_priority'
   ;
 
