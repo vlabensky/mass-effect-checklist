@@ -359,6 +359,10 @@ const data: GameData = {
         id: 'me2_illium_blue_rose_of_illium',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Illium:_Blue_Rose_of_Illium'),
+      }, {
+        id: 'me2_illium_gianna_parasini',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Illium:_Gianna_Parasini'),
       }],
     }],
   }, {
