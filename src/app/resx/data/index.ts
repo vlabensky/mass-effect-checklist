@@ -416,7 +416,7 @@ const data: GameData = {
         wikiUrl: w('Tuchanka:_Urdnot_Wrex'),
       }],
     }, {
-      id: 'me2_firewalker',
+      id: 'me2_project_firewalker',
       missions: [{
         id: 'me2_project_firewalker_rosalie_lost',
         prerequisites: ['me2_freedoms_progress'],
