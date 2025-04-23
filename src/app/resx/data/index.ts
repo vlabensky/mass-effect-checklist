@@ -406,6 +406,10 @@ const data: GameData = {
         id: 'me2_tuchanka_killing_pyjaks',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Tuchanka:_Killing_Pyjaks'),
+      }, {
+        id: 'me2_tuchanka_old_blood_missing_scout',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Tuchanka:_Old_Blood:_Missing_Scout'),
       }],
     }],
   }, {

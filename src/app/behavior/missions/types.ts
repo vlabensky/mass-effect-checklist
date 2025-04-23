@@ -111,6 +111,7 @@ export type MissionId =
   | 'me2_illium_the_prodigal_lost_locket_found'
   | 'me2_tuchanka_combustion_manifold'
   | 'me2_tuchanka_killing_pyjaks'
+  | 'me2_tuchanka_old_blood_missing_scout'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'
