@@ -105,6 +105,7 @@ export type MissionId =
   | 'me2_illium_the_assassin_salarian_family_data'
   | 'me2_illium_the_justicar_smuggling_evidence'
   | 'me2_illium_the_justicar_stolen_goods_found'
+  | 'me2_illium_the_prodigal_lost_locket_found'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'

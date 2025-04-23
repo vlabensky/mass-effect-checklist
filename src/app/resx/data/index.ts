@@ -383,6 +383,10 @@ const data: GameData = {
         id: 'me2_illium_the_justicar_stolen_goods_found',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Illium:_The_Justicar:_Stolen_Goods_Found'),
+      }, {
+        id: 'me2_illium_the_prodigal_lost_locket_found',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Illium:_The_Prodigal:_Lost_Locket_Found'),
       }],
     }],
   }, {
