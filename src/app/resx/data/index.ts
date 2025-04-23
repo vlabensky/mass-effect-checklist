@@ -444,6 +444,10 @@ const data: GameData = {
         id: 'me2_overlord',
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Overlord_(assignment)'),
+      }, {
+        id: 'me2_overlord_atlas_station',
+        prerequisites: ['me2_overlord'],
+        wikiUrl: w('Overlord:_Atlas_Station'),
       }],
     }],
   }, {

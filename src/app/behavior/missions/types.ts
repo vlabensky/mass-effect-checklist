@@ -121,6 +121,7 @@ export type MissionId =
   | 'me2_project_firewalker_volcano_station'
   | 'me2_project_firewalker_prothean_site'
   | 'me2_overlord'
+  | 'me2_overlord_atlas_station'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'

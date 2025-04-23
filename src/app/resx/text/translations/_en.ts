@@ -131,6 +131,7 @@ const strings: TextStrings = {
   mission_me2_project_firewalker_volcano_station: 'Project Firewalker: Volcano Station',
   mission_me2_project_firewalker_prothean_site: 'Project Firewalker: Prothean Site',
   mission_me2_overlord: 'Overlord/Investigate Project Overlord',
+  mission_me2_overlord_atlas_station: 'Overlord: Atlas Station',
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",
