@@ -134,6 +134,7 @@ export type TextStrings = {
   mission_me2_tuchanka_combustion_manifold: string;
   mission_me2_tuchanka_killing_pyjaks: string;
   mission_me2_tuchanka_old_blood_missing_scout: string;
+  mission_me2_tuchanka_urdnot_wrex: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;
