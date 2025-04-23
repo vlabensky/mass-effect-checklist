@@ -452,6 +452,10 @@ const data: GameData = {
         id: 'me2_overlord_prometheus_station',
         prerequisites: ['me2_overlord'],
         wikiUrl: w('Overlord:_Prometheus_Station'),
+      }, {
+        id: 'me2_overlord_vulcan_station',
+        prerequisites: ['me2_overlord'],
+        wikiUrl: w('Overlord:_Vulcan_Station'),
       }],
     }],
   }, {
