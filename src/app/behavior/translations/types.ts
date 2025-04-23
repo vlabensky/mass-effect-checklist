@@ -131,6 +131,7 @@ export type TextStrings = {
   mission_me2_illium_the_justicar_smuggling_evidence: string;
   mission_me2_illium_the_justicar_stolen_goods_found: string;
   mission_me2_illium_the_prodigal_lost_locket_found: string;
+  mission_me2_tuchanka_combustion_manifold: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;

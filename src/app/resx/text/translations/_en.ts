@@ -119,6 +119,7 @@ const strings: TextStrings = {
   mission_me2_illium_the_justicar_smuggling_evidence: 'Illium: The Justicar: Smuggling Evidence',
   mission_me2_illium_the_justicar_stolen_goods_found: 'Illium: The Justicar: Stolen Goods Found',
   mission_me2_illium_the_prodigal_lost_locket_found: 'Illium: The Prodigal: Lost Locket Found',
+  mission_me2_tuchanka_combustion_manifold: 'Tuchanka: Combustion Manifold',
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",
