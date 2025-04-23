@@ -349,6 +349,9 @@ const data: GameData = {
         prerequisites: ['me2_collector_ship'],
         wikiUrl: w('N7:_Mining_the_Canyon'),
       }],
+    }, {
+      id: 'me2_illium',
+      missions: [],
     }],
   }, {
     id: 'me3',

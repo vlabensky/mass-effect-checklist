@@ -14,6 +14,7 @@ export type SectionId =
   | 'me2_omega'
   | 'me2_normandy'
   | 'me2_n7'
+  | 'me2_illium'
   | 'me3_priority'
   ;
 
