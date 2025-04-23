@@ -116,6 +116,7 @@ export type MissionId =
   | 'me2_tuchanka_urdnot_wrex'
   | 'me2_project_firewalker_rosalie_lost'
   | 'me2_project_firewalker_geth_activity'
+  | 'me2_project_firewalker_volcano_station'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'

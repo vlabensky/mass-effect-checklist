@@ -425,6 +425,10 @@ const data: GameData = {
         id: 'me2_project_firewalker_geth_activity',
         prerequisites: ['me2_project_firewalker_rosalie_lost'],
         wikiUrl: w('Project_Firewalker:_Geth_Incursion'),
+      }, {
+        id: 'me2_project_firewalker_volcano_station',
+        prerequisites: ['me2_project_firewalker_rosalie_lost'],
+        wikiUrl: w('Project_Firewalker:_Volcano_Station'),
       }],
     }],
   }, {
