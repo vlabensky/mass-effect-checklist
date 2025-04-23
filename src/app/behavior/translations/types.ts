@@ -138,8 +138,8 @@ export type TextStrings = {
   mission_me2_tuchanka_urdnot_wrex: string;
   mission_me2_project_firewalker_rosalie_lost: string;
   mission_me2_project_firewalker_geth_activity: string;
-  mission_me2_project_firewalker_volcano_station: string;
   mission_me2_project_firewalker_survey_sites_located: string;
+  mission_me2_project_firewalker_volcano_station: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;
