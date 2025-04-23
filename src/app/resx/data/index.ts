@@ -459,7 +459,11 @@ const data: GameData = {
       }],
     }, {
       id: 'me2_lair_of_the_shadow_broker',
-      missions: [],
+      missions: [{
+        id: 'me2_lair_of_the_shadow_broker',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Lair_of_the_Shadow_Broker_(mission)'),
+      }],
     }, {
       id: 'me2_arrival',
       missions: [],

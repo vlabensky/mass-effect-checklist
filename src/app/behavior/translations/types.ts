@@ -148,6 +148,7 @@ export type TextStrings = {
   mission_me2_overlord_atlas_station: string;
   mission_me2_overlord_prometheus_station: string;
   mission_me2_overlord_vulcan_station: string;
+  mission_me2_lair_of_the_shadow_broker: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;
