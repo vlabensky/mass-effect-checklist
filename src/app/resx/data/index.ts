@@ -402,6 +402,10 @@ const data: GameData = {
         id: 'me2_tuchanka_combustion_manifold',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Tuchanka:_Combustion_Manifold'),
+      }, {
+        id: 'me2_tuchanka_killing_pyjaks',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Tuchanka:_Killing_Pyjaks'),
       }],
     }],
   }, {
