@@ -18,6 +18,7 @@ export type SectionId =
   | 'me2_tuchanka'
   | 'me2_project_firewalker'
   | 'me2_project_overlord'
+  | 'me2_lair_of_the_shadow_broker'
   | 'me3_priority'
   ;
 
