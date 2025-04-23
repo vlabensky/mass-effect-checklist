@@ -396,6 +396,9 @@ const data: GameData = {
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Illium:_The_Prodigal:_Lost_Locket_Found'),
       }],
+    }, {
+      id: 'me2_tuchanka',
+      missions: [],
     }],
   }, {
     id: 'me3',
