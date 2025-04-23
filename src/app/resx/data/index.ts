@@ -417,7 +417,11 @@ const data: GameData = {
       }],
     }, {
       id: 'me2_firewalker',
-      missions: [],
+      missions: [{
+        id: 'me2_project_firewalker_rosalie_lost',
+        prerequisites: ['me2_freedoms_progress'],
+        wikiUrl: w('Project_Firewalker:_Rosalie_Lost'),
+      }],
     }],
   }, {
     id: 'me3',
