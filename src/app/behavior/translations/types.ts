@@ -120,6 +120,7 @@ export type TextStrings = {
   mission_me2_n7_endangered_research_station: string;
   mission_me2_n7_mining_the_canyon: string;
   mission_me2_illium_a_troublemaker: string;
+  mission_me2_illium_blue_rose_of_illium: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;

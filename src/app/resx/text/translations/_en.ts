@@ -108,6 +108,7 @@ const strings: TextStrings = {
   mission_me2_n7_endangered_research_station: 'N7: Endangered Research Station',
   mission_me2_n7_mining_the_canyon: 'N7: Mining the Canyon',
   mission_me2_illium_a_troublemaker: 'Illium: A Troublemaker',
+  mission_me2_illium_blue_rose_of_illium: 'Illium: Blue Rose of Illium',
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",
