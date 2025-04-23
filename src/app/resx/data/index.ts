@@ -352,6 +352,10 @@ const data: GameData = {
     }, {
       id: 'me2_illium',
       missions: [{
+        id: 'me2_illium_liara_system_hacking',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Illium:_Liara:_System_Hacking'),
+      }, {
         id: 'me2_illium_a_troublemaker',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Illium:_Conrad_Verner'),
