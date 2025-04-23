@@ -167,4 +167,6 @@ export type TextStrings = {
   unknownMission: string;
 
   additional_info_me2_horizon: string;
+  additional_info_me2_collector_ship: string;
+  additional_info_me2_iff: string;
 };

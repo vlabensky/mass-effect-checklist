@@ -78,10 +78,12 @@ const data: GameData = {
         id: 'me2_collector_ship',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Collector_Ship_(mission)'),
+        additionalInfo: 'additional_info_me2_collector_ship',
       }, {
         id: 'me2_iff',
         prerequisites: ['me2_collector_ship'],
         wikiUrl: w('Reaper_IFF'),
+        additionalInfo: 'additional_info_me2_iff',
       }, {
         id: 'me2_await_iff',
         prerequisites: ['me2_iff'],
