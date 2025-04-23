@@ -152,12 +152,14 @@ export type Mission = {
   wikiUrl: string;
 };
 
+export type Section = {
+  id: SectionId;
+  missions: Mission[];
+};
+
 export type Game = {
   id: GameId;
-  sections: {
-    id: SectionId;
-    missions: Mission[];
-  }[];
+  sections: Section[];
 };
 
 export type GameData = {

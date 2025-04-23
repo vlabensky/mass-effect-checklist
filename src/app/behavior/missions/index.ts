@@ -5,6 +5,7 @@ export type {
   Game,
   GameId,
   SectionId,
+  Section,
 } from './types';
 
 export {
