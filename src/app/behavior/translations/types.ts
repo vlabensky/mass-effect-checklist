@@ -122,6 +122,7 @@ export type TextStrings = {
   mission_me2_illium_a_troublemaker: string;
   mission_me2_illium_blue_rose_of_illium: string;
   mission_me2_illium_gianna_parasini: string;
+  mission_me2_illium_indentured_service: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;

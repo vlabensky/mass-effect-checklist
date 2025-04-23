@@ -363,6 +363,10 @@ const data: GameData = {
         id: 'me2_illium_gianna_parasini',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Illium:_Gianna_Parasini'),
+      }, {
+        id: 'me2_illium_indentured_service',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Illium:_Indentured_Service'),
       }],
     }],
   }, {

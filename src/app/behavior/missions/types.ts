@@ -100,6 +100,7 @@ export type MissionId =
   | 'me2_illium_a_troublemaker'
   | 'me2_illium_blue_rose_of_illium'
   | 'me2_illium_gianna_parasini'
+  | 'me2_illium_indentured_service'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'

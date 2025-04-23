@@ -110,6 +110,7 @@ const strings: TextStrings = {
   mission_me2_illium_a_troublemaker: 'Illium: A Troublemaker',
   mission_me2_illium_blue_rose_of_illium: 'Illium: Blue Rose of Illium',
   mission_me2_illium_gianna_parasini: 'Illium: Gianna Parasini',
+  mission_me2_illium_indentured_service: 'Illium: Indentured Service',
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",
