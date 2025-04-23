@@ -137,6 +137,7 @@ const strings: TextStrings = {
   mission_me2_overlord_prometheus_station: 'Overlord: Prometheus Station',
   mission_me2_overlord_vulcan_station: 'Overlord: Vulcan Station',
   mission_me2_lair_of_the_shadow_broker: 'Lair of the Shadow Broker',
+  mission_me2_arrival: "Arrival/Rescue Dr. Kenson",
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",

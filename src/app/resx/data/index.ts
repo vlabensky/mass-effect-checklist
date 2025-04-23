@@ -466,7 +466,11 @@ const data: GameData = {
       }],
     }, {
       id: 'me2_arrival',
-      missions: [],
+      missions: [{
+        id: 'me2_arrival',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Arrival_(assignment)'),
+      }],
     }],
   }, {
     id: 'me3',
