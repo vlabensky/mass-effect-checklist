@@ -367,6 +367,10 @@ const data: GameData = {
         id: 'me2_illium_indentured_service',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Illium:_Indentured_Service'),
+      }, {
+        id: 'me2_illium_medical_scans',
+        prerequisites: ['me2_horizon'],
+        wikiUrl: w('Illium:_Medical_Scans'),
       }],
     }],
   }, {
