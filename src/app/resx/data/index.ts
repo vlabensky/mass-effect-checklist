@@ -354,7 +354,7 @@ const data: GameData = {
       missions: [{
         id: 'me2_illium_a_troublemaker',
         prerequisites: ['me2_horizon'],
-        wikiUrl: w('Illium:_A_Troublemaker'),
+        wikiUrl: w('Illium:_Conrad_Verner'),
       }],
     }],
   }, {
