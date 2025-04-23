@@ -421,6 +421,10 @@ const data: GameData = {
         id: 'me2_project_firewalker_rosalie_lost',
         prerequisites: ['me2_freedoms_progress'],
         wikiUrl: w('Project_Firewalker:_Rosalie_Lost'),
+      }, {
+        id: 'me2_project_firewalker_geth_activity',
+        prerequisites: ['me2_project_firewalker_rosalie_lost'],
+        wikiUrl: w('Project_Firewalker:_Geth_Incursion'),
       }],
     }],
   }, {

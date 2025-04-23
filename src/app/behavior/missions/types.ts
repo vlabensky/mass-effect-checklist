@@ -115,6 +115,7 @@ export type MissionId =
   | 'me2_tuchanka_old_blood_missing_scout'
   | 'me2_tuchanka_urdnot_wrex'
   | 'me2_project_firewalker_rosalie_lost'
+  | 'me2_project_firewalker_geth_activity'
   | 'me3_prologue'
   | 'me3_mars'
   | 'me3_citadel1'

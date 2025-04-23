@@ -125,6 +125,7 @@ const strings: TextStrings = {
   mission_me2_tuchanka_old_blood_missing_scout: 'Tuchanka: Old Blood: Missing Scout',
   mission_me2_tuchanka_urdnot_wrex: 'Tuchanka: Urdnot Wrex',
   mission_me2_project_firewalker_rosalie_lost: "Project Firewalker: Rosalie Lost",
+  mission_me2_project_firewalker_geth_activity: 'Project Firewalker: Geth Activity/Incursion',
   mission_me3_prologue: "Prologue: Earth",
   mission_me3_mars: "Priority: Mars",
   mission_me3_citadel1: "Priority: The Citadel I",
