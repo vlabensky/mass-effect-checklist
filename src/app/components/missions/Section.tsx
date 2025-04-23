@@ -1,6 +1,6 @@
 import type { TextKey } from "@/app/behavior/translations";
 import type { Mission, MissionId, Section } from "@/app/behavior/missions";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { ChevronIcon } from "../icons";
 import { useTranslations } from "../language";
 import MissionItem from "./MissionItem";
@@ -49,21 +49,29 @@ const GameSection = ({ section, completedMissions, onToggleMission }: Props) => 
         {t(groupKey)}
       </h3>
       <div
-        className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isSectionExpanded ? 'max-h-220' : 'max-h-0'}`}
+        className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isSectionExpanded ? 'max-h-500' : 'max-h-0'}`}
         style={{ transitionProperty: 'max-height' }}
       >
         {isSectionExpanded && (
           <ul className="list-none p-0 m-0" id={groupKey}>
-            {section.missions.map(mission => (
-              <MissionItem
-                key={mission.id}
-                mission={mission}
-                completed={!!completedMissions[mission.id]}
-                onToggle={onToggleMission}
-                prerequisitesMet={checkPrerequisites(mission)}
-                completedMissions={completedMissions}
-              />
-            ))}
+            {section.missions.map((mission, i) => {
+              const nextIndex = i + 1;
+              const anchorMissionId = section.missions.length > nextIndex ? section.missions[nextIndex].id : mission.id;
+              const anchor = `a_mission_${anchorMissionId}`;
+
+              return (
+                <Fragment key={mission.id}>
+                  <a id={anchor} className='invisible' aria-hidden></a>
+                  <MissionItem
+                    mission={mission}
+                    completed={!!completedMissions[mission.id]}
+                    onToggle={onToggleMission}
+                    prerequisitesMet={checkPrerequisites(mission)}
+                    completedMissions={completedMissions}
+                  />
+                </Fragment>
+              );
+            })}
           </ul>
         )}
       </div>

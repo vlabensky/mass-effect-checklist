@@ -127,7 +127,7 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, completed
                       key={prerequisiteId}
                       className={`text-sm py-0.5 ${isPrereqCompleted ? 'text-text-disabled line-through' : 'text-text-secondary'}`}
                     >
-                      - {prerequisiteName}
+                      <a href={`#a_mission_${prerequisiteId}`} className='hover:underline decoration-dashed' rel="no-follow">- {prerequisiteName}</a>
                     </li>
                   );
                 })}
