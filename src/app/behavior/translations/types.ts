@@ -119,6 +119,8 @@ export type TextStrings = {
   mission_me2_n7_captured_mining_facility: string;
   mission_me2_n7_endangered_research_station: string;
   mission_me2_n7_mining_the_canyon: string;
+  mission_me2_illium_liara_system_hacking: string;
+  mission_me2_illium_liara_the_observer: string;
   mission_me2_illium_a_troublemaker: string;
   mission_me2_illium_blue_rose_of_illium: string;
   mission_me2_illium_gianna_parasini: string;
@@ -128,7 +130,6 @@ export type TextStrings = {
   mission_me2_illium_the_justicar_smuggling_evidence: string;
   mission_me2_illium_the_justicar_stolen_goods_found: string;
   mission_me2_illium_the_prodigal_lost_locket_found: string;
-  mission_me2_illium_liara_system_hacking: string;
   mission_me3_prologue: string;
   mission_me3_mars: string;
   mission_me3_citadel1: string;

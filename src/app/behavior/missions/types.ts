@@ -98,6 +98,7 @@ export type MissionId =
   | 'me2_n7_endangered_research_station'
   | 'me2_n7_mining_the_canyon'
   | 'me2_illium_liara_system_hacking'
+  | 'me2_illium_liara_the_observer'
   | 'me2_illium_a_troublemaker'
   | 'me2_illium_blue_rose_of_illium'
   | 'me2_illium_gianna_parasini'

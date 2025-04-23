@@ -356,6 +356,10 @@ const data: GameData = {
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Illium:_Liara:_System_Hacking'),
       }, {
+        id: 'me2_illium_liara_the_observer',
+        prerequisites: ['me2_illium_liara_system_hacking'],
+        wikiUrl: w('Illium:_Liara:_The_Observer'),
+      }, {
         id: 'me2_illium_a_troublemaker',
         prerequisites: ['me2_horizon'],
         wikiUrl: w('Illium:_Conrad_Verner'),
