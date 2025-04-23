@@ -1,7 +1,7 @@
 import type { Mission, MissionId } from '@/app/behavior/missions';
 import { useTranslations } from '@/app/components/language';
 import { useState } from 'react';
-import { ChevronIcon, NewTabLinkIcon } from '../icons';
+import { ChevronIcon, InformationIcon, NewTabLinkIcon } from '../icons';
 
 type Props = {
   mission: Mission;
@@ -50,7 +50,7 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, completed
             </button>
           )}
           {!hasPrerequisites &&
-            <div className="w-4 mr-2 flex-shrink-0" style={{marginLeft: '0.125rem', marginRight: '0.625rem'}}></div>
+            <div className="w-4 mr-2 flex-shrink-0" style={{ marginLeft: '0.125rem', marginRight: '0.625rem' }}></div>
           }
           <label
             htmlFor={mission.id}
@@ -59,7 +59,18 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, completed
             {missionTitle}
           </label>
         </div>
-        <div className="py-2 px-3 flex-shrink-0">
+        <div className="py-2 px-3 flex-shrink-0 flex items-center space-x-2">
+          {hasPrerequisites && (
+            <button
+              onClick={togglePrereqs}
+              title={t('infoButtonAlt')}
+              aria-label={t('infoButtonAlt')}
+              className="p-1 rounded-md text-text-secondary hover:bg-background-hover hover:text-accent focus:outline-none focus:ring-2 focus:ring-offset-background focus:ring-accent transition-colors"
+            >
+              <InformationIcon />
+              <span className="sr-only">{t('infoButtonAlt')}</span>
+            </button>
+          )}
           <a
             href={mission.wikiUrl}
             target="_blank"
@@ -78,7 +89,7 @@ const MissionItem = ({ mission, completed, onToggle, prerequisitesMet, completed
         <div
           id={`prereqs-${mission.id}`}
           className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isPrereqsExpanded ? 'max-h-96' : 'max-h-0'}`}
-          style={{transitionProperty: 'max-height'}}
+          style={{ transitionProperty: 'max-height' }}
         >
           <ul className="pt-1 pb-2 pl-12 pr-3 bg-background-subtle border-b border-border">
             <li className="text-xs text-text-secondary mb-1">{t('prerequisitesLabel')}</li>

@@ -20,6 +20,7 @@ export type TextStrings = {
   themeLabel: string;
   languageLabel: string;
   prerequisitesLabel: string;
+  infoButtonAlt: string;
   wikiLinkAlt: string;
   hidePrereqsTitle: string;
   showPrereqsTitle: string;

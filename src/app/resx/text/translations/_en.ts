@@ -8,6 +8,7 @@ const strings: TextStrings = {
   themeLabel: "Theme",
   languageLabel: "Language",
   prerequisitesLabel: "Prerequisites:",
+  infoButtonAlt: "Show additional mission info",
   wikiLinkAlt: "Wiki Link",
   hidePrereqsTitle: "Hide prerequisites",
   showPrereqsTitle: "Show prerequisites",
