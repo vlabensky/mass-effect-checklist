@@ -20,16 +20,17 @@ const data: GameData = {
         prerequisites: ['me1_citadel_expose_saren'],
         wikiUrl: w('Find_Liara_T%27Soni'),
       }, {
+        id: 'me1_noveria_geth_interest',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Noveria:_Geth_Interest'),
+      }, {
         id: 'me1_feros',
         prerequisites: ['me1_citadel_expose_saren'],
         wikiUrl: w('Feros:_Geth_Attack'),
       }, {
-        id: 'me1_noveria',
-        prerequisites: ['me1_citadel_expose_saren'],
-        wikiUrl: w('Noveria:_Matriarch_Benezia'),
-      }, {
         id: 'me1_virmire',
-        prerequisites: ['me1_find_liara', 'me1_feros', 'me1_noveria'],
+        // TODO: any two of the three
+        prerequisites: ['me1_find_liara', 'me1_feros', 'me1_noveria_geth_interest'],
         wikiUrl: w('Virmire:_Saren%27s_Plan'),
       }, {
         id: 'me1_ilos',
