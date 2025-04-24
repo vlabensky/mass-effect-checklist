@@ -109,6 +109,24 @@ const data: GameData = {
         prerequisites: ['me1_citadel_asari_consort'],
         wikiUrl: w('Citadel:_Xeltan%27s_Complaint'),
       }, {
+        id: 'me1_citadel_old_friends',
+        // TODO: any of feros, noveria or therum
+        prerequisites: ['me1_find_liara'],
+        wikiUrl: w('Citadel:_Old_Friends'),
+        // TODO: additional info - needs Earthborn background
+      }, {
+        id: 'me1_citadel_old_unhappy_far_off_things',
+        // TODO: any of feros, noveria or therum
+        prerequisites: ['me1_find_liara'],
+        wikiUrl: w('Citadel:_Old,_Unhappy,_Far-Off_Things'),
+        // TODO: additional info - needs Spacer background
+      }, {
+        id: 'me1_citadel_i_remember_me',
+        // TODO: any of feros, noveria or therum
+        prerequisites: ['me1_find_liara'],
+        wikiUrl: w('Citadel:_I_Remember_Me'),
+        // TODO: additional info - needs Colonist background
+      }, {
         id: 'me1_citadel_family_matter',
         // TODO: any of feros, noveria or therum
         prerequisites: ['me1_find_liara'],
