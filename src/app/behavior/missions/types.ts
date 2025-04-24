@@ -33,6 +33,7 @@ export type MissionId =
   | 'me1_feros_geth_attack'
   | 'me1_feros_the_thorian'
   | 'me1_virmire'
+  | 'me1_virmire_assault'
   | 'me1_ilos'
   | 'me1_final_battle'
   | 'me2_prologue_save_joker'

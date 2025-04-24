@@ -41,6 +41,10 @@ const data: GameData = {
         prerequisites: ['me1_find_liara', 'me1_feros_geth_attack', 'me1_noveria_geth_interest'],
         wikiUrl: w('Virmire_(mission)'),
       }, {
+        id: 'me1_virmire_assault',
+        prerequisites: ['me1_virmire'],
+        wikiUrl: w('Virmire:_Assault'),
+      }, {
         id: 'me1_ilos',
         prerequisites: ['me1_virmire'],
         wikiUrl: w('Ilos:_Find_the_Conduit'),
