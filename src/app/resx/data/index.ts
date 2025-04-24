@@ -92,6 +92,10 @@ const data: GameData = {
         id: 'me1_citadel_scan_the_keepers',
         prerequisites: ['me1_citadel_expose_saren'],
         wikiUrl: w('Citadel:_Scan_the_Keepers'),
+      }, {
+        id: 'me1_citadel_schells_the_gambler',
+        prerequisites: ['me1_citadel_ritas_sister'],
+        wikiUrl: w('Citadel:_Schells_the_Gambler'),
       }],
     }],
   }, {

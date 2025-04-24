@@ -60,6 +60,7 @@ const strings: TextStrings = {
   mission_me1_citadel_reporters_request: 'Citadel: Reporter\'s Request',
   mission_me1_citadel_ritas_sister: 'Citadel: Rita\'s Sister',
   mission_me1_citadel_scan_the_keepers: 'Citadel: Scan the Keepers',
+  mission_me1_citadel_schells_the_gambler: 'Citadel: Schells the Gambler',
   mission_me2_prologue_save_joker: "Prologue: Save Joker",
   mission_me2_prologue_awakening: "Prologue: Awakening",
   mission_me2_freedoms_progress: "Freedom's Progress",

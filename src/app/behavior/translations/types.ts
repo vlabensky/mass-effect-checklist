@@ -72,6 +72,7 @@ export type TextStrings = {
   mission_me1_citadel_reporters_request: string;
   mission_me1_citadel_ritas_sister: string;
   mission_me1_citadel_scan_the_keepers: string;
+  mission_me1_citadel_schells_the_gambler: string;
   mission_me2_prologue_save_joker: string,
   mission_me2_prologue_awakening: string;
   mission_me2_freedoms_progress: string;
