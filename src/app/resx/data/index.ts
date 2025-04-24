@@ -128,6 +128,10 @@ const data: GameData = {
         // TODO: any of feros, noveria or therum
         prerequisites: ['me1_find_liara'],
         wikiUrl: w('Citadel:_The_Fourth_Estate'),
+      }, {
+        id: 'me1_citadel_our_own_worst_enemy',
+        prerequisites: ['me1_virmire_assault'],
+        wikiUrl: w('Citadel:_Our_Own_Worst_Enemy'),
       }],
     }],
   }, {
