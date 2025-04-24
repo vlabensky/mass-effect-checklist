@@ -100,6 +100,10 @@ const data: GameData = {
         id: 'me1_citadel_signal_tracking',
         prerequisites: ['me1_citadel_expose_saren'],
         wikiUrl: w('Citadel:_Signal_Tracking'),
+      }, {
+        id: 'me1_citadel_the_fan',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Citadel:_The_Fan'),
       }],
     }],
   }, {
