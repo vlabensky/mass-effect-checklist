@@ -84,6 +84,10 @@ const data: GameData = {
         id: 'me1_citadel_reporters_request',
         prerequisites: ['me1_citadel_expose_saren'],
         wikiUrl: w('Citadel:_Reporter%27s_Request'),
+      }, {
+        id: 'me1_citadel_ritas_sister',
+        prerequisites: ['me1_eden_prime'],
+        wikiUrl: w('Citadel:_Rita%27s_Sister'),
       }],
     }],
   }, {
