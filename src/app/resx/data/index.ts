@@ -217,6 +217,9 @@ const data: GameData = {
         prerequisites: ['me1_citadel_expose_saren'],
         wikiUrl: w('Virmire:_Wrex_and_the_Genophage'),
       }],
+    }, {
+      id: 'me1_unc',
+      missions: [],
     }],
   }, {
     id: 'me2',

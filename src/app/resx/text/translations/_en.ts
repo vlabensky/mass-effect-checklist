@@ -30,6 +30,7 @@ const strings: TextStrings = {
   group_me1_feros: 'Feros',
   group_me1_noveria: 'Noveria',
   group_me1_virmire: 'Virmire',
+  group_me1_unc: 'Uncharted Space Assignments',
   group_me2_plot: "Plot",
   group_me2_dossiers: "Dossiers",
   group_me2_citadel: "Citadel",

@@ -42,6 +42,7 @@ export type TextStrings = {
   group_me1_feros: string,
   group_me1_noveria: string,
   group_me1_virmire: string,
+  group_me1_unc: string,
   group_me2_plot: string,
   group_me2_dossiers: string,
   group_me2_citadel: string,

@@ -13,6 +13,7 @@ export type SectionId =
   | 'me1_feros'
   | 'me1_noveria'
   | 'me1_virmire'
+  | 'me1_unc'
   | 'me2_plot'
   | 'me2_dossiers'
   | 'me2_citadel'
