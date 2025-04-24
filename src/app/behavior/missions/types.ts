@@ -71,6 +71,8 @@ export type MissionId =
   | 'me1_feros_power_cells'
   | 'me1_feros_varren_meat'
   | 'me1_feros_water_restoration'
+  | 'me1_noveria_espionage'
+  | 'me1_noveria_smuggling'
   | 'me2_prologue_save_joker'
   | 'me2_prologue_awakening'
   | 'me2_freedoms_progress'

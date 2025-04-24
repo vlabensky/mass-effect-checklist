@@ -196,7 +196,15 @@ const data: GameData = {
       }],
     }, {
       id: 'me1_noveria',
-      missions: [],
+      missions: [{
+        id: 'me1_noveria_espionage',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Noveria:_Espionage'),
+      }, {
+        id: 'me1_noveria_smuggling',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Noveria:_Smuggling'),
+      }],
     }, {
       id: 'me1_virmire',
       missions: [],

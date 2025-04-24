@@ -85,6 +85,8 @@ const strings: TextStrings = {
   mission_me1_feros_power_cells: 'Feros: Power Cells',
   mission_me1_feros_varren_meat: 'Feros: Varren Meat',
   mission_me1_feros_water_restoration: 'Feros: Water Restoration',
+  mission_me1_noveria_espionage: 'Noveria: Espionage',
+  mission_me1_noveria_smuggling: 'Noveria: Smuggling',
   mission_me2_prologue_save_joker: "Prologue: Save Joker",
   mission_me2_prologue_awakening: "Prologue: Awakening",
   mission_me2_freedoms_progress: "Freedom's Progress",
