@@ -76,6 +76,10 @@ const data: GameData = {
         id: 'me1_citadel_jahleeds_fears',
         prerequisites: ['me1_citadel_expose_saren'],
         wikiUrl: w('Citadel:_Jahleed%27s_Fears'),
+      }, {
+        id: 'me1_citadel_presidium_prophet',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Citadel:_Presidium_Prophet'),
       }],
     }],
   }, {
