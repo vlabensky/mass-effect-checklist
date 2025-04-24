@@ -61,6 +61,7 @@ export type TextStrings = {
   mission_me1_virmire: string;
   mission_me1_virmire_assault: string;
   mission_me1_ilos: string;
+  mission_me1_ilos_trench_run: string;
   mission_me1_final_battle: string;
   mission_me2_prologue_save_joker: string,
   mission_me2_prologue_awakening: string;

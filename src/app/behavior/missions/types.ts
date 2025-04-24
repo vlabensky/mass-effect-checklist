@@ -35,6 +35,7 @@ export type MissionId =
   | 'me1_virmire'
   | 'me1_virmire_assault'
   | 'me1_ilos'
+  | 'me1_ilos_trench_run'
   | 'me1_final_battle'
   | 'me2_prologue_save_joker'
   | 'me2_prologue_awakening'
