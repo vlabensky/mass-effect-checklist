@@ -68,6 +68,10 @@ const data: GameData = {
         id: 'me1_citadel_doctor_michel',
         prerequisites: ['me1_citadel_expose_saren'],
         wikiUrl: w('Citadel:_Doctor_Michel'),
+      }, {
+        id: 'me1_citadel_homecoming',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Citadel:_Homecoming'),
       }],
     }],
   }, {

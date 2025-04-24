@@ -40,6 +40,7 @@ export type MissionId =
   | 'me1_final_battle'
   | 'me1_citadel_asari_consort'
   | 'me1_citadel_doctor_michel'
+  | 'me1_citadel_homecoming'
   | 'me2_prologue_save_joker'
   | 'me2_prologue_awakening'
   | 'me2_freedoms_progress'
