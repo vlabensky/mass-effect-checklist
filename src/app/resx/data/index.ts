@@ -60,7 +60,11 @@ const data: GameData = {
       }],
     }, {
       id: 'me1_citadel',
-      missions: [],
+      missions: [{
+        id: 'me1_citadel_asari_consort',
+        prerequisites: ['me1_eden_prime'],
+        wikiUrl: w('Citadel:_Asari_Consort'),
+      }],
     }],
   }, {
     id: 'me2',
