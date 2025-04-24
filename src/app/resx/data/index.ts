@@ -104,6 +104,10 @@ const data: GameData = {
         id: 'me1_citadel_the_fan',
         prerequisites: ['me1_citadel_expose_saren'],
         wikiUrl: w('Citadel:_The_Fan'),
+      }, {
+        id: 'me1_citadel_xeltans_complaint',
+        prerequisites: ['me1_citadel_asari_consort'],
+        wikiUrl: w('Citadel:_Xeltan%27s_Complaint'),
       }],
     }],
   }, {
