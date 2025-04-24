@@ -171,6 +171,15 @@ const data: GameData = {
         prerequisites: ['me1_citadel_expose_saren'],
         wikiUrl: w('Wrex:_Family_Armor'),
       }],
+    }, {
+      id: 'me1_feros',
+      missions: [],
+    }, {
+      id: 'me1_noveria',
+      missions: [],
+    }, {
+      id: 'me1_virmire',
+      missions: [],
     }],
   }, {
     id: 'me2',
