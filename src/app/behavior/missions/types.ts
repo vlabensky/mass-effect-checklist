@@ -29,6 +29,7 @@ export type MissionId =
   | 'me1_citadel_expose_saren'
   | 'me1_find_liara'
   | 'me1_noveria_geth_interest'
+  | 'me1_noveria_matriarch_benezia'
   | 'me1_feros'
   | 'me1_virmire'
   | 'me1_ilos'
