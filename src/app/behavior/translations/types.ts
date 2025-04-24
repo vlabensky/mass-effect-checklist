@@ -65,6 +65,7 @@ export type TextStrings = {
   mission_me1_ilos_trench_run: string;
   mission_me1_final_battle: string;
   mission_me1_citadel_asari_consort: string;
+  mission_me1_citadel_doctor_michel: string;
   mission_me2_prologue_save_joker: string,
   mission_me2_prologue_awakening: string;
   mission_me2_freedoms_progress: string;

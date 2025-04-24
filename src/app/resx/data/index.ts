@@ -64,6 +64,10 @@ const data: GameData = {
         id: 'me1_citadel_asari_consort',
         prerequisites: ['me1_eden_prime'],
         wikiUrl: w('Citadel:_Asari_Consort'),
+      }, {
+        id: 'me1_citadel_doctor_michel',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Citadel:_Doctor_Michel'),
       }],
     }],
   }, {

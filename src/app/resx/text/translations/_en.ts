@@ -53,6 +53,7 @@ const strings: TextStrings = {
   mission_me1_ilos_trench_run: "Ilos: Trench Run",
   mission_me1_final_battle: "Race Against Time: Final Battle",
   mission_me1_citadel_asari_consort: 'Citadel: Asari Consort',
+  mission_me1_citadel_doctor_michel: 'Citadel: Doctor Michel',
   mission_me2_prologue_save_joker: "Prologue: Save Joker",
   mission_me2_prologue_awakening: "Prologue: Awakening",
   mission_me2_freedoms_progress: "Freedom's Progress",
