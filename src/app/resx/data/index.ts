@@ -28,7 +28,7 @@ const data: GameData = {
         prerequisites: ['me1_noveria_geth_interest'],
         wikiUrl: w('Noveria:_Matriarch_Benezia'),
       }, {
-        id: 'me1_feros',
+        id: 'me1_feros_geth_attack',
         prerequisites: ['me1_citadel_expose_saren'],
         wikiUrl: w('Feros:_Geth_Attack'),
       }, {

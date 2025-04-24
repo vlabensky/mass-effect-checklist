@@ -30,7 +30,7 @@ export type MissionId =
   | 'me1_find_liara'
   | 'me1_noveria_geth_interest'
   | 'me1_noveria_matriarch_benezia'
-  | 'me1_feros'
+  | 'me1_feros_geth_attack'
   | 'me1_virmire'
   | 'me1_ilos'
   | 'me1_final_battle'

@@ -54,9 +54,9 @@ export type TextStrings = {
   mission_me1_eden_prime: string;
   mission_me1_citadel_expose_saren: string;
   mission_me1_find_liara: string;
-  mission_me1_feros: string;
   mission_me1_noveria_geth_interest: string;
   mission_me1_noveria_matriarch_benezia: string;
+  mission_me1_feros_geth_attack: string;
   mission_me1_virmire: string;
   mission_me1_ilos: string;
   mission_me1_final_battle: string;
