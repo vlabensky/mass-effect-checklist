@@ -123,6 +123,11 @@ const data: GameData = {
         // TODO: any of feros, noveria or therum
         prerequisites: ['me1_find_liara'],
         wikiUrl: w('Citadel:_Snap_Inspection'),
+      }, {
+        id: 'me1_citadel_the_fourth_estate',
+        // TODO: any of feros, noveria or therum
+        prerequisites: ['me1_find_liara'],
+        wikiUrl: w('Citadel:_The_Fourth_Estate'),
       }],
     }],
   }, {

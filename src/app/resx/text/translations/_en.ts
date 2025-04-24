@@ -67,6 +67,7 @@ const strings: TextStrings = {
   mission_me1_citadel_family_matter: 'Citadel: Family Matter',
   mission_me1_citadel_planting_a_bug: 'Citadel: Planting a Bug',
   mission_me1_citadel_snap_inspection: 'Citadel: Snap Inspection',
+  mission_me1_citadel_the_fourth_estate: 'Citadel: The Fourth Estate',
   mission_me2_prologue_save_joker: "Prologue: Save Joker",
   mission_me2_prologue_awakening: "Prologue: Awakening",
   mission_me2_freedoms_progress: "Freedom's Progress",
