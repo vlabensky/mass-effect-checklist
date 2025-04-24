@@ -62,6 +62,7 @@ export type MissionId =
   | 'me1_citadel_negotiators_request'
   | 'me1_garrus_find_dr_saleon'
   | 'me1_tali_and_the_geth'
+  | 'me1_wrex_family_armor'
   | 'me2_prologue_save_joker'
   | 'me2_prologue_awakening'
   | 'me2_freedoms_progress'

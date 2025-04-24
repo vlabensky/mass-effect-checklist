@@ -166,6 +166,10 @@ const data: GameData = {
         // TODO: UNC: Geth Incursions
         prerequisites: [],
         wikiUrl: w('Tali_and_the_Geth'),
+      }, {
+        id: 'me1_wrex_family_armor',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Wrex:_Family_Armor'),
       }],
     }],
   }, {
