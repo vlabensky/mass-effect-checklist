@@ -46,7 +46,7 @@ const data: GameData = {
         wikiUrl: w('Virmire:_Assault'),
       }, {
         id: 'me1_ilos',
-        prerequisites: ['me1_virmire'],
+        prerequisites: ['me1_virmire_assault'],
         wikiUrl: w('Ilos:_Find_the_Conduit'),
       }, {
         id: 'me1_final_battle',
