@@ -60,6 +60,7 @@ export type MissionId =
   | 'me1_citadel_the_fourth_estate'
   | 'me1_citadel_our_own_worst_enemy'
   | 'me1_citadel_negotiators_request'
+  | 'me1_garrus_find_dr_saleon'
   | 'me2_prologue_save_joker'
   | 'me2_prologue_awakening'
   | 'me2_freedoms_progress'

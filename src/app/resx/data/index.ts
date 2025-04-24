@@ -157,7 +157,11 @@ const data: GameData = {
       }],
     }, {
       id: 'me1_squad',
-      missions: [],
+      missions: [{
+        id: 'me1_garrus_find_dr_saleon',
+        prerequisites: ['me1_eden_prime'],
+        wikiUrl: w('Garrus:_Find_Dr._Saleon'),
+      }],
     }],
   }, {
     id: 'me2',
