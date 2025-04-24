@@ -32,6 +32,10 @@ const data: GameData = {
         prerequisites: ['me1_citadel_expose_saren'],
         wikiUrl: w('Feros:_Geth_Attack'),
       }, {
+        id: 'me1_feros_the_thorian',
+        prerequisites: ['me1_feros_geth_attack'],
+        wikiUrl: w('Feros:_The_Thorian'),
+      }, {
         id: 'me1_virmire',
         // TODO: any two of the three
         prerequisites: ['me1_find_liara', 'me1_feros_geth_attack', 'me1_noveria_geth_interest'],

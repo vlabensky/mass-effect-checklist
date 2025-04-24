@@ -57,6 +57,7 @@ export type TextStrings = {
   mission_me1_noveria_geth_interest: string;
   mission_me1_noveria_matriarch_benezia: string;
   mission_me1_feros_geth_attack: string;
+  mission_me1_feros_the_thorian: string;
   mission_me1_virmire: string;
   mission_me1_ilos: string;
   mission_me1_final_battle: string;
