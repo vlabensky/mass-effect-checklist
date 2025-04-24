@@ -9,6 +9,7 @@ export type GameId =
 export type SectionId =
   | 'me1_story'
   | 'me1_citadel'
+  | 'me1_squad'
   | 'me2_plot'
   | 'me2_dossiers'
   | 'me2_citadel'

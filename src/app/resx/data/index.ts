@@ -155,6 +155,9 @@ const data: GameData = {
         prerequisites: ['me1_virmire_assault'],
         wikiUrl: w('Citadel:_Negotiator%27s_Request'),
       }],
+    }, {
+      id: 'me1_squad',
+      missions: [],
     }],
   }, {
     id: 'me2',

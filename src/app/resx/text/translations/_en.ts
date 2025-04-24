@@ -26,6 +26,7 @@ const strings: TextStrings = {
   themeName_theme_me3: "Mass Effect 3",
   group_me1_story: "Main Story",
   group_me1_citadel: "Citadel",
+  group_me1_squad: "Squad",
   group_me2_plot: "Plot",
   group_me2_dossiers: "Dossiers",
   group_me2_citadel: "Citadel",

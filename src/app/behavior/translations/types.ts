@@ -38,6 +38,7 @@ export type TextStrings = {
   themeName_theme_me3: string;
   group_me1_story: string,
   group_me1_citadel: string,
+  group_me1_squad: string,
   group_me2_plot: string,
   group_me2_dossiers: string,
   group_me2_citadel: string,
