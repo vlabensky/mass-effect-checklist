@@ -81,6 +81,7 @@ export type TextStrings = {
   mission_me1_citadel_snap_inspection: string;
   mission_me1_citadel_the_fourth_estate: string;
   mission_me1_citadel_our_own_worst_enemy: string;
+  mission_me1_citadel_negotiators_request: string;
   mission_me2_prologue_save_joker: string,
   mission_me2_prologue_awakening: string;
   mission_me2_freedoms_progress: string;

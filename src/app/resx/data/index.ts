@@ -132,6 +132,10 @@ const data: GameData = {
         id: 'me1_citadel_our_own_worst_enemy',
         prerequisites: ['me1_virmire_assault'],
         wikiUrl: w('Citadel:_Our_Own_Worst_Enemy'),
+      }, {
+        id: 'me1_citadel_negotiators_request',
+        prerequisites: ['me1_virmire_assault'],
+        wikiUrl: w('Citadel:_Negotiator%27s_Request'),
       }],
     }],
   }, {
