@@ -96,6 +96,10 @@ const data: GameData = {
         id: 'me1_citadel_schells_the_gambler',
         prerequisites: ['me1_citadel_ritas_sister'],
         wikiUrl: w('Citadel:_Schells_the_Gambler'),
+      }, {
+        id: 'me1_citadel_signal_tracking',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Citadel:_Signal_Tracking'),
       }],
     }],
   }, {
