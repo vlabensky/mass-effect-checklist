@@ -87,6 +87,7 @@ export type TextStrings = {
   mission_me1_citadel_our_own_worst_enemy: string;
   mission_me1_citadel_negotiators_request: string;
   mission_me1_garrus_find_dr_saleon: string;
+  mission_me1_tali_and_the_geth: string;
   mission_me2_prologue_save_joker: string,
   mission_me2_prologue_awakening: string;
   mission_me2_freedoms_progress: string;

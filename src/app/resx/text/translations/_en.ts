@@ -75,6 +75,7 @@ const strings: TextStrings = {
   mission_me1_citadel_our_own_worst_enemy: 'Citadel: Our Own Worst Enemy',
   mission_me1_citadel_negotiators_request: 'Citadel: Negotiator\'s Request',
   mission_me1_garrus_find_dr_saleon: 'Garrus: Find Dr. Saleon',
+  mission_me1_tali_and_the_geth: 'Tali and the Geth',
   mission_me2_prologue_save_joker: "Prologue: Save Joker",
   mission_me2_prologue_awakening: "Prologue: Awakening",
   mission_me2_freedoms_progress: "Freedom's Progress",
