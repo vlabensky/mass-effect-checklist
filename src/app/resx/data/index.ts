@@ -118,6 +118,11 @@ const data: GameData = {
         // TODO: also one of feros, noveria or therum
         prerequisites: ['me1_citadel_reporters_request'],
         wikiUrl: w('Citadel:_Planting_a_Bug'),
+      }, {
+        id: 'me1_citadel_snap_inspection',
+        // TODO: any of feros, noveria or therum
+        prerequisites: ['me1_find_liara'],
+        wikiUrl: w('Citadel:_Snap_Inspection'),
       }],
     }],
   }, {
