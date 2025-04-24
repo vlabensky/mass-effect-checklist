@@ -92,6 +92,11 @@ export type TextStrings = {
   mission_me1_garrus_find_dr_saleon: string;
   mission_me1_tali_and_the_geth: string;
   mission_me1_wrex_family_armor: string;
+  mission_me1_feros_data_recovery: string;
+  mission_me1_feros_geth_in_the_tunnels: string;
+  mission_me1_feros_power_cells: string;
+  mission_me1_feros_varren_meat: string;
+  mission_me1_feros_water_restoration: string;
   mission_me2_prologue_save_joker: string,
   mission_me2_prologue_awakening: string;
   mission_me2_freedoms_progress: string;

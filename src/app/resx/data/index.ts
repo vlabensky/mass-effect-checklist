@@ -173,7 +173,27 @@ const data: GameData = {
       }],
     }, {
       id: 'me1_feros',
-      missions: [],
+      missions: [{
+        id: 'me1_feros_data_recovery',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Feros:_Data_Recovery'),
+      }, {
+        id: 'me1_feros_geth_in_the_tunnels',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Feros:_Geth_in_the_Tunnels'),
+      }, {
+        id: 'me1_feros_power_cells',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Feros:_Power_Cells'),
+      }, {
+        id: 'me1_feros_varren_meat',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Feros:_Varren_Meat'),
+      }, {
+        id: 'me1_feros_water_restoration',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Feros:_Water_Restoration'),
+      }],
     }, {
       id: 'me1_noveria',
       missions: [],
