@@ -49,7 +49,7 @@ const GameSection = ({ section, completedMissions, onToggleMission }: Props) => 
         {t(groupKey)}
       </h3>
       <div
-        className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isSectionExpanded ? 'max-h-500' : 'max-h-0'}`}
+        className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isSectionExpanded ? 'max-h-700' : 'max-h-0'}`}
         style={{ transitionProperty: 'max-height' }}
       >
         {isSectionExpanded && (
