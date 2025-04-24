@@ -88,6 +88,10 @@ const data: GameData = {
         id: 'me1_citadel_ritas_sister',
         prerequisites: ['me1_eden_prime'],
         wikiUrl: w('Citadel:_Rita%27s_Sister'),
+      }, {
+        id: 'me1_citadel_scan_the_keepers',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Citadel:_Scan_the_Keepers'),
       }],
     }],
   }, {
