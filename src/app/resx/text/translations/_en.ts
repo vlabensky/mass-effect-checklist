@@ -55,6 +55,7 @@ const strings: TextStrings = {
   mission_me1_citadel_asari_consort: 'Citadel: Asari Consort',
   mission_me1_citadel_doctor_michel: 'Citadel: Doctor Michel',
   mission_me1_citadel_homecoming: 'Citadel: Homecoming',
+  mission_me1_citadel_jahleeds_fears: 'Citadel: Jahleed\'s Fears',
   mission_me2_prologue_save_joker: "Prologue: Save Joker",
   mission_me2_prologue_awakening: "Prologue: Awakening",
   mission_me2_freedoms_progress: "Freedom's Progress",
