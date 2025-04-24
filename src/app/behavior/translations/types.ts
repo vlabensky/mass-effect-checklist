@@ -36,7 +36,6 @@ export type TextStrings = {
   themeName_theme_me1: string;
   themeName_theme_me2: string;
   themeName_theme_me3: string;
-  group_me1_prologue: string,
   group_me1_story: string,
   group_me2_plot: string,
   group_me2_dossiers: string,

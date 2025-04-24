@@ -6,15 +6,12 @@ const data: GameData = {
   games: [{
     id: 'me1',
     sections: [{
-      id: 'me1_prologue',
+      id: 'me1_story',
       missions: [{
         id: 'me1_eden_prime',
         prerequisites: [],
         wikiUrl: w('Find_the_Beacon'),
-      }],
-    }, {
-      id: 'me1_story',
-      missions: [{
+      }, {
         id: 'me1_citadel_expose_saren',
         prerequisites: ['me1_eden_prime'],
         wikiUrl: w('Citadel:_Expose_Saren'),
