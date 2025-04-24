@@ -76,6 +76,7 @@ export type TextStrings = {
   mission_me1_citadel_signal_tracking: string;
   mission_me1_citadel_the_fan: string;
   mission_me1_citadel_xeltans_complaint: string;
+  mission_me1_citadel_family_matter: string;
   mission_me2_prologue_save_joker: string,
   mission_me2_prologue_awakening: string;
   mission_me2_freedoms_progress: string;

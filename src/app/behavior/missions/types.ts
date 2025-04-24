@@ -50,6 +50,7 @@ export type MissionId =
   | 'me1_citadel_signal_tracking'
   | 'me1_citadel_the_fan'
   | 'me1_citadel_xeltans_complaint'
+  | 'me1_citadel_family_matter'
   | 'me2_prologue_save_joker'
   | 'me2_prologue_awakening'
   | 'me2_freedoms_progress'

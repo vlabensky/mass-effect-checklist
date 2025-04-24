@@ -108,6 +108,11 @@ const data: GameData = {
         id: 'me1_citadel_xeltans_complaint',
         prerequisites: ['me1_citadel_asari_consort'],
         wikiUrl: w('Citadel:_Xeltan%27s_Complaint'),
+      }, {
+        id: 'me1_citadel_family_matter',
+        // TODO: any of feros, noveria or therum
+        prerequisites: ['me1_find_liara'],
+        wikiUrl: w('Citadel:_Family_Matter'),
       }],
     }],
   }, {
