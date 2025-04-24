@@ -54,7 +54,7 @@ const data: GameData = {
         wikiUrl: w('Race_Against_Time:_Conduit'),
       }, {
         id: 'me1_final_battle',
-        prerequisites: ['me1_ilos'],
+        prerequisites: ['me1_ilos_trench_run'],
         wikiUrl: w('Race_Against_Time:_Final_Battle'),
       }],
     }],
