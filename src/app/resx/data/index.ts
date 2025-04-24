@@ -207,7 +207,16 @@ const data: GameData = {
       }],
     }, {
       id: 'me1_virmire',
-      missions: [],
+      missions: [{
+        id: 'me1_virmire_assisting_kirrahes_team',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Virmire:_Assisting_Kirrahe%27s_Team'),
+      },
+      {
+        id: 'me1_virmire_wrex_and_the_genophage',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Virmire:_Wrex_and_the_Genophage'),
+      }],
     }],
   }, {
     id: 'me2',

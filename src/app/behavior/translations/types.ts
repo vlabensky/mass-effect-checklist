@@ -99,6 +99,8 @@ export type TextStrings = {
   mission_me1_feros_water_restoration: string;
   mission_me1_noveria_espionage: string;
   mission_me1_noveria_smuggling: string;
+  mission_me1_virmire_assisting_kirrahes_team: string;
+  mission_me1_virmire_wrex_and_the_genophage: string;
   mission_me2_prologue_save_joker: string,
   mission_me2_prologue_awakening: string;
   mission_me2_freedoms_progress: string;

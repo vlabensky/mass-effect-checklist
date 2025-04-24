@@ -73,6 +73,8 @@ export type MissionId =
   | 'me1_feros_water_restoration'
   | 'me1_noveria_espionage'
   | 'me1_noveria_smuggling'
+  | 'me1_virmire_assisting_kirrahes_team'
+  | 'me1_virmire_wrex_and_the_genophage'
   | 'me2_prologue_save_joker'
   | 'me2_prologue_awakening'
   | 'me2_freedoms_progress'

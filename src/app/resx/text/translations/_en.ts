@@ -87,6 +87,8 @@ const strings: TextStrings = {
   mission_me1_feros_water_restoration: 'Feros: Water Restoration',
   mission_me1_noveria_espionage: 'Noveria: Espionage',
   mission_me1_noveria_smuggling: 'Noveria: Smuggling',
+  mission_me1_virmire_assisting_kirrahes_team: 'Virmire: Assisting Kirrahe\'s Team',
+  mission_me1_virmire_wrex_and_the_genophage: 'Virmire: Wrex and the Genophage',
   mission_me2_prologue_save_joker: "Prologue: Save Joker",
   mission_me2_prologue_awakening: "Prologue: Awakening",
   mission_me2_freedoms_progress: "Freedom's Progress",
