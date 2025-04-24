@@ -48,6 +48,7 @@ const data: GameData = {
         id: 'me1_ilos',
         prerequisites: ['me1_virmire_assault'],
         wikiUrl: w('Ilos:_Find_the_Conduit'),
+        // TODO: additionalInfo - mark as point of no return
       }, {
         id: 'me1_ilos_trench_run',
         prerequisites: ['me1_ilos'],
@@ -57,6 +58,9 @@ const data: GameData = {
         prerequisites: ['me1_ilos_trench_run'],
         wikiUrl: w('Race_Against_Time:_Final_Battle'),
       }],
+    }, {
+      id: 'me1_citadel',
+      missions: [],
     }],
   }, {
     id: 'me2',
