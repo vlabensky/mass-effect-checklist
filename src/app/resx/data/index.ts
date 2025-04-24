@@ -34,7 +34,7 @@ const data: GameData = {
       }, {
         id: 'me1_virmire',
         // TODO: any two of the three
-        prerequisites: ['me1_find_liara', 'me1_feros', 'me1_noveria_geth_interest'],
+        prerequisites: ['me1_find_liara', 'me1_feros_geth_attack', 'me1_noveria_geth_interest'],
         wikiUrl: w('Virmire:_Saren%27s_Plan'),
       }, {
         id: 'me1_ilos',
