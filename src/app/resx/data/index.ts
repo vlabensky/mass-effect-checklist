@@ -113,6 +113,11 @@ const data: GameData = {
         // TODO: any of feros, noveria or therum
         prerequisites: ['me1_find_liara'],
         wikiUrl: w('Citadel:_Family_Matter'),
+      }, {
+        id: 'me1_citadel_planting_a_bug',
+        // TODO: also one of feros, noveria or therum
+        prerequisites: ['me1_citadel_reporters_request'],
+        wikiUrl: w('Citadel:_Planting_a_Bug'),
       }],
     }],
   }, {
