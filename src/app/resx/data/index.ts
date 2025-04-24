@@ -80,6 +80,10 @@ const data: GameData = {
         id: 'me1_citadel_presidium_prophet',
         prerequisites: ['me1_citadel_expose_saren'],
         wikiUrl: w('Citadel:_Presidium_Prophet'),
+      }, {
+        id: 'me1_citadel_reporters_request',
+        prerequisites: ['me1_citadel_expose_saren'],
+        wikiUrl: w('Citadel:_Reporter%27s_Request'),
       }],
     }],
   }, {

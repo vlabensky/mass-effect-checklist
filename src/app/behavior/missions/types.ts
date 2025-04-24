@@ -43,6 +43,7 @@ export type MissionId =
   | 'me1_citadel_homecoming'
   | 'me1_citadel_jahleeds_fears'
   | 'me1_citadel_presidium_prophet'
+  | 'me1_citadel_reporters_request'
   | 'me2_prologue_save_joker'
   | 'me2_prologue_awakening'
   | 'me2_freedoms_progress'
