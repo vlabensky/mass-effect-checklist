@@ -10,7 +10,7 @@ const data: GameData = {
       missions: [{
         id: 'me1_eden_prime',
         prerequisites: [],
-        wikiUrl: w('Find_the_Beacon'),
+        wikiUrl: w('Prologue:_Find_the_Beacon'),
       }, {
         id: 'me1_citadel_expose_saren',
         prerequisites: ['me1_eden_prime'],
@@ -26,7 +26,7 @@ const data: GameData = {
       }, {
         id: 'me1_noveria',
         prerequisites: ['me1_citadel_expose_saren'],
-        wikiUrl: w('Noveria#Walkthrough'),
+        wikiUrl: w('Noveria:_Matriarch_Benezia'),
       }, {
         id: 'me1_virmire',
         prerequisites: ['me1_find_liara', 'me1_feros', 'me1_noveria'],
