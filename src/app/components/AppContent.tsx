@@ -184,7 +184,7 @@ const AppContent = () => {
             </div>
           </div>
 
-          <div className="border-b border-border flex flex-wrap space-x-1">
+          <div className="border-b border-border flex flex-col sm:flex-row space-x-1">
             <TabButton labelKey="tabME1" onClick={() => setActiveTab("me1")} isActiveTab={activeTab === "me1"} />
             <TabButton labelKey="tabME2" onClick={() => setActiveTab("me2")} isActiveTab={activeTab === "me2"} />
             <TabButton labelKey="tabME3" onClick={() => setActiveTab("me3")} isActiveTab={activeTab === "me3"} />
