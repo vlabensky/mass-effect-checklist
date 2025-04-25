@@ -190,13 +190,11 @@ const AppContent = () => {
             <TabButton labelKey="tabME3" onClick={() => setActiveTab("me3")} isActiveTab={activeTab === "me3"} />
           </div>
 
-          <div>
-            <MissionList
-              game={getActiveGame()}
-              completedMissions={completedMissions}
-              onToggleMission={handleToggleMission}
-            />
-          </div>
+          <MissionList
+            game={getActiveGame()}
+            completedMissions={completedMissions}
+            onToggleMission={handleToggleMission}
+          />
 
           <footer className="mt-12 text-center text-text-footer text-sm">
             <p>{t('footerSource')}</p>
