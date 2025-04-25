@@ -127,6 +127,9 @@ export type TextStrings = {
   mission_me1_unc_rogue_vi: string;
   mission_me1_unc_besieged_base: string;
   mission_me1_unc_the_negotiation: string;
+  mission_me1_x57_bring_down_the_sky: string;
+  mission_me1_x57_avoid_the_blasting_caps: string;
+  mission_me1_x57_missing_engineers: string;
   mission_me2_prologue_save_joker: string,
   mission_me2_prologue_awakening: string;
   mission_me2_freedoms_progress: string;

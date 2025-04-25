@@ -321,7 +321,19 @@ const data: GameData = {
       }],
     }, {
       id: 'me1_bring_down_the_sky',
-      missions: [],
+      missions: [{
+        id: 'me1_x57_bring_down_the_sky',
+        prerequisites: [],
+        wikiUrl: w('X57:_Bring_Down_the_Sky'),
+      }, {
+        id: 'me1_x57_avoid_the_blasting_caps',
+        prerequisites: [],
+        wikiUrl: w('X57:_Avoid_the_Blasting_Caps'),
+      }, {
+        id: 'me1_x57_missing_engineers',
+        prerequisites: [],
+        wikiUrl: w('X57:_Missing_Engineers'),
+      }],
     }],
   }, {
     id: 'me2',
