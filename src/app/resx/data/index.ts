@@ -319,6 +319,9 @@ const data: GameData = {
         wikiUrl: w('UNC:_The_Negotiation'),
         // TODO: additional info about 80% Renegate, or 90% Renegate if 80% Paragon
       }],
+    }, {
+      id: 'me1_bring_down_the_sky',
+      missions: [],
     }],
   }, {
     id: 'me2',

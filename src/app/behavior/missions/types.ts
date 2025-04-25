@@ -14,6 +14,7 @@ export type SectionId =
   | 'me1_noveria'
   | 'me1_virmire'
   | 'me1_unc'
+  | 'me1_bring_down_the_sky'
   | 'me2_plot'
   | 'me2_dossiers'
   | 'me2_citadel'
