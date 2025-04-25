@@ -312,7 +312,7 @@ const data: GameData = {
         id: 'me1_unc_besieged_base',
         prerequisites: [],
         wikiUrl: w('UNC:_Besieged_Base'),
-        // TODO: additional info about 80% Paragon, or 90% Paragon if 80% Renegate
+        additionalInfo: 'additional_info_me1_unc_besieged_base',
       }, {
         id: 'me1_unc_the_negotiation',
         prerequisites: [],
