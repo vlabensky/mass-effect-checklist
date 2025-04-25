@@ -219,7 +219,106 @@ const data: GameData = {
       }],
     }, {
       id: 'me1_unc',
-      missions: [],
+      missions: [{
+        id: 'me1_unc_distress_call',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Distress_Call'),
+      }, {
+        id: 'me1_unc_asari_diplomacy',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Asari_Diplomacy'),
+      }, {
+        id: 'me1_unc_espionage_probe',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Espionage_Probe'),
+      }, {
+        id: 'me1_unc_geth_incursions',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Geth_Incursions'),
+      }, {
+        id: 'me1_unc_missing_marines',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Missing_Marines'),
+      }, {
+        id: 'me1_unc_cerberus',
+        prerequisites: ['me1_unc_missing_marines'],
+        wikiUrl: w('UNC:_Cerberus'),
+      }, {
+        id: 'me1_unc_hades_dogs',
+        prerequisites: ['me1_unc_cerberus'],
+        wikiUrl: w('UNC:_Hades%27_Dogs'),
+      }, {
+        id: 'me1_unc_colony_of_the_dead',
+        prerequisites: ['me1_feros_geth_attack'],
+        wikiUrl: w('UNC:_Colony_of_the_Dead'),
+      }, {
+        id: 'me1_unc_derelict_freighter',
+        prerequisites: ['me1_feros_geth_attack'],
+        wikiUrl: w('UNC:_Derelict_Freighter'),
+      }, {
+        id: 'me1_unc_exogeni_facility',
+        prerequisites: ['me1_feros_geth_attack'],
+        wikiUrl: w('UNC:_ExoGeni_Facility'),
+      }, {
+        id: 'me1_unc_dead_scientists',
+        prerequisites: ['me1_noveria_geth_interest'],
+        wikiUrl: w('UNC:_Dead_Scientists'),
+      }, {
+        id: 'me1_unc_listening_post_alpha',
+        prerequisites: ['me1_noveria_geth_interest'],
+        wikiUrl: w('UNC:_Listening_Post_Alpha'),
+      }, {
+        id: 'me1_unc_listening_post_theta',
+        prerequisites: ['me1_noveria_geth_interest'],
+        wikiUrl: w('UNC:_Listening_Post_Theta'),
+      }, {
+        id: 'me1_unc_depot_sigma_23',
+        prerequisites: ['me1_unc_listening_post_alpha', 'me1_unc_listening_post_theta'],
+        wikiUrl: w('UNC:_Depot_Sigma-23'),
+      }, {
+        id: 'me1_unc_hostage',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Hostage'),
+      }, {
+        id: 'me1_unc_hostile_takeover',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Hostile_Takeover'),
+      }, {
+        id: 'me1_unc_lost_freighter',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Lost_Freighter'),
+      }, {
+        id: 'me1_unc_lost_module',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Lost_Module'),
+      }, {
+        id: 'me1_unc_major_kyle',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Major_Kyle'),
+      }, {
+        id: 'me1_unc_missing_survey_team',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Missing_Survey_Team'),
+      }, {
+        id: 'me1_unc_privateers',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Privateers'),
+      }, {
+        id: 'me1_unc_rogue_vi',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Rogue_VI'),
+        // TODO: additional info about level 20 req
+      }, {
+        id: 'me1_unc_besieged_base',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Besieged_Base'),
+        // TODO: additional info about 80% Paragon, or 90% Paragon if 80% Renegate
+      }, {
+        id: 'me1_unc_the_negotiation',
+        prerequisites: [],
+        wikiUrl: w('UNC:_The_Negotiation'),
+        // TODO: additional info about 80% Renegate, or 90% Renegate if 80% Paragon
+      }],
     }],
   }, {
     id: 'me2',
