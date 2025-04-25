@@ -166,7 +166,7 @@ const AppContent = () => {
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-wrap justify-between items-center mb-8 gap-4 relative">
             <h1 className="text-3xl sm:text-4xl font-bold text-accent">{t('pageTitle')}</h1>
-            <div className="relative">
+            <div className="absolute right-0">
               <button
                 ref={settingsButtonRef}
                 onClick={toggleSettingsMenu}
