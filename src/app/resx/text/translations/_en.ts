@@ -234,6 +234,7 @@ const strings: TextStrings = {
   unknownMission: "Unknown Mission",
 
   additional_info_me1_unc_rogue_vi: 'This assignment is triggered after reaching level 20 (or level 11 in Mass Effect Legendary Edition with Legendary Mode) when next traveling to another system.',
+  additional_info_me1_unc_besieged_base: 'This assignment only becomes available when you hit 80% Paragon, or 90% Paragon if you had attained 80% Renegade first.',
   additional_info_me2_horizon: 'This mission will be triggered automatically as soon as the player completes four main dossiers. So after recruiting Archangel, Jack, and Mordin Solus, as well as recovering Grunt in his tank from Korlus (note that waking up Grunt is not necessary), the player will be forced to play this mission.',
   additional_info_me2_collector_ship: 'This mission will be triggered automatically as soon as the player completes any five missions after Horizon. Also there are additional conditions so please check the Wiki article for more details.',
   additional_info_me2_iff: 'A countdown begins once the player completes this mission, with potentially dire consequences for the crew of the Normandy if Shepard delays too long in proceeding through the Omega 4 Relay.',
