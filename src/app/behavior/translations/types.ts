@@ -131,6 +131,11 @@ export type TextStrings = {
   mission_me1_x57_bring_down_the_sky: string;
   mission_me1_x57_avoid_the_blasting_caps: string;
   mission_me1_x57_missing_engineers: string;
+  mission_me1_unc_prothean_data_discs: string;
+  mission_me1_unc_turian_insignias: string;
+  mission_me1_unc_valuable_minerals: string;
+  mission_me1_unc_locate_signs_of_battle: string;
+  mission_me1_unc_asari_writings: string;
   mission_me2_prologue_save_joker: string,
   mission_me2_prologue_awakening: string;
   mission_me2_freedoms_progress: string;

@@ -336,7 +336,27 @@ const data: GameData = {
       }],
     }, {
       id: 'me1_collectibles',
-      missions: [],
+      missions: [{
+        id: 'me1_unc_prothean_data_discs',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Prothean_Data_Discs'),
+      }, {
+        id: 'me1_unc_turian_insignias',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Turian_Insignias'),
+      }, {
+        id: 'me1_unc_valuable_minerals',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Valuable_Minerals'),
+      }, {
+        id: 'me1_unc_locate_signs_of_battle',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Locate_Signs_of_Battle'),
+      }, {
+        id: 'me1_unc_asari_writings',
+        prerequisites: [],
+        wikiUrl: w('UNC:_Asari_Writings'),
+      }],
     }],
   }, {
     id: 'me2',
