@@ -307,7 +307,7 @@ const data: GameData = {
         id: 'me1_unc_rogue_vi',
         prerequisites: [],
         wikiUrl: w('UNC:_Rogue_VI'),
-        // TODO: additional info about level 20 req
+        additionalInfo: 'additional_info_me1_unc_rogue_vi',
       }, {
         id: 'me1_unc_besieged_base',
         prerequisites: [],

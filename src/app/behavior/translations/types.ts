@@ -245,6 +245,7 @@ export type TextStrings = {
   mission_me3_earth: string;
   unknownMission: string;
 
+  additional_info_me1_unc_rogue_vi: string;
   additional_info_me2_horizon: string;
   additional_info_me2_collector_ship: string;
   additional_info_me2_iff: string;
