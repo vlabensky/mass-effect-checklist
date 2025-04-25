@@ -15,8 +15,8 @@ const TabButton = ({ labelKey, onClick, isActiveTab }: Props) => {
       onClick={onClick}
       className={`px-4 py-2 font-semibold rounded-t-lg focus:outline-none transition-colors duration-200 ease-in-out border-b-2 ${
         isActiveTab
-          ? "bg-background-list text-text-primary border-accent"
-          : "bg-background-header text-text-secondary border-transparent hover:bg-background-hover hover:text-text-primary"
+          ? "bg-background-header text-text-primary border-accent"
+          : "bg-background-list text-text-secondary border-transparent hover:bg-background-hover hover:text-text-primary"
       }`}
     >
       {" "}
