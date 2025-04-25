@@ -44,6 +44,7 @@ export type TextStrings = {
   group_me1_virmire: string,
   group_me1_unc: string,
   group_me1_bring_down_the_sky: string;
+  group_me1_collectibles: string;
   group_me2_plot: string,
   group_me2_dossiers: string,
   group_me2_citadel: string,

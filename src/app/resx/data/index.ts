@@ -334,6 +334,9 @@ const data: GameData = {
         prerequisites: [],
         wikiUrl: w('X57:_Missing_Engineers'),
       }],
+    }, {
+      id: 'me1_collectibles',
+      missions: [],
     }],
   }, {
     id: 'me2',
