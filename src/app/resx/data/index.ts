@@ -848,7 +848,7 @@ const data: GameData = {
         id: 'me3_priority_cerberus_hq',
         prerequisites: ['me3_priority_horizon'],
         wikiUrl: w('Priority:_Cerberus_Headquarters'),
-        // TODO: point of no return
+        additionalInfo: 'additional_info_me3_priority_cerberus_hq',
       }, {
         id: 'me3_priority_earth',
         prerequisites: ['me3_priority_cerberus_hq'],
