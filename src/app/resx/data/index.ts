@@ -1020,7 +1020,120 @@ const data: GameData = {
       }],
     }, {
       id: 'me3_priority_the_citadel2',
-      missions: [],
+      missions: [{
+        id: 'me3_arrae_ex_cerberus_scientists',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Arrae:_Ex-Cerberus_Scientists'),
+      }, {
+        id: 'me3_citadel_cerberus_turian_poison',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Cerberus_Turian_Poison'),
+        // TODO: during me3_arrae_ex_cerberus_scientists
+      }, {
+        id: 'me3_athena_nebula_hesperia_period_statue',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Athena_Nebula:_Hesperia-Period_Statue'),
+      }, {
+        id: 'me3_citadel_batarian_codes',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Batarian_Codes'),
+      }, {
+        id: 'me3_citadel_cerberus_ciphers',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Cerberus_Ciphers'),
+        // TODO: during N7: Communication Hub
+        // This mission cannot be completed before Priority: Thessia.
+      }, {
+        id: 'me3_citadel_cerberus_retribution',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Cerberus_Retribution'),
+      }, {
+        id: 'me3_citadel_chemical_treatment',
+        prerequisites: ['me3_priority_citadel2', ],
+        wikiUrl: w('Citadel:_Chemical_Treatment'),
+        // TODO: during N7: Fuel Reactors
+        // This mission cannot be completed before Priority: Geth Dreadnought.
+      }, {
+        id: 'me3_citadel_inspirational_stories',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Inspirational_Stories'),
+        // TODO:
+        // This mission cannot be completed before Priority: Geth Dreadnought.
+      }, {
+        id: 'me3_citadel_kakliosaur_fossil',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Kakliosaur_Fossil'),
+      }, {
+        id: 'me3_citadel_medical_supplies',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Medical_Supplies'),
+      }, {
+        id: 'me3_citadel_medi_gel_sabotage',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Medi-Gel_Sabotage'),
+      }, {
+        id: 'me3_citadel_reaper_code_fragments',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Reaper_Code_Fragments'),
+        // TODO: during Rannoch: Geth Fighter Squadrons
+        // This mission cannot be completed before Priority: Geth Dreadnought.
+      }, {
+        id: 'me3_citadel_shore_leave',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Shore_Leave'),
+        // TODO: DLC Mission
+      }, {
+        id: 'me3_citadel_target_jamming_technology',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Target_Jamming_Technology'),
+        // TODO: during Rannoch: Admiral Koris
+        // This mission cannot be completed before Priority: Geth Dreadnought.
+      }, {
+        id: 'me3_citadel_volus_ambassador',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Volus_Ambassador'),
+      }, {
+        id: 'me3_citadel_wounded_batarian',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Wounded_Batarian'),
+      }, {
+        id: 'me3_dekuuna_code_of_the_ancients',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Dekuuna:_Code_of_the_Ancients'),
+        // TODO: This mission cannot be completed before Priority: Rannoch.
+      }, {
+        id: 'me3_hades_nexus_obelisk_of_karza',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Hades_Nexus:_Obelisk_of_Karza'),
+        // TODO: This mission cannot be completed before Priority: Rannoch.
+      }, {
+        id: 'me3_hades_nexus_prothean_sphere',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Hades_Nexus:_Prothean_Sphere'),
+        // TODO: This mission cannot be completed before Priority: Rannoch.
+      }, {
+        id: 'me3_kallini_ardat_yakshi_monastery',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Kallini:_Ardat-Yakshi_Monastery'),
+      }, {
+        id: 'me3_citadel_asari_widow',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Asari_Widow'),
+        // TODO: during me3_kallini_ardat_yakshi_monastery
+      }, {
+        id: 'me3_nimbus_cluster_library_of_asha',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Nimbus_Cluster:_Library_of_Asha'),
+      }, {
+        id: 'me3_silean_nebula_rings_of_alune',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Silean_Nebula:_Rings_of_Alune'),
+        // TODO: This mission cannot be completed before Priority: Rannoch.
+      }, {
+        id: 'me3_valhallan_threshold_prothean_data_drives',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Valhallan_Threshold:_Prothean_Data_Drives'),
+      }],
     }, {
       id: 'me3_priority_geth_dreadnought',
       missions: [],
