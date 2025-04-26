@@ -878,7 +878,100 @@ const data: GameData = {
       }],
     }, {
       id: 'me3_priority_palaven',
-      missions: [],
+      missions: [{
+        id: 'me3_apien_crest_banner_of_the_first_regiment',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Apien_Crest:_Banner_of_the_First_Regiment'),
+      }, {
+        id: 'me3_aria_blood_pack',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Aria:_Blood_Pack'),
+      }, {
+        id: 'me3_aria_blue_suns',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Aria:_Blue_Suns'),
+      }, {
+        id: 'me3_aria_eclipse',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Aria:_Eclipse'),
+      }, {
+        id: 'me3_benning_evidence',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Benning:_Evidence'),
+        // TODO: during N7: Cerberus Abductions
+        // This mission cannot be completed before Priority: Sur'Kesh.
+        // Progress-Sensitive Mission: This mission expires if not completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_citadel_alien_medi_gel_formula',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Alien_Medi-Gel_Formula'),
+        // TODO: during N7: Cerberus Lab
+        // Progress-Sensitive Mission: This mission expires if not completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_citadel_aria_tloak',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Aria_T%27Loak'),
+        // TODO: DLC Mission
+      }, {
+        id: 'me3_citadel_barla_von',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Barla_Von'),
+        // TODO:
+        // This mission cannot be completed before Priority: Sur'Kesh.
+        // Progress-Sensitive Mission: This mission expires if not completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_citadel_biotic_amp_interfaces',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Biotic_Amp_Interfaces'),
+        // TODO: during Grissom Academy: Emergency Evacuation
+        // Progress-Sensitive Mission: This mission expires if not completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_citadel_dr_bryson',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Dr._Bryson'),
+        // TODO: DLC Mission
+      }, {
+        id: 'me3_citadel_gx12_thermal_pipe',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_GX12_Thermal_Pipe'),
+      }, {
+        id: 'me3_citadel_hanar_diplomat',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Hanar_Diplomat'),
+        // TODO: Progress-Sensitive Mission: This mission expires if not completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_citadel_heating_unit_stabilizers',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Heating_Unit_Stabilizers'),
+        // TODO: during N7: Cerberus Fighter Base
+        // This mission cannot be completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_citadel_improved_power_grid',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Improved_Power_Grid'),
+        // TODO: during N7: Cerberus Attack
+        // This mission cannot be completed before Priority: Sur'Kesh.
+        // Progress-Sensitive Mission: This mission expires if not completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_grissom_academy_emergency_evacuation',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Grissom_Academy:_Emergency_Evacuation'),
+        // TODO: Progress-Sensitive Mission: This mission expires if not completed before Priority: The Citadel II.
+      }, {
+        id: 'me3_irune_book_of_plenix',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Irune:_Book_of_Plenix'),
+        // TODO: This mission cannot be completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_ismar_frontier_prototype_components',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Ismar_Frontier:_Prototype_Components'),
+        // TODO: Progress-Sensitive Mission: This mission expires if not completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_kites_nest_pillars_of_strength',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Kite%27s_Nest:_Pillars_of_Strength'),
+      }],
     }, {
       id: 'me3_priority_surkesh',
       missions: [],

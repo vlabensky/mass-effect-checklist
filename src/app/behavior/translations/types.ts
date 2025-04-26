@@ -257,6 +257,24 @@ export type TextStrings = {
   mission_me3_priority_eden_prime: string;
   mission_me3_eden_prime_resistance_movement: string;
   mission_me3_shrike_abyssal_prothean_obelisk: string;
+  mission_me3_apien_crest_banner_of_the_first_regiment: string;
+  mission_me3_aria_blood_pack: string;
+  mission_me3_aria_blue_suns: string;
+  mission_me3_aria_eclipse: string;
+  mission_me3_benning_evidence: string;
+  mission_me3_citadel_alien_medi_gel_formula: string;
+  mission_me3_citadel_aria_tloak: string;
+  mission_me3_citadel_barla_von: string;
+  mission_me3_citadel_biotic_amp_interfaces: string;
+  mission_me3_citadel_dr_bryson: string;
+  mission_me3_citadel_gx12_thermal_pipe: string;
+  mission_me3_citadel_hanar_diplomat: string;
+  mission_me3_citadel_heating_unit_stabilizers: string;
+  mission_me3_citadel_improved_power_grid: string;
+  mission_me3_grissom_academy_emergency_evacuation: string;
+  mission_me3_irune_book_of_plenix: string;
+  mission_me3_ismar_frontier_prototype_components: string;
+  mission_me3_kites_nest_pillars_of_strength: string;
   unknownMission: string;
 
   additional_info_me1_unc_rogue_vi: string;
