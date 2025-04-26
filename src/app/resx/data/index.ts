@@ -1136,13 +1136,35 @@ const data: GameData = {
       }],
     }, {
       id: 'me3_priority_geth_dreadnought',
-      missions: [],
+      missions: [{
+        id: 'me3_n7_fuel_reactors',
+        prerequisites: ['me3_priority_geth_dreadnought'],
+        wikiUrl: w('N7:_Fuel_Reactors'),
+      }, {
+        id: 'me3_rannoch_admiral_koris',
+        prerequisites: ['me3_priority_geth_dreadnought'],
+        wikiUrl: w('Rannoch:_Admiral_Koris'),
+        // TODO: This mission expires if not completed before Priority: Rannoch.
+      }, {
+        id: 'me3_rannoch_geth_fighter_squadrons',
+        prerequisites: ['me3_priority_geth_dreadnought'],
+        wikiUrl: w('Rannoch:_Geth_Fighter_Squadrons'),
+        // TODO: This mission expires if not completed before Priority: Rannoch.
+      }],
     }, {
       id: 'me3_priority_rannoch',
-      missions: [],
+      missions: [{
+        id: 'me3_dekuuna_elcor_extraction',
+        prerequisites: ['me3_priority_rannoch'],
+        wikiUrl: w('Dekuuna:_Elcor_Extraction'),
+      }],
     }, {
       id: 'me3_priority_thessia',
-      missions: [],
+      missions: [{
+        id: 'me3_n7_communication_hub',
+        prerequisites: ['me3_priority_thessia'],
+        wikiUrl: w('N7:_Communication_Hub'),
+      }],
     }],
   }],
 };

@@ -281,6 +281,11 @@ export type MissionId =
   | 'me3_nimbus_cluster_library_of_asha'
   | 'me3_silean_nebula_rings_of_alune'
   | 'me3_valhallan_threshold_prothean_data_drives'
+  | 'me3_n7_fuel_reactors'
+  | 'me3_rannoch_admiral_koris'
+  | 'me3_rannoch_geth_fighter_squadrons'
+  | 'me3_dekuuna_elcor_extraction'
+  | 'me3_n7_communication_hub'
   ;
 
 export type Mission = {

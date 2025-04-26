@@ -295,6 +295,11 @@ const strings: TextStrings = {
   mission_me3_nimbus_cluster_library_of_asha: 'Nimbus Cluster: Library of Asha',
   mission_me3_silean_nebula_rings_of_alune: 'Silean Nebula: Rings of Alune',
   mission_me3_valhallan_threshold_prothean_data_drives: 'Valhallan Threshold: Prothean Data Drives',
+  mission_me3_n7_fuel_reactors: 'N7: Fuel Reactors',
+  mission_me3_rannoch_admiral_koris: 'Rannoch: Admiral Koris',
+  mission_me3_rannoch_geth_fighter_squadrons: 'Rannoch: Geth Fighter Squadrons',
+  mission_me3_dekuuna_elcor_extraction: 'Dekuuna: Elcor Extraction',
+  mission_me3_n7_communication_hub: 'N7: Communication Hub',
   unknownMission: "Unknown Mission",
 
   additional_info_me1_unc_rogue_vi: 'This assignment is triggered after reaching level 20 (or level 11 in Mass Effect Legendary Edition with Legendary Mode) when next traveling to another system.',

@@ -307,6 +307,11 @@ export type TextStrings = {
   mission_me3_nimbus_cluster_library_of_asha: string;
   mission_me3_silean_nebula_rings_of_alune: string;
   mission_me3_valhallan_threshold_prothean_data_drives: string;
+  mission_me3_n7_fuel_reactors: string;
+  mission_me3_rannoch_admiral_koris: string;
+  mission_me3_rannoch_geth_fighter_squadrons: string;
+  mission_me3_dekuuna_elcor_extraction: string;
+  mission_me3_n7_communication_hub: string;
   unknownMission: string;
 
   additional_info_me1_unc_rogue_vi: string;
