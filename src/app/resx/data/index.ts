@@ -48,7 +48,7 @@ const data: GameData = {
         id: 'me1_ilos',
         prerequisites: ['me1_virmire_assault'],
         wikiUrl: w('Ilos:_Find_the_Conduit'),
-        // TODO: additionalInfo - mark as point of no return
+        additionalInfo: 'additional_info_me1_ilos',
       }, {
         id: 'me1_ilos_trench_run',
         prerequisites: ['me1_ilos'],
@@ -113,19 +113,19 @@ const data: GameData = {
         // TODO: any of feros, noveria or therum
         prerequisites: ['me1_find_liara'],
         wikiUrl: w('Citadel:_Old_Friends'),
-        // TODO: additional info - needs Earthborn background
+        additionalInfo: 'additional_info_me1_citadel_old_friends',
       }, {
         id: 'me1_citadel_old_unhappy_far_off_things',
         // TODO: any of feros, noveria or therum
         prerequisites: ['me1_find_liara'],
         wikiUrl: w('Citadel:_Old,_Unhappy,_Far-Off_Things'),
-        // TODO: additional info - needs Spacer background
+        additionalInfo: 'additional_info_me1_citadel_old_unhappy_far_off_things',
       }, {
         id: 'me1_citadel_i_remember_me',
         // TODO: any of feros, noveria or therum
         prerequisites: ['me1_find_liara'],
         wikiUrl: w('Citadel:_I_Remember_Me'),
-        // TODO: additional info - needs Colonist background
+        additionalInfo: 'additional_info_me1_citadel_i_remember_me',
       }, {
         id: 'me1_citadel_family_matter',
         // TODO: any of feros, noveria or therum
@@ -163,8 +163,7 @@ const data: GameData = {
         wikiUrl: w('Garrus:_Find_Dr._Saleon'),
       }, {
         id: 'me1_tali_and_the_geth',
-        // TODO: UNC: Geth Incursions
-        prerequisites: [],
+        prerequisites: ['me1_unc_geth_incursions'],
         wikiUrl: w('Tali_and_the_Geth'),
       }, {
         id: 'me1_wrex_family_armor',
@@ -317,7 +316,7 @@ const data: GameData = {
         id: 'me1_unc_the_negotiation',
         prerequisites: [],
         wikiUrl: w('UNC:_The_Negotiation'),
-        // TODO: additional info about 80% Renegate, or 90% Renegate if 80% Paragon
+        additionalInfo: 'additional_info_me1_unc_the_negotiation',
       }],
     }, {
       id: 'me1_bring_down_the_sky',
@@ -406,6 +405,7 @@ const data: GameData = {
         id: 'me2_use_omega4_relay',
         prerequisites: ['me2_await_iff'],
         wikiUrl: w('Stop_the_Collectors#Use_Omega_4_Relay'),
+        additionalInfo: 'additional_info_me2_use_omega4_relay',
       }, {
         id: 'me2_suicide_mission_infiltration',
         prerequisites: ['me2_use_omega4_relay'],
@@ -794,59 +794,376 @@ const data: GameData = {
     sections: [{
       id: 'me3_priority',
       missions: [{
-        id: 'me3_prologue',
+        id: 'me3_priority_prologue',
         prerequisites: [],
         wikiUrl: w('Prologue:_Earth'),
       }, {
-        id: 'me3_mars',
-        prerequisites: ['me3_prologue'],
+        id: 'me3_priority_mars',
+        prerequisites: ['me3_priority_prologue'],
         wikiUrl: w('Priority:_Mars'),
       }, {
-        id: 'me3_citadel1',
-        prerequisites: ['me3_mars'],
+        id: 'me3_priority_citadel1',
+        prerequisites: ['me3_priority_mars'],
         wikiUrl: w('Priority:_The_Citadel_I'),
       }, {
-        id: 'me3_palaven',
-        prerequisites: ['me3_citadel1'],
+        id: 'me3_priority_palaven',
+        prerequisites: ['me3_priority_citadel1'],
         wikiUrl: w('Priority:_Palaven'),
       }, {
-        id: 'me3_surkesh',
-        prerequisites: ['me3_palaven'],
+        id: 'me3_priority_surkesh',
+        prerequisites: ['me3_priority_palaven'],
         wikiUrl: w('Priority:_Sur%27Kesh'),
       }, {
-        id: 'me3_tuchanka',
-        prerequisites: ['me3_surkesh'],
+        id: 'me3_priority_tuchanka',
+        prerequisites: ['me3_priority_surkesh'],
         wikiUrl: w('Priority:_Tuchanka'),
       }, {
-        id: 'me3_citadel2',
-        prerequisites: ['me3_tuchanka'],
+        id: 'me3_priority_citadel2',
+        prerequisites: ['me3_priority_tuchanka'],
         wikiUrl: w('Priority:_The_Citadel_II'),
       }, {
-        id: 'me3_perseus_veil',
-        prerequisites: ['me3_citadel2'],
-        wikiUrl:
-          w('Priority:_Geth_Dreadnought'),
+        id: 'me3_priority_perseus_veil',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Priority:_Perseus_Veil'),
       }, {
-        id: 'me3_rannoch',
-        prerequisites: ['me3_perseus_veil'],
+        id: 'me3_priority_geth_dreadnought',
+        prerequisites: ['me3_priority_perseus_veil'],
+        wikiUrl: w('Priority:_Geth_Dreadnought'),
+      }, {
+        id: 'me3_priority_rannoch',
+        prerequisites: ['me3_priority_geth_dreadnought'],
         wikiUrl: w('Priority:_Rannoch'),
       }, {
-        id: 'me3_thessia',
-        prerequisites: ['me3_rannoch'],
+        id: 'me3_priority_citadel3',
+        prerequisites: ['me3_priority_rannoch'],
+        wikiUrl: w('Priority:_The_Citadel_III'),
+      }, {
+        id: 'me3_priority_thessia',
+        prerequisites: ['me3_priority_citadel3'],
         wikiUrl: w('Priority:_Thessia'),
       }, {
-        id: 'me3_horizon',
-        prerequisites: ['me3_thessia'],
+        id: 'me3_priority_horizon',
+        prerequisites: ['me3_priority_thessia'],
         wikiUrl: w('Priority:_Horizon'),
       }, {
-        id: 'me3_cerberus_hq',
-        prerequisites: ['me3_horizon'],
-        wikiUrl:
-          w('Priority:_Cerberus_Headquarters'),
+        id: 'me3_priority_cerberus_hq',
+        prerequisites: ['me3_priority_horizon'],
+        wikiUrl: w('Priority:_Cerberus_Headquarters'),
+        additionalInfo: 'additional_info_me3_priority_cerberus_hq',
       }, {
-        id: 'me3_earth',
-        prerequisites: ['me3_cerberus_hq'],
-        wikiUrl: w('Priority:_Earth_(mission)'),
+        id: 'me3_priority_earth',
+        prerequisites: ['me3_priority_cerberus_hq'],
+        wikiUrl: w('Priority:_Earth'),
+      }],
+    }, {
+      id: 'me3_priority_the_citadel1',
+      missions: [{
+        id: 'me3_n7_cerberus_lab',
+        prerequisites: ['me3_priority_citadel1'],
+        wikiUrl: w('N7:_Cerberus_Lab'),
+      }, {
+        id: 'me3_priority_eden_prime',
+        prerequisites: ['me3_priority_citadel1'],
+        wikiUrl: w('Priority:_Eden_Prime'),
+      }, {
+        id: 'me3_eden_prime_resistance_movement',
+        prerequisites: ['me3_priority_citadel1'],
+        wikiUrl: w('Eden_Prime:_Resistance_Movement'),
+        // TODO: Progress-Sensitive Mission: This mission cannot be completed if not accomplished during your first and only time on Eden Prime.
+      }, {
+        id: 'me3_shrike_abyssal_prothean_obelisk',
+        prerequisites: ['me3_priority_citadel1'],
+        wikiUrl: w('Shrike_Abyssal:_Prothean_Obelisk'),
+        // TODO: This mission cannot be completed before Priority: Palaven.
+      }],
+    }, {
+      id: 'me3_priority_palaven',
+      missions: [{
+        id: 'me3_apien_crest_banner_of_the_first_regiment',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Apien_Crest:_Banner_of_the_First_Regiment'),
+      }, {
+        id: 'me3_aria_blood_pack',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Aria:_Blood_Pack'),
+      }, {
+        id: 'me3_aria_blue_suns',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Aria:_Blue_Suns'),
+      }, {
+        id: 'me3_aria_eclipse',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Aria:_Eclipse'),
+      }, {
+        id: 'me3_benning_evidence',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Benning:_Evidence'),
+        // TODO: during N7: Cerberus Abductions
+        // This mission cannot be completed before Priority: Sur'Kesh.
+        // Progress-Sensitive Mission: This mission expires if not completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_citadel_alien_medi_gel_formula',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Alien_Medi-Gel_Formula'),
+        // TODO: during N7: Cerberus Lab
+        // Progress-Sensitive Mission: This mission expires if not completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_citadel_aria_tloak',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Aria_T%27Loak'),
+        // TODO: DLC Mission
+      }, {
+        id: 'me3_citadel_barla_von',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Barla_Von'),
+        // TODO:
+        // This mission cannot be completed before Priority: Sur'Kesh.
+        // Progress-Sensitive Mission: This mission expires if not completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_citadel_biotic_amp_interfaces',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Biotic_Amp_Interfaces'),
+        // TODO: during Grissom Academy: Emergency Evacuation
+        // Progress-Sensitive Mission: This mission expires if not completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_citadel_dr_bryson',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Dr._Bryson'),
+        // TODO: DLC Mission
+      }, {
+        id: 'me3_citadel_gx12_thermal_pipe',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_GX12_Thermal_Pipe'),
+      }, {
+        id: 'me3_citadel_hanar_diplomat',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Hanar_Diplomat'),
+        // TODO: Progress-Sensitive Mission: This mission expires if not completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_citadel_heating_unit_stabilizers',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Heating_Unit_Stabilizers'),
+        // TODO: during N7: Cerberus Fighter Base
+        // This mission cannot be completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_citadel_improved_power_grid',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Citadel:_Improved_Power_Grid'),
+        // TODO: during N7: Cerberus Attack
+        // This mission cannot be completed before Priority: Sur'Kesh.
+        // Progress-Sensitive Mission: This mission expires if not completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_grissom_academy_emergency_evacuation',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Grissom_Academy:_Emergency_Evacuation'),
+        // TODO: Progress-Sensitive Mission: This mission expires if not completed before Priority: The Citadel II.
+      }, {
+        id: 'me3_irune_book_of_plenix',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Irune:_Book_of_Plenix'),
+        // TODO: This mission cannot be completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_ismar_frontier_prototype_components',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Ismar_Frontier:_Prototype_Components'),
+        // TODO: Progress-Sensitive Mission: This mission expires if not completed before Priority: Tuchanka.
+      }, {
+        id: 'me3_kites_nest_pillars_of_strength',
+        prerequisites: ['me3_priority_palaven'],
+        wikiUrl: w('Kite%27s_Nest:_Pillars_of_Strength'),
+      }],
+    }, {
+      id: 'me3_priority_surkesh',
+      missions: [{
+        id: 'me3_attican_traverse_krogan_team',
+        prerequisites: ['me3_priority_surkesh'],
+        wikiUrl: w('Attican_Traverse:_Krogan_Team'),
+        // TODO: Main Plot Progression: Unlocks the main plot mission Priority: Tuchanka if done before Tuchanka: Turian Platoon.
+      }, {
+        id: 'me3_citadel_krogan_dying_message',
+        prerequisites: ['me3_priority_surkesh'],
+        wikiUrl: w('Citadel:_Krogan_Dying_Message'),
+        // TODO: part of me3_attican_traverse_krogan_team
+      }, {
+        id: 'me3_n7_cerberus_abductions',
+        // TODO: also one of 'me3_attican_traverse_krogan_team' OR 'me3_tuchanka_turian_platoon'
+        prerequisites: ['me3_priority_surkesh'],
+        wikiUrl: w('N7:_Cerberus_Abductions'),
+      }, {
+        id: 'me3_n7_cerberus_attack',
+        prerequisites: ['me3_priority_surkesh'],
+        wikiUrl: w('N7:_Cerberus_Attack'),
+      }, {
+        id: 'me3_tuchanka_turian_platoon',
+        prerequisites: ['me3_priority_surkesh'],
+        wikiUrl: w('Tuchanka:_Turian_Platoon'),
+        // TODO: Main Plot Progression: Unlocks the main plot mission Priority: Tuchanka if done before Attican Traverse: Krogan Team.
+        // Progress-Sensitive Mission: This mission expires if not completed before Priority: Thessia.
+      }, {
+        id: 'me3_tuchanka_bomb',
+        prerequisites: ['me3_priority_surkesh'],
+        wikiUrl: w('Tuchanka:_Bomb'),
+        // TODO: Timed Mission: This mission will be marked as failed if not completed within three missions after acquisition.
+      }, {
+        id: 'me3_citadel_cerberus_automated_turret_schematics',
+        prerequisites: ['me3_priority_surkesh'],
+        wikiUrl: w('Citadel:_Cerberus_Automated_Turret_Schematics'),
+        // TODO: during Tuchanka: Bomb
+        // This mission cannot be completed before Priority: The Citadel II.
+      }],
+    }, {
+      id: 'me3_priority_tuchanka',
+      missions: [{
+        id: 'me3_n7_cerberus_fighter_base',
+        prerequisites: ['me3_priority_tuchanka'],
+        wikiUrl: w('N7:_Cerberus_Fighter_Base'),
+      }],
+    }, {
+      id: 'me3_priority_the_citadel2',
+      missions: [{
+        id: 'me3_arrae_ex_cerberus_scientists',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Arrae:_Ex-Cerberus_Scientists'),
+      }, {
+        id: 'me3_citadel_cerberus_turian_poison',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Cerberus_Turian_Poison'),
+        // TODO: during me3_arrae_ex_cerberus_scientists
+      }, {
+        id: 'me3_athena_nebula_hesperia_period_statue',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Athena_Nebula:_Hesperia-Period_Statue'),
+      }, {
+        id: 'me3_citadel_batarian_codes',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Batarian_Codes'),
+      }, {
+        id: 'me3_citadel_cerberus_ciphers',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Cerberus_Ciphers'),
+        // TODO: during N7: Communication Hub
+        // This mission cannot be completed before Priority: Thessia.
+      }, {
+        id: 'me3_citadel_cerberus_retribution',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Cerberus_Retribution'),
+      }, {
+        id: 'me3_citadel_chemical_treatment',
+        prerequisites: ['me3_priority_citadel2', ],
+        wikiUrl: w('Citadel:_Chemical_Treatment'),
+        // TODO: during N7: Fuel Reactors
+        // This mission cannot be completed before Priority: Geth Dreadnought.
+      }, {
+        id: 'me3_citadel_inspirational_stories',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Inspirational_Stories'),
+        // TODO:
+        // This mission cannot be completed before Priority: Geth Dreadnought.
+      }, {
+        id: 'me3_citadel_kakliosaur_fossil',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Kakliosaur_Fossil'),
+      }, {
+        id: 'me3_citadel_medical_supplies',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Medical_Supplies'),
+      }, {
+        id: 'me3_citadel_medi_gel_sabotage',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Medi-Gel_Sabotage'),
+      }, {
+        id: 'me3_citadel_reaper_code_fragments',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Reaper_Code_Fragments'),
+        // TODO: during Rannoch: Geth Fighter Squadrons
+        // This mission cannot be completed before Priority: Geth Dreadnought.
+      }, {
+        id: 'me3_citadel_shore_leave',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Shore_Leave'),
+        // TODO: DLC Mission
+      }, {
+        id: 'me3_citadel_target_jamming_technology',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Target_Jamming_Technology'),
+        // TODO: during Rannoch: Admiral Koris
+        // This mission cannot be completed before Priority: Geth Dreadnought.
+      }, {
+        id: 'me3_citadel_volus_ambassador',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Volus_Ambassador'),
+      }, {
+        id: 'me3_citadel_wounded_batarian',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Wounded_Batarian'),
+      }, {
+        id: 'me3_dekuuna_code_of_the_ancients',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Dekuuna:_Code_of_the_Ancients'),
+        // TODO: This mission cannot be completed before Priority: Rannoch.
+      }, {
+        id: 'me3_hades_nexus_obelisk_of_karza',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Hades_Nexus:_Obelisk_of_Karza'),
+        // TODO: This mission cannot be completed before Priority: Rannoch.
+      }, {
+        id: 'me3_hades_nexus_prothean_sphere',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Hades_Nexus:_Prothean_Sphere'),
+        // TODO: This mission cannot be completed before Priority: Rannoch.
+      }, {
+        id: 'me3_kallini_ardat_yakshi_monastery',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Kallini:_Ardat-Yakshi_Monastery'),
+      }, {
+        id: 'me3_citadel_asari_widow',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Citadel:_Asari_Widow'),
+        // TODO: during me3_kallini_ardat_yakshi_monastery
+      }, {
+        id: 'me3_nimbus_cluster_library_of_asha',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Nimbus_Cluster:_Library_of_Asha'),
+      }, {
+        id: 'me3_silean_nebula_rings_of_alune',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Silean_Nebula:_Rings_of_Alune'),
+        // TODO: This mission cannot be completed before Priority: Rannoch.
+      }, {
+        id: 'me3_valhallan_threshold_prothean_data_drives',
+        prerequisites: ['me3_priority_citadel2'],
+        wikiUrl: w('Valhallan_Threshold:_Prothean_Data_Drives'),
+      }],
+    }, {
+      id: 'me3_priority_geth_dreadnought',
+      missions: [{
+        id: 'me3_n7_fuel_reactors',
+        prerequisites: ['me3_priority_geth_dreadnought'],
+        wikiUrl: w('N7:_Fuel_Reactors'),
+      }, {
+        id: 'me3_rannoch_admiral_koris',
+        prerequisites: ['me3_priority_geth_dreadnought'],
+        wikiUrl: w('Rannoch:_Admiral_Koris'),
+        // TODO: This mission expires if not completed before Priority: Rannoch.
+      }, {
+        id: 'me3_rannoch_geth_fighter_squadrons',
+        prerequisites: ['me3_priority_geth_dreadnought'],
+        wikiUrl: w('Rannoch:_Geth_Fighter_Squadrons'),
+        // TODO: This mission expires if not completed before Priority: Rannoch.
+      }],
+    }, {
+      id: 'me3_priority_rannoch',
+      missions: [{
+        id: 'me3_dekuuna_elcor_extraction',
+        prerequisites: ['me3_priority_rannoch'],
+        wikiUrl: w('Dekuuna:_Elcor_Extraction'),
+      }],
+    }, {
+      id: 'me3_priority_thessia',
+      missions: [{
+        id: 'me3_n7_communication_hub',
+        prerequisites: ['me3_priority_thessia'],
+        wikiUrl: w('N7:_Communication_Hub'),
       }],
     }],
   }],
