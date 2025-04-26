@@ -256,6 +256,7 @@ export type MissionId =
   | 'me3_tuchanka_turian_platoon'
   | 'me3_citadel_cerberus_automated_turret_schematics'
   | 'me3_tuchanka_bomb'
+  | 'me3_n7_cerberus_fighter_base'
   ;
 
 export type Mission = {

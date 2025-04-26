@@ -270,6 +270,7 @@ const strings: TextStrings = {
   mission_me3_tuchanka_turian_platoon: 'Tuchanka: Turian Platoon',
   mission_me3_citadel_cerberus_automated_turret_schematics: 'Citadel: Cerberus Automated Turret Schematics',
   mission_me3_tuchanka_bomb: 'Tuchanka: Bomb',
+  mission_me3_n7_cerberus_fighter_base: 'N7: Cerberus Fighter Base',
   unknownMission: "Unknown Mission",
 
   additional_info_me1_unc_rogue_vi: 'This assignment is triggered after reaching level 20 (or level 11 in Mass Effect Legendary Edition with Legendary Mode) when next traveling to another system.',

@@ -282,6 +282,7 @@ export type TextStrings = {
   mission_me3_tuchanka_turian_platoon: string;
   mission_me3_citadel_cerberus_automated_turret_schematics: string;
   mission_me3_tuchanka_bomb: string;
+  mission_me3_n7_cerberus_fighter_base: string;
   unknownMission: string;
 
   additional_info_me1_unc_rogue_vi: string;

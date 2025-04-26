@@ -1013,7 +1013,11 @@ const data: GameData = {
       }],
     }, {
       id: 'me3_priority_tuchanka',
-      missions: [],
+      missions: [{
+        id: 'me3_n7_cerberus_fighter_base',
+        prerequisites: ['me3_priority_tuchanka'],
+        wikiUrl: w('N7:_Cerberus_Fighter_Base'),
+      }],
     }, {
       id: 'me3_priority_the_citadel2',
       missions: [],
