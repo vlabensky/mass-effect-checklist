@@ -238,7 +238,9 @@ export type TextStrings = {
   mission_me3_tuchanka: string;
   mission_me3_citadel2: string;
   mission_me3_perseus_veil: string;
+  mission_me3_priority_geth_dreadnought: string;
   mission_me3_rannoch: string;
+  mission_me3_priority_citadel3: string;
   mission_me3_thessia: string;
   mission_me3_horizon: string;
   mission_me3_cerberus_hq: string;

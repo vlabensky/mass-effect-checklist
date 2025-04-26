@@ -823,15 +823,22 @@ const data: GameData = {
       }, {
         id: 'me3_perseus_veil',
         prerequisites: ['me3_citadel2'],
-        wikiUrl:
-          w('Priority:_Geth_Dreadnought'),
+        wikiUrl: w('Priority:_Perseus_Veil'),
+      }, {
+        id: 'me3_priority_geth_dreadnought',
+        prerequisites: ['me3_perseus_veil'],
+        wikiUrl: w('Priority:_Geth_Dreadnought'),
       }, {
         id: 'me3_rannoch',
-        prerequisites: ['me3_perseus_veil'],
+        prerequisites: ['me3_priority_geth_dreadnought'],
         wikiUrl: w('Priority:_Rannoch'),
       }, {
-        id: 'me3_thessia',
+        id: 'me3_priority_citadel3',
         prerequisites: ['me3_rannoch'],
+        wikiUrl: w('Priority:_The_Citadel_III'),
+      }, {
+        id: 'me3_thessia',
+        prerequisites: ['me3_priority_citadel3'],
         wikiUrl: w('Priority:_Thessia'),
       }, {
         id: 'me3_horizon',
@@ -840,8 +847,8 @@ const data: GameData = {
       }, {
         id: 'me3_cerberus_hq',
         prerequisites: ['me3_horizon'],
-        wikiUrl:
-          w('Priority:_Cerberus_Headquarters'),
+        wikiUrl: w('Priority:_Cerberus_Headquarters'),
+        // TODO: point of no return
       }, {
         id: 'me3_earth',
         prerequisites: ['me3_cerberus_hq'],
