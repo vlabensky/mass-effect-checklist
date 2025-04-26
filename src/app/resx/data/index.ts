@@ -852,7 +852,7 @@ const data: GameData = {
       }, {
         id: 'me3_earth',
         prerequisites: ['me3_cerberus_hq'],
-        wikiUrl: w('Priority:_Earth_(mission)'),
+        wikiUrl: w('Priority:_Earth'),
       }],
     }],
   }],
