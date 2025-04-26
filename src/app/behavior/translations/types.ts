@@ -247,6 +247,11 @@ export type TextStrings = {
 
   additional_info_me1_unc_rogue_vi: string;
   additional_info_me1_unc_besieged_base: string;
+  additional_info_me1_unc_the_negotiation: string;
+  additional_info_me1_ilos: string;
+  additional_info_me1_citadel_old_friends: string;
+  additional_info_me1_citadel_old_unhappy_far_off_things: string;
+  additional_info_me1_citadel_i_remember_me: string;
   additional_info_me2_horizon: string;
   additional_info_me2_collector_ship: string;
   additional_info_me2_iff: string;

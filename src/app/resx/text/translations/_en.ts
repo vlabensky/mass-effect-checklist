@@ -234,9 +234,14 @@ const strings: TextStrings = {
   unknownMission: "Unknown Mission",
 
   additional_info_me1_unc_rogue_vi: 'This assignment is triggered after reaching level 20 (or level 11 in Mass Effect Legendary Edition with Legendary Mode) when next traveling to another system.',
-  additional_info_me1_unc_besieged_base: 'This assignment only becomes available when you hit 80% Paragon, or 90% Paragon if you had attained 80% Renegade first.',
-  additional_info_me2_horizon: 'This mission will be triggered automatically as soon as the player completes four main dossiers. So after recruiting Archangel, Jack, and Mordin Solus, as well as recovering Grunt in his tank from Korlus (note that waking up Grunt is not necessary), the player will be forced to play this mission.',
-  additional_info_me2_collector_ship: 'This mission will be triggered automatically as soon as the player completes any five missions after Horizon. Also there are additional conditions so please check the Wiki article for more details.',
+  additional_info_me1_unc_besieged_base: 'Only available when the player hits 80% Paragon, or 90% Paragon if the player had attained 80% Renegade first.',
+  additional_info_me1_unc_the_negotiation: 'Only available when the player hits 80% Renegade, or 90% Renegade if the player had attained 80% Paragon first.',
+  additional_info_me1_ilos: 'This is a point of no return. Once the player heads to Ilos, the rest of the game proceeds in locked progression with no possibility to complete any assignments.',
+  additional_info_me1_citadel_old_friends: 'Only available if Shepard has the Earthborn background.',
+  additional_info_me1_citadel_old_unhappy_far_off_things: 'Only available if Shepard has the Spacer background.',
+  additional_info_me1_citadel_i_remember_me: 'Only available if Shepard has the Colonist background.',
+  additional_info_me2_horizon: 'This mission will be triggered automatically as soon as the player completes four main dossiers. So after recruiting Archangel, Jack, and Mordin Solus, as well as recovering Grunt in his tank from Korlus (waking up Grunt is not necessary), the player will be forced to play this mission.',
+  additional_info_me2_collector_ship: 'This mission will be triggered automatically as soon as the player completes any five missions after Horizon. Also there are additional conditions that can be found in the mission\'s Wiki article.',
   additional_info_me2_iff: 'A countdown begins once the player completes this mission, with potentially dire consequences for the crew of the Normandy if Shepard delays too long in proceeding through the Omega 4 Relay.',
 };
 

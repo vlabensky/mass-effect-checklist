@@ -48,7 +48,7 @@ const data: GameData = {
         id: 'me1_ilos',
         prerequisites: ['me1_virmire_assault'],
         wikiUrl: w('Ilos:_Find_the_Conduit'),
-        // TODO: additionalInfo - mark as point of no return
+        additionalInfo: 'additional_info_me1_ilos',
       }, {
         id: 'me1_ilos_trench_run',
         prerequisites: ['me1_ilos'],
@@ -113,19 +113,19 @@ const data: GameData = {
         // TODO: any of feros, noveria or therum
         prerequisites: ['me1_find_liara'],
         wikiUrl: w('Citadel:_Old_Friends'),
-        // TODO: additional info - needs Earthborn background
+        additionalInfo: 'additional_info_me1_citadel_old_friends',
       }, {
         id: 'me1_citadel_old_unhappy_far_off_things',
         // TODO: any of feros, noveria or therum
         prerequisites: ['me1_find_liara'],
         wikiUrl: w('Citadel:_Old,_Unhappy,_Far-Off_Things'),
-        // TODO: additional info - needs Spacer background
+        additionalInfo: 'additional_info_me1_citadel_old_unhappy_far_off_things',
       }, {
         id: 'me1_citadel_i_remember_me',
         // TODO: any of feros, noveria or therum
         prerequisites: ['me1_find_liara'],
         wikiUrl: w('Citadel:_I_Remember_Me'),
-        // TODO: additional info - needs Colonist background
+        additionalInfo: 'additional_info_me1_citadel_i_remember_me',
       }, {
         id: 'me1_citadel_family_matter',
         // TODO: any of feros, noveria or therum
@@ -163,8 +163,7 @@ const data: GameData = {
         wikiUrl: w('Garrus:_Find_Dr._Saleon'),
       }, {
         id: 'me1_tali_and_the_geth',
-        // TODO: UNC: Geth Incursions
-        prerequisites: [],
+        prerequisites: ['me1_unc_geth_incursions'],
         wikiUrl: w('Tali_and_the_Geth'),
       }, {
         id: 'me1_wrex_family_armor',
@@ -317,7 +316,7 @@ const data: GameData = {
         id: 'me1_unc_the_negotiation',
         prerequisites: [],
         wikiUrl: w('UNC:_The_Negotiation'),
-        // TODO: additional info about 80% Renegate, or 90% Renegate if 80% Paragon
+        additionalInfo: 'additional_info_me1_unc_the_negotiation',
       }],
     }, {
       id: 'me1_bring_down_the_sky',
