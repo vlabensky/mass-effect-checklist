@@ -405,6 +405,7 @@ const data: GameData = {
         id: 'me2_use_omega4_relay',
         prerequisites: ['me2_await_iff'],
         wikiUrl: w('Stop_the_Collectors#Use_Omega_4_Relay'),
+        additionalInfo: 'additional_info_me2_use_omega4_relay',
       }, {
         id: 'me2_suicide_mission_infiltration',
         prerequisites: ['me2_use_omega4_relay'],

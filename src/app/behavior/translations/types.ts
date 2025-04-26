@@ -257,5 +257,6 @@ export type TextStrings = {
   additional_info_me2_horizon: string;
   additional_info_me2_collector_ship: string;
   additional_info_me2_iff: string;
+  additional_info_me2_use_omega4_relay: string;
   additional_info_me3_priority_cerberus_hq: string;
 };
