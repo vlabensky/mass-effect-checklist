@@ -855,6 +855,9 @@ const data: GameData = {
         prerequisites: ['me3_priority_cerberus_hq'],
         wikiUrl: w('Priority:_Earth'),
       }],
+    }, {
+      id: 'me3_priority_the_citadel1',
+      missions: [],
     }],
   }],
 };

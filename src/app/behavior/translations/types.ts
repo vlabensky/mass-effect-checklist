@@ -59,6 +59,7 @@ export type TextStrings = {
   group_me2_lair_of_the_shadow_broker: string;
   group_me2_arrival: string;
   group_me3_priority: string,
+  group_me3_priority_the_citadel1: string;
   mission_me1_eden_prime: string;
   mission_me1_citadel_expose_saren: string;
   mission_me1_find_liara: string;

@@ -47,6 +47,7 @@ const strings: TextStrings = {
   group_me2_lair_of_the_shadow_broker: "Lair of the Shadow Broker",
   group_me2_arrival: "Arrival",
   group_me3_priority: "Priority",
+  group_me3_priority_the_citadel1: 'Priority: The Citadel I',
   mission_me1_eden_prime: "Find the Beacon",
   mission_me1_citadel_expose_saren: "Citadel: Expose Saren",
   mission_me1_find_liara: "Find Liara T'Soni",

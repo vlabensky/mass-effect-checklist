@@ -30,6 +30,7 @@ export type SectionId =
   | 'me2_lair_of_the_shadow_broker'
   | 'me2_arrival'
   | 'me3_priority'
+  | 'me3_priority_the_citadel1'
   ;
 
 export type MissionId =
