@@ -275,6 +275,13 @@ export type TextStrings = {
   mission_me3_irune_book_of_plenix: string;
   mission_me3_ismar_frontier_prototype_components: string;
   mission_me3_kites_nest_pillars_of_strength: string;
+  mission_me3_attican_traverse_krogan_team: string;
+  mission_me3_citadel_krogan_dying_message: string;
+  mission_me3_n7_cerberus_abductions: string;
+  mission_me3_n7_cerberus_attack: string;
+  mission_me3_tuchanka_turian_platoon: string;
+  mission_me3_citadel_cerberus_automated_turret_schematics: string;
+  mission_me3_tuchanka_bomb: string;
   unknownMission: string;
 
   additional_info_me1_unc_rogue_vi: string;

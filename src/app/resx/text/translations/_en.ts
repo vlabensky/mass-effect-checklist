@@ -263,6 +263,13 @@ const strings: TextStrings = {
   mission_me3_irune_book_of_plenix: 'Irune: Book of Plenix',
   mission_me3_ismar_frontier_prototype_components: 'Ismar Frontier: Prototype Components',
   mission_me3_kites_nest_pillars_of_strength: 'Kite\'s Nest: Pillars of Strength',
+  mission_me3_attican_traverse_krogan_team: 'Attican Traverse: Krogan Team',
+  mission_me3_citadel_krogan_dying_message: 'Citadel: Krogan Dying Message',
+  mission_me3_n7_cerberus_abductions: 'N7: Cerberus Abductions',
+  mission_me3_n7_cerberus_attack: 'N7: Cerberus Attack',
+  mission_me3_tuchanka_turian_platoon: 'Tuchanka: Turian Platoon',
+  mission_me3_citadel_cerberus_automated_turret_schematics: 'Citadel: Cerberus Automated Turret Schematics',
+  mission_me3_tuchanka_bomb: 'Tuchanka: Bomb',
   unknownMission: "Unknown Mission",
 
   additional_info_me1_unc_rogue_vi: 'This assignment is triggered after reaching level 20 (or level 11 in Mass Effect Legendary Edition with Legendary Mode) when next traveling to another system.',

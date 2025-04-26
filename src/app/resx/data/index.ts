@@ -974,7 +974,43 @@ const data: GameData = {
       }],
     }, {
       id: 'me3_priority_surkesh',
-      missions: [],
+      missions: [{
+        id: 'me3_attican_traverse_krogan_team',
+        prerequisites: ['me3_priority_surkesh'],
+        wikiUrl: w('Attican_Traverse:_Krogan_Team'),
+        // TODO: Main Plot Progression: Unlocks the main plot mission Priority: Tuchanka if done before Tuchanka: Turian Platoon.
+      }, {
+        id: 'me3_citadel_krogan_dying_message',
+        prerequisites: ['me3_priority_surkesh'],
+        wikiUrl: w('Citadel:_Krogan_Dying_Message'),
+        // TODO: part of me3_attican_traverse_krogan_team
+      }, {
+        id: 'me3_n7_cerberus_abductions',
+        // TODO: also one of 'me3_attican_traverse_krogan_team' OR 'me3_tuchanka_turian_platoon'
+        prerequisites: ['me3_priority_surkesh'],
+        wikiUrl: w('N7:_Cerberus_Abductions'),
+      }, {
+        id: 'me3_n7_cerberus_attack',
+        prerequisites: ['me3_priority_surkesh'],
+        wikiUrl: w('N7:_Cerberus_Attack'),
+      }, {
+        id: 'me3_tuchanka_turian_platoon',
+        prerequisites: ['me3_priority_surkesh'],
+        wikiUrl: w('Tuchanka:_Turian_Platoon'),
+        // TODO: Main Plot Progression: Unlocks the main plot mission Priority: Tuchanka if done before Attican Traverse: Krogan Team.
+        // Progress-Sensitive Mission: This mission expires if not completed before Priority: Thessia.
+      }, {
+        id: 'me3_tuchanka_bomb',
+        prerequisites: ['me3_priority_surkesh'],
+        wikiUrl: w('Tuchanka:_Bomb'),
+        // TODO: Timed Mission: This mission will be marked as failed if not completed within three missions after acquisition.
+      }, {
+        id: 'me3_citadel_cerberus_automated_turret_schematics',
+        prerequisites: ['me3_priority_surkesh'],
+        wikiUrl: w('Citadel:_Cerberus_Automated_Turret_Schematics'),
+        // TODO: during Tuchanka: Bomb
+        // This mission cannot be completed before Priority: The Citadel II.
+      }],
     }, {
       id: 'me3_priority_tuchanka',
       missions: [],

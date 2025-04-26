@@ -249,6 +249,13 @@ export type MissionId =
   | 'me3_irune_book_of_plenix'
   | 'me3_ismar_frontier_prototype_components'
   | 'me3_kites_nest_pillars_of_strength'
+  | 'me3_attican_traverse_krogan_team'
+  | 'me3_citadel_krogan_dying_message'
+  | 'me3_n7_cerberus_abductions'
+  | 'me3_n7_cerberus_attack'
+  | 'me3_tuchanka_turian_platoon'
+  | 'me3_citadel_cerberus_automated_turret_schematics'
+  | 'me3_tuchanka_bomb'
   ;
 
 export type Mission = {
