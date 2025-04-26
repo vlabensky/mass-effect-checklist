@@ -31,6 +31,13 @@ export type SectionId =
   | 'me2_arrival'
   | 'me3_priority'
   | 'me3_priority_the_citadel1'
+  | 'me3_priority_palaven'
+  | 'me3_priority_surkesh'
+  | 'me3_priority_tuchanka'
+  | 'me3_priority_the_citadel2'
+  | 'me3_priority_geth_dreadnought'
+  | 'me3_priority_rannoch'
+  | 'me3_priority_thessia'
   ;
 
 export type MissionId =

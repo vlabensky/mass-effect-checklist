@@ -876,6 +876,27 @@ const data: GameData = {
         wikiUrl: w('Shrike_Abyssal:_Prothean_Obelisk'),
         // TODO: This mission cannot be completed before Priority: Palaven.
       }],
+    }, {
+      id: 'me3_priority_palaven',
+      missions: [],
+    }, {
+      id: 'me3_priority_surkesh',
+      missions: [],
+    }, {
+      id: 'me3_priority_tuchanka',
+      missions: [],
+    }, {
+      id: 'me3_priority_the_citadel2',
+      missions: [],
+    }, {
+      id: 'me3_priority_geth_dreadnought',
+      missions: [],
+    }, {
+      id: 'me3_priority_rannoch',
+      missions: [],
+    }, {
+      id: 'me3_priority_thessia',
+      missions: [],
     }],
   }],
 };

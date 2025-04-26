@@ -60,6 +60,13 @@ export type TextStrings = {
   group_me2_arrival: string;
   group_me3_priority: string,
   group_me3_priority_the_citadel1: string;
+  group_me3_priority_palaven: string;
+  group_me3_priority_surkesh: string;
+  group_me3_priority_tuchanka: string;
+  group_me3_priority_the_citadel2: string;
+  group_me3_priority_geth_dreadnought: string;
+  group_me3_priority_rannoch: string;
+  group_me3_priority_thessia: string;
   mission_me1_eden_prime: string;
   mission_me1_citadel_expose_saren: string;
   mission_me1_find_liara: string;
