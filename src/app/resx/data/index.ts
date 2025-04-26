@@ -793,65 +793,65 @@ const data: GameData = {
     sections: [{
       id: 'me3_priority',
       missions: [{
-        id: 'me3_prologue',
+        id: 'me3_priority_prologue',
         prerequisites: [],
         wikiUrl: w('Prologue:_Earth'),
       }, {
-        id: 'me3_mars',
-        prerequisites: ['me3_prologue'],
+        id: 'me3_priority_mars',
+        prerequisites: ['me3_priority_prologue'],
         wikiUrl: w('Priority:_Mars'),
       }, {
-        id: 'me3_citadel1',
-        prerequisites: ['me3_mars'],
+        id: 'me3_priority_citadel1',
+        prerequisites: ['me3_priority_mars'],
         wikiUrl: w('Priority:_The_Citadel_I'),
       }, {
-        id: 'me3_palaven',
-        prerequisites: ['me3_citadel1'],
+        id: 'me3_priority_palaven',
+        prerequisites: ['me3_priority_citadel1'],
         wikiUrl: w('Priority:_Palaven'),
       }, {
-        id: 'me3_surkesh',
-        prerequisites: ['me3_palaven'],
+        id: 'me3_priority_surkesh',
+        prerequisites: ['me3_priority_palaven'],
         wikiUrl: w('Priority:_Sur%27Kesh'),
       }, {
-        id: 'me3_tuchanka',
-        prerequisites: ['me3_surkesh'],
+        id: 'me3_priority_tuchanka',
+        prerequisites: ['me3_priority_surkesh'],
         wikiUrl: w('Priority:_Tuchanka'),
       }, {
-        id: 'me3_citadel2',
-        prerequisites: ['me3_tuchanka'],
+        id: 'me3_priority_citadel2',
+        prerequisites: ['me3_priority_tuchanka'],
         wikiUrl: w('Priority:_The_Citadel_II'),
       }, {
-        id: 'me3_perseus_veil',
-        prerequisites: ['me3_citadel2'],
+        id: 'me3_priority_perseus_veil',
+        prerequisites: ['me3_priority_citadel2'],
         wikiUrl: w('Priority:_Perseus_Veil'),
       }, {
         id: 'me3_priority_geth_dreadnought',
-        prerequisites: ['me3_perseus_veil'],
+        prerequisites: ['me3_priority_perseus_veil'],
         wikiUrl: w('Priority:_Geth_Dreadnought'),
       }, {
-        id: 'me3_rannoch',
+        id: 'me3_priority_rannoch',
         prerequisites: ['me3_priority_geth_dreadnought'],
         wikiUrl: w('Priority:_Rannoch'),
       }, {
         id: 'me3_priority_citadel3',
-        prerequisites: ['me3_rannoch'],
+        prerequisites: ['me3_priority_rannoch'],
         wikiUrl: w('Priority:_The_Citadel_III'),
       }, {
-        id: 'me3_thessia',
+        id: 'me3_priority_thessia',
         prerequisites: ['me3_priority_citadel3'],
         wikiUrl: w('Priority:_Thessia'),
       }, {
-        id: 'me3_horizon',
-        prerequisites: ['me3_thessia'],
+        id: 'me3_priority_horizon',
+        prerequisites: ['me3_priority_thessia'],
         wikiUrl: w('Priority:_Horizon'),
       }, {
-        id: 'me3_cerberus_hq',
-        prerequisites: ['me3_horizon'],
+        id: 'me3_priority_cerberus_hq',
+        prerequisites: ['me3_priority_horizon'],
         wikiUrl: w('Priority:_Cerberus_Headquarters'),
         // TODO: point of no return
       }, {
-        id: 'me3_earth',
-        prerequisites: ['me3_cerberus_hq'],
+        id: 'me3_priority_earth',
+        prerequisites: ['me3_priority_cerberus_hq'],
         wikiUrl: w('Priority:_Earth'),
       }],
     }],
