@@ -220,6 +220,10 @@ export type MissionId =
   | 'me3_priority_horizon'
   | 'me3_priority_cerberus_hq'
   | 'me3_priority_earth'
+  | 'me3_n7_cerberus_lab'
+  | 'me3_priority_eden_prime'
+  | 'me3_eden_prime_resistance_movement'
+  | 'me3_shrike_abyssal_prothean_obelisk'
   ;
 
 export type Mission = {

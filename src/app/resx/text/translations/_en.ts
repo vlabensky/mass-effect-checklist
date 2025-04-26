@@ -234,6 +234,10 @@ const strings: TextStrings = {
   mission_me3_priority_horizon: "Priority: Horizon",
   mission_me3_priority_cerberus_hq: "Priority: Cerberus Headquarters",
   mission_me3_priority_earth: "Priority: Earth",
+  mission_me3_n7_cerberus_lab: 'N7: Cerberus Lab',
+  mission_me3_priority_eden_prime: 'Priority: Eden Prime',
+  mission_me3_eden_prime_resistance_movement: 'Eden Prime: Resistance Movement',
+  mission_me3_shrike_abyssal_prothean_obelisk: 'Shrike Abyssal: Prothean Obelisk',
   unknownMission: "Unknown Mission",
 
   additional_info_me1_unc_rogue_vi: 'This assignment is triggered after reaching level 20 (or level 11 in Mass Effect Legendary Edition with Legendary Mode) when next traveling to another system.',

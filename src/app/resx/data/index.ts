@@ -857,7 +857,25 @@ const data: GameData = {
       }],
     }, {
       id: 'me3_priority_the_citadel1',
-      missions: [],
+      missions: [{
+        id: 'me3_n7_cerberus_lab',
+        prerequisites: ['me3_priority_citadel1'],
+        wikiUrl: w('N7:_Cerberus_Lab'),
+      }, {
+        id: 'me3_priority_eden_prime',
+        prerequisites: ['me3_priority_citadel1'],
+        wikiUrl: w('Priority:_Eden_Prime'),
+      }, {
+        id: 'me3_eden_prime_resistance_movement',
+        prerequisites: ['me3_priority_citadel1'],
+        wikiUrl: w('Eden_Prime:_Resistance_Movement'),
+        // TODO: Progress-Sensitive Mission: This mission cannot be completed if not accomplished during your first and only time on Eden Prime.
+      }, {
+        id: 'me3_shrike_abyssal_prothean_obelisk',
+        prerequisites: ['me3_priority_citadel1'],
+        wikiUrl: w('Shrike_Abyssal:_Prothean_Obelisk'),
+        // TODO: This mission cannot be completed before Priority: Palaven.
+      }],
     }],
   }],
 };

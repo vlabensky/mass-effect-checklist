@@ -246,6 +246,10 @@ export type TextStrings = {
   mission_me3_priority_horizon: string;
   mission_me3_priority_cerberus_hq: string;
   mission_me3_priority_earth: string;
+  mission_me3_n7_cerberus_lab: string;
+  mission_me3_priority_eden_prime: string;
+  mission_me3_eden_prime_resistance_movement: string;
+  mission_me3_shrike_abyssal_prothean_obelisk: string;
   unknownMission: string;
 
   additional_info_me1_unc_rogue_vi: string;
