@@ -53,6 +53,8 @@ export type MissionId =
   | 'me1_ilos'
   | 'me1_ilos_trench_run'
   | 'me1_final_battle'
+  | 'me1_citadel_garrus'
+  | 'me1_citadel_wrex'
   | 'me1_citadel_asari_consort'
   | 'me1_citadel_doctor_michel'
   | 'me1_citadel_homecoming'

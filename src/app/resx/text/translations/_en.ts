@@ -67,6 +67,8 @@ const strings: TextStrings = {
   mission_me1_ilos: "Ilos: Find the Conduit",
   mission_me1_ilos_trench_run: "Ilos: Trench Run",
   mission_me1_final_battle: "Race Against Time: Final Battle",
+  mission_me1_citadel_garrus: 'Citadel: Garrus',
+  mission_me1_citadel_wrex: 'Citadel: Wrex',
   mission_me1_citadel_asari_consort: 'Citadel: Asari Consort',
   mission_me1_citadel_doctor_michel: 'Citadel: Doctor Michel',
   mission_me1_citadel_homecoming: 'Citadel: Homecoming',
