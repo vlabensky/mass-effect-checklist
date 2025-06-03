@@ -3,28 +3,32 @@ import * as m from '../missions';
 
 // Gemini Sigma
 
+export const me1_location_gemini_sigma_han_paravin = loc('Paravin')
+  .hasMissions(m.me1_mission_asari_writings)
+  .build();
+
+export const me1_location_gemini_sigma_han_patatanlis = loc('Patatanlis')
+  .hasMissions(m.me1_mission_valuable_minerals_light_metals)
+  .build();
+
 export const me1_location_gemini_sigma_han_mavigon = loc('Mavigon')
   .hasMissions(m.me1_mission_hostile_takeover)
   .build();
 
-export const me1_location_gemini_sigma_han_patatanlis = loc('Patatanlis')
-  .build();
-
-export const me1_location_gemini_sigma_han_paravlin = loc('Paravlin')
-  .build();
-
 export const me1_system_gemini_sigma_han = sys('Han')
   .hasLocations(
-    me1_location_gemini_sigma_han_mavigon,
+    me1_location_gemini_sigma_han_paravin,
     me1_location_gemini_sigma_han_patatanlis,
-    me1_location_gemini_sigma_han_paravlin,
+    me1_location_gemini_sigma_han_mavigon,
   )
   .build();
 
 export const me1_location_gemini_sigma_ming_parag = loc('Parag')
+  .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 
 export const me1_location_gemini_sigma_ming_altanorch = loc('Altanorch')
+  .hasMissions(m.me1_mission_locate_signs_of_battle)
   .build();
 
 export const me1_location_gemini_sigma_ming_msv_worthington = loc('MSV Worthington')
