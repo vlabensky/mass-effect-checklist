@@ -103,6 +103,10 @@ export const me2_mission_omega_struggling_quarian = m('Struggling Quarian', 'Ome
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
+export const me2_mission_omega_the_patriarch = m('The Patriarch', 'Omega:_The_Patriarch', 'The_Patriarch')
+  .availableWhen(() => me2_mission_dossier_archangel.isCompleted || me2_mission_dossier_the_professor.isCompleted)
+  .build();
+
 // N7 Assignments
 
 export const me2_mission_n7_assignments_wrecked_merchant_freighter = m('Wrecked Merchant Freighter', 'N7_Assignments:_Wrecked_Merchant_Freighter', 'Wrecked_Merchant_Freighter')
