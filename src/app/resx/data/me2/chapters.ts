@@ -62,6 +62,7 @@ export const me2_chapter_omega = ch('Omega')
     m.me2_mission_omega_batarian_bartender,
     m.me2_mission_omega_struggling_quarian,
     m.me2_mission_omega_the_patriarch,
+    m.me2_mission_omega_packages_for_ish,
   )
   .build();
 

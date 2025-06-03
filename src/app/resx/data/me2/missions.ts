@@ -118,6 +118,10 @@ export const me2_mission_omega_the_patriarch = m('The Patriarch', 'Omega:_The_Pa
   .availableWhen(() => me2_mission_dossier_archangel.isCompleted || me2_mission_dossier_the_professor.isCompleted)
   .build();
 
+export const me2_mission_omega_packages_for_ish = m('Packages for Ish', 'Omega:_Packages_for_Ish', 'Packages_for_Ish')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
 // N7 Assignments
 
 export const me2_mission_n7_assignments_wrecked_merchant_freighter = m('Wrecked Merchant Freighter', 'N7_Assignments:_Wrecked_Merchant_Freighter', 'Wrecked_Merchant_Freighter')
