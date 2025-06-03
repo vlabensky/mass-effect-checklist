@@ -44,6 +44,26 @@ export const me2_mission_acquire_reaper_iff = m('Stop The Collectors: Acquire Re
   .withAdditionalInfo('A countdown begins once the player completes this mission, with potentially dire consequences for the crew of the Normandy if Shepard delays too long in proceeding through the Omega 4 Relay.')
   .build();
 
+export const me2_mission_await_iff_installation = m('Stop The Collectors: Await IFF Installation', 'AwaitIFFInstallation', 'AwaitIFFInstallation')
+  .availableWhen(() => me2_mission_acquire_reaper_iff.isCompleted)
+  .build();
+
+export const me2_mission_use_omega4_relay = m('Stop The Collectors: Use Omega-4 Relay', 'UseOmega4Relay', 'UseOmega4Relay')
+  .availableWhen(() => me2_mission_await_iff_installation.isCompleted)
+  .build();
+
+export const me2_mission_suicide_mission_infiltration = m('Suicide Mission: Infiltration', 'Suicide_Mission:_Infiltration', 'Suicide_Mission_Infiltration')
+  .availableWhen(() => me2_mission_use_omega4_relay.isCompleted)
+  .build();
+
+export const me2_mission_suicide_mission_the_long_walk = m('Suicide Mission: The Long Walk', 'Suicide_Mission:_The_Long_Walk', 'Suicide_Mission_The_Long_Walk')
+  .availableWhen(() => me2_mission_suicide_mission_infiltration.isCompleted)
+  .build();
+
+export const me2_mission_suicide_mission_final_battle = m('Suicide Mission: Final Battle', 'Suicide_Mission:_Final_Battle', 'Suicide_Mission_Final_Battle')
+  .availableWhen(() => me2_mission_suicide_mission_the_long_walk.isCompleted)
+  .build();
+
 // Normandy
 
 export const me2_mission_normandy_fba_couplings = m('FBA Couplings', 'Normandy:_FBA_Couplings', 'FBA_Couplings')

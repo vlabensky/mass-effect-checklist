@@ -19,6 +19,11 @@ export const me2_chapter_plot = ch('Plot Missions')
     m.me2_mission_horizon,
     m.me2_mission_collector_ship,
     m.me2_mission_acquire_reaper_iff,
+    m.me2_mission_await_iff_installation,
+    m.me2_mission_use_omega4_relay,
+    m.me2_mission_suicide_mission_infiltration,
+    m.me2_mission_suicide_mission_the_long_walk,
+    m.me2_mission_suicide_mission_final_battle,
   )
   .build();
 
