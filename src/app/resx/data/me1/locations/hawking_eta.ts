@@ -4,12 +4,15 @@ import * as m from '../missions';
 // Hawking Eta
 
 export const me1_location_hawking_eta_century_metallic_asteroid = loc('Metallic Asteroid')
+  .hasMissions(m.me1_mission_valuable_minerals_heavy_metals)
   .build();
 
 export const me1_location_hawking_eta_century_canctra = loc('Canctra')
+  .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 
 export const me1_location_hawking_eta_century_tharopto = loc('Tharopto')
+  .hasMissions(m.me1_mission_locate_signs_of_battle)
   .build();
 
 export const me1_location_hawking_eta_century_presrop = loc('Presrop')
