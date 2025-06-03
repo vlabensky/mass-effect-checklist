@@ -41,6 +41,7 @@ export type System = {
 export type Location = {
   name: string;
   missions: Mission[];
+  additionalInfo?: string;
 };
 
 export type GameData = {

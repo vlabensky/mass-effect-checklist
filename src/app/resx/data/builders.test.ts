@@ -211,6 +211,14 @@ describe('Builders tests', () => {
       expect(location.missions[1].name).toEqual('Mock Mission 2');
     });
 
+    it('should build a location with additional info', () => {
+      const location = loc('Test Location 3')
+        .withAdditionalInfo('Some location additional information')
+        .build();
+    
+      expect(location.additionalInfo).toBe('Some location additional information');
+    });
+
     it('should not allow adding location with the same name twice', () => {
       expect(() => {
         loc('Duplicate Test Location').build();

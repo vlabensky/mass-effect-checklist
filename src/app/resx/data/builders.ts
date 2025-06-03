@@ -190,6 +190,7 @@ export const sys = (name: string) => new SystemBuilder(name);
 export class LocationBuilder {
   name: string;
   missions: Mission[];
+  additionalInfo?: string;
 
   constructor(name: string) {
     if (locationNames.has(name))
@@ -206,10 +207,16 @@ export class LocationBuilder {
     return this;
   }
 
+  withAdditionalInfo(info: string) {
+    this.additionalInfo = info;
+    return this;
+  }
+
   build(): Location {
     return {
       name: this.name,
       missions: this.missions,
+      additionalInfo: this.additionalInfo,
     };
   }
 }
