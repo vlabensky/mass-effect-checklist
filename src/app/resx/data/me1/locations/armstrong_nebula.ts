@@ -4,9 +4,11 @@ import * as m from '../missions';
 // Armstrong Nebula
 
 export const me1_location_armstrong_nebula_gagarin_junthor = loc('Junthor')
+  .hasMissions(m.me1_mission_asari_writings)
   .build();
 
 export const me1_location_armstrong_nebula_gagarin_antirumgon = loc('Antirumgon')
+  .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 
 export const me1_location_armstrong_nebula_gagarin_rayingri = loc('Rayingri')
@@ -22,12 +24,15 @@ export const me1_system_armstrong_nebula_gagarin = sys('Gagarin')
   .build();
 
 export const me1_location_armstrong_nebula_grissom_benda = loc('Benda')
+  .hasMissions(m.me1_mission_locate_signs_of_battle)
   .build();
 
 export const me1_location_armstrong_nebula_grissom_zaherux = loc('Zaherux')
+  .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 
 export const me1_location_armstrong_nebula_grissom_rocky_asteroid = loc('Rocky Asteroid')
+  .hasMissions(m.me1_mission_valuable_minerals_rare_metals)
   .build();
 
 export const me1_location_armstrong_nebula_grissom_solcrum = loc('Solcrum')
@@ -44,9 +49,11 @@ export const me1_system_armstrong_nebula_grissom = sys('Grissom')
   .build();
 
 export const me1_location_armstrong_nebula_hong_matar = loc('Matar')
+  .hasMissions(m.me1_mission_asari_writings)
   .build();
 
 export const me1_location_armstrong_nebula_hong_treagir = loc('Treagir')
+  .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 
 export const me1_location_armstrong_nebula_hong_casbin = loc('Casbin')
@@ -62,12 +69,15 @@ export const me1_system_armstrong_nebula_hong = sys('Hong')
   .build();
 
 export const me1_location_armstrong_nebula_tereshkova_carbonaceus_asteroid = loc('Carbonaceus Asteroid')
+  .hasMissions(m.me1_mission_locate_signs_of_battle)
   .build();
 
 export const me1_location_armstrong_nebula_tereshkova_patamalrus = loc('Patamalrus')
+  .hasMissions(m.me1_mission_valuable_minerals_heavy_metals)
   .build();
 
 export const me1_location_armstrong_nebula_tereshkova_thegeuse = loc('Thegeuse')
+  .hasMissions(m.me1_mission_valuable_minerals_heavy_metals)
   .build();
 
 export const me1_location_armstrong_nebula_tereshkova_antibaar = loc('Antibaar')
@@ -84,6 +94,7 @@ export const me1_system_armstrong_nebula_tereshkova = sys('Tereshkova')
   .build();
 
 export const me1_location_armstrong_nebula_vamshi_pregel = loc('Pregel')
+  .hasMissions(m.me1_mission_turian_insignias)
   .build();
 
 export const me1_location_armstrong_nebula_vamshi_maji = loc('Maji')
