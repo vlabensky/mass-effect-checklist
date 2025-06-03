@@ -35,6 +35,32 @@ export const me2_mission_normandy_normandy_crash_site = m('Normandy Crash Site',
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
+// Dossiers
+
+export const me2_mission_dossier_master_thief = m('The Master Thief', 'Dossier:_The_Master_Thief', 'The_Master_Thief')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_dossier_veteran = m('The Veteran', 'Dossier:_The_Veteran', 'The_Veteran')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_dossier_warlord = m('The Warlord', 'Dossier:_The_Warlord', 'The_Warlord')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_dossier_archangel = m('Archangel', 'Dossier:_Archangel', 'Archangel')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_dossier_the_professor = m('The Professor', 'Dossier:_The_Professor', 'The_Professor')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_dossier_the_convict = m('The Convict', 'Dossier:_The_Convict', 'The_Convict')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
 // Citadel
 
 export const me2_mission_citadel_the_council = m('The Council', 'Citadel:_The_Council', 'The_Council')

@@ -22,6 +22,19 @@ export const me2_chapter_normandy = ch('Normandy')
   )
   .build();
 
+// Dossiers
+
+export const me2_chapter_dossiers = ch('Dossiers')
+  .hasMissions(
+    m.me2_mission_dossier_master_thief,
+    m.me2_mission_dossier_veteran,
+    m.me2_mission_dossier_warlord,
+    m.me2_mission_dossier_archangel,
+    m.me2_mission_dossier_the_professor,
+    m.me2_mission_dossier_the_convict,
+  )
+  .build();
+
 // Citadel
 
 export const me2_chapter_citadel = ch('Citadel')
