@@ -14,9 +14,11 @@ export const me1_system_argos_rho_gorgon = sys('Gorgon')
   .build();
 
 export const me1_location_argos_rho_hydra_canrum = loc('Canrum')
+  .hasMissions(m.me1_mission_turian_insignias)
   .build();
 
 export const me1_location_argos_rho_hydra_syba = loc('Syba')
+  .hasMissions(m.me1_mission_valuable_minerals_gasses)
   .build();
 
 export const me1_location_argos_rho_hydra_metgos = loc('Metgos')
@@ -32,12 +34,15 @@ export const me1_system_argos_rho_hydra = sys('Hydra')
   .build();
 
 export const me1_location_argos_rho_phoenix_patashi = loc('Patashi')
+  .hasMissions(m.me1_mission_valuable_minerals_rare_metals)
   .build();
 
 export const me1_location_argos_rho_phoenix_carbonaceous_asteroid = loc('Carbonaceous Asteroid')
+  .hasMissions(m.me1_mission_prothean_data_discs)
   .build();
 
 export const me1_location_argos_rho_phoenix_vebinok = loc('Vebinok')
+  .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 
 export const me1_location_argos_rho_phoenix_tuntau = loc('Tuntau')
