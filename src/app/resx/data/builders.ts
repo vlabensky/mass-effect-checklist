@@ -22,13 +22,14 @@ export class MissionBuilder {
   ignUrlPath: string;
   isAvailable?: () => boolean;
   additionalInfo?: string;
+  innerMissions?: Mission[];
 
   constructor(name: string, fandomUrlPath: string, ignUrlPath: string) {
     if (missionNames.has(name))
       throw new Error(`Mission with name ${name} already exists`);
 
     missionNames.add(name);
-    
+
     this.name = name;
     this.fandomUrlPath = fandomUrlPath;
     this.ignUrlPath = ignUrlPath;
@@ -44,11 +45,16 @@ export class MissionBuilder {
     return this;
   }
 
+  hasInnerMissions(...missions: Mission[]) {
+    this.innerMissions = missions;
+    return this;
+  }
+
   build(): Mission {
     return {
       name: this.name,
       urls: createUrls(this.fandomUrlPath, this.ignUrlPath),
-      innerMissions: [],
+      innerMissions: this.innerMissions ?? [],
       isAvailable: this.isAvailable ?? always,
       isCompleted: false,
       additionalInfo: this.additionalInfo,
@@ -76,7 +82,7 @@ export class ChapterBuilder {
       throw new Error(`Chapter with name ${name} already exists`);
 
     chapterNames.add(name);
-    
+
     this.name = name;
   }
 
@@ -112,7 +118,7 @@ export class ClusterBuilder {
       throw new Error(`Cluster with name ${name} already exists`);
 
     clusterNames.add(name);
-    
+
     this.name = name;
     this.fandomUrlPath = fandomUrlPath;
     this.ignUrlPath = ignUrlPath;
@@ -152,7 +158,7 @@ export class SystemBuilder {
       throw new Error(`System with name ${name} already exists`);
 
     systemNames.add(name);
-    
+
     this.name = name;
     this.locations = [];
   }
@@ -181,7 +187,7 @@ export class LocationBuilder {
       throw new Error(`Location with name ${name} already exists`);
 
     locationNames.add(name);
-    
+
     this.name = name;
     this.missions = [];
   }

@@ -4,7 +4,7 @@ describe('Builders tests', () => {
   describe('when building a mission', () => {
     it('should build a mission with default values', () => {
       const mission = m('Test Mission 1', 'Test_Fandom_Path_1', 'Test_IGN_Path_1').build();
-      
+
       expect(mission.name).toBe('Test Mission 1');
       expect(mission.urls.fandom).toBe('https://masseffect.fandom.com/wiki/Test_Fandom_Path_1');
       expect(mission.urls.ign).toBe('https://www.ign.com/wikis/mass-effect/Test_IGN_Path_1');
@@ -18,7 +18,7 @@ describe('Builders tests', () => {
       const mission = m('Test Mission 2', 'Test_Fandom_Path_2', 'Test_IGN_Path_2')
         .availableWhen(() => false)
         .build();
-    
+
       expect(mission.isAvailable()).toBe(false);
     });
 
@@ -26,7 +26,7 @@ describe('Builders tests', () => {
       const mission = m('Test Mission 3', 'Test_Fandom_Path_3', 'Test_IGN_Path_3')
         .withAdditionalInfo('Some additional information')
         .build();
-    
+
       expect(mission.additionalInfo).toBe('Some additional information');
     });
 
@@ -37,6 +37,27 @@ describe('Builders tests', () => {
         m('Duplicate Test Mission', 'Test_Fandom_Path', 'Test_IGN_Path')
           .build();
       }).toThrow('Mission with name Duplicate Test Mission already exists');
+    });
+
+    it('should build a mission with inner missions', () => {
+      const innerMission1 = m('Inner Mission 1', 'Inner_Mission_1', 'Inner_Mission_1').build();
+      const innerMission2 = m('Inner Mission 2', 'Inner_Mission_2', 'Inner_Mission_2').build();
+
+      const mission = m('Test Mission 4', 'Test_Fandom_Path_4', 'Test_IGN_Path_4')
+        .hasInnerMissions(innerMission1, innerMission2)
+        .build();
+
+      expect(mission.innerMissions).toHaveLength(2);
+      expect(mission.innerMissions[0].name).toBe('Inner Mission 1');
+      expect(mission.innerMissions[1].name).toBe('Inner Mission 2');
+    });
+
+    it('should default to empty inner missions array when hasInnerMissions is not called', () => {
+      const mission = m('Test Mission 5', 'Test_Fandom_Path_5', 'Test_IGN_Path_5').build();
+
+      expect(mission.innerMissions).toBeDefined();
+      expect(Array.isArray(mission.innerMissions)).toBe(true);
+      expect(mission.innerMissions).toHaveLength(0);
     });
   });
 
@@ -65,7 +86,7 @@ describe('Builders tests', () => {
 
     it('should build a chapter with default values', () => {
       const chapter = ch('Test Chapter 1').build();
-      
+
       expect(chapter.name).toBe('Test Chapter 1');
       expect(chapter.missions).toEqual([]);
       expect(chapter.acquireableMissions).toEqual([]);
@@ -75,7 +96,7 @@ describe('Builders tests', () => {
       const chapter = ch('Test Chapter 2')
         .hasMissions(...mockMissions)
         .build();
-    
+
       expect(chapter.missions[0].name).toEqual('Mock Mission 1');
       expect(chapter.missions[1].name).toEqual('Mock Mission 2');
     });
@@ -84,7 +105,7 @@ describe('Builders tests', () => {
       const chapter = ch('Test Chapter 3')
         .canAcquireMissions(...mockMissions)
         .build();
-    
+
       expect(chapter.acquireableMissions[0].name).toEqual('Mock Mission 1');
       expect(chapter.acquireableMissions[1].name).toEqual('Mock Mission 2');
     });
@@ -93,7 +114,7 @@ describe('Builders tests', () => {
       const chapter = ch('Test Chapter 4')
         .hasMissions(...mockMissions.map(m => ({ ...m, isCompleted: false })))
         .build();
-    
+
       expect(chapter.isCompleted()).toBe(false);
     });
 
@@ -101,7 +122,7 @@ describe('Builders tests', () => {
       const chapter = ch('Test Chapter 5')
         .hasMissions(...mockMissions)
         .build();
-    
+
       expect(chapter.isCompleted()).toBe(false);
     });
 
@@ -109,7 +130,7 @@ describe('Builders tests', () => {
       const chapter = ch('Test Chapter 6')
         .hasMissions(...mockMissions.map(m => ({ ...m, isCompleted: true })))
         .build();
-    
+
       expect(chapter.isCompleted()).toBe(true);
     });
 
@@ -146,7 +167,7 @@ describe('Builders tests', () => {
 
     it('should build a location with default values', () => {
       const location = loc('Test Location 1').build();
-      
+
       expect(location.name).toBe('Test Location 1');
       expect(location.missions).toEqual([]);
     });
@@ -155,7 +176,7 @@ describe('Builders tests', () => {
       const location = loc('Test Location 2')
         .hasMissions(...mockMissions)
         .build();
-    
+
       expect(location.missions[0].name).toEqual('Mock Mission 1');
       expect(location.missions[1].name).toEqual('Mock Mission 2');
     });
@@ -179,7 +200,7 @@ describe('Builders tests', () => {
 
     it('should build a system with default values', () => {
       const system = sys('Test System 1').build();
-      
+
       expect(system.name).toBe('Test System 1');
       expect(system.locations).toEqual([]);
     });
@@ -188,7 +209,7 @@ describe('Builders tests', () => {
       const system = sys('Test System 2')
         .hasLocations(...mockLocations)
         .build();
-    
+
       expect(system.locations[0].name).toEqual('Mock Location 1');
       expect(system.locations[1].name).toEqual('Mock Location 2');
     });
@@ -218,14 +239,14 @@ describe('Builders tests', () => {
 
     it('should build a cluster with default values', () => {
       const cluster = cl('Test Cluster 1', 'Test_Fandom_Path_1', 'Test_IGN_Path_1').build();
-      
+
       expect(cluster.name).toBe('Test Cluster 1');
       expect(cluster.systems).toEqual([]);
     });
 
     it('should correctly format fandom and ign URLs', () => {
       const cluster = cl('Artemis Tau', 'Artemis_Tau', 'Artemis_Tau_Cluster').build();
-      
+
       expect(cluster.urls.fandom).toBe('https://masseffect.fandom.com/wiki/Artemis_Tau');
       expect(cluster.urls.ign).toBe('https://www.ign.com/wikis/mass-effect/Artemis_Tau_Cluster');
     });
@@ -234,7 +255,7 @@ describe('Builders tests', () => {
       const cluster = cl('Test Cluster 2', 'Test_Fandom_Path_2', 'Test_IGN_Path_2')
         .hasSystems(...mockSystems)
         .build();
-    
+
       expect(cluster.systems[0].name).toEqual('Mock System 1');
       expect(cluster.systems[1].name).toEqual('Mock System 2');
       expect(cluster.systems[0].locations[0].name).toEqual('Mock Location 1');
