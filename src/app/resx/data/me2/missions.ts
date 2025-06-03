@@ -114,3 +114,21 @@ export const me2_mission_project_firewalker_volcano_station = m('Volcano Station
 export const me2_mission_project_firewalker_prothean_site = m('Prothean Site', 'Project_Firewalker:_Prothean_Site', 'Prothean_Site')
   .availableWhen(() => me2_mission_project_firewalker_volcano_station.isCompleted)
   .build();
+
+// Project Overlord
+
+export const me2_mission_project_overlord_investigate_project_overlord = m('Investigate Project Overlord', 'Project_Overlord:_Investigate_Project_Overlord', 'Investigate_Project_Overlord')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_project_overlord_atlas_station = m('Atlas Station', 'Project_Overlord:_Atlas_Station', 'Atlas_Station')
+  .availableWhen(() => me2_mission_project_overlord_investigate_project_overlord.isCompleted)
+  .build();
+
+export const me2_mission_project_overlord_prometheus_station = m('Prometheus Station', 'Project_Overlord:_Prometheus_Station', 'Prometheus_Station')
+  .availableWhen(() => me2_mission_project_overlord_investigate_project_overlord.isCompleted)
+  .build();
+
+export const me2_mission_project_overlord_vulcan_station = m('Vulcan Station', 'Project_Overlord:_Vulcan_Station', 'Vulcan_Station')
+  .availableWhen(() => me2_mission_project_overlord_investigate_project_overlord.isCompleted)
+  .build();

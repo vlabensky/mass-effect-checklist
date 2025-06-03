@@ -67,3 +67,14 @@ export const me2_chapter_project_firewalker = ch('Project Firewalker')
     m.me2_mission_project_firewalker_prothean_site,
   )
   .build();
+
+// Project Overlord
+
+export const me2_chapter_project_overlord = ch('Project Overlord')
+  .hasMissions(
+    m.me2_mission_project_overlord_investigate_project_overlord,
+    m.me2_mission_project_overlord_atlas_station,
+    m.me2_mission_project_overlord_prometheus_station,
+    m.me2_mission_project_overlord_vulcan_station,
+  )
+  .build();
