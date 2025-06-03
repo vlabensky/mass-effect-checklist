@@ -113,3 +113,17 @@ export const me2_chapter_loyalty = ch('Loyalty Missions')
     m.me2_mission_loyalty_kasumi,
   )
   .build();
+
+// Illium
+
+export const me2_chapter_illium = ch('Illium')
+  .hasMissions(
+    m.me2_mission_illium_liara_system_hacking,
+    m.me2_mission_illium_liara_the_observer,
+    m.me2_mission_illium_a_troublemaker,
+    m.me2_mission_illium_blue_rose_of_illium,
+    m.me2_mission_illium_gianna_parasini,
+    m.me2_mission_illium_indentured_service,
+    m.me2_mission_illium_medical_scans,
+  )
+  .build();

@@ -227,3 +227,32 @@ export const me2_mission_loyalty_kasumi = m('Kasumi - Stealing Memory', 'Loyalty
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
+// Illium
+
+export const me2_mission_illium_liara_system_hacking = m('Liara: System Hacking', 'Illium:_Liara:_System_Hacking', 'Liara_System_Hacking')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_illium_liara_the_observer = m('Liara: The Observer', 'Illium:_Liara:_The_Observer', 'Liara_The_Observer')
+  .availableWhen(() => me2_mission_illium_liara_system_hacking.isCompleted)
+  .build();
+
+export const me2_mission_illium_a_troublemaker = m('A Troublemaker', 'Illium:_A_Troublemaker', 'A_Troublemaker')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_illium_blue_rose_of_illium = m('Blue Rose of Illium', 'Illium:_Blue_Rose_of_Illium', 'Blue_Rose_of_Illium')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_illium_gianna_parasini = m('Gianna Parasini', 'Illium:_Gianna_Parasini', 'Gianna_Parasini')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_illium_indentured_service = m('Indentured Service', 'Illium:_Indentured_Service', 'Indentured_Service')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_illium_medical_scans = m('Medical Scans', 'Illium:_Medical_Scans', 'Medical_Scans')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
