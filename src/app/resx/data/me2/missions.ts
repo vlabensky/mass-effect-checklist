@@ -32,6 +32,11 @@ export const me2_mission_horizon = m('Horizon', 'Horizon:_Horizon', 'Horizon')
   .availableWhen(predicates.isHorizonEnabled)
   .build();
 
+export const me2_mission_collector_ship = m('Collector Ship', 'Collector_Ship', 'Collector_Ship')
+  .availableWhen(predicates.isHorizonCompleted)
+  .withAdditionalInfo('This mission will be triggered automatically as soon as the player completes any five missions after Horizon. Also there are additional conditions that can be found in the mission\'s Wiki article.')
+  .build();
+
 // Normandy
 
 export const me2_mission_normandy_fba_couplings = m('FBA Couplings', 'Normandy:_FBA_Couplings', 'FBA_Couplings')
