@@ -4,12 +4,15 @@ import * as m from '../missions';
 // Voyager Cluster
 
 export const me1_location_voyager_cluster_amazon_sonedma = loc('Sonedma')
+  .hasMissions(m.me1_mission_valuable_minerals_rare_metals)
   .build();
 
 export const me1_location_voyager_cluster_amazon_sybin = loc('Sybin')
+  .hasMissions(m.me1_mission_turian_insignias)
   .build();
 
 export const me1_location_voyager_cluster_amazon_tremar = loc('Tremar')
+  .hasMissions(m.me1_mission_valuable_minerals_gasses)
   .build();
 
 export const me1_location_voyager_cluster_amazon_agebinium = loc('Agebinium')
@@ -26,9 +29,11 @@ export const me1_system_voyager_cluster_amazon = sys('Amazon')
   .build();
 
 export const me1_location_voyager_cluster_columbia_ontaheter = loc('Ontaheter')
+  .hasMissions(m.me1_mission_valuable_minerals_rare_metals)
   .build();
 
 export const me1_location_voyager_cluster_columbia_gromar = loc('Gromar')
+  .hasMissions(m.me1_mission_locate_signs_of_battle)
   .build();
 
 export const me1_location_voyager_cluster_columbia_nepheron = loc('Nepheron')
@@ -44,12 +49,15 @@ export const me1_system_voyager_cluster_columbia = sys('Columbia')
   .build();
 
 export const me1_location_voyager_cluster_yangtze_dregir = loc('Dregir')
+  .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 
 export const me1_location_voyager_cluster_yangtze_alrumter = loc('Alrumter')
+  .hasMissions(m.me1_mission_prothean_data_discs)
   .build();
 
 export const me1_location_voyager_cluster_yangtze_patajiri = loc('Patajiri')
+  .hasMissions(m.me1_mission_valuable_minerals_rare_metals)
   .build();
 
 export const me1_location_voyager_cluster_yangtze_binthu = loc('Binthu')
