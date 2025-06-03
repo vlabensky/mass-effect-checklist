@@ -7,6 +7,7 @@ export const predicates = {
     && me2_mission_dossier_the_professor.isCompleted
     && me2_mission_dossier_the_convict.isCompleted,
   isHorizonCompleted: () => me2_mission_horizon.isCompleted,
+  isCollectorShipCompleted: () => me2_mission_collector_ship.isCompleted,
 };
 
 // Prologue
@@ -30,6 +31,7 @@ export const me2_mission_the_council = m('The Council', 'Plot:_The_Council', 'Th
 
 export const me2_mission_horizon = m('Horizon', 'Horizon:_Horizon', 'Horizon')
   .availableWhen(predicates.isHorizonEnabled)
+  .withAdditionalInfo('This mission will be triggered automatically as soon as the player completes four main dossiers. So after recruiting Archangel, Jack, and Mordin Solus, as well as recovering Grunt in his tank from Korlus (waking up Grunt is not necessary), the player will be forced to play this mission.')
   .build();
 
 export const me2_mission_collector_ship = m('Collector Ship', 'Collector_Ship', 'Collector_Ship')
@@ -224,6 +226,14 @@ export const me2_mission_n7_assignments_blue_suns_base = m('Blue Suns Base', 'N7
 
 export const me2_mission_n7_assignments_javelin_missiles_launched = m('Javelin Missiles Launched', 'N7_Assignments:_Javelin_Missiles_Launched', 'Javelin_Missiles_Launched')
   .availableWhen(() => me2_mission_n7_assignments_msv_strontium_mule.isCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_endangered_research_station = m('Endangered Research Station', 'N7_Assignments:_Endangered_Research_Station', 'Endangered_Research_Station')
+  .availableWhen(predicates.isCollectorShipCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_mining_the_canyon = m('Mining the Canyon', 'N7_Assignments:_Mining_the_Canyon', 'Mining_the_Canyon')
+  .availableWhen(predicates.isCollectorShipCompleted)
   .build();
 
 // Project Firewalker

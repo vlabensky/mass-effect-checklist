@@ -91,6 +91,8 @@ export const me2_chapter_n7_assignments = ch('N7 Assignments')
     m.me2_mission_n7_assignments_msv_strontium_mule,
     m.me2_mission_n7_assignments_blue_suns_base,
     m.me2_mission_n7_assignments_javelin_missiles_launched,
+    m.me2_mission_n7_assignments_endangered_research_station,
+    m.me2_mission_n7_assignments_mining_the_canyon,
   )
   .build();
 
