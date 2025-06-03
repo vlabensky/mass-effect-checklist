@@ -86,6 +86,35 @@ export const me2_mission_dossier_the_convict = m('The Convict', 'Dossier:_The_Co
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
+export const me2_mission_the_assassin_salarian_family_data = m('The Assassin: Salarian Family Data', 'Dossier:_The_Assassin:_Salarian_Family_Data', 'The_Assassin_Salarian_Family_Data')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_dossier_the_assassin = m('The Assassin', 'Dossier:_The_Assassin', 'The_Assassin')
+  .availableWhen(predicates.isHorizonCompleted)
+  .hasInnerMissions(me2_mission_the_assassin_salarian_family_data)
+  .build();
+
+export const me2_mission_the_justicar_smuggling_evidence = m('The Justicar: Smuggling Evidence', 'Dossier:_The_Justicar:_Smuggling_Evidence', 'The_Justicar_Smuggling_Evidence')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_the_justicar_stolen_goods_found = m('The Justicar: Stolen Goods Found', 'Dossier:_The_Justicar:_Stolen_Goods_Found', 'The_Justicar_Stolen_Goods_Found')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_dossier_the_justicar = m('The Justicar', 'Dossier:_The_Justicar', 'The_Justicar')
+  .availableWhen(predicates.isHorizonCompleted)
+  .hasInnerMissions(
+    me2_mission_the_justicar_smuggling_evidence,
+    me2_mission_the_justicar_stolen_goods_found,
+  )
+  .build();
+
+export const me2_mission_dossier_tali = m('Tali', 'Dossier:_Tali', 'Tali')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
 // Citadel
 
 export const me2_mission_citadel_captain_bailey = m('Captain Bailey', 'Citadel:_Captain_Bailey', 'Captain_Bailey')

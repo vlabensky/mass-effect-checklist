@@ -41,6 +41,9 @@ export const me2_chapter_dossiers = ch('Dossiers')
     m.me2_mission_dossier_archangel,
     m.me2_mission_dossier_the_professor,
     m.me2_mission_dossier_the_convict,
+    m.me2_mission_dossier_the_assassin,
+    m.me2_mission_dossier_the_justicar,
+    m.me2_mission_dossier_tali,
   )
   .build();
 
