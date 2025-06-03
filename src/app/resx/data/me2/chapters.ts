@@ -78,3 +78,12 @@ export const me2_chapter_project_overlord = ch('Project Overlord')
     m.me2_mission_project_overlord_vulcan_station,
   )
   .build();
+
+// Loyalty Missions
+
+export const me2_chapter_loyalty = ch('Loyalty Missions')
+  .hasMissions(
+    m.me2_mission_loyalty_zaeed,
+    m.me2_mission_loyalty_kasumi,
+  )
+  .build();

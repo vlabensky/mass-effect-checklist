@@ -132,3 +132,14 @@ export const me2_mission_project_overlord_prometheus_station = m('Prometheus Sta
 export const me2_mission_project_overlord_vulcan_station = m('Vulcan Station', 'Project_Overlord:_Vulcan_Station', 'Vulcan_Station')
   .availableWhen(() => me2_mission_project_overlord_investigate_project_overlord.isCompleted)
   .build();
+
+// Loyalty
+
+export const me2_mission_loyalty_zaeed = m('Zaeed - The Price of Revenge', 'Loyalty:_Zaeed_The_Price_of_Revenge', 'Zaeed_The_Price_of_Revenge')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_loyalty_kasumi = m('Kasumi - Stealing Memory', 'Loyalty:_Kasumi_Stealing_Memory', 'Kasumi_Stealing_Memory')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
