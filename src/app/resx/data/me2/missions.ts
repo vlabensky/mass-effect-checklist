@@ -353,6 +353,10 @@ export const me2_mission_loyalty_tali_treason = m('Tali: Treason', 'Tali:_Treaso
   .availableWhen(predicates.isHorizonCompleted)
   .build();
 
+export const me2_mission_loyalty_legion_a_house_divided = m('Legion: A House Divided', 'Legion:_A_House_Divided', 'Legion_A_House_Divided')
+  .availableWhen(() => me2_mission_acquire_reaper_iff.isCompleted)
+  .build();
+
 // Illium
 
 export const me2_mission_illium_liara_system_hacking = m('Liara: System Hacking', 'Liara:_System_Hacking', 'Liara_System_Hacking')

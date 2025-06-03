@@ -135,6 +135,7 @@ export const me2_chapter_loyalty = ch('Loyalty Missions')
     m.me2_mission_loyalty_jacob_gift_of_greatness,
     m.me2_mission_loyalty_samara_ardat_yakshi,
     m.me2_mission_loyalty_tali_treason,
+    m.me2_mission_loyalty_legion_a_house_divided,
   )
   .build();
 
