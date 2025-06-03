@@ -4,6 +4,7 @@ import * as m from '../missions';
 // Kepler Verge
 
 export const me1_location_kepler_verge_herschel_rocky_asteroid = loc('Rocky Asteroid')
+  .hasMissions(m.me1_mission_valuable_minerals_heavy_metals)
   .build();
 
 export const me1_location_kepler_verge_herschel_msv_fedele = loc('MSV Fedele')
@@ -18,9 +19,11 @@ export const me1_system_kepler_verge_herschel = sys('Herschel')
   .build();
 
 export const me1_location_kepler_verge_newton_klencory = loc('Klencory')
+  .hasMissions(m.me1_mission_asari_writings)
   .build();
 
 export const me1_location_kepler_verge_newton_juncro = loc('Juncro')
+  .hasMissions(m.me1_mission_valuable_minerals_gasses)
   .build();
 
 export const me1_location_kepler_verge_newton_ontarom = loc('Ontarom')
