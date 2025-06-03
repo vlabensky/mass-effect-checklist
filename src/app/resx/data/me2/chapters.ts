@@ -11,6 +11,14 @@ export const me2_chapter_prologue = ch('Prologue')
   )
   .build();
 
+// Plot Missions
+
+export const me2_chapter_plot = ch('Plot Missions')
+  .hasMissions(
+    m.me2_mission_citadel_the_council,
+  )
+  .build();
+
 // Normandy
 
 export const me2_chapter_normandy = ch('Normandy')
@@ -39,7 +47,6 @@ export const me2_chapter_dossiers = ch('Dossiers')
 
 export const me2_chapter_citadel = ch('Citadel')
   .hasMissions(
-    m.me2_mission_citadel_the_council,
     m.me2_mission_citadel_captain_bailey,
     m.me2_mission_citadel_crime_in_progress,
     m.me2_mission_citadel_krogan_sushi,
