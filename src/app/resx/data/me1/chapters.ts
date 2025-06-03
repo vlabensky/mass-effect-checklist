@@ -54,6 +54,10 @@ export const me1_chapter_feros = ch('Feros')
     m.me1_mission_varren_meat,
     m.me1_mission_water_restoration,
   )
+  .canAcquireMissions(
+    m.me1_mission_colony_of_the_dead,
+    m.me1_mission_exogeni_facility,
+  )
   .build();
 
 // Noveria

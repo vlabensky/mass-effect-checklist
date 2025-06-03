@@ -19,6 +19,7 @@ export const predicates = {
   },
   isNoveriaCompleted: () => me1_mission_rift_station_matriarch_benezia.isCompleted,
   isVirmireCompleted: () => me1_mission_assault.isCompleted,
+  isFerosCompleted: () => me1_mission_the_thorian.isCompleted,
   isIlosCompleted: () => me1_mission_find_the_conduit.isCompleted,
   isWrexRecruited: () => me1_mission_wrex.isCompleted,
   isGarrusRecruited: () => me1_mission_garrus.isCompleted,
@@ -362,6 +363,18 @@ export const me1_mission_depot_sigma_23 = m('Depot Sigma-23', 'Depot_Sigma_23', 
 
 export const me1_mission_bring_down_the_sky = m('Bring Down the Sky', 'Bring_Down_the_Sky', 'Bring_Down_the_Sky')
   .availableWhen(predicates.isExposeSarenCompleted)
+  .build();
+
+export const me1_mission_derelict_freighter = m('Derelict Freighter', 'Derelict_Freighter', 'Derelict_Freighter')
+  .availableWhen(predicates.isFerosCompleted)
+  .build();
+
+export const me1_mission_colony_of_the_dead = m('Colony of the Dead', 'Colony_of_the_Dead', 'Colony_of_the_Dead')
+  .availableWhen(predicates.isFerosCompleted)
+  .build();
+
+export const me1_mission_exogeni_facility = m('ExoGeni Facility', 'ExoGeni_Facility', 'ExoGeni_Facility')
+  .availableWhen(predicates.isFerosCompleted)
   .build();
 
 // Discovery Assignments

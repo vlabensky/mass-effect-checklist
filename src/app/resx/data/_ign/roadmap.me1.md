@@ -162,6 +162,16 @@ Rogue VI
 - Sol
 - Level 20 (or 11?) req
 
+#### Maroon Sea
+Derelict Freighter
+- Caspian
+
+Colony of the Dead
+- Matano
+
+ExoGeni Facility
+- Vostok
+
 #### Exodus
 Bring Down the Sky
 - Asgard

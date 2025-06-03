@@ -9,5 +9,6 @@ export { me1_cluster_hawking_eta } from './hawking_eta';
 export { me1_cluster_horse_head_nebula } from './horse_head_nebula';
 export { me1_cluster_kepler_verge } from './kepler_verge';
 export { me1_cluster_local_cluster } from './local_cluster';
+export { me1_cluster_maroon_sea } from './maroon_sea';
 export { me1_cluster_styx_theta } from './styx_theta';
 export { me1_cluster_voyager_cluster } from './voyager_cluster';
