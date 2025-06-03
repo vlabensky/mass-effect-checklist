@@ -4,9 +4,11 @@ import * as m from '../missions';
 // Attican Beta
 
 export const me1_location_attican_beta_hercules_syided = loc('Syided')
+  .hasMissions(m.me1_mission_locate_signs_of_battle)
   .build();
 
 export const me1_location_attican_beta_hercules_zatorus = loc('Zatorus')
+  .hasMissions(m.me1_mission_valuable_minerals_heavy_metals)
   .build();
 
 export const me1_location_attican_beta_hercules_eletania = loc('Eletania')
@@ -22,9 +24,15 @@ export const me1_system_attican_beta_hercules = sys('Hercules')
   .build();
 
 export const me1_location_attican_beta_theseus_sharring = loc('Sharring')
+  .hasMissions(m.me1_mission_prothean_data_discs)
   .build();
 
 export const me1_location_attican_beta_theseus_quana = loc('Quana')
+  .hasMissions(m.me1_mission_valuable_minerals_light_metals)
+  .build();
+
+export const me1_location_attican_beta_theseus_feros = loc('Feros')
+  .hasMissions(m.me1_mission_geth_attack, m.me1_mission_the_thorian)
   .build();
 
 export const me1_system_attican_beta_theseus = sys('Theseus')
