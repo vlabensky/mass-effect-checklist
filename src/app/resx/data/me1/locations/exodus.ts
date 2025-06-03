@@ -13,8 +13,19 @@ export const me1_system_exodus_asgard = sys('Asgard')
   )
   .build();
 
+export const me1_location_exodus_utopia_eden_prime = loc('Eden Prime')
+  .hasMissions(m.me1_mission_prologue_find_the_beacon)
+  .build();
+
+export const me1_system_exodus_utopia = sys('Utopia')
+  .hasLocations(
+    me1_location_exodus_utopia_eden_prime,
+  )
+  .build();
+
 export const me1_cluster_exodus = cl('Exodus', 'Exodus', 'Exodus')
   .hasSystems(
     me1_system_exodus_asgard,
+    me1_system_exodus_utopia,
   )
   .build();
