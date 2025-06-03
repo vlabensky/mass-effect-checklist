@@ -4,12 +4,15 @@ import * as m from '../missions';
 // Hades Gamma
 
 export const me1_location_hades_gamma_antaeus_edmos = loc('Edmos')
+  .hasMissions(m.me1_mission_valuable_minerals_gasses)
   .build();
 
 export const me1_location_hades_gamma_antaeus_ploba = loc('Ploba')
+  .hasMissions(m.me1_mission_asari_writings)
   .build();
 
 export const me1_location_hades_gamma_antaeus_vemal = loc('Vemal')
+  .hasMissions(m.me1_mission_valuable_minerals_rare_metals)
   .build();
 
 export const me1_location_hades_gamma_antaeus_trebin = loc('Trebin')
@@ -26,9 +29,11 @@ export const me1_system_hades_gamma_antaeus = sys('Antaeus')
   .build();
 
 export const me1_location_hades_gamma_cacus_zayarter = loc('Zayarter')
+  .hasMissions(m.me1_mission_valuable_minerals_heavy_metals)
   .build();
 
 export const me1_location_hades_gamma_cacus_faringar = loc('Faringar')
+  .hasMissions(m.me1_mission_valuable_minerals_rare_metals)
   .build();
 
 export const me1_location_hades_gamma_cacus_chohe = loc('Chohe')
@@ -44,12 +49,15 @@ export const me1_system_hades_gamma_cacus = sys('Cacus')
   .build();
 
 export const me1_location_hades_gamma_dis_nearrum = loc('Nearrum')
+  .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 
 export const me1_location_hades_gamma_dis_metallic_asteroid = loc('Metallic Asteroid')
+  .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 
 export const me1_location_hades_gamma_dis_raysha = loc('Raysha')
+  .hasMissions(m.me1_mission_turian_insignias)
   .build();
 
 export const me1_location_hades_gamma_dis_klensal = loc('Klensal')
@@ -66,12 +74,15 @@ export const me1_system_hades_gamma_dis = sys('Dis')
   .build();
 
 export const me1_location_hades_gamma_farinata_rocky_asteroid = loc('Rocky Asteroid')
+  .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 
 export const me1_location_hades_gamma_farinata_juntauma = loc('Juntauma')
+  .hasMissions(m.me1_mission_prothean_data_discs)
   .build();
 
 export const me1_location_hades_gamma_farinata_nepneu = loc('Nepneu')
+  .hasMissions(m.me1_mission_valuable_minerals_rare_metals)
   .build();
 
 export const me1_location_hades_gamma_farinata_msv_ontario = loc('MSV Ontario')
@@ -88,9 +99,11 @@ export const me1_system_hades_gamma_farinata = sys('Farinata')
   .build();
 
 export const me1_location_hades_gamma_plutus_mingito = loc('Mingito')
+  .hasMissions(m.me1_mission_valuable_minerals_rare_metals)
   .build();
 
 export const me1_location_hades_gamma_plutus_clocrolis = loc('Clocrolis')
+  .hasMissions(m.me1_mission_valuable_minerals_rare_metals)
   .build();
 
 export const me1_location_hades_gamma_plutus_nonuel = loc('Nonuel')
