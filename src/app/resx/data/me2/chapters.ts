@@ -55,3 +55,15 @@ export const me2_chapter_n7_assignments = ch('N7 Assignments')
     m.me2_mission_n7_assignments_lost_operative,
   )
   .build();
+
+// Project Firewalker
+
+export const me2_chapter_project_firewalker = ch('Project Firewalker')
+  .hasMissions(
+    m.me2_mission_project_firewalker_rosalie_lost,
+    m.me2_mission_project_firewalker_geth_activity,
+    m.me2_mission_project_firewalker_survey_sites_located,
+    m.me2_mission_project_firewalker_volcano_station,
+    m.me2_mission_project_firewalker_prothean_site,
+  )
+  .build();

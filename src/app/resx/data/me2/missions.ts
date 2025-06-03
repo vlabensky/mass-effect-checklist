@@ -92,3 +92,25 @@ export const me2_mission_n7_assignments_eclipse_smuggling_depot = m('Eclipse Smu
 export const me2_mission_n7_assignments_lost_operative = m('Lost Operative', 'N7_Assignments:_Lost_Operative', 'Lost_Operative')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
+
+// Project Firewalker
+
+export const me2_mission_project_firewalker_rosalie_lost = m('Rosalie Lost', 'Project_Firewalker:_Rosalie_Lost', 'Rosalie_Lost')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_project_firewalker_geth_activity = m('Geth Activity/Incursion', 'Project_Firewalker:_Geth_Activity_Incursion', 'Geth_Activity_Incursion')
+  .availableWhen(() => me2_mission_project_firewalker_rosalie_lost.isCompleted)
+  .build();
+
+export const me2_mission_project_firewalker_survey_sites_located = m('Survey Sites Located', 'Project_Firewalker:_Survey_Sites_Located', 'Survey_Sites_Located')
+  .availableWhen(() => me2_mission_project_firewalker_rosalie_lost.isCompleted)
+  .build();
+
+export const me2_mission_project_firewalker_volcano_station = m('Volcano Station', 'Project_Firewalker:_Volcano_Station', 'Volcano_Station')
+  .availableWhen(() => me2_mission_project_firewalker_rosalie_lost.isCompleted)
+  .build();
+
+export const me2_mission_project_firewalker_prothean_site = m('Prothean Site', 'Project_Firewalker:_Prothean_Site', 'Prothean_Site')
+  .availableWhen(() => me2_mission_project_firewalker_volcano_station.isCompleted)
+  .build();
