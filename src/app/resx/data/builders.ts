@@ -23,6 +23,8 @@ export class MissionBuilder {
   isAvailable?: () => boolean;
   additionalInfo?: string;
   innerMissions?: Mission[];
+  innerMissionNames: Set<string>;
+
 
   constructor(name: string, fandomUrlPath: string, ignUrlPath: string) {
     if (missionNames.has(name))
@@ -33,6 +35,7 @@ export class MissionBuilder {
     this.name = name;
     this.fandomUrlPath = fandomUrlPath;
     this.ignUrlPath = ignUrlPath;
+    this.innerMissionNames = new Set<string>();
   }
 
   availableWhen(predicate: () => boolean) {
@@ -46,6 +49,12 @@ export class MissionBuilder {
   }
 
   hasInnerMissions(...missions: Mission[]) {
+    missions.forEach(mission => {
+      if (this.innerMissionNames.has(mission.name))
+        throw new Error(`Inner mission with name ${mission.name} already exists`);
+
+      this.innerMissionNames.add(mission.name);
+    });
     this.innerMissions = missions;
     return this;
   }

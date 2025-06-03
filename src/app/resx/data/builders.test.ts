@@ -59,6 +59,36 @@ describe('Builders tests', () => {
       expect(Array.isArray(mission.innerMissions)).toBe(true);
       expect(mission.innerMissions).toHaveLength(0);
     });
+
+    it('should not allow adding inner missions with the same name', () => {
+      const duplicateInnerMissions = [{
+        name: 'Duplicate Inner Mission',
+        urls: {
+          fandom: 'url1',
+          ign: 'url2',
+        },
+        innerMissions: [],
+        isAvailable: () => true,
+        isCompleted: false,
+        additionalInfo: undefined,
+      }, {
+        name: 'Duplicate Inner Mission',
+        urls: {
+          fandom: 'url3',
+          ign: 'url4',
+        },
+        innerMissions: [],
+        isAvailable: () => true,
+        isCompleted: true,
+        additionalInfo: undefined,
+      }];
+
+      const missionBuilder = m('Test Mission 6', 'Test_Fandom_Path_6', 'Test_IGN_Path_6');
+
+      expect(() => {
+        missionBuilder.hasInnerMissions(...duplicateInnerMissions);
+      }).toThrow('Inner mission with name Duplicate Inner Mission already exists');
+    });
   });
 
   describe('when building a chapter', () => {
