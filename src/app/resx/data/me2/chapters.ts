@@ -22,3 +22,14 @@ export const me2_chapter_normandy = ch('Normandy')
   )
   .build();
 
+// Citadel
+
+export const me2_chapter_citadel = ch('Citadel')
+  .hasMissions(
+    m.me2_mission_citadel_the_council,
+    m.me2_mission_citadel_captain_bailey,
+    m.me2_mission_citadel_crime_in_progress,
+    m.me2_mission_citadel_krogan_sushi,
+  )
+  .build();
+
