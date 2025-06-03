@@ -98,7 +98,17 @@ Privateers
 Hostile Takeover III
 - Fortuna
 
+#### Styx Theta
+Listening Post Alpha
+- Erebus 
+
+Listening Post Theta
+- Acheron
+
 #### Argos Rho
+Depot Sigma-23
+- Gorgon 
+
 Unusual Readings/Distress Call
 - Hydra
 
