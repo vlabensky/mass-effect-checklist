@@ -53,3 +53,16 @@ export const me2_mission_citadel_krogan_sushi = m('Krogan Sushi', 'Citadel:_Krog
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
+// Omega
+
+export const me2_mission_omega_aria_t_loak = m('Aria T\'Loak', 'Omega:_Aria_T\'Loak', 'Aria_T\'Loak')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_omega_batarian_bartender = m('Batarian Bartender', 'Omega:_Batarian_Bartender', 'Batarian_Bartender')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_omega_struggling_quarian = m('Struggling Quarian', 'Omega:_Struggling_Quarian', 'Struggling_Quarian')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();

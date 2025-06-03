@@ -33,3 +33,13 @@ export const me2_chapter_citadel = ch('Citadel')
   )
   .build();
 
+// Omega
+
+export const me2_chapter_omega = ch('Omega')
+  .hasMissions(
+    m.me2_mission_omega_aria_t_loak,
+    m.me2_mission_omega_batarian_bartender,
+    m.me2_mission_omega_struggling_quarian,
+  )
+  .build();
+
