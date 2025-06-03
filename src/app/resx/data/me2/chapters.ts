@@ -15,7 +15,8 @@ export const me2_chapter_prologue = ch('Prologue')
 
 export const me2_chapter_plot = ch('Plot Missions')
   .hasMissions(
-    m.me2_mission_citadel_the_council,
+    m.me2_mission_the_council,
+    m.me2_mission_horizon,
   )
   .build();
 

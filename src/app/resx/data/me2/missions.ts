@@ -2,6 +2,10 @@ import { m } from '../builders';
 
 export const predicates = {
   isPrologueCompleted: () => me2_mission_prologue_freedoms_progress.isCompleted,
+  isHorizonEnabled: () => me2_mission_dossier_warlord.isCompleted
+    && me2_mission_dossier_archangel.isCompleted
+    && me2_mission_dossier_the_professor.isCompleted
+    && me2_mission_dossier_the_convict.isCompleted,
 };
 
 // Prologue
@@ -19,8 +23,12 @@ export const me2_mission_prologue_freedoms_progress = m('Freedom\'s Progress', '
 
 // Plot Missions
 
-export const me2_mission_plot_the_council = m('The Council', 'Plot:_The_Council', 'The_Council')
+export const me2_mission_the_council = m('The Council', 'Plot:_The_Council', 'The_Council')
   .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_horizon = m('Horizon', 'Horizon:_Horizon', 'Horizon')
+  .availableWhen(predicates.isHorizonEnabled)
   .build();
 
 // Normandy
