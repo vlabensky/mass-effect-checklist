@@ -1,5 +1,5 @@
-import { ch, cl, loc, m, sys } from './builders';
-import { GameData } from './types';
+import { ch, cl, loc, m, sys } from '../builders';
+import { GameData } from '../types';
 
 export const predicates = {
   isPrologueCompleted: () => me1_mission_prologue_find_the_beacon.isCompleted,
