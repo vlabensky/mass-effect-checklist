@@ -49,12 +49,22 @@ export const me2_mission_dossier_warlord = m('The Warlord', 'Dossier:_The_Warlor
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
+export const me2_mission_archangel_datapad_recovered = m('Archangel: Datapad Recovered', 'Archangel:_Datapad_Recovered', 'Archangel_Datapad_Recovered')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
 export const me2_mission_dossier_archangel = m('Archangel', 'Dossier:_Archangel', 'Archangel')
+  .availableWhen(predicates.isPrologueCompleted)
+  .hasInnerMissions(me2_mission_archangel_datapad_recovered)
+  .build();
+
+export const me2_mission_the_professor_missing_assistant = m('The Professor: Missing Assistant', 'The_Professor:_Missing_Assistant', 'The_Professor_Missing_Assistant')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
 export const me2_mission_dossier_the_professor = m('The Professor', 'Dossier:_The_Professor', 'The_Professor')
   .availableWhen(predicates.isPrologueCompleted)
+  .hasInnerMissions(me2_mission_the_professor_missing_assistant)
   .build();
 
 export const me2_mission_dossier_the_convict = m('The Convict', 'Dossier:_The_Convict', 'The_Convict')
