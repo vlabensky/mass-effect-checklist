@@ -127,3 +127,12 @@ export const me2_chapter_illium = ch('Illium')
     m.me2_mission_illium_medical_scans,
   )
   .build();
+
+// Tuchanka
+
+export const me2_chapter_tuchanka = ch('Tuchanka')
+  .hasMissions(
+    m.me2_mission_tuchanka_urdnot_wrex,
+    m.me2_mission_tuchanka_killing_pyjaks,
+  )
+  .build();

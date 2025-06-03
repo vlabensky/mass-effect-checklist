@@ -256,3 +256,13 @@ export const me2_mission_illium_indentured_service = m('Indentured Service', 'Il
 export const me2_mission_illium_medical_scans = m('Medical Scans', 'Illium:_Medical_Scans', 'Medical_Scans')
   .availableWhen(predicates.isHorizonCompleted)
   .build();
+
+// Tuchanka
+
+export const me2_mission_tuchanka_urdnot_wrex = m('Urdnot Wrex', 'Tuchanka:_Urdnot_Wrex', 'Urdnot_Wrex')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_tuchanka_killing_pyjaks = m('Killing Pyjaks', 'Tuchanka:_Killing_Pyjaks', 'Killing_Pyjaks')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
