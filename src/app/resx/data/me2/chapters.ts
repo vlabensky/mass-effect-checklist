@@ -169,8 +169,16 @@ export const me2_chapter_tuchanka = ch('Tuchanka')
 
 // Shadow Broker
 
-export const me2_chapter_shadow_broker = ch('Shadow Broker')
+export const me2_chapter_shadow_broker = ch('Shadow Broker (DLC)')
   .hasMissions(
     m.me2_mission_lair_of_the_shadow_broker,
+  )
+  .build();
+
+// Arrival
+
+export const me2_chapter_arrival = ch('Arrival (DLC)')
+  .hasMissions(
+    m.me2_mission_arrival_rescue_dr_kenson,
   )
   .build();

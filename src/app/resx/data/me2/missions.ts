@@ -78,7 +78,7 @@ export const me2_mission_normandy_special_ingredients = m('Special Ingredients',
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me2_mission_normandy_normandy_crash_site = m('Normandy Crash Site', 'Normandy:_Normandy_Crash_Site', 'Normandy_Crash_Site')
+export const me2_mission_normandy_normandy_crash_site = m('Normandy Crash Site (DLC)', 'Normandy:_Normandy_Crash_Site', 'Normandy_Crash_Site')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
@@ -420,5 +420,11 @@ export const me2_mission_tuchanka_killing_pyjaks = m('Killing Pyjaks', 'Tuchanka
 // Shadow Broker
 
 export const me2_mission_lair_of_the_shadow_broker = m('Lair of the Shadow Broker', 'Lair_of_the_Shadow_Broker', 'Lair_of_the_Shadow_Broker')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+// Arrival
+
+export const me2_mission_arrival_rescue_dr_kenson = m('Rescue Dr. Kenson', 'Rescue_Dr._Kenson', 'Rescue_Dr_Kenson')
   .availableWhen(predicates.isHorizonCompleted)
   .build();
