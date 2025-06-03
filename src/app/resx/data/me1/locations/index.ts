@@ -11,5 +11,6 @@ export { me1_cluster_kepler_verge } from './kepler_verge';
 export { me1_cluster_local_cluster } from './local_cluster';
 export { me1_cluster_maroon_sea } from './maroon_sea';
 export { me1_cluster_pangaea_expanse } from './pangaea_expanse';
+export { me1_cluster_sentry_omega } from './sentry_omega';
 export { me1_cluster_styx_theta } from './styx_theta';
 export { me1_cluster_voyager_cluster } from './voyager_cluster';
