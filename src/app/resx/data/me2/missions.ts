@@ -6,6 +6,7 @@ export const predicates = {
     && me2_mission_dossier_archangel.isCompleted
     && me2_mission_dossier_the_professor.isCompleted
     && me2_mission_dossier_the_convict.isCompleted,
+  isHorizonCompleted: () => me2_mission_horizon.isCompleted,
 };
 
 // Prologue
