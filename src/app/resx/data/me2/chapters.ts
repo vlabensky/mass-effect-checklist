@@ -156,3 +156,11 @@ export const me2_chapter_tuchanka = ch('Tuchanka')
     m.me2_mission_tuchanka_killing_pyjaks,
   )
   .build();
+
+// Shadow Broker
+
+export const me2_chapter_shadow_broker = ch('Shadow Broker')
+  .hasMissions(
+    m.me2_mission_lair_of_the_shadow_broker,
+  )
+  .build();

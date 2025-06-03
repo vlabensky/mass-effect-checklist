@@ -372,3 +372,9 @@ export const me2_mission_tuchanka_urdnot_wrex = m('Urdnot Wrex', 'Tuchanka:_Urdn
 export const me2_mission_tuchanka_killing_pyjaks = m('Killing Pyjaks', 'Tuchanka:_Killing_Pyjaks', 'Killing_Pyjaks')
   .availableWhen(predicates.isHorizonCompleted)
   .build();
+
+// Shadow Broker
+
+export const me2_mission_lair_of_the_shadow_broker = m('Lair of the Shadow Broker', 'Lair_of_the_Shadow_Broker', 'Lair_of_the_Shadow_Broker')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
