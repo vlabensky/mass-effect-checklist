@@ -219,25 +219,87 @@ export const me2_mission_project_overlord_vulcan_station = m('Vulcan Station', '
 
 // Loyalty
 
-export const me2_mission_loyalty_zaeed = m('Zaeed - The Price of Revenge', 'Loyalty:_Zaeed_The_Price_of_Revenge', 'Zaeed_The_Price_of_Revenge')
+export const me2_mission_loyalty_zaeed = m('Zaeed: The Price of Revenge', 'Zaeed_The_Price_of_Revenge', 'Zaeed_The_Price_of_Revenge')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me2_mission_loyalty_kasumi = m('Kasumi - Stealing Memory', 'Loyalty:_Kasumi_Stealing_Memory', 'Kasumi_Stealing_Memory')
+export const me2_mission_loyalty_kasumi = m('Kasumi: Stealing Memory', 'Kasumi_Stealing_Memory', 'Kasumi_Stealing_Memory')
   .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_loyalty_grunt_rite_of_passage = m('Grunt: Rite of Passage', 'Grunt_Rite_of_Passage', 'Grunt_Rite_of_Passage')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_combustion_manifold = m('Combustion Manifold', 'Combustion_Manifold', 'Combustion_Manifold')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_mordin_old_blood_missing_scout = m('Mordin: Old Blood: Missing Scout', 'Mordin:_Old_Blood:_Missing_Scout', 'Mordin_Old_Blood_Missing_Scout')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_loyalty_mordin_old_blood = m('Mordin: Old Blood', 'Mordin:_Old_Blood', 'Mordin_Old_Blood')
+  .availableWhen(predicates.isHorizonCompleted)
+  .hasInnerMissions(
+    me2_mission_combustion_manifold,
+    me2_mission_mordin_old_blood_missing_scout,
+  )
+  .build();
+
+export const me2_mission_citadel_found_forged_id = m('Citadel: Found Forged ID', 'Citadel:_Found_Forged_ID', 'Citadel_Found_Forged_ID')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_loyalty_garrus_eye_for_an_eye = m('Garrus: Eye for an Eye', 'Garrus:_Eye_for_an_Eye', 'Garrus_Eye_for_an_Eye')
+  .availableWhen(predicates.isHorizonCompleted)
+  .hasInnerMissions(
+    me2_mission_citadel_found_forged_id,
+  )
+  .build();
+
+export const me2_mission_loyalty_thane_sins_of_the_father = m('Thane: Sins of the Father', 'Thane:_Sins_of_the_Father', 'Thane_Sins_of_the_Father')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_the_prodigal_lost_locket_found = m('The Prodigal: Lost Locket Found', 'The_Prodigal:_Lost_Locket_Found', 'The_Prodigal_Lost_Locket_Found')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_loyalty_miranda_the_prodigal = m('Miranda: The Prodigal', 'Miranda:_The_Prodigal', 'Miranda_The_Prodigal')
+  .availableWhen(predicates.isHorizonCompleted)
+  .hasInnerMissions(
+    me2_mission_the_prodigal_lost_locket_found,
+  )
+  .build();
+
+export const me2_mission_loyalty_jack_subject_zero = m('Jack: Subject Zero', 'Jack:_Subject_Zero', 'Jack_Subject_Zero')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_loyalty_jacob_gift_of_greatness = m('Jacob: The Gift of Greatness', 'Jacob:_The_Gift_of_Greatness', 'Jacob_Gift_of_Greatness')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_loyalty_samara_ardat_yakshi = m('Samara: The Ardat-Yakshi', 'Samara:_The_Ardat_Yakshi', 'Samara_Ardat_Yakshi')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_loyalty_tali_treason = m('Tali: Treason', 'Tali:_Treason', 'Tali_Treason')
+  .availableWhen(predicates.isHorizonCompleted)
   .build();
 
 // Illium
 
-export const me2_mission_illium_liara_system_hacking = m('Liara: System Hacking', 'Illium:_Liara:_System_Hacking', 'Liara_System_Hacking')
+export const me2_mission_illium_liara_system_hacking = m('Liara: System Hacking', 'Liara:_System_Hacking', 'Liara_System_Hacking')
   .availableWhen(predicates.isHorizonCompleted)
   .build();
 
-export const me2_mission_illium_liara_the_observer = m('Liara: The Observer', 'Illium:_Liara:_The_Observer', 'Liara_The_Observer')
+export const me2_mission_illium_liara_the_observer = m('Liara: The Observer', 'Liara:_The_Observer', 'Liara_The_Observer')
   .availableWhen(() => me2_mission_illium_liara_system_hacking.isCompleted)
   .build();
 
-export const me2_mission_illium_a_troublemaker = m('A Troublemaker', 'Illium:_A_Troublemaker', 'A_Troublemaker')
+export const me2_mission_illium_a_troublemaker = m('A Troublemaker', 'A_Troublemaker', 'A_Troublemaker')
   .availableWhen(predicates.isHorizonCompleted)
   .build();
 

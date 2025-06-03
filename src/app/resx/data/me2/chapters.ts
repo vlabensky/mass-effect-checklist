@@ -111,6 +111,15 @@ export const me2_chapter_loyalty = ch('Loyalty Missions')
   .hasMissions(
     m.me2_mission_loyalty_zaeed,
     m.me2_mission_loyalty_kasumi,
+    m.me2_mission_loyalty_grunt_rite_of_passage,
+    m.me2_mission_loyalty_mordin_old_blood,
+    m.me2_mission_loyalty_garrus_eye_for_an_eye,
+    m.me2_mission_loyalty_thane_sins_of_the_father,
+    m.me2_mission_loyalty_miranda_the_prodigal,
+    m.me2_mission_loyalty_jack_subject_zero,
+    m.me2_mission_loyalty_jacob_gift_of_greatness,
+    m.me2_mission_loyalty_samara_ardat_yakshi,
+    m.me2_mission_loyalty_tali_treason,
   )
   .build();
 
