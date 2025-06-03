@@ -50,5 +50,8 @@ export const me2_chapter_n7_assignments = ch('N7 Assignments')
     m.me2_mission_n7_assignments_wrecked_merchant_freighter,
     m.me2_mission_n7_assignments_abandoned_research_station,
     m.me2_mission_n7_assignments_hahne_kedar_facility,
+    m.me2_mission_n7_assignments_msv_estevanico,
+    m.me2_mission_n7_assignments_eclipse_smuggling_depot,
+    m.me2_mission_n7_assignments_lost_operative,
   )
   .build();
