@@ -17,6 +17,12 @@ export const me2_mission_prologue_freedoms_progress = m('Freedom\'s Progress', '
   .availableWhen(() => me2_mission_prologue_awakening.isCompleted)
   .build();
 
+// Plot Missions
+
+export const me2_mission_plot_the_council = m('The Council', 'Plot:_The_Council', 'The_Council')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
 // Normandy
 
 export const me2_mission_normandy_fba_couplings = m('FBA Couplings', 'Normandy:_FBA_Couplings', 'FBA_Couplings')
@@ -72,10 +78,6 @@ export const me2_mission_dossier_the_convict = m('The Convict', 'Dossier:_The_Co
   .build();
 
 // Citadel
-
-export const me2_mission_citadel_the_council = m('The Council', 'Citadel:_The_Council', 'The_Council')
-  .availableWhen(predicates.isPrologueCompleted)
-  .build();
 
 export const me2_mission_citadel_captain_bailey = m('Captain Bailey', 'Citadel:_Captain_Bailey', 'Captain_Bailey')
   .availableWhen(predicates.isPrologueCompleted)
