@@ -100,14 +100,14 @@ Hostile Takeover III
 
 #### Styx Theta
 Listening Post Alpha
-- Erebus 
+- Erebus
 
 Listening Post Theta
 - Acheron
 
 #### Argos Rho
 Depot Sigma-23
-- Gorgon 
+- Gorgon
 
 Unusual Readings/Distress Call
 - Hydra
@@ -301,3 +301,17 @@ Find the Conduit
 ### Final Mission
 
 Race Against Time: Final Battle
+
+## Discovery Assignments
+
+Asari Writings
+Locate Signs of Battle
+Prothean Data Discs
+Turian Insignias
+
+### Valuable Minerals
+
+Valuable Minerals: Light Metals
+Valuable Minerals: Rare Metals
+Valuable Minerals: Heavy Metals
+Valuable Minerals: Gasses

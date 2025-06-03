@@ -363,3 +363,29 @@ export const me1_mission_depot_sigma_23 = m('Depot Sigma-23', 'Depot_Sigma_23', 
 export const me1_mission_bring_down_the_sky = m('Bring Down the Sky', 'Bring_Down_the_Sky', 'Bring_Down_the_Sky')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
+
+// Discovery Assignments
+
+export const me1_mission_asari_writings = m('Asari Writings', 'Asari_Writings', 'Asari_Writings')
+  .build();
+
+export const me1_mission_locate_signs_of_battle = m('Locate Signs of Battle', 'Locate_Signs_of_Battle', 'Locate_Signs_of_Battle')
+  .build();
+
+export const me1_mission_prothean_data_discs = m('Prothean Data Discs', 'Prothean_Data_Discs', 'Prothean_Data_Discs')
+  .build();
+
+export const me1_mission_turian_insignias = m('Turian Insignias', 'Turian_Insignias', 'Turian_Insignias')
+  .build();
+
+export const me1_mission_valuable_minerals_light_metals = m('Valuable Minerals: Light Metals', 'Valuable_Minerals:_Light_Metals', 'Valuable_Minerals:_Light_Metals')
+  .build();
+
+export const me1_mission_valuable_minerals_rare_metals = m('Valuable Minerals: Rare Metals', 'Valuable_Minerals:_Rare_Metals', 'Valuable_Minerals:_Rare_Metals')
+  .build();
+
+export const me1_mission_valuable_minerals_heavy_metals = m('Valuable Minerals: Heavy Metals', 'Valuable_Minerals:_Heavy_Metals', 'Valuable_Minerals:_Heavy_Metals')
+  .build();
+
+export const me1_mission_valuable_minerals_gasses = m('Valuable Minerals: Gasses', 'Valuable_Minerals:_Gasses', 'Valuable_Minerals:_Gasses')
+  .build();
