@@ -79,6 +79,17 @@ export const me2_chapter_n7_assignments = ch('N7 Assignments')
     m.me2_mission_n7_assignments_msv_estevanico,
     m.me2_mission_n7_assignments_eclipse_smuggling_depot,
     m.me2_mission_n7_assignments_lost_operative,
+    m.me2_mission_n7_assignments_abandoned_mine,
+    m.me2_mission_n7_assignments_anomalous_weather_detected,
+    m.me2_mission_n7_assignments_blood_pack_base,
+    m.me2_mission_n7_assignments_blood_pack_communications_relay,
+    m.me2_mission_n7_assignments_quarian_crash_site,
+    m.me2_mission_n7_assignments_imminent_ship_crash,
+    m.me2_mission_n7_assignments_captured_mining_facility,
+    m.me2_mission_n7_assignments_archeological_dig_site,
+    m.me2_mission_n7_assignments_msv_strontium_mule,
+    m.me2_mission_n7_assignments_blue_suns_base,
+    m.me2_mission_n7_assignments_javelin_missiles_launched,
   )
   .build();
 

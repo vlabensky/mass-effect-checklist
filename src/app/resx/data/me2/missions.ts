@@ -177,6 +177,50 @@ export const me2_mission_n7_assignments_lost_operative = m('Lost Operative', 'N7
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
+export const me2_mission_n7_assignments_abandoned_mine = m('Abandoned Mine', 'N7_Assignments:_Abandoned_Mine', 'Abandoned_Mine')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_anomalous_weather_detected = m('Anomalous Weather Detected', 'N7_Assignments:_Anomalous_Weather_Detected', 'Anomalous_Weather_Detected')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_blood_pack_base = m('Blood Pack Base', 'N7_Assignments:_Blood_Pack_Base', 'Blood_Pack_Base')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_blood_pack_communications_relay = m('Blood Pack Communications Relay', 'N7_Assignments:_Blood_Pack_Communications_Relay', 'Blood_Pack_Communications_Relay')
+  .availableWhen(() => me2_mission_n7_assignments_blood_pack_base.isCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_quarian_crash_site = m('Quarian Crash Site', 'N7_Assignments:_Quarian_Crash_Site', 'Quarian_Crash_Site')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_imminent_ship_crash = m('Imminent Ship Crash', 'N7_Assignments:_Imminent_Ship_Crash', 'Imminent_Ship_Crash')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_captured_mining_facility = m('Captured Mining Facility', 'N7_Assignments:_Captured_Mining_Facility', 'Captured_Mining_Facility')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_archeological_dig_site = m('Archeological Dig Site', 'N7_Assignments:_Archeological_Dig_Site', 'Archeological_Dig_Site')
+  .availableWhen(predicates.isHorizonCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_msv_strontium_mule = m('MSV Strontium Mule', 'N7_Assignments:_MSV_Strontium_Mule', 'MSV_Strontium_Mule')
+  .availableWhen(() => me2_mission_n7_assignments_archeological_dig_site.isCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_blue_suns_base = m('Blue Suns Base', 'N7_Assignments:_Blue_Suns_Base', 'Blue_Suns_Base')
+  .availableWhen(() => me2_mission_n7_assignments_msv_strontium_mule.isCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_javelin_missiles_launched = m('Javelin Missiles Launched', 'N7_Assignments:_Javelin_Missiles_Launched', 'Javelin_Missiles_Launched')
+  .availableWhen(() => me2_mission_n7_assignments_msv_strontium_mule.isCompleted)
+  .build();
+
 // Project Firewalker
 
 export const me2_mission_project_firewalker_rosalie_lost = m('Rosalie Lost', 'Project_Firewalker:_Rosalie_Lost', 'Rosalie_Lost')
