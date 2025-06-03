@@ -39,6 +39,11 @@ export const me2_mission_collector_ship = m('Collector Ship', 'Collector_Ship', 
   .withAdditionalInfo('This mission will be triggered automatically as soon as the player completes any five missions after Horizon. Also there are additional conditions that can be found in the mission\'s Wiki article.')
   .build();
 
+export const me2_mission_acquire_reaper_iff = m('Stop The Collectors: Acquire Reaper IFF', 'Acquire_Reaper_IFF', 'Acquire_Reaper_IFF')
+  .availableWhen(predicates.isCollectorShipCompleted)
+  .withAdditionalInfo('A countdown begins once the player completes this mission, with potentially dire consequences for the crew of the Normandy if Shepard delays too long in proceeding through the Omega 4 Relay.')
+  .build();
+
 // Normandy
 
 export const me2_mission_normandy_fba_couplings = m('FBA Couplings', 'Normandy:_FBA_Couplings', 'FBA_Couplings')

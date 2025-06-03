@@ -18,6 +18,7 @@ export const me2_chapter_plot = ch('Plot Missions')
     m.me2_mission_the_council,
     m.me2_mission_horizon,
     m.me2_mission_collector_ship,
+    m.me2_mission_acquire_reaper_iff,
   )
   .build();
 
