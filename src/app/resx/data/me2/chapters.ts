@@ -10,3 +10,15 @@ export const me2_chapter_prologue = ch('Prologue')
     m.me2_mission_prologue_freedoms_progress,
   )
   .build();
+
+// Normandy
+
+export const me2_chapter_normandy = ch('Normandy')
+  .hasMissions(
+    m.me2_mission_normandy_fba_couplings,
+    m.me2_mission_normandy_serrice_ice_brandy,
+    m.me2_mission_normandy_special_ingredients,
+    m.me2_mission_normandy_normandy_crash_site,
+  )
+  .build();
+
