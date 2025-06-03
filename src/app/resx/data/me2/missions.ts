@@ -66,3 +66,29 @@ export const me2_mission_omega_batarian_bartender = m('Batarian Bartender', 'Ome
 export const me2_mission_omega_struggling_quarian = m('Struggling Quarian', 'Omega:_Struggling_Quarian', 'Struggling_Quarian')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
+
+// N7 Assignments
+
+export const me2_mission_n7_assignments_wrecked_merchant_freighter = m('Wrecked Merchant Freighter', 'N7_Assignments:_Wrecked_Merchant_Freighter', 'Wrecked_Merchant_Freighter')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_abandoned_research_station = m('Abandoned Research Station', 'N7_Assignments:_Abandoned_Research_Station', 'Abandoned_Research_Station')
+  .availableWhen(() => me2_mission_n7_assignments_wrecked_merchant_freighter.isCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_hahne_kedar_facility = m('Hahne Kedar Facility', 'N7_Assignments:_Hahne_Kedar_Facility', 'Hahne_Kedar_Facility')
+  .availableWhen(() => me2_mission_n7_assignments_abandoned_research_station.isCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_msv_estevanico = m('MSV Estevanico', 'N7_Assignments:_MSV_Estevanico', 'MSV_Estevanico')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_eclipse_smuggling_depot = m('Eclipse Smuggling Depot', 'N7_Assignments:_Eclipse_Smuggling_Depot', 'Eclipse_Smuggling_Depot')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
+
+export const me2_mission_n7_assignments_lost_operative = m('Lost Operative', 'N7_Assignments:_Lost_Operative', 'Lost_Operative')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();

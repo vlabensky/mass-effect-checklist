@@ -43,3 +43,12 @@ export const me2_chapter_omega = ch('Omega')
   )
   .build();
 
+// N7 Assignments
+
+export const me2_chapter_n7_assignments = ch('N7 Assignments')
+  .hasMissions(
+    m.me2_mission_n7_assignments_wrecked_merchant_freighter,
+    m.me2_mission_n7_assignments_abandoned_research_station,
+    m.me2_mission_n7_assignments_hahne_kedar_facility,
+  )
+  .build();
