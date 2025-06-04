@@ -313,12 +313,12 @@ Wreckage: Fuel 380
 Alliance Frigate Hong Kong, Alliance Fifth Fleet
 ### Hoplos
 #### Kopis
-Artifact: Obelisk of Karza
+Hades Nexus: Obelisk of Karza
 #### Far West of System
 Wreckage: Fuel 250
 ### Sheol
 #### Gei Hinnom
-Artifact: Prothean Sphere
+Hades Nexus: Prothean Sphere
 ### Pamyat
 #### Dobrovolski
 Alliance Frigate Leipzig, Alliance First Fleet
