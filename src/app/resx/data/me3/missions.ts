@@ -7,6 +7,7 @@ export const predicates = {
   isTurianPlatoonCompleted: () => me3_mission_tuchanka_turian_platoon.isCompleted,
   isTurianPlatoonOrKroganTeamCompleted: () => me3_mission_attican_traverse_krogan_team_the_rachni.isCompleted || predicates.isTurianPlatoonCompleted(),
   isTuchankaCompleted: () => me3_mission_priority_tuchanka.isCompleted,
+  isCitadel2Completed: () => me3_mission_priority_citadel_2.isCompleted,
 };
 
 // Main Plot
@@ -206,3 +207,68 @@ export const me3_mission_n7_cerberus_fighter_base = m('N7: Cerberus Fighter Base
   .availableWhen(predicates.isTuchankaCompleted)
   .hasInnerMissions(me3_mission_citadel_heating_unit_stabilizers)
   .build();
+
+// Post-Citadel II Missions
+
+export const me3_mission_citadel_cerberus_turian_poison = m('Citadel: Cerberus Turian Poison', 'Citadel:_Cerberus_Turian_Poison', 'Citadel_Cerberus_Turian_Poison')
+  .availableWhen(predicates.isCitadel2Completed)
+  .build();
+
+export const me3_mission_arrae_ex_cerberus_scientists = m('Arrae: Ex-Cerberus Scientists', 'Arrae:_Ex-Cerberus_Scientists', 'Arrae_Ex_Cerberus_Scientists')
+  .availableWhen(predicates.isCitadel2Completed)
+  .hasInnerMissions(me3_mission_citadel_cerberus_turian_poison)
+  .build();
+
+export const me3_mission_athena_nebula_hesperia_period_statue = m('Athena Nebula: Hesperia-Period Statue', 'Athena_Nebula:_Hesperia-Period_Statue', 'Athena_Nebula_Hesperia_Period_Statue')
+  .availableWhen(predicates.isCitadel2Completed)
+  .build();
+
+export const me3_mission_citadel_batarian_codes = m('Citadel: Batarian Codes', 'Citadel:_Batarian_Codes', 'Citadel_Batarian_Codes')
+  .availableWhen(predicates.isCitadel2Completed)
+  .build();
+
+export const me3_mission_citadel_cerberus_retribution = m('Citadel: Cerberus Retribution', 'Citadel:_Cerberus_Retribution', 'Citadel_Cerberus_Retribution')
+  .availableWhen(predicates.isCitadel2Completed)
+  .build();
+
+export const me3_mission_citadel_inspirational_stories = m('Citadel: Inspirational Stories', 'Citadel:_Inspirational_Stories', 'Citadel_Inspirational_Stories')
+  .availableWhen(predicates.isCitadel2Completed)
+  .build();
+
+export const me3_mission_citadel_medical_supplies = m('Citadel: Medical Supplies', 'Citadel:_Medical_Supplies', 'Citadel_Medical_Supplies')
+  .availableWhen(predicates.isCitadel2Completed)
+  .build();
+
+export const me3_mission_citadel_medi_gel_sabotage = m('Citadel: Medi-Gel Sabotage', 'Citadel:_Medi-Gel_Sabotage', 'Citadel_MediGel_Sabotage')
+  .availableWhen(predicates.isCitadel2Completed)
+  .build();
+
+export const me3_mission_citadel_volus_ambassador = m('Citadel: Volus Ambassador', 'Citadel:_Volus_Ambassador', 'Citadel_Volus_Ambassador')
+  .availableWhen(predicates.isCitadel2Completed)
+  .build();
+
+export const me3_mission_citadel_wounded_batarian = m('Citadel: Wounded Batarian', 'Citadel:_Wounded_Batarian', 'Citadel_Wounded_Batarian')
+  .availableWhen(predicates.isCitadel2Completed)
+  .build();
+
+export const me3_mission_citadel_asari_widow = m('Citadel: Asari Widow', 'Citadel:_Asari_Widow', 'Citadel_Asari_Widow')
+  .availableWhen(predicates.isCitadel2Completed)
+  .build();
+
+export const me3_mission_kallini_ardat_yakshi_monastery = m('Kallini: Ardat-Yakshi Monastery', 'Kallini:_Ardat-Yakshi_Monastery', 'Kallini_Ardat_Yakshi_Monastery')
+  .availableWhen(predicates.isCitadel2Completed)
+  .hasInnerMissions(me3_mission_citadel_asari_widow)
+  .build();
+
+export const me3_mission_nimbus_cluster_library_of_asha = m('Nimbus Cluster: Library of Asha', 'Nimbus_Cluster:_Library_of_Asha', 'Nimbus_Cluster_Library_of_Asha')
+  .availableWhen(predicates.isCitadel2Completed)
+  .build();
+
+export const me3_mission_valhallan_threshold_prothean_data_drives = m('Valhallan Threshold: Prothean Data Drives', 'Valhallan_Threshold:_Prothean_Data_Drives', 'Valhallan_Threshold_Prothean_Data_Drives')
+  .availableWhen(predicates.isCitadel2Completed)
+  .build();
+
+export const me3_mission_citadel_shore_leave = m('Citadel: Shore Leave (Citadel DLC)', 'Citadel:_Shore_Leave_(Citadel_DLC)', 'Citadel_Shore_Leave_Citadel_DLC')
+  .availableWhen(predicates.isCitadel2Completed)
+  .build();
+

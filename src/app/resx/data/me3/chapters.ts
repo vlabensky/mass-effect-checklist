@@ -72,3 +72,23 @@ export const me3_chapter_post_tuchanka = ch('Post-Tuchanka Missions')
   )
   .build();
 
+// Post-Citadel II Missions
+
+export const me3_chapter_post_citadel_2 = ch('Post-Citadel II Missions')
+  .hasMissions(
+    m.me3_mission_arrae_ex_cerberus_scientists,
+    m.me3_mission_athena_nebula_hesperia_period_statue,
+    m.me3_mission_citadel_batarian_codes,
+    m.me3_mission_citadel_cerberus_retribution,
+    m.me3_mission_citadel_inspirational_stories,
+    m.me3_mission_citadel_medical_supplies,
+    m.me3_mission_citadel_medi_gel_sabotage,
+    m.me3_mission_citadel_volus_ambassador,
+    m.me3_mission_citadel_wounded_batarian,
+    m.me3_mission_kallini_ardat_yakshi_monastery,
+    m.me3_mission_nimbus_cluster_library_of_asha,
+    m.me3_mission_valhallan_threshold_prothean_data_drives,
+    m.me3_mission_citadel_shore_leave,
+  )
+  .build();
+
