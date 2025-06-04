@@ -8,6 +8,8 @@ export const predicates = {
   isTurianPlatoonOrKroganTeamCompleted: () => me3_mission_attican_traverse_krogan_team_the_rachni.isCompleted || predicates.isTurianPlatoonCompleted(),
   isTuchankaCompleted: () => me3_mission_priority_tuchanka.isCompleted,
   isCitadel2Completed: () => me3_mission_priority_citadel_2.isCompleted,
+  isGethDreadnoughtCompleted: () => me3_mission_priority_geth_dreadnought.isCompleted,
+  isGethFighterSquadronsOrAdmiralKorisCompleted: () => me3_mission_rannoch_geth_fighter_squadrons.isCompleted || me3_mission_rannoch_admiral_koris.isCompleted,
 };
 
 // Main Plot
@@ -48,7 +50,7 @@ export const me3_mission_priority_geth_dreadnought = m('Priority: Geth Dreadnoug
   .build();
 
 export const me3_mission_priority_rannoch = m('Priority: Rannoch', 'Priority:_Rannoch', 'Priority_Rannoch')
-  .availableWhen(() => me3_mission_priority_geth_dreadnought.isCompleted)
+  .availableWhen(predicates.isGethFighterSquadronsOrAdmiralKorisCompleted)
   .build();
 
 export const me3_mission_priority_citadel_3 = m('Priority: The Citadel III', 'Priority:_The_Citadel_III', 'Priority_The_Citadel_3')
@@ -272,3 +274,35 @@ export const me3_mission_citadel_shore_leave = m('Citadel: Shore Leave (Citadel 
   .availableWhen(predicates.isCitadel2Completed)
   .build();
 
+// Post-Geth Dreadnought Missions
+
+export const me3_mission_citadel_kakliosaur_fossil = m('Citadel: Kakliosaur Fossil', 'Citadel:_Kakliosaur_Fossil', 'Citadel_Kakliosaur_Fossil')
+  .availableWhen(predicates.isGethDreadnoughtCompleted)
+  .build();
+
+export const me3_mission_citadel_chemical_treatment = m('Citadel: Chemical Treatment', 'Citadel:_Chemical_Treatment', 'Citadel_Chemical_Treatment')
+  .availableWhen(predicates.isGethDreadnoughtCompleted)
+  .build();
+
+export const me3_mission_n7_fuel_reactors = m('N7: Fuel Reactors', 'N7:_Fuel_Reactors', 'N7_Fuel_Reactors')
+  .availableWhen(predicates.isGethDreadnoughtCompleted)
+  .hasInnerMissions(me3_mission_citadel_chemical_treatment)
+  .build();
+
+export const me3_mission_citadel_target_jamming_technology = m('Citadel: Target Jamming Technology', 'Citadel:_Target_Jamming_Technology', 'Citadel_Target_Jamming_Technology')
+  .availableWhen(predicates.isGethDreadnoughtCompleted)
+  .build();
+
+export const me3_mission_rannoch_admiral_koris = m('Rannoch: Admiral Koris', 'Rannoch:_Admiral_Koris', 'Rannoch_Admiral_Koris')
+  .availableWhen(predicates.isGethDreadnoughtCompleted)
+  .hasInnerMissions(me3_mission_citadel_target_jamming_technology)
+  .build();
+
+export const me3_mission_citadel_reaper_code_fragments = m('Citadel: Reaper Code Fragments', 'Citadel:_Reaper_Code_Fragments', 'Citadel_Reaper_Code_Fragments')
+  .availableWhen(predicates.isGethDreadnoughtCompleted)
+  .build();
+
+export const me3_mission_rannoch_geth_fighter_squadrons = m('Rannoch: Geth Fighter Squadrons', 'Rannoch:_Geth_Fighter_Squadrons', 'Rannoch_Geth_Fighter_Squadrons')
+  .availableWhen(predicates.isGethDreadnoughtCompleted)
+  .hasInnerMissions(me3_mission_citadel_reaper_code_fragments)
+  .build();

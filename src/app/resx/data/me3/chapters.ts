@@ -92,3 +92,13 @@ export const me3_chapter_post_citadel_2 = ch('Post-Citadel II Missions')
   )
   .build();
 
+// Post-Geth Dreadnought Missions
+
+export const me3_chapter_post_geth_dreadnought = ch('Post-Geth Dreadnought Missions')
+  .hasMissions(
+    m.me3_mission_citadel_kakliosaur_fossil,
+    m.me3_mission_n7_fuel_reactors,
+    m.me3_mission_rannoch_admiral_koris,
+    m.me3_mission_rannoch_geth_fighter_squadrons,
+  )
+  .build();
