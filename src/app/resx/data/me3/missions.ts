@@ -6,6 +6,7 @@ export const predicates = {
   isSurkeshCompleted: () => me3_mission_priority_surkesh.isCompleted,
   isTurianPlatoonCompleted: () => me3_mission_tuchanka_turian_platoon.isCompleted,
   isTurianPlatoonOrKroganTeamCompleted: () => me3_mission_attican_traverse_krogan_team_the_rachni.isCompleted || predicates.isTurianPlatoonCompleted(),
+  isTuchankaCompleted: () => me3_mission_priority_tuchanka.isCompleted,
 };
 
 // Main Plot
@@ -191,3 +192,17 @@ export const me3_mission_citadel_barla_von = m('Citadel: Barla Von', 'Citadel:_B
   .availableWhen(predicates.isSurkeshCompleted)
   .build();
 
+// Post-Tuchanka Missions
+
+export const me3_mission_irune_book_of_plenix = m('Irune: Book of Plenix', 'Irune:_Book_of_Plenix', 'Irune_Book_of_Plenix')
+  .availableWhen(predicates.isTuchankaCompleted)
+  .build();
+
+export const me3_mission_citadel_heating_unit_stabilizers = m('Citadel: Heating Unit Stabilizers', 'Citadel:_Heating_Unit_Stabilizers', 'Citadel_Heating_Unit_Stabilizers')
+  .availableWhen(predicates.isTuchankaCompleted)
+  .build();
+
+export const me3_mission_n7_cerberus_fighter_base = m('N7: Cerberus Fighter Base', 'N7:_Cerberus_Fighter_Base', 'N7_Cerberus_Fighter_Base')
+  .availableWhen(predicates.isTuchankaCompleted)
+  .hasInnerMissions(me3_mission_citadel_heating_unit_stabilizers)
+  .build();

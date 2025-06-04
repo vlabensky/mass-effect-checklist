@@ -63,3 +63,12 @@ export const me3_chapter_post_surkesh = ch('Post-Sur\'Kesh Missions')
   )
   .build();
 
+// Post-Tuchanka Missions
+
+export const me3_chapter_post_tuchanka = ch('Post-Tuchanka Missions')
+  .hasMissions(
+    m.me3_mission_irune_book_of_plenix,
+    m.me3_mission_n7_cerberus_fighter_base,
+  )
+  .build();
+
