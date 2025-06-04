@@ -3,6 +3,9 @@ import { m } from '../builders';
 export const predicates = {
   isCitadel1Completed: () => me3_mission_priority_the_citadel_1.isCompleted,
   isPalavenCompleted: () => me3_mission_priority_palaven.isCompleted,
+  isSurkeshCompleted: () => me3_mission_priority_surkesh.isCompleted,
+  isTurianPlatoonCompleted: () => me3_mission_tuchanka_turian_platoon.isCompleted,
+  isTurianPlatoonOrKroganTeamCompleted: () => me3_mission_attican_traverse_krogan_team_the_rachni.isCompleted || predicates.isTurianPlatoonCompleted(),
 };
 
 // Main Plot
@@ -141,3 +144,50 @@ export const me3_mission_citadel_aria_t_loak = m('Citadel: Aria T\'Loak (Omega D
 export const me3_mission_citadel_dr_bryson = m('Citadel: Dr. Bryson (Leviathan DLC)', 'Citadel:_Dr._Bryson', 'Citadel_Dr_Bryson')
   .availableWhen(predicates.isPalavenCompleted)
   .build();
+
+// Post-Sur'Kesh Missions
+
+export const me3_mission_citadel_krogan_dying_message = m('Citadel: Krogan Dying Message', 'Citadel:_Krogan_Dying_Message', 'Citadel_Krogan_Dying_Message')
+  .availableWhen(predicates.isSurkeshCompleted)
+  .build();
+
+export const me3_mission_attican_traverse_krogan_team_the_rachni = m('Attican Traverse: Krogan Team/The Rachni', 'Attican_Traverse:_Krogan_Team/The_Rachni', 'Attican_Traverse_Krogan_Team_The_Rachni')
+  .availableWhen(predicates.isSurkeshCompleted)
+  .hasInnerMissions(me3_mission_citadel_krogan_dying_message)
+  .build();
+
+export const me3_mission_tuchanka_turian_platoon = m('Tuchanka: Turian Platoon', 'Tuchanka:_Turian_Platoon', 'Tuchanka_Turian_Platoon')
+  .availableWhen(predicates.isSurkeshCompleted)
+  .build();
+
+export const me3_mission_citadel_cerberus_automated_turret_schematics = m('Citadel: Cerberus Automated Turret Schematics', 'Citadel:_Cerberus_Automated_Turret_Schematics', 'Citadel_Cerberus_Automated_Turret_Schematics')
+  .availableWhen(predicates.isTurianPlatoonCompleted)
+  .build();
+
+export const me3_mission_tuchanka_bomb = m('Tuchanka: Bomb', 'Tuchanka:_Bomb', 'Tuchanka_Bomb')
+  .availableWhen(predicates.isTurianPlatoonCompleted)
+  .hasInnerMissions(me3_mission_citadel_cerberus_automated_turret_schematics)
+  .build();
+
+export const me3_mission_benning_evidence = m('Benning: Evidence', 'Benning:_Evidence', 'Benning_Evidence')
+  .availableWhen(predicates.isTurianPlatoonOrKroganTeamCompleted)
+  .build();
+
+export const me3_mission_n7_cerberus_abductions = m('N7: Cerberus Abductions', 'N7:_Cerberus_Abductions', 'N7_Cerberus_Abductions')
+  .availableWhen(predicates.isTurianPlatoonOrKroganTeamCompleted)
+  .hasInnerMissions(me3_mission_benning_evidence)
+  .build();
+
+export const me3_mission_citadel_improved_power_grid = m('Citadel: Improved Power Grid', 'Citadel:_Improved_Power_Grid', 'Citadel_Improved_Power_Grid')
+  .availableWhen(predicates.isSurkeshCompleted)
+  .build();
+
+export const me3_mission_n7_cerberus_attack = m('N7: Cerberus Attack', 'N7:_Cerberus_Attack', 'N7_Cerberus_Attack')
+  .availableWhen(predicates.isSurkeshCompleted)
+  .hasInnerMissions(me3_mission_citadel_improved_power_grid)
+  .build();
+
+export const me3_mission_citadel_barla_von = m('Citadel: Barla Von', 'Citadel:_Barla_Von', 'Citadel_Barla_Von')
+  .availableWhen(predicates.isSurkeshCompleted)
+  .build();
+

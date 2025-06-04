@@ -50,3 +50,16 @@ export const me3_chapter_post_palaven = ch('Post-Palaven Missions')
   )
   .build();
 
+// Post-Sur'Kesh Missions
+
+export const me3_chapter_post_surkesh = ch('Post-Sur\'Kesh Missions')
+  .hasMissions(
+    m.me3_mission_attican_traverse_krogan_team_the_rachni,
+    m.me3_mission_tuchanka_turian_platoon,
+    m.me3_mission_tuchanka_bomb,
+    m.me3_mission_n7_cerberus_abductions,
+    m.me3_mission_n7_cerberus_attack,
+    m.me3_mission_citadel_barla_von,
+  )
+  .build();
+
