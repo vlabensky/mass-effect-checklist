@@ -1,5 +1,9 @@
 import { m } from '../builders';
 
+export const predicates = {
+  isCitadel1Completed: () => me3_mission_priority_the_citadel_1.isCompleted,
+};
+
 // Main Plot
 
 export const me3_mission_prologue_earth = m('Prologue: Earth', 'Prologue:_Earth', 'Prologue_Earth')
@@ -46,4 +50,15 @@ export const me3_mission_priority_cerberus_hq = m('Priority: Cerberus Headquarte
   .build();
 
 export const me3_mission_priority_earth = m('Priority: Earth', 'Priority:_Earth', 'Priority_Earth')
+  .build();
+
+// After The Citadel I
+
+export const me3_mission_citadel_alien_medi_gel_formula = m('Citadel: Alien Medi-Gel Formula', 'Citadel:_Alien_Medi-Gel_Formula', 'Citadel_Alien_MediGel_Formula')
+  .availableWhen(predicates.isCitadel1Completed)
+  .build();
+
+export const me3_mission_n7_cerberus_lab = m('N7: Cerberus Lab', 'N7:_Cerberus_Lab', 'N7_Cerberus_Lab')
+  .availableWhen(predicates.isCitadel1Completed)
+  .hasInnerMissions(me3_mission_citadel_alien_medi_gel_formula)
   .build();
