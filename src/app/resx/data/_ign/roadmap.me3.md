@@ -189,7 +189,7 @@ _Empty_
 #### South of Faix, East of Nios (Between 4th & 5th Rings)
 Wreckage: Fuel 350
 #### Digeris
-Artifact: Banner of the 1st Regiment
+Apien Crest: Banner of the First Regiment
 ### Gemmae
 #### Pherios
 Turian 79th Flotila
@@ -225,6 +225,31 @@ Wreckage: Fuel 450
 #### Camaron
 Advanced Power Relay
 
+## Athena Nebula
+### Parnitha
+#### Tevura
+Asari Cruiser Cybaen
+### Orisoni
+#### Egalic
+Asari Research Ships
+#### East of Star (Betweeen 2nd & 3rd Rings)
+Wreckage: Fuel 350
+### Tomaros
+#### South of Niagolon
+Wreckage: Fuel 200
+#### Pronoia
+Asari Cruiser Nefrane
+### Vernio
+#### Polissa
+Athena Nebula: Hesperia-Period Statue
+#### Northeast of Star (Between 2nd & 3rd Rings)
+Wreckage: Fuel 400
+### Ialessa
+#### East of Star (Between 3rd & 4th Rings)
+Wreckage: Fuel 500
+#### Trikalon
+Asari Engineers
+
 ## Exodus Cluster
 ### Utopia
 #### South of Eden Prime (3rd Ring)
@@ -242,6 +267,43 @@ Alliance Cruiser Shanghai
 Alliance Spec Ops Team Delta
 #### Northwest of Star
 Wreckage: Fuel 250
+
+## Gemini Sigma
+### Han
+#### Near Mass Relay
+Wreckage: Fuel 470
+#### Mavigon
+Salvage: Credits 10,000
+### Ming
+#### South East of Star (Between 1st & 2nd rings)
+Wreckage: Fuel 320
+#### Parag
+Alliance Cruiser Nairobi, Alliance Third Fleet
+
+## Hades Gamma
+### Dis
+#### East of Star (2nd Ring)
+Wreckage: Fuel 200
+#### Klensal
+Salvage: Credits 10,000
+### Farinata
+#### North of Star (1st Ring)
+Wreckage: Fuel 200
+#### Juntauma
+Alliance Frigate Agincourt, Alliance First Fleet
+### Cacus
+#### Chohe
+Salvage: Credits 10,000
+#### West of Xamarri (Between 4th and 5th Rings)
+Wreckage: Fuel 400
+### Antaeus
+#### Near Mass Relay
+Wreckage: Fuel 300
+#### Trebin
+Salvage: Credits 10,000
+### Plutus
+#### Nonuel
+Spec Ops Team Zeta, 103rd Marine Divison
 
 ## Hades Nexus
 ### Hekate
@@ -262,6 +324,11 @@ Artifact: Prothean Sphere
 Alliance Frigate Leipzig, Alliance First Fleet
 #### South of Star
 Wreckage: Fuel 100
+
+## Horsehead Nebula
+### Pax
+#### Noveria
+N7: Cerberus Fighter Base
 
 ## Hourglass Nebula
 ### Osun
@@ -286,7 +353,8 @@ Terminus Freighters
 ## Ismar Frontier
 ### Aquila
 #### Metaponto
-Advanced Biotic Implants
+Ismar Frontier: Prototype Components
+- Advanced Biotic Implants
 
 ## Kepler Verge
 _Empty_
@@ -298,7 +366,7 @@ Weapon Upgrade Kit
 #### West of Verush
 Wreckage: Fuel 300
 #### Khar'shan
-Artifact: Pillars of Strength
+Kite's Nest: Pillars of Strength
 ### Untrel
 #### Adek
 Salvage: Credits 10,000
@@ -306,7 +374,8 @@ Salvage: Credits 10,000
 Wreckage: Fuel 100
 ### Vular
 #### Vana
-Black Market Artifact
+Aria: Blue Suns
+- Black Market Artifact
 #### Northwest of Star, 3rd Ring
 Wreckage: Fuel 150
 ### Indris (Leviathan DLC)
@@ -320,7 +389,8 @@ Wreckage: Fuel 300
 ## Krogan DMZ
 ### Dranek
 #### Rothla
-Shadow Broker Wet Squad
+Citadel: Barla Von
+- Shadow Broker Wet Squad
 #### Southeast of Star
 Wreckage: Fuel 200
 ### Nith
@@ -385,6 +455,8 @@ Wreckage: Fuel 200
 Salvage: Credits 10,000
 #### South of Star
 Wreckage: Fuel 350
+#### Sanctum
+N7: Cerberus Lab
 ### Mil (Leviathan DLC)
 #### Chalkhos
 Husk Neural Map
