@@ -28,6 +28,7 @@ export const me3_chapter_main_plot = ch('Main Plot')
 export const me3_chapter_post_citadel_1 = ch('Post-Citadel I Missions')
   .hasMissions(
     m.me3_mission_n7_cerberus_lab,
+    m.me3_mission_priority_eden_prime,
   )
   .build();
 

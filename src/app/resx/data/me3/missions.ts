@@ -76,3 +76,12 @@ export const me3_mission_n7_cerberus_lab = m('N7: Cerberus Lab', 'N7:_Cerberus_L
   .availableWhen(predicates.isCitadel1Completed)
   .hasInnerMissions(me3_mission_citadel_alien_medi_gel_formula)
   .build();
+
+export const me3_mission_eden_prime_resistance_movement = m('Eden Prime: Resistance Movement', 'Eden_Prime:_Resistance_Movement', 'Eden_Prime_Resistance_Movement')
+  .availableWhen(predicates.isCitadel1Completed)
+  .build();
+
+export const me3_mission_priority_eden_prime = m('Priority: Eden Prime (From Ashes DLC)', 'Priority:_Eden_Prime', 'Priority_Eden_Prime')
+  .availableWhen(predicates.isCitadel1Completed)
+  .hasInnerMissions(me3_mission_eden_prime_resistance_movement)
+  .build();

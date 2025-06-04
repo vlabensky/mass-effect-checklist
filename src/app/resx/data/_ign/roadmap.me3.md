@@ -27,7 +27,7 @@ N7: Cerberus Lab
 !> Citadel: Alien Medi-Gel Formula
 !> - expires after Priority: Tuchanka
 
-Priority: Eden Prime
+Priority: Eden Prime (From Ashes DLC)
 !> Eden Prime: Resistance Movement
 
 ### Can acquire
