@@ -42,6 +42,7 @@ export const me3_mission_priority_horizon = m('Priority: Horizon', 'Priority:_Ho
   .build();
 
 export const me3_mission_priority_cerberus_hq = m('Priority: Cerberus Headquarters', 'Priority:_Cerberus_Headquarters', 'Priority_Cerberus_HQ')
+  .withAdditionalInfo('This is the point of no return. Once the mission is started, the remainder of the game runs in locked progression with no possibility to complete side missions or visit the Citadel.')
   .build();
 
 export const me3_mission_priority_earth = m('Priority: Earth', 'Priority:_Earth', 'Priority_Earth')
