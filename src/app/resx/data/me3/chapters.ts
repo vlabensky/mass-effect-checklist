@@ -102,3 +102,15 @@ export const me3_chapter_post_geth_dreadnought = ch('Post-Geth Dreadnought Missi
     m.me3_mission_rannoch_geth_fighter_squadrons,
   )
   .build();
+
+// Post-Rannoch Missions
+
+export const me3_chapter_post_rannoch = ch('Post-Rannoch Missions')
+  .hasMissions(
+    m.me3_mission_dekuuna_code_of_the_ancients_elcor_extraction,
+    m.me3_mission_silean_nebula_rings_of_alune,
+    m.me3_mission_hades_nexus_prothean_sphere,
+    m.me3_mission_hades_nexus_obelisk_of_karza,
+  )
+  .build();
+

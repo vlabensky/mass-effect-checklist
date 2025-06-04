@@ -10,6 +10,7 @@ export const predicates = {
   isCitadel2Completed: () => me3_mission_priority_citadel_2.isCompleted,
   isGethDreadnoughtCompleted: () => me3_mission_priority_geth_dreadnought.isCompleted,
   isGethFighterSquadronsOrAdmiralKorisCompleted: () => me3_mission_rannoch_geth_fighter_squadrons.isCompleted || me3_mission_rannoch_admiral_koris.isCompleted,
+  isRannochCompleted: () => me3_mission_priority_rannoch.isCompleted,
 };
 
 // Main Plot
@@ -305,4 +306,22 @@ export const me3_mission_citadel_reaper_code_fragments = m('Citadel: Reaper Code
 export const me3_mission_rannoch_geth_fighter_squadrons = m('Rannoch: Geth Fighter Squadrons', 'Rannoch:_Geth_Fighter_Squadrons', 'Rannoch_Geth_Fighter_Squadrons')
   .availableWhen(predicates.isGethDreadnoughtCompleted)
   .hasInnerMissions(me3_mission_citadel_reaper_code_fragments)
+  .build();
+
+// Post-Rannoch Missions
+
+export const me3_mission_dekuuna_code_of_the_ancients_elcor_extraction = m('Dekuuna: Code of the Ancients/Elcor Extraction', 'Dekuuna:_Code_of_the_Ancients/Elcor_Extraction', 'Dekuuna_Code_of_the_Ancients_Elcor_Extraction')
+  .availableWhen(predicates.isRannochCompleted)
+  .build();
+
+export const me3_mission_silean_nebula_rings_of_alune = m('Silean Nebula: Rings of Alune', 'Silean_Nebula:_Rings_of_Alune', 'Silean_Nebula_Rings_of_Alune')
+  .availableWhen(predicates.isRannochCompleted)
+  .build();
+
+export const me3_mission_hades_nexus_prothean_sphere = m('Hades Nexus: Prothean Sphere', 'Hades_Nexus:_Prothean_Sphere', 'Hades_Nexus_Prothean_Sphere')
+  .availableWhen(predicates.isRannochCompleted)
+  .build();
+
+export const me3_mission_hades_nexus_obelisk_of_karza = m('Hades Nexus: Obelisk of Karza', 'Hades_Nexus:_Obelisk_of_Karza', 'Hades_Nexus_Obelisk_of_Karza')
+  .availableWhen(predicates.isRannochCompleted)
   .build();
