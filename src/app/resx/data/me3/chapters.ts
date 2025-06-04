@@ -30,6 +30,9 @@ export const me3_chapter_post_citadel_1 = ch('Post-Citadel I Missions')
     m.me3_mission_n7_cerberus_lab,
     m.me3_mission_priority_eden_prime,
   )
+  .canAcquireMissions(
+    m.me3_mission_shrike_abyssal_prothean_obelisk,
+  )
   .build();
 
 // Post-Palaven Missions
@@ -47,6 +50,13 @@ export const me3_chapter_post_palaven = ch('Post-Palaven Missions')
     m.me3_mission_shrike_abyssal_prothean_obelisk,
     m.me3_mission_citadel_aria_t_loak,
     m.me3_mission_citadel_dr_bryson,
+  )
+  .canAcquireMissions(
+    m.me3_mission_benning_evidence,
+    m.me3_mission_citadel_barla_von,
+    m.me3_mission_citadel_heating_unit_stabilizers,
+    m.me3_mission_citadel_improved_power_grid,
+    m.me3_mission_irune_book_of_plenix,
   )
   .build();
 
@@ -89,6 +99,17 @@ export const me3_chapter_post_citadel_2 = ch('Post-Citadel II Missions')
     m.me3_mission_nimbus_cluster_library_of_asha,
     m.me3_mission_valhallan_threshold_prothean_data_drives,
     m.me3_mission_citadel_shore_leave,
+  )
+  .canAcquireMissions(
+    m.me3_mission_citadel_cerberus_ciphers,
+    m.me3_mission_citadel_chemical_treatment,
+    m.me3_mission_citadel_kakliosaur_fossil,
+    m.me3_mission_citadel_reaper_code_fragments,
+    m.me3_mission_citadel_target_jamming_technology,
+    m.me3_mission_dekuuna_code_of_the_ancients_elcor_extraction,
+    m.me3_mission_hades_nexus_obelisk_of_karza,
+    m.me3_mission_hades_nexus_prothean_sphere,
+    m.me3_mission_silean_nebula_rings_of_alune,
   )
   .build();
 
