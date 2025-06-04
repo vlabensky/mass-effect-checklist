@@ -159,554 +159,290 @@ N7: Communication Hub
 # Systems
 
 ## Aethon Cluster
-
 ### Aru
 #### Irune
 Artifact: Book of Plenix
-#### Cherk Sab
-Volus Fabrication Units (War Asset)
 #### West of Irune
-Wreckage: Fuel (200)
-
+Wreckage: Fuel 200
+#### Cherk Sab
+Volus Fabrication Units
 ### Esori
 #### Solu Paolis
-Volus Dreadnought Kwonu (War Asset)
+Volus Dreadnought Kwonu
 #### South/Southwest of Kailo
-Wreckage: Fuel (300)
-
-### Nura
-#### Oma Ker
-Intel: Volus Intelligence Archives
-#### Northeast of Welunt
-Wreckage: Fuel (150)
-
+Wreckage: Fuel 300
 ### Satu Arrd
 #### Nalisin
-War Asset: Volus Engineering Team
+Volus Engineering Team
 #### Southeast of Nalisin
-Wreckage: Fuel (325)
+Wreckage: Fuel 200
+### Nura
+#### Oma Ker
+Volus Intelligence Archives
+#### Northeast of Star (Between 2nd & 3rd Ring)
+Wreckage: Fuel 250
 
 ## Annos Basin
-
-### Pranas
-_No mission critical assets or Fuel, or the page has no data table._
+_There is nothing to be scanned or found in this sector._
 
 ## Apien Crest
-
 ### Castellus
+#### South of Faix, East of Nios (Between 4th & 5th Rings)
+Wreckage: Fuel 350
 #### Digeris
-War Asset: Turian Spec Ops Team
-#### East of Fiax
-Wreckage: Fuel (200)
-
+Artifact: Banner of the 1st Regiment
 ### Gemmae
-#### Pheiros
-War Asset: Turian 79th Flotilla
-#### South of Pheiros
-Wreckage: Fuel (175)
-#### Outside Reaper Space near Star System
-War Asset: Emergency Fuel Pods
-
-### Trebia
-#### Thessia
-Priority: Thessia (Mission)
-
-## Arcturus Stream
-
-### Arcturus
-#### Arcturus Station
-Intel: Intel from Battle of Arcturus
-#### West of Arcturus Station
-Wreckage: Fuel (400)
-
-### Euler
-#### Fermi
-War Asset: Evacuation Convoys
-#### South of Fermi
-Wreckage: Fuel (350)
+#### Pherios
+Turian 79th Flotila
+#### South of Pherios
+Wreckage: Fuel 800
+#### West of Pherios
+Wreckage: Fuel 750
 
 ## Argos Rho
-
 ### Gorgon
 #### Camaron
-War Asset: Advanced Power Relays
-#### Southwest of Camaron
-Wreckage: Fuel (250)
-
+War Asset: Advanced Power Relays (50)
 ### Hydra
 #### Canrum
-War Asset: Haptic Optics Array
-#### West/Southwest of Metgos
-Wreckage: Fuel (350)
-
+War Asset: Haptic Optics Array (50)
+Wreckage: Fuel 270
 ### Phoenix
-#### Pinnacle Station
-War Asset: Turian Seventh Fleet
 #### Intai'sei
-War Asset: Fossilized Kakliosaur
-#### West of Pinnacle Station
-Wreckage: Fuel (400)
-#### The Citadel
-Priority: The Citadel II (Mission)
+Artifact: Fossilized Kakliosaur (Contributes to Krogan Clans War Asset)
+Credits: 15,000
+#### Pinnacle Station
+War Asset: Turian Spec Ops Team (40)
+
+## Arcturus Stream
+### Arcturus
+#### Arcturus Station
+Intel: Battle of Arcturus (Weapon Damage +5% or Shields +5%)
+Wreckage: Fuel 350
+### Euler
+Wreckage: Fuel 100
 
 ## Athena Nebula
-
 ### Ialessa
-#### Ialessa
-War Asset: Asari Command
-#### Northwest of Ialessa
-Wreckage: Fuel (240)
-
+#### Trikalon
+War Asset: Asari Engineers (30)
+Wreckage: Fuel 500
 ### Orisoni
 #### Egalic
-War Asset: Asari Research Ships
-#### West of Egalic
-Wreckage: Fuel (180)
-
+War Asset: Asari Research Ships (35)
+Wreckage: Fuel 350
 ### Parnitha
 #### Tevura
-War Asset: Asari Cruiser Cybaen
-#### Southwest of Tevura
-Wreckage: Fuel (160)
-
+War Asset: Asari Cruiser Cybaen (30)
 ### Tomaros
 #### Pronoia
-War Asset: Asari Cruiser Nefrane
-#### Northeast of Pronoia
-Wreckage: Fuel (400)
-
-### Vernio
-#### Polissa
-War Asset: Asari Sixth Fleet
-#### West of Polissa
-Wreckage: Fuel (370)
+War Asset: Asari Cruiser Nefrane (30)
+Wreckage: Fuel 200
 
 ## Attican Beta
-
 ### Hercules
 #### Eletania
-War Asset: Interferometric Array
-#### South of Eletania
-Wreckage: Fuel (370)
-
+War Asset: Interferometric Array (45)
+Wreckage: Fuel 370
 ### Theseus
 #### Feros
-War Asset: Exogeni Scientists
-#### Quana
-War Asset: ExoGeni Scientists
-#### North of Feros
-Wreckage: Fuel (400)
+War Asset: ExoGeni Scientists (40)
+Wreckage: Fuel 240
 
-## Exodus Cluster
-
-### Asgard
-#### Borr
-War Asset: Remains of Reaper Destroyer
-#### Tyr
-War Asset: Alliance Naval Exploration Flotilla
-#### Terra Nova
-War Asset: Alliance Cruiser Shanghai
-#### Loki
-War Asset: Alliance Spec Ops Team Delta
-#### North of Borr
-Wreckage: Fuel (200)
-
-### Utopia
-#### Zion
-War Asset: Prothean Data Files
-#### Northeast of Zion
-Wreckage: Fuel (300)
+## Crescent Nebula
+### Lusarn
+#### Beyalt
+Salvage: Credits 10,000
+Wreckage: Fuel 150
+### Tasale
+#### Illium
+War Asset: Liquid Assets
+Wreckage: Fuel 350
 
 ## Far Rim
 
-### Dholen
-#### Gotha
-War Asset: Turian Survivor Fleet
-#### Southwest of Gotha
-Wreckage: Fuel (175)
-
-### Ma-at
-#### Ma-at
-War Asset: Reaper Weapon Schematics
+*Note: Specific data for the Far Rim cluster is limited. It is generally considered the beginning of geth space and may not contain scannable assets.*
 
 ## Gemini Sigma
-
 ### Han
 #### Mavigon
-War Asset: Salarian Third Fleet
-#### West of Mavigon
-Wreckage: Fuel (200)
-
+Salvage: Credits 10,000
+Wreckage: Fuel 470
 ### Ming
 #### Parag
-War Asset: Salarian Special Tasks Group
-#### West of Antiroprus
-Wreckage: Fuel (270)
+War Asset: Alliance Cruiser Nairobi / Alliance Third Fleet (25)
+Wreckage: Fuel 320
 
 ## Hades Gamma
-
 ### Antaeus
 #### Trebin
-War Asset: Prothean Sphere
-#### Southeast of Trebin
-Wreckage: Fuel (400)
-
+Salvage: Credits 10,000
+Wreckage: Fuel 300
 ### Cacus
 #### Chohe
-War Asset: Silean Nebula: Rings of Alune
-#### Southeast of Zayarter
-Wreckage: Fuel (100)
-
+Salvage: Credits 10,000
+Wreckage: Fuel 400
 ### Dis
 #### Klensal
-War Asset: 10000 Credits
-#### Northeast of Klensal
-Wreckage: Fuel (120)
-
+Salvage: Credits 10,000
+Wreckage: Fuel 200
 ### Farinata
 #### Juntauma
-War Asset: Alliance Cruiser Agincourt
-#### West of Juntauma
-Wreckage: Fuel (225)
-
+War Asset: Alliance Frigate Agincourt & Alliance First Fleet (105)
+Wreckage: Fuel 200
 ### Plutus
 #### Nonuel
-War Asset: Special Ops Team Zeta
-#### West of Viduus
-Wreckage: Fuel (200)
+War Asset: Special Ops Team Zeta & 103rd Marine Division (70)
 
 ## Hades Nexus
-
-### Hekate
-#### Asteria
-War Asset: Alliance First Fleet
-#### South of Asteria
-Wreckage: Fuel (250)
-
-### Hoplos
-#### Kopis
-War Asset: Obelisk of Karza
-#### West of Kopis
-Wreckage: Fuel (250)
-
 ### Sheol
 #### Gei Hinnom
-War Asset: Prothean Data Drives
-#### East of Gei Hinnom
-Wreckage: Fuel (250)
+Mission: Artifact Recovery
+War Asset: Terminus Freighter Crew
+### Hoplos
+#### Kamchatka
+Mission: N7: Cerberus Attack
+War Asset: Alliance First Fleet
+### Hekate
+#### Asteria Station
+War Asset: Medical Supplies
+### Pamyat
+#### Unknown Location
+Wreckage: Fuel 400
 
 ## Horsehead Nebula
-
 ### Pax
-#### Noveria
-War Asset: Intact Reaper Weapon
-#### Veles
-War Asset: Elcor Flotilla
-#### Southeast of Noveria
-Wreckage: Fuel (350)
+#### Ontarom
+War Asset: Special Forces Unit
+Wreckage: Fuel 300
+## Hourglass Nebula
+### Faryar
+#### Daratar
+Mission: N7: Cerberus Abductions
+### Osun
+#### Aequitas
+War Asset: Aethon Cluster Recovered Supplies
 
 ## Hourglass Nebula
-
-### Faryar
-#### Alingon
-War Asset: Shadow Broker Support Team
-#### Northwest of Alingon
-Wreckage: Fuel (350)
-
 ### Osun
 #### Erinle
-War Asset: Serrice Guard
-#### West of Erinle
-Wreckage: Fuel (100)
-
-### Ploitari
-#### Zanethu
-War Asset: Terminus Freighters
-#### West of Thegan
-Wreckage: Fuel (200)
-
+Salvage: Credits 10,000
+#### Southwest of Erinle
+Wreckage: Fuel 100
+### Faryar
+#### Alingon
+Shadow Broker Starship Tech
+#### Northwest of Alingon
+Wreckage: Fuel 600
 ### Sowilo
 #### Hagalaz
-War Asset: Shadow Broker Wet Squad
-#### North of Hagalaz
-Wreckage: Fuel (75)
-
-## Ismar Frontier
-
-### Aquila
-_No mission critical assets or Fuel, or the page has no data table._
-
+Shadow Broker Support Team
+#### North of Star
+Wreckage: Fuel 200
+### Ploitari
+#### Zanethu
+Terminus Freighters
 ## Kepler Verge
 
+## Ismar Frontier
+### Aquila
+#### Kypladon
+War Asset: Resistance Movement
+Wreckage: Fuel 150
+## Kepler Verge
 ### Newton
 #### Ontarom
-War Asset: Alliance Fighter Base
-#### West of Ontarom
-Wreckage: Fuel (300)
+Mission: N7: Cerberus Abductions
+War Asset: Science Team
 
 ## Kite's Nest
-
-### Harsa
-#### Verush
-War Asset: Hanar & Drell Forces
-#### Khar'shan
-War Asset: Pillars of Strength
-#### Northwest of Verush
-Wreckage: Fuel (300)
-
-### Untrel
-#### Adek
-War Asset: Drell Assassin
-#### West of Adek
-Wreckage: Fuel (100)
-
 ### Vular
-#### Vana
-War Asset: Black Star Corsairs
-#### South of Vana
-Wreckage: Fuel (200)
+#### Khar'shan
+War Asset: Batarian Fleet
+### Untrel
+#### Erszbat
+War Asset: Prison Ship
+
+## Kepler Verge
+_There are no resources in this system._
 
 ## Krogan DMZ
-
-### Aralakh
-#### Tuchanka
-Priority: Tuchanka (Mission)
-Attican Traverse: Krogan Team (Mission)
-Tuchanka: Turian Platoon (Mission)
-Tuchanka: Bomb (Mission)
-#### Durak
-War Asset: Krogan First Division
-#### Kanin
-War Asset: Krogan Clans
-#### Kralla
-War Asset:Krogan Mercenaries
-#### Vartok
-War Asset: Urdnot Wrex
-#### West of Durak
-Wreckage: Fuel (300)
-
 ### Nith
-#### Mantun
-War Asset: Clan Urdnot
-#### West of Tuchanka
-Wreckage: Fuel (150)
-
-## Minos Wasteland
-
-### Arrae
-_No mission critical assets or Fuel, or the page has no data table._
-
-### Fortis
-_No mission critical assets or Fuel, or the page has no data table._
-
-## Nimbus Cluster
-
-### Agaiou
-#### Carcosa
-War Asset: Library of Asha
-#### South of Carcosa
-Wreckage: Fuel (150)
-
-### Kallini
-#### Kiconi
-War Asset: Asari Second Fleet
-#### Holakana
-War Asset: Asari Engineers
-#### North of Kiconi
-Wreckage: Fuel (300)
-
-### Mesana
-#### Lesuss
-Mesana: Distress Signal (Mission)
-
-### Pelion (The Pelion Nebula is part of the Nimbus Cluster)
-#### Trategos
-War Asset: Asari Cruiser Talein
-#### West of Trategos
-Wreckage: Fuel (300)
-#### Sthenia
-War Asset: Asari Third Fleet
-#### Aitis
-War Asset: Asari Sixth Fleet
-#### North of Sthenia
-Wreckage: Fuel (150)
-#### South of Aitis
-Wreckage: Fuel (200)
-#### Northeast of Sthenia
-Wreckage: Fuel (250)
+#### Rothla
+War Asset: Clan Warband
+### Khar'shan Border
+#### Korbal
+War Asset: Krogan Mercenaries
 
 ## Ninmah Cluster
+### Gamus
+#### Benning
+Mission: Citadel: Benning: Evidence
+War Asset: Human Resistance
 
-### Maskim Xul
-_No mission critical assets or Fuel, or the page has no data table._
-
-### Mulla Xul
-_No mission critical assets or Fuel, or the page has no data table._
-
-## Nubian Expanse
-
+## Nubian Expance
 ### Dakka
-#### Pragia
-War Asset: Research Data from Pragia
-#### East of Pragia
-Wreckage: Fuel (400)
+#### Zada Ban
+War Asset: Medical Equipment
 
-### Kalini
-#### Kloji
-War Asset: Alliance Marine Recon Unit
-#### South of Taha Imja
-Wreckage: Fuel (250)
+## Exodus Cluster
+### Asgard
+#### Terra Nova
+War Asset: Resistance Fighters
+Wreckage: Fuel 300
+### Utopia
+#### Eden Prime
+Mission: Eden Prime: From Ashes (DLC)
+War Asset: Prothean Artifact
 
-### Qertassi
-#### Norehsa
-War Asset: Element Zero Converter
-#### North of Norehsa
-Wreckage: Fuel (200)
+## Minos Wasteland
+### Caestus
+#### Cyone
+War Asset: Terminus Supply Routes
+Wreckage: Fuel 250
+
+## Nimbus Cluster
+### Mesana
+#### Nevos
+War Asset: Asari Science Team
+Mission: Ardat-Yakshi Monastery
 
 ## Perseus Veil
-
-### Tikkun
-_No mission critical assets or Fuel, or the page has no data table._
+### Makhur
+#### Haratar
+War Asset: Geth Data
+Mission: Geth Dreadnought
 
 ## Serpent Nebula
-
-### Boltzmann
-_No mission critical assets or Fuel, or the page has no data table._
-
-### Euler
-_No mission critical assets or Fuel, or the page has no data table._
-
-### Horsehead Nebula
-_No mission critical assets or Fuel, or the page has no data table._
-
-### Sahrabarik
-_No mission critical assets or Fuel, or the page has no data table._
-
 ### Widow
 #### The Citadel
-Priority: The Citadel I (Mission)
-#### Serpent Nebula
-The Citadel (Location)
-
-## Sigurd's Cradle
-
-### Decoris
-#### Laena
-War Asset: Dr. Jelize
-#### Southwest of Laena
-Wreckage: Fuel (150)
-
-### Lenal
-#### Triginta Petra
-War Asset: Javelin Missile Launchers
-#### Northeast of Triginta Petra
-Wreckage: Fuel (270)
-
-### Mil
-#### Chalkhos
-War Asset: Liquid Assets (10000 Credits)
-#### West of Chalkhos
-Wreckage: Fuel (270)
-
-### Psi Tophet
-#### Vemal
-War Asset: Salarian First Fleet
-#### South of Vemal
-Wreckage: Fuel (450)
-
-### Skepsis
-#### Watson
-War Asset: Terminus Freighters
-#### North of Watson
-Wreckage: Fuel (200)
-#### Fiennral
-War Asset: Shadow Broker Starship Tech
-#### Southeast of Fiennral
-Wreckage: Fuel (250)
+Hub: Multiple missions, stores, and war assets
 
 ## Silean Nebula
-
-### Kypladon
-#### Hanalei
-War Asset: Hanalei Signal Data
-#### West of Hanalei
-Wreckage: Fuel (350)
-
-### Loropi
-#### Yasilia
-War Asset: Asari Cruiser squadrons
-#### South of Yasilia
-Wreckage: Fuel (170)
-
-### Nahuala
-#### Hyetiana
-War Asset: Serrice Guard Armory
-#### North of Hyetiana
-Wreckage: Fuel (250)
-
-### Phontes
-#### Dekuuna
-War Asset: Code of the Ancients
-War Asset: Elcor Flotilla
-#### Oltan
-War Asset: Elcor Evacuation Fleet
-#### South of Oltan
-Wreckage: Fuel (450)
-
 ### Teyolia
 #### Nevos
-War Asset: Rings of Alune
-#### Quirezia
-War Asset: Asari Commandos
-#### South of Nevos
-Wreckage: Fuel (350)
+War Asset: Asari Cruisers
+### Nahuala
+#### Thal
+War Asset: Civilian Convoy
 
 ## The Shrike Abyssal
-
-### Kyzil
-#### Heshtok
-War Asset: Prothean Data
-#### North of Heshtok
-Wreckage: Fuel (200)
-
-### Thal
-#### Allamet
-War Asset: Prothean Obelisk
-#### West of Allamet
-Wreckage: Fuel (200)
-
-### Urla Rast
-#### Talis Fia
-War Asset: Wreckage Debris
-#### South of Talis Fia
-Wreckage: Fuel (100)
-
 ### Xe Cha
-#### Zada Ban
-War Asset: Advanced Biotic Implants
-#### North of Zada Ban
-Wreckage: Fuel (150)
+#### Dekuuna
+War Asset: Elcor Delegation
+Mission: Citadel: Elcor Extraction
+
+## Sigurd's Cradle
+### Decoris
+#### Sanctum
+Mission: N7: Communication Hub
+War Asset: Communication Towers
 
 ## Valhallan Threshold
-
 ### Micah
-#### Elohi
-War Asset: Emergency Fuel Station
-#### Farlas
-War Asset: Prothean-Tipped Eezo Collection
-#### Kakabel
-War Asset: Prothean Data Files
-#### North of Elohi
-Wreckage: Fuel (250)
-
-### Paz
-#### Garvug
-War Asset: Prothean Data Disc
-#### South of Garvug
-Wreckage: Fuel (150)
-
-### Raheel-Leyya
-#### Cao Mon
-War Asset: Wrecked Mass Relay
-#### North of Agent
-Wreckage: Fuel (150)
+#### Asteria Station
+Mission: N7: Fuel Reactors
+War Asset: Fuel Reactors
+### Pelion
+#### Themis
+War Asset: Ex-Cerberus Engineers
