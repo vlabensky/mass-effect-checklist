@@ -156,3 +156,313 @@ N7: Communication Hub
 !> Citadel: Cerberus Ciphers
 
 # Systems
+
+## Aethon Cluster
+### Aru
+#### Irune
+Artifact: Book of Plenix
+#### West of Irune
+Wreckage: Fuel 200
+#### Cherk Sab
+Volus Fabrication Units
+### Esori
+#### Solu Paolis
+Volus Dreadnought Kwonu
+#### South/Southwest of Kailo
+Wreckage: Fuel 300
+### Satu Arrd
+#### Nalisin
+Volus Engineering Team
+#### Southeast of Nalisin
+Wreckage: Fuel 200
+### Nura
+#### Oma Ker
+Volus Intelligence Archives
+#### Northeast of Star (Between 2nd & 3rd Ring)
+Wreckage: Fuel 250
+
+## Annos Basin
+_Empty_
+
+## Apien Crest
+### Castellus
+#### South of Faix, East of Nios (Between 4th & 5th Rings)
+Wreckage: Fuel 350
+#### Digeris
+Artifact: Banner of the 1st Regiment
+### Gemmae
+#### Pherios
+Turian 79th Flotila
+#### South of Pherios
+Wreckage: Fuel 800
+#### West of Pherios
+Wreckage: Fuel 750
+
+## Arcturus Stream
+### Arcturus
+#### Arcturus Staion
+Intel From Battle of Arcturus
+#### West of Themis
+Wreckage: Fuel 350
+### Euler
+#### Southwest of Yukawa
+Wreckage: Fuel 100
+
+## Argos Rho
+### Hydra
+#### South of Star 2nd Ring
+Wreckage: Fuel 270
+#### Canrum
+Haptic Optics Array
+### Phoenix
+#### Pinnacle Station
+Turian Spec Ops Team
+#### Intai'sei
+Artifact: Fossilized Kakliosaur
+#### Northeast of Intai'sei
+Wreckage: Fuel 450
+### Gorgon
+#### Camaron
+Advanced Power Relay
+
+## Exodus Cluster
+### Utopia
+#### South of Eden Prime (3rd Ring)
+Wreckage: Fuel 200
+#### Zion
+Prothean Data Files
+### Asgard
+#### Borr
+Remains of Reaper Destroyer
+#### Tyr
+Alliance Naval Exploration Flotilla
+#### Terra Nova
+Alliance Cruiser Shanghai
+#### Loki
+Alliance Spec Ops Team Delta
+#### Northwest of Star
+Wreckage: Fuel 250
+
+## Hades Nexus
+### Hekate
+#### Southwest of Mass Relay
+Wreckage: Fuel 380
+#### Asteria
+Alliance Frigate Hong Kong, Alliance Fifth Fleet
+### Hoplos
+#### Kopis
+Artifact: Obelisk of Karza
+#### Far West of System
+Wreckage: Fuel 250
+### Sheol
+#### Gei Hinnom
+Artifact: Prothean Sphere
+### Pamyat
+#### Dobrovolski
+Alliance Frigate Leipzig, Alliance First Fleet
+#### South of Star
+Wreckage: Fuel 100
+
+## Hourglass Nebula
+### Osun
+#### Erinle
+Salvage: Credits 10,000
+#### Southwest of Erinle
+Wreckage: Fuel 100
+### Faryar
+#### Alingon
+Shadow Broker Starship Tech
+#### Northwest of Alingon
+Wreckage: Fuel 600
+### Sowilo
+#### Hagalaz
+Shadow Broker Support Team
+#### North of Star
+Wreckage: Fuel 200
+### Ploitari
+#### Zanethu
+Terminus Freighters
+
+## Ismar Frontier
+### Aquila
+#### Metaponto
+Advanced Biotic Implants
+
+## Kepler Verge
+_Empty_
+
+## Kite's Nest
+### Harsa
+#### Verush
+Weapon Upgrade Kit
+#### West of Verush
+Wreckage: Fuel 300
+#### Khar'shan
+Artifact: Pillars of Strength
+### Untrel
+#### Adek
+Salvage: Credits 10,000
+#### West of Adek
+Wreckage: Fuel 100
+### Vular
+#### Vana
+Black Market Artifact
+#### Northwest of Star, 3rd Ring
+Wreckage: Fuel 150
+### Indris (Leviathan DLC)
+#### Cholis
+Govenor Grothan Pazness
+#### Camala
+Unsuccessful search for Garneau
+#### N/NE of star between 2nd and 3rd ring
+Wreckage: Fuel 300
+
+## Krogan DMZ
+### Dranek
+#### Rothla
+Shadow Broker Wet Squad
+#### Southeast of Star
+Wreckage: Fuel 200
+### Nith
+#### Northeast of Star
+Wreckage: Fuel 300
+
+## Minos Wasteland
+### Fortis
+#### South of Mass Relay
+Wreckage: Fuel 200
+#### Pietas
+Salvage: Credits 10,000
+
+## Nimbus Cluster
+### Pelion
+#### South of Aitis
+Wreckage: Fuel 650
+#### Trategos
+Intact Reaper Weapon
+#### Northeast of Trategos
+Wreckage: Fuel 750
+#### Northwest of Sthenia
+Wreckage: Fuel 850
+### Agaiou
+#### Carcosa
+Artifact: Library of Asha
+### Kallini
+#### South of Pania
+Wreckage: Fuel 300
+
+## Nubian Expanse
+### Dakka
+#### Pragia
+Research Data from Pragia
+#### Southeast of Star
+Wreckage: Fuel 350
+### Qertassi
+#### Norehsa
+Alliance Frigate Trafalgar
+#### North of Noresha
+Wreckage: Fuel 50
+### Kalabsha
+#### Yamm
+Alliance Marine Recon Unit, 103rd Marine Division
+#### Northeast of Star
+Wreckage: Fuel 300
+
+## Perseus Veil
+_Empty_
+
+## Serpent Nebula
+_Empty_
+
+## Sigurd's Cradle
+### Skepsis
+#### Watson
+Javelin Missle Launchers
+#### Between Crick and Mass Relay
+Wreckage: Fuel 200
+### Decoris
+#### Laena
+Salvage: Credits 10,000
+#### South of Star
+Wreckage: Fuel 350
+### Mil (Leviathan DLC)
+#### Chalkhos
+Husk Neural Map
+#### Mylasi (Asteroid belt NE of star)
+Unsuccessful search for Leviathan
+### Lenal (Leviathan DLC)
+#### Triginta Petra
+Dextro Rations
+#### Laconix
+Unsuccessful search for Leviathan
+### Psi Tophet (Leviathan DLC)
+#### 2181 Despoina
+Leviathan
+
+## Silean Nebula
+### Kypladon
+#### Hanalei
+Dr.Jelize
+### Teyolia
+#### Nevos
+Artifact: Rings of Alune
+#### Quirezia
+Salvage: Credits 10,000
+#### East of Star (3rd Ring)
+Wreckage: Fuel 375
+### Phontes
+#### Dekuuna
+Artifact: Code of the Ancients
+#### Oltan
+Elcor Flotilla
+#### East of Lenuamund (Between 2nd and 3rd Rings)
+Wreckage: Fuel 175
+### Nahuala
+#### Hyetiana
+Serrice Guard
+#### Southwest of Agessia
+Wreckage: Fuel 250
+### Loropi
+#### South East of Wreckage (Near the Ring)
+Wreckage: Fuel 300
+#### Yasilium
+Armali Sniper Unit
+
+## The Shrike Abyssal
+### Xe Cha
+#### Zada Ban
+Salvage: Credits 10,000
+#### South of Star (Between 2nd & 3rd ring)
+Wreckage: Fuel 150
+### Urla Rast
+#### Northeast of Star (Between 2nd and 3rd ring)
+Wreckage: Fuel 300
+#### Talis Fia
+Artifact: Prothean Obelisk
+### Thal
+#### Southwest of star (between 1st and 2nd rings)
+Wreckage: Fuel 400
+#### Tyrix (Very small asteroid North of sun, between 3rd and 4th ring)
+Vorcha Labor Team
+### Kyzil
+#### Heshtok
+Void Devils Fighter Wing
+#### Just a little Southwest of Rustaka
+Fuel 350
+
+## Valhallan Threshold
+### Raheel-Leyya
+#### Northeast of Star
+Wreckage: Fuel 95
+### Paz
+#### Garvug
+Artifact: Prothean Data Disks
+#### East of Star
+Wreckage: Fuel 160
+### Micah
+#### Elohi
+Emergency Fuel Pods
+#### Farlas
+Element Zero Converter
+#### Southeast of Star
+Wreckage: Fuel 340
