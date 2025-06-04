@@ -160,7 +160,7 @@ N7: Communication Hub
 ## Aethon Cluster
 ### Aru
 #### Irune
-Artifact: Book of Plenix
+Irune: Book of Plenix
 #### West of Irune
 Wreckage: Fuel 200
 #### Cherk Sab
@@ -218,7 +218,7 @@ Haptic Optics Array
 #### Pinnacle Station
 Turian Spec Ops Team
 #### Intai'sei
-Artifact: Fossilized Kakliosaur
+Citadel: Kakliosaur Fossil
 #### Northeast of Intai'sei
 Wreckage: Fuel 450
 ### Gorgon
@@ -346,7 +346,7 @@ Wreckage: Fuel 750
 Wreckage: Fuel 850
 ### Agaiou
 #### Carcosa
-Artifact: Library of Asha
+Nimbus Cluster: Library of Asha
 ### Kallini
 #### South of Pania
 Wreckage: Fuel 300
@@ -405,14 +405,14 @@ Leviathan
 Dr.Jelize
 ### Teyolia
 #### Nevos
-Artifact: Rings of Alune
+Silean Nebula: Rings of Alune
 #### Quirezia
 Salvage: Credits 10,000
 #### East of Star (3rd Ring)
 Wreckage: Fuel 375
 ### Phontes
 #### Dekuuna
-Artifact: Code of the Ancients
+Dekuuna: Code of the Ancients/Elcor Extraction
 #### Oltan
 Elcor Flotilla
 #### East of Lenuamund (Between 2nd and 3rd Rings)
@@ -438,7 +438,7 @@ Wreckage: Fuel 150
 #### Northeast of Star (Between 2nd and 3rd ring)
 Wreckage: Fuel 300
 #### Talis Fia
-Artifact: Prothean Obelisk
+Shrike Abyssal: Prothean Obelisk
 ### Thal
 #### Southwest of star (between 1st and 2nd rings)
 Wreckage: Fuel 400
@@ -456,7 +456,7 @@ Fuel 350
 Wreckage: Fuel 95
 ### Paz
 #### Garvug
-Artifact: Prothean Data Disks
+Valhallan Threshold: Prothean Data Drives
 #### East of Star
 Wreckage: Fuel 160
 ### Micah
