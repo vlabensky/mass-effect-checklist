@@ -114,3 +114,11 @@ export const me3_chapter_post_rannoch = ch('Post-Rannoch Missions')
   )
   .build();
 
+// Post-Thessia Missions
+
+export const me3_chapter_post_thessia = ch('Post-Thessia Missions')
+  .hasMissions(
+    m.me3_mission_n7_communication_hub,
+  )
+  .build();
+

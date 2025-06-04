@@ -11,6 +11,7 @@ export const predicates = {
   isGethDreadnoughtCompleted: () => me3_mission_priority_geth_dreadnought.isCompleted,
   isGethFighterSquadronsOrAdmiralKorisCompleted: () => me3_mission_rannoch_geth_fighter_squadrons.isCompleted || me3_mission_rannoch_admiral_koris.isCompleted,
   isRannochCompleted: () => me3_mission_priority_rannoch.isCompleted,
+  isThessiaCompleted: () => me3_mission_priority_thessia.isCompleted,
 };
 
 // Main Plot
@@ -324,4 +325,15 @@ export const me3_mission_hades_nexus_prothean_sphere = m('Hades Nexus: Prothean 
 
 export const me3_mission_hades_nexus_obelisk_of_karza = m('Hades Nexus: Obelisk of Karza', 'Hades_Nexus:_Obelisk_of_Karza', 'Hades_Nexus_Obelisk_of_Karza')
   .availableWhen(predicates.isRannochCompleted)
+  .build();
+
+// Post-Thessia Missions
+
+export const me3_mission_citadel_cerberus_ciphers = m('Citadel: Cerberus Ciphers', 'Citadel:_Cerberus_Ciphers', 'Citadel_Cerberus_Ciphers')
+  .availableWhen(predicates.isThessiaCompleted)
+  .build();
+
+export const me3_mission_n7_communication_hub = m('N7: Communication Hub', 'N7:_Communication_Hub', 'N7_Communication_Hub')
+  .availableWhen(predicates.isThessiaCompleted)
+  .hasInnerMissions(me3_mission_citadel_cerberus_ciphers)
   .build();
