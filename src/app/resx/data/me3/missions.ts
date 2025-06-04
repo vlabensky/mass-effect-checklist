@@ -2,6 +2,7 @@ import { m } from '../builders';
 
 export const predicates = {
   isCitadel1Completed: () => me3_mission_priority_the_citadel_1.isCompleted,
+  isPalavenCompleted: () => me3_mission_priority_palaven.isCompleted,
 };
 
 // Main Plot
@@ -84,4 +85,59 @@ export const me3_mission_eden_prime_resistance_movement = m('Eden Prime: Resista
 export const me3_mission_priority_eden_prime = m('Priority: Eden Prime (From Ashes DLC)', 'Priority:_Eden_Prime', 'Priority_Eden_Prime')
   .availableWhen(predicates.isCitadel1Completed)
   .hasInnerMissions(me3_mission_eden_prime_resistance_movement)
+  .build();
+
+// Post-Palaven Missions
+
+export const me3_mission_aria_blood_pack = m('Aria: Blood Pack', 'Aria:_Blood_Pack', 'Aria_Blood_Pack')
+  .availableWhen(predicates.isPalavenCompleted)
+  .build();
+
+export const me3_mission_aria_blue_suns = m('Aria: Blue Suns', 'Aria:_Blue_Suns', 'Aria_Blue_Suns')
+  .availableWhen(predicates.isPalavenCompleted)
+  .build();
+
+export const me3_mission_aria_eclipse = m('Aria: Eclipse', 'Aria:_Eclipse', 'Aria_Eclipse')
+  .availableWhen(predicates.isPalavenCompleted)
+  .build();
+
+export const me3_mission_citadel_gx12_thermal_pipe = m('Citadel: GX12 Thermal Pipe', 'Citadel:_GX12_Thermal_Pipe', 'Citadel_GX12_Thermal_Pipe')
+  .availableWhen(predicates.isPalavenCompleted)
+  .build();
+
+export const me3_mission_citadel_hanar_diplomat = m('Citadel: Hanar Diplomat', 'Citadel:_Hanar_Diplomat', 'Citadel_Hanar_Diplomat')
+  .availableWhen(predicates.isPalavenCompleted)
+  .build();
+
+export const me3_mission_citadel_biotic_amp_interfaces = m('Citadel: Biotic Amp Interfaces', 'Citadel:_Biotic_Amp_Interfaces', 'Citadel_Biotic_Amp_Interfaces')
+  .availableWhen(predicates.isPalavenCompleted)
+  .build();
+
+export const me3_mission_grissom_academy_emergency_evacuation = m('Grissom Academy: Emergency Evacuation', 'Grissom_Academy:_Emergency_Evacuation', 'Grissom_Academy_Emergency_Evacuation')
+  .availableWhen(predicates.isPalavenCompleted)
+  .hasInnerMissions(me3_mission_citadel_biotic_amp_interfaces)
+  .build();
+
+export const me3_mission_apien_crest_banner_of_the_first_regiment = m('Apien Crest: Banner of the First Regiment', 'Apien_Crest:_Banner_of_the_First_Regiment', 'Apien_Crest_Banner_of_the_First_Regiment')
+  .availableWhen(predicates.isPalavenCompleted)
+  .build();
+
+export const me3_mission_ismar_frontier_prototype_components = m('Ismar Frontier: Prototype Components', 'Ismar_Frontier:_Prototype_Components', 'Ismar_Frontier_Prototype_Components')
+  .availableWhen(predicates.isPalavenCompleted)
+  .build();
+
+export const me3_mission_kites_nest_pillars_of_strength = m('Kite\'s Nest: Pillars of Strength', 'Kites_Nest:_Pillars_of_Strength', 'Kites_Nest_Pillars_of_Strength')
+  .availableWhen(predicates.isPalavenCompleted)
+  .build();
+
+export const me3_mission_shrike_abyssal_prothean_obelisk = m('Shrike Abyssal: Prothean Obelisk', 'Shrike_Abyssal:_Prothean_Obelisk', 'Shrike_Abyssal_Prothean_Obelisk')
+  .availableWhen(predicates.isPalavenCompleted)
+  .build();
+
+export const me3_mission_citadel_aria_t_loak = m('Citadel: Aria T\'Loak (Omega DLC)', 'Citadel:_Aria_T\'Loak', 'Citadel_Aria_T\'Loak')
+  .availableWhen(predicates.isPalavenCompleted)
+  .build();
+
+export const me3_mission_citadel_dr_bryson = m('Citadel: Dr. Bryson (Leviathan DLC)', 'Citadel:_Dr._Bryson', 'Citadel_Dr_Bryson')
+  .availableWhen(predicates.isPalavenCompleted)
   .build();

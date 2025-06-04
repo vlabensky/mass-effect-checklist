@@ -32,3 +32,21 @@ export const me3_chapter_post_citadel_1 = ch('Post-Citadel I Missions')
   )
   .build();
 
+// Post-Palaven Missions
+
+export const me3_chapter_post_palaven = ch('Post-Palaven Missions')
+  .hasMissions(
+    m.me3_mission_aria_blood_pack,
+    m.me3_mission_aria_blue_suns,
+    m.me3_mission_aria_eclipse,
+    m.me3_mission_citadel_gx12_thermal_pipe,
+    m.me3_mission_citadel_hanar_diplomat,
+    m.me3_mission_apien_crest_banner_of_the_first_regiment,
+    m.me3_mission_ismar_frontier_prototype_components,
+    m.me3_mission_kites_nest_pillars_of_strength,
+    m.me3_mission_shrike_abyssal_prothean_obelisk,
+    m.me3_mission_citadel_aria_t_loak,
+    m.me3_mission_citadel_dr_bryson,
+  )
+  .build();
+
