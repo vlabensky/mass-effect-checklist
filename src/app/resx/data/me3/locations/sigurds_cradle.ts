@@ -47,15 +47,9 @@ export const me3_location_sigurds_cradle_mil_chalkhos = loc('Chalkhos')
   .hasMissions(m.me3_mission_war_asset)
   .build();
 
-export const me3_location_sigurds_cradle_mil_mylasi = loc('Mylasi (Asteroid belt NE of star)')
-  .withAdditionalInfo('Unsuccessful search for Leviathan')
-  .hasMissions(m.me3_mission_war_asset)
-  .build();
-
 export const me3_system_sigurds_cradle_mil = sys('Mil (Leviathan DLC)')
   .hasLocations(
     me3_location_sigurds_cradle_mil_chalkhos,
-    me3_location_sigurds_cradle_mil_mylasi,
   )
   .build();
 
@@ -64,14 +58,9 @@ export const me3_location_sigurds_cradle_lenal_triginta_petra = loc('Triginta Pe
   .hasMissions(m.me3_mission_war_asset)
   .build();
 
-export const me3_location_sigurds_cradle_lenal_laconix = loc('Laconix')
-  .withAdditionalInfo('Unsuccessful search for Leviathan')
-  .build();
-
 export const me3_system_sigurds_cradle_lenal = sys('Lenal (Leviathan DLC)')
   .hasLocations(
     me3_location_sigurds_cradle_lenal_triginta_petra,
-    me3_location_sigurds_cradle_lenal_laconix,
   )
   .build();
 
