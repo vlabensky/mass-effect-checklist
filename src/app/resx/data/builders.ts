@@ -1,6 +1,7 @@
 import { Chapter, type Mission, type Cluster, type System, type Location } from './types';
 
 const always = () => true;
+const never = () => false;
 
 const missionNames = new Set<string>();
 const chapterNames = new Set<string>();
@@ -21,6 +22,7 @@ export class MissionBuilder {
   fandomUrlPath: string;
   ignUrlPath: string;
   isAvailable?: () => boolean;
+  isExpired?: () => boolean;
   additionalInfo?: string;
   innerMissions?: Mission[];
   innerMissionNames: Set<string>;
@@ -59,6 +61,11 @@ export class MissionBuilder {
     return this;
   }
 
+  expiresAfter(predicate: () => boolean) {
+    this.isExpired = predicate;
+    return this;
+  }
+
   build(): Mission {
     return {
       name: this.name,
@@ -66,6 +73,7 @@ export class MissionBuilder {
       innerMissions: this.innerMissions ?? [],
       isAvailable: this.isAvailable ?? always,
       isCompleted: false,
+      isExpired: this.isExpired ?? never,
       additionalInfo: this.additionalInfo,
     };
   }

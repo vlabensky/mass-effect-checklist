@@ -21,6 +21,7 @@ export type Mission = {
   innerMissions: Mission[];
   isAvailable: () => boolean;
   isCompleted: boolean;
+  isExpired: () => boolean;
   additionalInfo?: string;
 };
 

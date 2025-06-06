@@ -69,6 +69,7 @@ describe('Builders tests', () => {
         },
         innerMissions: [],
         isAvailable: () => true,
+        isExpired: () => false,
         isCompleted: false,
         additionalInfo: undefined,
       }, {
@@ -79,6 +80,7 @@ describe('Builders tests', () => {
         },
         innerMissions: [],
         isAvailable: () => true,
+        isExpired: () => false,
         isCompleted: true,
         additionalInfo: undefined,
       }];
@@ -88,6 +90,28 @@ describe('Builders tests', () => {
       expect(() => {
         missionBuilder.hasInnerMissions(...duplicateInnerMissions);
       }).toThrow('Inner mission with name Duplicate Inner Mission already exists');
+    });
+
+    it('should set default expiration to false when expiresAfter is not called', () => {
+      const mission = m('Test Mission 7', 'Test_Fandom_Path_7', 'Test_IGN_Path_7').build();
+
+      expect(mission.isExpired()).toBe(false);
+    });
+
+    it('should expire the mission when the predicate returns true', () => {
+      const mission = m('Test Mission 8', 'Test_Fandom_Path_8', 'Test_IGN_Path_8')
+        .expiresAfter(() => true)
+        .build();
+
+      expect(mission.isExpired()).toBe(true);
+    });
+
+    it('should not expire the mission when the predicate returns false', () => {
+      const mission = m('Test Mission 9', 'Test_Fandom_Path_9', 'Test_IGN_Path_9')
+        .expiresAfter(() => false)
+        .build();
+
+      expect(mission.isExpired()).toBe(false);
     });
   });
 
@@ -100,6 +124,7 @@ describe('Builders tests', () => {
       },
       innerMissions: [],
       isAvailable: () => true,
+      isExpired: () => false,
       isCompleted: false,
       additionalInfo: undefined,
     }, {
@@ -110,6 +135,7 @@ describe('Builders tests', () => {
       },
       innerMissions: [],
       isAvailable: () => true,
+      isExpired: () => false,
       isCompleted: true,
       additionalInfo: undefined,
     }];
@@ -181,6 +207,7 @@ describe('Builders tests', () => {
       },
       innerMissions: [],
       isAvailable: () => true,
+      isExpired: () => false,
       isCompleted: false,
       additionalInfo: undefined,
     }, {
@@ -191,6 +218,7 @@ describe('Builders tests', () => {
       },
       innerMissions: [],
       isAvailable: () => true,
+      isExpired: () => false,
       isCompleted: true,
       additionalInfo: undefined,
     }];
@@ -215,7 +243,7 @@ describe('Builders tests', () => {
       const location = loc('Test Location 3')
         .withAdditionalInfo('Some location additional information')
         .build();
-    
+
       expect(location.additionalInfo).toBe('Some location additional information');
     });
 
