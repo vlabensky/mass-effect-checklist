@@ -344,3 +344,8 @@ export const me3_mission_n7_communication_hub = m('N7: Communication Hub', 'N7:_
   .availableWhen(predicates.isThessiaCompleted)
   .hasInnerMissions(me3_mission_citadel_cerberus_ciphers)
   .build();
+
+// Search & Rescue Missions
+
+export const me3_mission_war_asset = m('War Asset', 'War_Asset', 'War_Asset')
+  .build();

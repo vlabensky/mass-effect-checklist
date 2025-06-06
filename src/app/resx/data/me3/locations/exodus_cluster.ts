@@ -1,13 +1,16 @@
 import { cl, loc, sys } from '../../builders';
+import * as m from '../missions';
 
 // Exodus Cluster
 
 export const me3_location_exodus_cluster_utopia_south_of_eden_prime = loc('South of Eden Prime (3rd Ring)')
   .withAdditionalInfo('Wreckage: Fuel 200')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_exodus_cluster_utopia_zion = loc('Zion')
   .withAdditionalInfo('Prothean Data Files')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_exodus_cluster_utopia = sys('Utopia')
@@ -19,22 +22,27 @@ export const me3_system_exodus_cluster_utopia = sys('Utopia')
 
 export const me3_location_exodus_cluster_asgard_borr = loc('Borr')
   .withAdditionalInfo('Remains of Reaper Destroyer')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_exodus_cluster_asgard_tyr = loc('Tyr')
   .withAdditionalInfo('Alliance Naval Exploration Flotilla')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_exodus_cluster_asgard_terra_nova = loc('Terra Nova')
   .withAdditionalInfo('Alliance Cruiser Shanghai')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_exodus_cluster_asgard_loki = loc('Loki')
   .withAdditionalInfo('Alliance Spec Ops Team Delta')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_exodus_cluster_asgard_northwest_of_star = loc('Northwest of Star')
   .withAdditionalInfo('Wreckage: Fuel 250')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_exodus_cluster_asgard = sys('Asgard')

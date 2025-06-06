@@ -5,14 +5,17 @@ import * as m from '../missions';
 
 export const me3_location_kites_nest_harsa_verush = loc('Verush')
   .withAdditionalInfo('Weapon Upgrade Kit')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_kites_nest_harsa_west_of_verush = loc('West of Verush')
   .withAdditionalInfo('Wreckage: Fuel 300')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_kites_nest_harsa_kharshan = loc('Khar\'shan')
   .withAdditionalInfo('Kite\'s Nest: Pillars of Strength')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_kites_nest_harsa = sys('Harsa')
@@ -25,10 +28,12 @@ export const me3_system_kites_nest_harsa = sys('Harsa')
 
 export const me3_location_kites_nest_untrel_adek = loc('Adek')
   .withAdditionalInfo('Salvage: Credits 10,000')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_kites_nest_untrel_west_of_adek = loc('West of Adek')
   .withAdditionalInfo('Wreckage: Fuel 100')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_kites_nest_untrel = sys('Untrel')
@@ -44,6 +49,7 @@ export const me3_location_kites_nest_vular_vana = loc('Vana')
 
 export const me3_location_kites_nest_vular_northwest_of_star = loc('Northwest of Star, 3rd Ring')
   .withAdditionalInfo('Wreckage: Fuel 150')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_kites_nest_vular = sys('Vular')
@@ -55,14 +61,17 @@ export const me3_system_kites_nest_vular = sys('Vular')
 
 export const me3_location_kites_nest_indris_cholis = loc('Cholis')
   .withAdditionalInfo('Govenor Grothan Pazness')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_kites_nest_indris_camala = loc('Camala')
   .withAdditionalInfo('Unsuccessful search for Garneau')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_kites_nest_indris_north_northeast_of_star = loc('N/NE of star between 2nd and 3rd ring')
   .withAdditionalInfo('Wreckage: Fuel 300')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_kites_nest_indris = sys('Indris (Leviathan DLC)')

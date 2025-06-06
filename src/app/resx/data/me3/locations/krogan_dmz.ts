@@ -9,6 +9,7 @@ export const me3_location_krogan_dmz_dranek_rothla = loc('Rothla')
 
 export const me3_location_krogan_dmz_dranek_southeast_of_star = loc('Southeast of Star')
   .withAdditionalInfo('Wreckage: Fuel 200')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_krogan_dmz_dranek = sys('Dranek')
@@ -20,6 +21,7 @@ export const me3_system_krogan_dmz_dranek = sys('Dranek')
 
 export const me3_location_krogan_dmz_nith_northeast_of_star = loc('Northeast of Star')
   .withAdditionalInfo('Wreckage: Fuel 300')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_krogan_dmz_nith = sys('Nith')

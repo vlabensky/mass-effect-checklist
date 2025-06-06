@@ -474,7 +474,7 @@ Leviathan
 ## Silean Nebula
 ### Kypladon
 #### Hanalei
-Dr.Jelize
+Dr. Jelize
 ### Teyolia
 #### Nevos
 Silean Nebula: Rings of Alune

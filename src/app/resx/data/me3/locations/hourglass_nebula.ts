@@ -1,13 +1,16 @@
 import { cl, loc, sys } from '../../builders';
+import * as m from '../missions';
 
 // Hourglass Nebula
 
 export const me3_location_hourglass_nebula_osun_erinle = loc('Erinle')
   .withAdditionalInfo('Salvage: Credits 10,000')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_hourglass_nebula_osun_southwest_of_erinle = loc('Southwest of Erinle')
   .withAdditionalInfo('Wreckage: Fuel 100')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_hourglass_nebula_osun = sys('Osun')
@@ -19,10 +22,12 @@ export const me3_system_hourglass_nebula_osun = sys('Osun')
 
 export const me3_location_hourglass_nebula_faryar_alingon = loc('Alingon')
   .withAdditionalInfo('Shadow Broker Starship Tech')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_hourglass_nebula_faryar_northwest_of_alingon = loc('Northwest of Alingon')
   .withAdditionalInfo('Wreckage: Fuel 600')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_hourglass_nebula_faryar = sys('Faryar')
@@ -34,10 +39,12 @@ export const me3_system_hourglass_nebula_faryar = sys('Faryar')
 
 export const me3_location_hourglass_nebula_sowilo_hagalaz = loc('Hagalaz')
   .withAdditionalInfo('Shadow Broker Support Team')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_hourglass_nebula_sowilo_north_of_star = loc('North of Star')
   .withAdditionalInfo('Wreckage: Fuel 200')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_hourglass_nebula_sowilo = sys('Sowilo')
@@ -49,6 +56,7 @@ export const me3_system_hourglass_nebula_sowilo = sys('Sowilo')
 
 export const me3_location_hourglass_nebula_ploitari_zanethu = loc('Zanethu')
   .withAdditionalInfo('Terminus Freighters')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_hourglass_nebula_ploitari = sys('Ploitari')

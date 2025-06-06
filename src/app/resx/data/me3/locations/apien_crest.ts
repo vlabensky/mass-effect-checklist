@@ -5,6 +5,7 @@ import * as m from '../missions';
 
 export const me3_location_apien_crest_castellus_south_of_faix = loc('South of Faix, East of Nios (Between 4th & 5th Rings)')
   .withAdditionalInfo('Wreckage: Fuel 350')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_apien_crest_castellus_digeris = loc('Digeris')
@@ -20,14 +21,17 @@ export const me3_system_apien_crest_castellus = sys('Castellus')
 
 export const me3_location_apien_crest_gemmae_pherios = loc('Pherios')
   .withAdditionalInfo('Turian 79th Flotila')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_apien_crest_gemmae_south_of_pherios = loc('South of Pherios')
   .withAdditionalInfo('Wreckage: Fuel 800')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_apien_crest_gemmae_west_of_pherios = loc('West of Pherios')
   .withAdditionalInfo('Wreckage: Fuel 750')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_apien_crest_gemmae = sys('Gemmae')

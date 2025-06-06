@@ -5,10 +5,12 @@ import * as m from '../missions';
 
 export const me3_location_hades_nexus_hekate_southwest_of_mass_relay = loc('Southwest of Mass Relay')
   .withAdditionalInfo('Wreckage: Fuel 380')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_hades_nexus_hekate_asteria = loc('Asteria')
   .withAdditionalInfo('Alliance Frigate Hong Kong, Alliance Fifth Fleet')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_hades_nexus_hekate = sys('Hekate')
@@ -24,6 +26,7 @@ export const me3_location_hades_nexus_hoplos_kopis = loc('Kopis')
 
 export const me3_location_hades_nexus_hoplos_far_west_of_system = loc('Far West of System')
   .withAdditionalInfo('Wreckage: Fuel 250')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_hades_nexus_hoplos = sys('Hoplos')
@@ -45,10 +48,12 @@ export const me3_system_hades_nexus_sheol = sys('Sheol')
 
 export const me3_location_hades_nexus_pamyat_dobrovolski = loc('Dobrovolski')
   .withAdditionalInfo('Alliance Frigate Leipzig, Alliance First Fleet')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_hades_nexus_pamyat_south_of_star = loc('South of Star')
   .withAdditionalInfo('Wreckage: Fuel 100')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_hades_nexus_pamyat = sys('Pamyat')

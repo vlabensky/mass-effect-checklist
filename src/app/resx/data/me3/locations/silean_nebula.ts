@@ -4,7 +4,8 @@ import * as m from '../missions';
 // Silean Nebula
 
 export const me3_location_silean_nebula_kypladon_hanalei = loc('Hanalei')
-  .withAdditionalInfo('Dr.Jelize')
+  .withAdditionalInfo('Dr. Jelize')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_silean_nebula_kypladon = sys('Kypladon')
@@ -19,10 +20,12 @@ export const me3_location_silean_nebula_teyolia_nevos = loc('Nevos')
 
 export const me3_location_silean_nebula_teyolia_quirezia = loc('Quirezia')
   .withAdditionalInfo('Salvage: Credits 10,000')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_silean_nebula_teyolia_east_of_star = loc('East of Star (3rd Ring)')
   .withAdditionalInfo('Wreckage: Fuel 375')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_silean_nebula_teyolia = sys('Teyolia')
@@ -39,10 +42,12 @@ export const me3_location_silean_nebula_phontes_dekuuna = loc('Dekuuna')
 
 export const me3_location_silean_nebula_phontes_oltan = loc('Oltan')
   .withAdditionalInfo('Elcor Flotilla')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_silean_nebula_phontes_east_of_lenuamund = loc('East of Lenuamund (Between 2nd and 3rd Rings)')
   .withAdditionalInfo('Wreckage: Fuel 175')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_silean_nebula_phontes = sys('Phontes')
@@ -55,10 +60,12 @@ export const me3_system_silean_nebula_phontes = sys('Phontes')
 
 export const me3_location_silean_nebula_nahuala_hyetiana = loc('Hyetiana')
   .withAdditionalInfo('Serrice Guard')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_silean_nebula_nahuala_southwest_of_agessia = loc('Southwest of Agessia')
   .withAdditionalInfo('Wreckage: Fuel 250')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_silean_nebula_nahuala = sys('Nahuala')
@@ -70,10 +77,12 @@ export const me3_system_silean_nebula_nahuala = sys('Nahuala')
 
 export const me3_location_silean_nebula_loropi_south_east_of_wreckage = loc('South East of Wreckage (Near the Ring)')
   .withAdditionalInfo('Wreckage: Fuel 300')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_silean_nebula_loropi_yasilium = loc('Yasilium')
   .withAdditionalInfo('Armali Sniper Unit')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_silean_nebula_loropi = sys('Loropi')

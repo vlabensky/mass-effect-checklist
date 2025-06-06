@@ -1,13 +1,16 @@
 import { cl, loc, sys } from '../../builders';
+import * as m from '../missions';
 
 // Hades Gamma
 
 export const me3_location_hades_gamma_dis_east_of_star = loc('East of Star (2nd Ring)')
   .withAdditionalInfo('Wreckage: Fuel 200')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_hades_gamma_dis_klensal = loc('Klensal')
   .withAdditionalInfo('Salvage: Credits 10,000')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_hades_gamma_dis = sys('Dis')
@@ -19,10 +22,12 @@ export const me3_system_hades_gamma_dis = sys('Dis')
 
 export const me3_location_hades_gamma_farinata_north_of_star = loc('North of Star (1st Ring)')
   .withAdditionalInfo('Wreckage: Fuel 200')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_hades_gamma_farinata_juntauma = loc('Juntauma')
   .withAdditionalInfo('Alliance Frigate Agincourt, Alliance First Fleet')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_hades_gamma_farinata = sys('Farinata')
@@ -34,10 +39,12 @@ export const me3_system_hades_gamma_farinata = sys('Farinata')
 
 export const me3_location_hades_gamma_cacus_chohe = loc('Chohe')
   .withAdditionalInfo('Salvage: Credits 10,000')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_hades_gamma_cacus_west_of_xamarri = loc('West of Xamarri (Between 4th and 5th Rings)')
   .withAdditionalInfo('Wreckage: Fuel 400')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_hades_gamma_cacus = sys('Cacus')
@@ -49,10 +56,12 @@ export const me3_system_hades_gamma_cacus = sys('Cacus')
 
 export const me3_location_hades_gamma_antaeus_near_mass_relay = loc('Near Mass Relay')
   .withAdditionalInfo('Wreckage: Fuel 300')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_hades_gamma_antaeus_trebin = loc('Trebin')
   .withAdditionalInfo('Salvage: Credits 10,000')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_hades_gamma_antaeus = sys('Antaeus')
@@ -64,6 +73,7 @@ export const me3_system_hades_gamma_antaeus = sys('Antaeus')
 
 export const me3_location_hades_gamma_plutus_nonuel = loc('Nonuel')
   .withAdditionalInfo('Spec Ops Team Zeta, 103rd Marine Division')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_hades_gamma_plutus = sys('Plutus')

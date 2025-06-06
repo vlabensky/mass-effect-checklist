@@ -5,10 +5,12 @@ import * as m from '../missions';
 
 export const me3_location_sigurds_cradle_skepsis_watson = loc('Watson')
   .withAdditionalInfo('Javelin Missle Launchers')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_sigurds_cradle_skepsis_between_crick_and_mass_relay = loc('Between Crick and Mass Relay')
   .withAdditionalInfo('Wreckage: Fuel 200')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_sigurds_cradle_skepsis = sys('Skepsis')
@@ -20,10 +22,12 @@ export const me3_system_sigurds_cradle_skepsis = sys('Skepsis')
 
 export const me3_location_sigurds_cradle_decoris_laena = loc('Laena')
   .withAdditionalInfo('Salvage: Credits 10,000')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_sigurds_cradle_decoris_south_of_star = loc('South of Star')
   .withAdditionalInfo('Wreckage: Fuel 350')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_sigurds_cradle_decoris_sanctum = loc('Sanctum')
@@ -40,10 +44,12 @@ export const me3_system_sigurds_cradle_decoris = sys('Decoris')
 
 export const me3_location_sigurds_cradle_mil_chalkhos = loc('Chalkhos')
   .withAdditionalInfo('Husk Neural Map')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_sigurds_cradle_mil_mylasi = loc('Mylasi (Asteroid belt NE of star)')
   .withAdditionalInfo('Unsuccessful search for Leviathan')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_sigurds_cradle_mil = sys('Mil (Leviathan DLC)')
@@ -55,6 +61,7 @@ export const me3_system_sigurds_cradle_mil = sys('Mil (Leviathan DLC)')
 
 export const me3_location_sigurds_cradle_lenal_triginta_petra = loc('Triginta Petra')
   .withAdditionalInfo('Dextro Rations')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_sigurds_cradle_lenal_laconix = loc('Laconix')
@@ -69,7 +76,7 @@ export const me3_system_sigurds_cradle_lenal = sys('Lenal (Leviathan DLC)')
   .build();
 
 export const me3_location_sigurds_cradle_psi_tophet_2181_despoina = loc('2181 Despoina')
-  .withAdditionalInfo('Leviathan')
+  .withAdditionalInfo('Leviathan (DLC)')
   .build();
 
 export const me3_system_sigurds_cradle_psi_tophet = sys('Psi Tophet (Leviathan DLC)')

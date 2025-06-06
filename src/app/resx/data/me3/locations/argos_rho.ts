@@ -5,10 +5,12 @@ import * as m from '../missions';
 
 export const me3_location_argos_rho_hydra_south_of_star = loc('South of Star 2nd Ring')
   .withAdditionalInfo('Wreckage: Fuel 270')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_argos_rho_hydra_canrum = loc('Canrum')
   .withAdditionalInfo('Haptic Optics Array')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_argos_rho_hydra = sys('Hydra')
@@ -20,6 +22,7 @@ export const me3_system_argos_rho_hydra = sys('Hydra')
 
 export const me3_location_argos_rho_phoenix_pinnacle_station = loc('Pinnacle Station')
   .withAdditionalInfo('Turian Spec Ops Team')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_argos_rho_phoenix_intai_sei = loc('Intai\'sei')
@@ -28,6 +31,7 @@ export const me3_location_argos_rho_phoenix_intai_sei = loc('Intai\'sei')
 
 export const me3_location_argos_rho_phoenix_northeast_of_intai_sei = loc('Northeast of Intai\'sei')
   .withAdditionalInfo('Wreckage: Fuel 450')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_argos_rho_phoenix = sys('Phoenix')
@@ -40,6 +44,7 @@ export const me3_system_argos_rho_phoenix = sys('Phoenix')
 
 export const me3_location_argos_rho_gorgon_camaron = loc('Camaron')
   .withAdditionalInfo('Advanced Power Relay')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_argos_rho_gorgon = sys('Gorgon')

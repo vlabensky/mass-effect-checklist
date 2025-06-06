@@ -9,10 +9,12 @@ export const me3_location_aethon_cluster_aru_irune = loc('Irune')
 
 export const me3_location_aethon_cluster_aru_west_of_irune = loc('West of Irune')
   .withAdditionalInfo('Wreckage: Fuel 200')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_aethon_cluster_aru_cherk_sab = loc('Cherk Sab')
   .withAdditionalInfo('Volus Fabrication Units')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_aethon_cluster_aru = sys('Aru')
@@ -25,10 +27,12 @@ export const me3_system_aethon_cluster_aru = sys('Aru')
 
 export const me3_location_aethon_cluster_esori_solu_paolis = loc('Solu Paolis')
   .withAdditionalInfo('Volus Dreadnought Kwonu')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_aethon_cluster_esori_south_southwest_of_kailo = loc('South/Southwest of Kailo')
   .withAdditionalInfo('Wreckage: Fuel 300')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_aethon_cluster_esori = sys('Esori')
@@ -40,10 +44,12 @@ export const me3_system_aethon_cluster_esori = sys('Esori')
 
 export const me3_location_aethon_cluster_satu_arrd_nalisin = loc('Nalisin')
   .withAdditionalInfo('Volus Engineering Team')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_aethon_cluster_satu_arrd_southeast_of_nalisin = loc('Southeast of Nalisin')
   .withAdditionalInfo('Wreckage: Fuel 200')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_aethon_cluster_satu_arrd = sys('Satu Arrd')
@@ -55,10 +61,12 @@ export const me3_system_aethon_cluster_satu_arrd = sys('Satu Arrd')
 
 export const me3_location_aethon_cluster_nura_oma_ker = loc('Oma Ker')
   .withAdditionalInfo('Volus Intelligence Archives')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_location_aethon_cluster_nura_northeast_of_star = loc('Northeast of Star (Between 2nd & 3rd Ring)')
   .withAdditionalInfo('Wreckage: Fuel 250')
+  .hasMissions(m.me3_mission_war_asset)
   .build();
 
 export const me3_system_aethon_cluster_nura = sys('Nura')
