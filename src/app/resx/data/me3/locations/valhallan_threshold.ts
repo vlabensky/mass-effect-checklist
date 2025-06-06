@@ -1,0 +1,57 @@
+import { cl, loc, sys } from '../../builders';
+import * as m from '../missions';
+
+// Valhallan Threshold
+
+export const me3_location_valhallan_threshold_raheel_leyya_northeast_of_star = loc('Northeast of Star')
+  .withAdditionalInfo('Wreckage: Fuel 95')
+  .build();
+
+export const me3_system_valhallan_threshold_raheel_leyya = sys('Raheel-Leyya')
+  .hasLocations(
+    me3_location_valhallan_threshold_raheel_leyya_northeast_of_star,
+  )
+  .build();
+
+export const me3_location_valhallan_threshold_paz_garvug = loc('Garvug')
+  .withAdditionalInfo('Valhallan Threshold: Prothean Data Drives')
+  .build();
+
+export const me3_location_valhallan_threshold_paz_east_of_star = loc('East of Star')
+  .withAdditionalInfo('Wreckage: Fuel 160')
+  .build();
+
+export const me3_system_valhallan_threshold_paz = sys('Paz')
+  .hasLocations(
+    me3_location_valhallan_threshold_paz_garvug,
+    me3_location_valhallan_threshold_paz_east_of_star,
+  )
+  .build();
+
+export const me3_location_valhallan_threshold_micah_elohi = loc('Elohi')
+  .withAdditionalInfo('Emergency Fuel Pods')
+  .build();
+
+export const me3_location_valhallan_threshold_micah_farlas = loc('Farlas')
+  .withAdditionalInfo('Element Zero Converter')
+  .build();
+
+export const me3_location_valhallan_threshold_micah_southeast_of_star = loc('Southeast of Star')
+  .withAdditionalInfo('Wreckage: Fuel 340')
+  .build();
+
+export const me3_system_valhallan_threshold_micah = sys('Micah')
+  .hasLocations(
+    me3_location_valhallan_threshold_micah_elohi,
+    me3_location_valhallan_threshold_micah_farlas,
+    me3_location_valhallan_threshold_micah_southeast_of_star,
+  )
+  .build();
+
+export const me3_cluster_valhallan_threshold = cl('Valhallan Threshold', 'Valhallan_Threshold', 'Valhallan_Threshold')
+  .hasSystems(
+    me3_system_valhallan_threshold_raheel_leyya,
+    me3_system_valhallan_threshold_paz,
+    me3_system_valhallan_threshold_micah,
+  )
+  .build();
