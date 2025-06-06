@@ -8,7 +8,7 @@ export const me3_location_apien_crest_castellus_south_of_faix = loc('South of Fa
   .build();
 
 export const me3_location_apien_crest_castellus_digeris = loc('Digeris')
-  .withAdditionalInfo('Apien Crest: Banner of the First Regiment')
+  .hasMissions(m.me3_mission_apien_crest_banner_of_the_first_regiment)
   .build();
 
 export const me3_system_apien_crest_castellus = sys('Castellus')

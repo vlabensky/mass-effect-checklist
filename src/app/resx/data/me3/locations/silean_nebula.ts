@@ -14,7 +14,7 @@ export const me3_system_silean_nebula_kypladon = sys('Kypladon')
   .build();
 
 export const me3_location_silean_nebula_teyolia_nevos = loc('Nevos')
-  .withAdditionalInfo('Silean Nebula: Rings of Alune')
+  .hasMissions(m.me3_mission_silean_nebula_rings_of_alune)
   .build();
 
 export const me3_location_silean_nebula_teyolia_quirezia = loc('Quirezia')
@@ -34,7 +34,7 @@ export const me3_system_silean_nebula_teyolia = sys('Teyolia')
   .build();
 
 export const me3_location_silean_nebula_phontes_dekuuna = loc('Dekuuna')
-  .withAdditionalInfo('Dekuuna: Code of the Ancients/Elcor Extraction')
+  .hasMissions(m.me3_mission_dekuuna_code_of_the_ancients_elcor_extraction)
   .build();
 
 export const me3_location_silean_nebula_phontes_oltan = loc('Oltan')

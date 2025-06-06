@@ -1,4 +1,5 @@
 import { cl, loc, sys } from '../../builders';
+import * as m from '../missions';
 
 // Athena Nebula
 
@@ -43,7 +44,7 @@ export const me3_system_athena_nebula_tomaros = sys('Tomaros')
   .build();
 
 export const me3_location_athena_nebula_vernio_polissa = loc('Polissa')
-  .withAdditionalInfo('Athena Nebula: Hesperia-Period Statue')
+  .hasMissions(m.me3_mission_athena_nebula_hesperia_period_statue)
   .build();
 
 export const me3_location_athena_nebula_vernio_northeast_of_star = loc('Northeast of Star (Between 2nd & 3rd Rings)')

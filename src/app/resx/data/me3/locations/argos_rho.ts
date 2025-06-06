@@ -1,4 +1,5 @@
 import { cl, loc, sys } from '../../builders';
+import * as m from '../missions';
 
 // Argos Rho
 
@@ -22,7 +23,7 @@ export const me3_location_argos_rho_phoenix_pinnacle_station = loc('Pinnacle Sta
   .build();
 
 export const me3_location_argos_rho_phoenix_intai_sei = loc('Intai\'sei')
-  .withAdditionalInfo('Citadel: Kakliosaur Fossil')
+  .hasMissions(m.me3_mission_citadel_kakliosaur_fossil)
   .build();
 
 export const me3_location_argos_rho_phoenix_northeast_of_intai_sei = loc('Northeast of Intai\'sei')

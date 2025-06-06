@@ -14,7 +14,7 @@ export const me3_system_valhallan_threshold_raheel_leyya = sys('Raheel-Leyya')
   .build();
 
 export const me3_location_valhallan_threshold_paz_garvug = loc('Garvug')
-  .withAdditionalInfo('Valhallan Threshold: Prothean Data Drives')
+  .hasMissions(m.me3_mission_valhallan_threshold_prothean_data_drives)
   .build();
 
 export const me3_location_valhallan_threshold_paz_east_of_star = loc('East of Star')

@@ -39,7 +39,7 @@ export const me3_system_kites_nest_untrel = sys('Untrel')
   .build();
 
 export const me3_location_kites_nest_vular_vana = loc('Vana')
-  .withAdditionalInfo('Aria: Blue Suns\n- Black Market Artifact')
+  .hasMissions(m.me3_mission_aria_blue_suns)
   .build();
 
 export const me3_location_kites_nest_vular_northwest_of_star = loc('Northwest of Star, 3rd Ring')

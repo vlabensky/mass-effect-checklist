@@ -29,7 +29,7 @@ export const me3_system_nimbus_cluster_pelion = sys('Pelion')
   .build();
 
 export const me3_location_nimbus_cluster_agaiou_carcosa = loc('Carcosa')
-  .withAdditionalInfo('Nimbus Cluster: Library of Asha')
+  .hasMissions(m.me3_mission_nimbus_cluster_library_of_asha)
   .build();
 
 export const me3_system_nimbus_cluster_agaiou = sys('Agaiou')

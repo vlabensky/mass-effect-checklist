@@ -4,7 +4,7 @@ import * as m from '../missions';
 // Ismar Frontier
 
 export const me3_location_ismar_frontier_aquila_metaponto = loc('Metaponto')
-  .withAdditionalInfo('Ismar Frontier: Prototype Components\n- Advanced Biotic Implants')
+  .hasMissions(m.me3_mission_ismar_frontier_prototype_components)
   .build();
 
 export const me3_system_ismar_frontier_aquila = sys('Aquila')

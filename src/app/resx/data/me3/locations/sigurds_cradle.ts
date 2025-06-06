@@ -27,7 +27,7 @@ export const me3_location_sigurds_cradle_decoris_south_of_star = loc('South of S
   .build();
 
 export const me3_location_sigurds_cradle_decoris_sanctum = loc('Sanctum')
-  .withAdditionalInfo('N7: Cerberus Lab')
+  .hasMissions(m.me3_mission_n7_cerberus_lab)
   .build();
 
 export const me3_system_sigurds_cradle_decoris = sys('Decoris')

@@ -1,5 +1,4 @@
 import { cl, loc, sys } from '../../builders';
-import * as m from '../missions';
 
 // Horsehead Nebula
 

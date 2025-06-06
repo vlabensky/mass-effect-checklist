@@ -4,7 +4,7 @@ import * as m from '../missions';
 // Aethon Cluster
 
 export const me3_location_aethon_cluster_aru_irune = loc('Irune')
-  .withAdditionalInfo('Irune: Book of Plenix')
+  .hasMissions(m.me3_mission_irune_book_of_plenix)
   .build();
 
 export const me3_location_aethon_cluster_aru_west_of_irune = loc('West of Irune')

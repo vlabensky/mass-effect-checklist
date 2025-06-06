@@ -4,7 +4,7 @@ import * as m from '../missions';
 // Krogan DMZ
 
 export const me3_location_krogan_dmz_dranek_rothla = loc('Rothla')
-  .withAdditionalInfo('Citadel: Barla Von\n- Shadow Broker Wet Squad')
+  .hasMissions(m.me3_mission_citadel_barla_von)
   .build();
 
 export const me3_location_krogan_dmz_dranek_southeast_of_star = loc('Southeast of Star')

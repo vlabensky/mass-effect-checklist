@@ -23,7 +23,7 @@ export const me3_location_shrike_abyssal_urla_rast_northeast_of_star = loc('Nort
   .build();
 
 export const me3_location_shrike_abyssal_urla_rast_talis_fia = loc('Talis Fia')
-  .withAdditionalInfo('Shrike Abyssal: Prothean Obelisk')
+  .hasMissions(m.me3_mission_shrike_abyssal_prothean_obelisk)
   .build();
 
 export const me3_system_shrike_abyssal_urla_rast = sys('Urla Rast')
