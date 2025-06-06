@@ -80,6 +80,7 @@ export const me3_mission_priority_earth = m('Priority: Earth', 'Priority:_Earth'
 
 export const me3_mission_citadel_alien_medi_gel_formula = m('Citadel: Alien Medi-Gel Formula', 'Citadel:_Alien_Medi-Gel_Formula', 'Citadel_Alien_MediGel_Formula')
   .availableWhen(predicates.isCitadel1Completed)
+  .expiresAfter(predicates.isTuchankaCompleted)
   .build();
 
 export const me3_mission_n7_cerberus_lab = m('N7: Cerberus Lab', 'N7:_Cerberus_Lab', 'N7_Cerberus_Lab')
@@ -116,6 +117,7 @@ export const me3_mission_citadel_gx12_thermal_pipe = m('Citadel: GX12 Thermal Pi
 
 export const me3_mission_citadel_hanar_diplomat = m('Citadel: Hanar Diplomat', 'Citadel:_Hanar_Diplomat', 'Citadel_Hanar_Diplomat')
   .availableWhen(predicates.isPalavenCompleted)
+  .expiresAfter(predicates.isTuchankaCompleted)
   .build();
 
 export const me3_mission_citadel_biotic_amp_interfaces = m('Citadel: Biotic Amp Interfaces', 'Citadel:_Biotic_Amp_Interfaces', 'Citadel_Biotic_Amp_Interfaces')
@@ -125,6 +127,7 @@ export const me3_mission_citadel_biotic_amp_interfaces = m('Citadel: Biotic Amp 
 export const me3_mission_grissom_academy_emergency_evacuation = m('Grissom Academy: Emergency Evacuation', 'Grissom_Academy:_Emergency_Evacuation', 'Grissom_Academy_Emergency_Evacuation')
   .availableWhen(predicates.isPalavenCompleted)
   .hasInnerMissions(me3_mission_citadel_biotic_amp_interfaces)
+  .expiresAfter(predicates.isTuchankaCompleted)
   .build();
 
 export const me3_mission_apien_crest_banner_of_the_first_regiment = m('Apien Crest: Banner of the First Regiment', 'Apien_Crest:_Banner_of_the_First_Regiment', 'Apien_Crest_Banner_of_the_First_Regiment')
@@ -133,6 +136,7 @@ export const me3_mission_apien_crest_banner_of_the_first_regiment = m('Apien Cre
 
 export const me3_mission_ismar_frontier_prototype_components = m('Ismar Frontier: Prototype Components', 'Ismar_Frontier:_Prototype_Components', 'Ismar_Frontier_Prototype_Components')
   .availableWhen(predicates.isPalavenCompleted)
+  .expiresAfter(predicates.isTuchankaCompleted)
   .build();
 
 export const me3_mission_kites_nest_pillars_of_strength = m('Kite\'s Nest: Pillars of Strength', 'Kites_Nest:_Pillars_of_Strength', 'Kites_Nest_Pillars_of_Strength')
@@ -164,6 +168,7 @@ export const me3_mission_attican_traverse_krogan_team_the_rachni = m('Attican Tr
 
 export const me3_mission_tuchanka_turian_platoon = m('Tuchanka: Turian Platoon', 'Tuchanka:_Turian_Platoon', 'Tuchanka_Turian_Platoon')
   .availableWhen(predicates.isSurkeshCompleted)
+  .expiresAfter(predicates.isThessiaCompleted)
   .build();
 
 export const me3_mission_citadel_cerberus_automated_turret_schematics = m('Citadel: Cerberus Automated Turret Schematics', 'Citadel:_Cerberus_Automated_Turret_Schematics', 'Citadel_Cerberus_Automated_Turret_Schematics')
@@ -297,6 +302,7 @@ export const me3_mission_citadel_target_jamming_technology = m('Citadel: Target 
 
 export const me3_mission_rannoch_admiral_koris = m('Rannoch: Admiral Koris', 'Rannoch:_Admiral_Koris', 'Rannoch_Admiral_Koris')
   .availableWhen(predicates.isGethDreadnoughtCompleted)
+  .expiresAfter(predicates.isRannochCompleted)
   .hasInnerMissions(me3_mission_citadel_target_jamming_technology)
   .build();
 
@@ -306,6 +312,7 @@ export const me3_mission_citadel_reaper_code_fragments = m('Citadel: Reaper Code
 
 export const me3_mission_rannoch_geth_fighter_squadrons = m('Rannoch: Geth Fighter Squadrons', 'Rannoch:_Geth_Fighter_Squadrons', 'Rannoch_Geth_Fighter_Squadrons')
   .availableWhen(predicates.isGethDreadnoughtCompleted)
+  .expiresAfter(predicates.isRannochCompleted)
   .hasInnerMissions(me3_mission_citadel_reaper_code_fragments)
   .build();
 
