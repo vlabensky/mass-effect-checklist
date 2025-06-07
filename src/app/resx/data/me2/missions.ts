@@ -12,22 +12,18 @@ export const predicates = {
 
 // Prologue
 
-export const me2_mission_prologue_save_joker = m('Save Joker', 'Prologue:_Save_Joker', 'Save_Joker')
+export const me2_mission_prologue_save_joker = m('Save Joker', 'Prologue:_Save_Joker', 'Prologue_-_Save_Joker')
   .build();
 
-export const me2_mission_prologue_awakening = m('Awakening', 'Prologue:_Awakening', 'Awakening')
+export const me2_mission_prologue_awakening = m('Awakening', 'Prologue:_Awakening', 'Prologue_-_Awakening')
   .availableWhen(() => me2_mission_prologue_save_joker.isCompleted)
   .build();
 
-export const me2_mission_prologue_freedoms_progress = m('Freedom\'s Progress', 'Prologue:_Freedom\'s_Progress', 'Freedoms_Progress')
+export const me2_mission_prologue_freedoms_progress = m('Freedom\'s Progress', 'Freedom%27s_Progress_(mission)', 'Freedom%27s_Progress')
   .availableWhen(() => me2_mission_prologue_awakening.isCompleted)
   .build();
 
 // Plot Missions
-
-export const me2_mission_the_council = m('The Council', 'Plot:_The_Council', 'The_Council')
-  .availableWhen(predicates.isPrologueCompleted)
-  .build();
 
 export const me2_mission_horizon = m('Horizon', 'Horizon:_Horizon', 'Horizon')
   .availableWhen(predicates.isHorizonEnabled)
@@ -148,6 +144,10 @@ export const me2_mission_dossier_tali = m('Tali', 'Dossier:_Tali', 'Tali')
   .build();
 
 // Citadel
+
+export const me2_mission_the_council = m('The Council', 'Plot:_The_Council', 'The_Citadel_-_The_Council')
+  .availableWhen(predicates.isPrologueCompleted)
+  .build();
 
 export const me2_mission_citadel_captain_bailey = m('Captain Bailey', 'Citadel:_Captain_Bailey', 'Captain_Bailey')
   .availableWhen(predicates.isPrologueCompleted)
