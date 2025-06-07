@@ -32,6 +32,7 @@ export type Cluster = {
     fandom: string;
     ign: string;
   };
+  isAvailable: () => boolean;
 };
 
 export type System = {
