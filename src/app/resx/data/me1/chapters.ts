@@ -106,8 +106,10 @@ export const me1_chapter_the_citadel_3 = ch('The Citadel III')
 
 export const me1_chapter_virmire = ch('Virmire')
   .hasMissions(
-    m.me1_mission_saren_plan,
+    m.me1_mission_virmire,
+    m.me1_mission_wrex_and_the_genophage,
     m.me1_mission_assault,
+    m.me1_mission_assisting_kirrahes_team,
   )
   .build();
 
@@ -126,5 +128,15 @@ export const me1_chapter_race_against_time = ch('Race against time')
   .hasMissions(
     m.me1_mission_find_the_conduit,
     m.me1_mission_final_battle,
+  )
+  .build();
+
+// Bring Down the Sky (DLC)
+
+export const me1_chapter_bring_down_the_sky = ch('Bring Down the Sky (DLC)')
+  .hasMissions(
+    m.me1_mission_bring_down_the_sky,
+    m.me1_mission_avoid_the_blasting_caps,
+    m.me1_mission_missing_engineers,
   )
   .build();

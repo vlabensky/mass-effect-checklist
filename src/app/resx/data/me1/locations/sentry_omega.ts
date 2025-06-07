@@ -4,7 +4,7 @@ import * as m from '../missions';
 // Sentry Omega
 
 export const me1_location_sentry_omega_hoc_virmire = loc('Virmire')
-  .hasMissions(m.me1_mission_saren_plan)
+  .hasMissions(m.me1_mission_virmire)
   .build();
 
 export const me1_system_sentry_omega_hoc = sys('Hoc')

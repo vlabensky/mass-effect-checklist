@@ -255,11 +255,19 @@ export const me1_mission_the_fan_3 = m('The Fan III', 'The_Citadel:_The_Fan_III'
 
 // Virmire
 
-export const me1_mission_saren_plan = m('Saren\'s Plan', 'Virmire:_Saren\'s_Plan', 'Saren\'s_Plan')
+export const me1_mission_virmire = m('Virmire', 'Virmire_(mission)', 'Virmire')
+  .availableWhen(predicates.twoPlotMissionsCompleted)
+  .build();
+
+export const me1_mission_wrex_and_the_genophage = m('Wrex and the Genophage', 'Virmire:_Wrex_and_the_Genophage', 'How_to_Save_Wrex')
   .availableWhen(predicates.twoPlotMissionsCompleted)
   .build();
 
 export const me1_mission_assault = m('Assault', 'Virmire:_Assault', 'Assault')
+  .availableWhen(predicates.twoPlotMissionsCompleted)
+  .build();
+
+export const me1_mission_assisting_kirrahes_team = m('Assisting Kirrahe\'s Team', 'Virmire:_Assisting_Kirrahe\'s_Team', 'How_to_Save_Kirrahe')
   .availableWhen(predicates.twoPlotMissionsCompleted)
   .build();
 
@@ -320,7 +328,7 @@ export const me1_mission_cerberus = m('Cerberus', 'Cerberus', 'Cerberus')
   .availableWhen(predicates.isMissingMarinesCompleted)
   .build();
 
-export const me1_mission_hades_dogs = m('Hades Dogs', 'Hades_Dogs', 'Hades_Dogs')
+export const me1_mission_hades_dogs = m('Hades Dogs\'', 'Hades_Dogs', 'Hades_Dogs')
   .availableWhen(predicates.isCerberusCompleted)
   .build();
 
@@ -361,10 +369,6 @@ export const me1_mission_depot_sigma_23 = m('Depot Sigma-23', 'Depot_Sigma_23', 
   .availableWhen(predicates.listeningPostsCompleted)
   .build();
 
-export const me1_mission_bring_down_the_sky = m('Bring Down the Sky', 'Bring_Down_the_Sky', 'Bring_Down_the_Sky')
-  .availableWhen(predicates.isExposeSarenCompleted)
-  .build();
-
 export const me1_mission_derelict_freighter = m('Derelict Freighter', 'Derelict_Freighter', 'Derelict_Freighter')
   .availableWhen(predicates.isFerosCompleted)
   .build();
@@ -375,6 +379,20 @@ export const me1_mission_colony_of_the_dead = m('Colony of the Dead', 'Colony_of
 
 export const me1_mission_exogeni_facility = m('ExoGeni Facility', 'ExoGeni_Facility', 'ExoGeni_Facility')
   .availableWhen(predicates.isFerosCompleted)
+  .build();
+
+// Bring Down the Sky (DLC)
+
+export const me1_mission_bring_down_the_sky = m('X57: Bring Down the Sky', 'X57:_Bring_Down_the_Sky', 'X57:_Bring_Down_the_Sky')
+  .availableWhen(predicates.isExposeSarenCompleted)
+  .build();
+
+export const me1_mission_avoid_the_blasting_caps = m('X57: Avoid the Blasting Caps', 'X57:_Avoid_the_Blasting_Caps', 'Avoid_the_Blasting_Caps')
+  .availableWhen(predicates.isExposeSarenCompleted)
+  .build();
+
+export const me1_mission_missing_engineers = m('X57: Missing Engineers', 'X57:_Missing_Engineers', 'Missing_Engineers')
+  .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
 // Discovery Assignments
