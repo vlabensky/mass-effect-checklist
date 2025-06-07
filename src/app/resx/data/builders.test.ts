@@ -334,5 +334,20 @@ describe('Builders tests', () => {
         cl('Duplicate Test Cluster', 'Test_Fandom_Path', 'Test_IGN_Path').build();
       }).toThrow('Cluster with name Duplicate Test Cluster already exists');
     });
+
+    it('should set custom availability', () => {
+      const cluster = cl('Test Cluster 3', 'Test_Cluster_3', 'Test_Cluster_3')
+        .availableWhen(() => false)
+        .build();
+
+      expect(cluster.isAvailable()).toBe(false);
+    });
+
+    it('should set default availability', () => {
+      const cluster = cl('Test Cluster 4', 'Test_Cluster_4', 'Test_Cluster_4')
+        .build();
+
+      expect(cluster.isAvailable()).toBe(true);
+    });
   });
 });

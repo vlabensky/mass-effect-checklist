@@ -129,6 +129,7 @@ export class ClusterBuilder {
   fandomUrlPath: string;
   ignUrlPath: string;
   systems: System[];
+  isAvailable?: () => boolean;
 
   constructor(name: string, fandomUrlPath: string, ignUrlPath: string) {
     if (clusterNames.has(name))
@@ -147,11 +148,17 @@ export class ClusterBuilder {
     return this;
   }
 
+  availableWhen(predicate: () => boolean) {
+    this.isAvailable = predicate;
+    return this;
+  }
+
   build(): Cluster {
     return {
       name: this.name,
       systems: this.systems,
       urls: createUrls(this.fandomUrlPath, this.ignUrlPath),
+      isAvailable: this.isAvailable ?? always,
     };
   }
 }
