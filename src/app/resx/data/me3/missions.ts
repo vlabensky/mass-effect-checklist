@@ -318,7 +318,11 @@ export const me3_mission_rannoch_geth_fighter_squadrons = m('Rannoch: Geth Fight
 
 // Post-Rannoch Missions
 
-export const me3_mission_dekuuna_code_of_the_ancients_elcor_extraction = m('Dekuuna: Code of the Ancients/Elcor Extraction', 'Dekuuna:_Code_of_the_Ancients/Elcor_Extraction', 'Dekuuna_Code_of_the_Ancients_Elcor_Extraction')
+export const me3_mission_dekuuna_code_of_the_ancients = m('Dekuuna: Code of the Ancients', 'Dekuuna:_Code_of_the_Ancients/Elcor_Extraction', 'Dekuuna_Code_of_the_Ancients_Elcor_Extraction')
+  .availableWhen(predicates.isRannochCompleted)
+  .build();
+
+export const me3_mission_dekuuna_elcor_extraction = m('Dekuuna: Elcor Extraction', 'Dekuuna:_Code_of_the_Ancients/Elcor_Extraction', 'Dekuuna_Code_of_the_Ancients_Elcor_Extraction')
   .availableWhen(predicates.isRannochCompleted)
   .build();
 

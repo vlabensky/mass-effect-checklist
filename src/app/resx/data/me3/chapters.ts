@@ -106,7 +106,8 @@ export const me3_chapter_post_citadel_2 = ch('Post-Citadel II Missions')
     m.me3_mission_citadel_kakliosaur_fossil,
     m.me3_mission_citadel_reaper_code_fragments,
     m.me3_mission_citadel_target_jamming_technology,
-    m.me3_mission_dekuuna_code_of_the_ancients_elcor_extraction,
+    m.me3_mission_dekuuna_code_of_the_ancients,
+    m.me3_mission_dekuuna_elcor_extraction,
     m.me3_mission_hades_nexus_obelisk_of_karza,
     m.me3_mission_hades_nexus_prothean_sphere,
     m.me3_mission_silean_nebula_rings_of_alune,
@@ -128,7 +129,8 @@ export const me3_chapter_post_geth_dreadnought = ch('Post-Geth Dreadnought Missi
 
 export const me3_chapter_post_rannoch = ch('Post-Rannoch Missions')
   .hasMissions(
-    m.me3_mission_dekuuna_code_of_the_ancients_elcor_extraction,
+    m.me3_mission_dekuuna_code_of_the_ancients,
+    m.me3_mission_dekuuna_elcor_extraction,
     m.me3_mission_silean_nebula_rings_of_alune,
     m.me3_mission_hades_nexus_prothean_sphere,
     m.me3_mission_hades_nexus_obelisk_of_karza,
