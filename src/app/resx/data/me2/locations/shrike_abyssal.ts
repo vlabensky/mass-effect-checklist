@@ -47,7 +47,7 @@ export const me2_system_shrike_abyssal_xe_cha = sys('Xe Cha')
   )
   .build();
 
-export const me2_cluster_shrike_abyssal = cl('The Shrike Abyssal', 'The_Shrike_Abyssal', 'The_Shrike_Abyssal')
+export const me2_cluster_shrike_abyssal = cl('The Shrike Abyssal')
   .hasSystems(
     me2_system_shrike_abyssal_urla_rast,
     me2_system_shrike_abyssal_xe_cha,

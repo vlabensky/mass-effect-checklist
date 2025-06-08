@@ -37,7 +37,7 @@ export const me2_system_minos_wasteland_fortis = sys('Fortis')
   )
   .build();
 
-export const me2_cluster_minos_wasteland = cl('Minos Wasteland', 'Minos_Wasteland', 'Minos_Wasteland')
+export const me2_cluster_minos_wasteland = cl('Minos Wasteland')
   .hasSystems(
     me2_system_minos_wasteland_caestus,
     me2_system_minos_wasteland_fortis,

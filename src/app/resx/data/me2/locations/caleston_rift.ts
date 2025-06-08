@@ -112,7 +112,7 @@ export const me2_system_caleston_rift_talava = sys('Talava')
   )
   .build();
 
-export const me2_cluster_caleston_rift = cl('Caleston Rift', 'Caleston_Rift', 'Caleston_Rift')
+export const me2_cluster_caleston_rift = cl('Caleston Rift')
   .hasSystems(
     me2_system_caleston_rift_aysur,
     me2_system_caleston_rift_balor,

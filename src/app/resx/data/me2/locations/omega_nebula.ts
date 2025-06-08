@@ -97,7 +97,7 @@ export const me2_system_omega_nebula_sahrabarik = sys('Sahrabarik')
   )
   .build();
 
-export const me2_cluster_omega_nebula = cl('Omega Nebula', 'Omega_Nebula', 'Omega_Nebula')
+export const me2_cluster_omega_nebula = cl('Omega Nebula')
   .hasSystems(
     me2_system_omega_nebula_arinlarkan,
     me2_system_omega_nebula_batalla,

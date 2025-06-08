@@ -1,8 +1,8 @@
-import type { MissionUrls } from '../types';
+import type { MissionUrls, ClusterUrls } from '../types';
 
 const url = (path: string) => `https://masseffect.fandom.com/wiki/${path}`;
 
-const urls: MissionUrls = {
+const missionUrls: MissionUrls = {
   me2_mission_acquire_reaper_iff: url('Stop_the_Collectors#Acquire_Reaper_IFF'),
   me2_mission_archangel_datapad_recovered: url('Omega:_Archangel:_Datapad_Recovered'),
   me2_mission_arrival_rescue_dr_kenson: url('Arrival_(assignment)'),
@@ -98,4 +98,28 @@ const urls: MissionUrls = {
   me2_mission_use_omega4_relay: url('Stop_the_Collectors#Use_Omega_4_Relay'),
 };
 
-export default urls;
+const clusterUrls: ClusterUrls = {
+  me2_cluster_caleston_rift: url('Caleston_Rift'),
+  me2_cluster_crescent_nebula: url('Crescent_Nebula'),
+  me2_cluster_eagle_nebula: url('Eagle_Nebula'),
+  me2_cluster_far_rim: url('Far_Rim'),
+  me2_cluster_hades_nexus: url('Hades_Nexus'),
+  me2_cluster_hawking_eta: url('Hawking_eta'),
+  me2_cluster_hourglass_nebula: url('Hourglass_Nebula'),
+  me2_cluster_ismar_frontier: url('Ismar_Frontier'),
+  me2_cluster_krogan_dmz: url('Krogan_DMZ'),
+  me2_cluster_local_cluster: url('Local_Cluster'),
+  me2_cluster_minos_wasteland: url('Minos_Wasteland'),
+  me2_cluster_nubian_expanse: url('Nubian_Expance'),
+  me2_cluster_omega_nebula: url('Omega_Nebula'),
+  me2_cluster_pylos_nebula: url('Pylos_Nebula'),
+  me2_cluster_rosetta_nebula: url('Rosetta_Nebula'),
+  me2_cluster_serpent_nebula: url('Serpent_Nebula'),
+  me2_cluster_shadow_sea: url('Shadow_Sea'),
+  me2_cluster_shrike_abyssal: url('Shrike_Abyssal'),
+  me2_cluster_sigurds_cradle: url('Sigurd%27s_Cradle'),
+  me2_cluster_titan_nebula: url('Titan_Nebula'),
+  me2_cluster_valhallan_threshold: url('Valhallan_Threshold'),
+};
+
+export { missionUrls, clusterUrls };

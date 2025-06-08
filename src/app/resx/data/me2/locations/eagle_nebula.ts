@@ -132,7 +132,7 @@ export const me2_system_eagle_nebula_strabo = sys('Strabo')
   )
   .build();
 
-export const me2_cluster_eagle_nebula = cl('Eagle Nebula', 'Eagle_Nebula', 'Eagle_Nebula')
+export const me2_cluster_eagle_nebula = cl('Eagle Nebula')
   .hasSystems(
     me2_system_eagle_nebula_amun,
     me2_system_eagle_nebula_imir,

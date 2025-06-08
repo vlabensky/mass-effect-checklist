@@ -12,7 +12,7 @@ export const me2_system_serpent_nebula_widow = sys('Widow')
   )
   .build();
 
-export const me2_cluster_serpent_nebula = cl('Serpent Nebula', 'Serpent_Nebula', 'Serpent_Nebula')
+export const me2_cluster_serpent_nebula = cl('Serpent Nebula')
   .hasSystems(
     me2_system_serpent_nebula_widow,
   )

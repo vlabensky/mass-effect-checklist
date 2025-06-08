@@ -112,7 +112,7 @@ export const me2_system_pylos_nebula_satent = sys('Satent')
   )
   .build();
 
-export const me2_cluster_pylos_nebula = cl('Pylos Nebula', 'Pylos_Nebula', 'Pylos_Nebula')
+export const me2_cluster_pylos_nebula = cl('Pylos Nebula')
   .hasSystems(
     me2_system_pylos_nebula_dirada,
     me2_system_pylos_nebula_kriseroi,

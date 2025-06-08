@@ -77,7 +77,7 @@ export const me2_system_ismar_frontier_tassrah = sys('Tassrah')
   )
   .build();
 
-export const me2_cluster_ismar_frontier = cl('Ismar Frontier', 'Ismar_Frontier', 'Ismar_Frontier')
+export const me2_cluster_ismar_frontier = cl('Ismar Frontier')
   .hasSystems(
     me2_system_ismar_frontier_aquila,
     me2_system_ismar_frontier_elysta,

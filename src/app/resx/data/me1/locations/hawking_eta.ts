@@ -3,7 +3,7 @@ import * as m from '../missions';
 
 // Hawking Eta
 
-export const me1_location_hawking_eta_century_metallic_asteroid = loc('Century - Metallic Asteroid')
+export const me1_location_hawking_eta_century_metallic_asteroid = loc('Metallic Asteroid')
   .hasMissions(m.me1_mission_valuable_minerals_heavy_metals)
   .build();
 
@@ -28,7 +28,7 @@ export const me1_system_hawking_eta_century = sys('Century')
   )
   .build();
 
-export const me1_cluster_hawking_eta = cl('Hawking Eta', 'Hawking_Eta', 'Hawking_Eta')
+export const me1_cluster_hawking_eta = cl('Hawking Eta')
   .hasSystems(
     me1_system_hawking_eta_century,
   )

@@ -1,14 +1,16 @@
-import fandomUrls from './fandom';
-import ignUrls from './ign';
+import * as fandom from './fandom';
+import * as ign from './ign';
 
 const urlProviders = [
   {
     name: 'fandom' as const,
-    missionUrls: fandomUrls,
+    missionUrls: fandom.missionUrls,
+    clusterUrls: fandom.clusterUrls,
   },
   {
     name: 'ign' as const,
-    missionUrls: ignUrls,
+    missionUrls: ign.missionUrls,
+    clusterUrls: ign.clusterUrls,
   },
 ];
 

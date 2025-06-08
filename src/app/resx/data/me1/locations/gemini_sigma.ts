@@ -43,7 +43,7 @@ export const me1_system_gemini_sigma_ming = sys('Ming')
   )
   .build();
 
-export const me1_cluster_gemini_sigma = cl('Gemini Sigma', 'Gemini_Sigma', 'Gemini_Sigma')
+export const me1_cluster_gemini_sigma = cl('Gemini Sigma')
   .hasSystems(
     me1_system_gemini_sigma_han,
     me1_system_gemini_sigma_ming,

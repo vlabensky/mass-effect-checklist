@@ -23,7 +23,7 @@ export const me1_system_exodus_utopia = sys('Utopia')
   )
   .build();
 
-export const me1_cluster_exodus = cl('Exodus', 'Exodus_Cluster', 'Exodus')
+export const me1_cluster_exodus = cl('Exodus')
   .hasSystems(
     me1_system_exodus_asgard,
     me1_system_exodus_utopia,

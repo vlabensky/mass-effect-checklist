@@ -11,6 +11,6 @@ export const me1_system_sentry_omega_hoc = sys('Hoc')
   .hasLocations(me1_location_sentry_omega_hoc_virmire)
   .build();
 
-export const me1_cluster_sentry_omega = cl('Sentry Omega', 'Sentry_Omega', 'Sentry_Omega')
+export const me1_cluster_sentry_omega = cl('Sentry Omega')
   .hasSystems(me1_system_sentry_omega_hoc)
   .build();

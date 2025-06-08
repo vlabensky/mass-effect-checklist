@@ -87,7 +87,7 @@ export const me2_system_hades_nexus_hoplos = sys('Hoplos')
   )
   .build();
 
-export const me2_cluster_hades_nexus = cl('Hades Nexus', 'Hades_Nexus', 'Hades_Nexus')
+export const me2_cluster_hades_nexus = cl('Hades Nexus')
   .hasSystems(
     me2_system_hades_nexus_hekate,
     me2_system_hades_nexus_pamyat,

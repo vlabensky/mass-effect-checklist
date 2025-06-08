@@ -42,7 +42,7 @@ export const me1_system_attican_beta_theseus = sys('Theseus')
   )
   .build();
 
-export const me1_cluster_attican_beta = cl('Attican Beta', 'Attican_Beta', 'Attican_Beta')
+export const me1_cluster_attican_beta = cl('Attican Beta')
   .hasSystems(
     me1_system_attican_beta_hercules,
     me1_system_attican_beta_theseus,

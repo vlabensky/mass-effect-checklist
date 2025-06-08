@@ -1,8 +1,8 @@
-import type { MissionUrls } from '../types';
+import type { MissionUrls, ClusterUrls } from '../types';
 
 const url = (path: string) => `https://www.ign.com/wikis/mass-effect-3/${path}`;
 
-const urls: MissionUrls = {
+const missionUrls: MissionUrls = {
   me3_mission_prologue_earth: url('Prologue'),
   me3_mission_priority_mars: url('Priority:_Mars'),
   me3_mission_priority_the_citadel_1: url('Priority:_The_Citadel_1'),
@@ -80,4 +80,32 @@ const urls: MissionUrls = {
   me3_mission_war_asset: url('Galaxy_Map'),
 };
 
-export default urls;
+const clusterUrls: ClusterUrls = {
+  me3_cluster_aethon_cluster: url('Aethon_Cluster'),
+  me3_cluster_annos_basin: url('Annos_Basin'),
+  me3_cluster_apien_crest: url('Apien_Crest'),
+  me3_cluster_arcturus_stream: url('Arcturus_Stream'),
+  me3_cluster_argos_rho: url('Argos_Rho'),
+  me3_cluster_athena_nebula: url('Athena_Nebula'),
+  me3_cluster_exodus_cluster: url('Exodus_Cluster'),
+  me3_cluster_gemini_sigma: url('Gemini_Sigma'),
+  me3_cluster_hades_gamma: url('Hades_Gamma'),
+  me3_cluster_hades_nexus: url('Hades_Nexus'),
+  me3_cluster_horsehead_nebula: url('Horsehead_Nebula'),
+  me3_cluster_hourglass_nebula: url('Hourglass_Nebula'),
+  me3_cluster_ismar_frontier: url('Ismar_Frontier'),
+  me3_cluster_kepler_verge: url('Kepler_Verge'),
+  me3_cluster_kites_nest: url('Kite%27s_Nest'),
+  me3_cluster_krogan_dmz: url('Krogan_DMZ'),
+  me3_cluster_minos_wasteland: url('Minos_Wasteland'),
+  me3_cluster_nimbus_cluster: url('Nimbus_Cluster'),
+  me3_cluster_nubian_expanse: url('Nubian_Expanse'),
+  me3_cluster_perseus_veil: url('Perseus_Veil'),
+  me3_cluster_serpent_nebula: url('Serpent_Nebula'),
+  me3_cluster_shrike_abyssal: url('Shrike_Abyssal'),
+  me3_cluster_sigurds_cradle: url('Sigurd%27s_Cradle'),
+  me3_cluster_silean_nebula: url('Silean_Nebula'),
+  me3_cluster_valhallan_threshold: url('Valhallan_Threshold'),
+}
+
+export { missionUrls, clusterUrls };

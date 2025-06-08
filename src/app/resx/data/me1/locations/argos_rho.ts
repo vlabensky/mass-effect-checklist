@@ -37,7 +37,7 @@ export const me1_location_argos_rho_phoenix_patashi = loc('Patashi')
   .hasMissions(m.me1_mission_valuable_minerals_rare_metals)
   .build();
 
-export const me1_location_argos_rho_phoenix_carbonaceous_asteroid = loc('Argos Rho - Carbonaceous Asteroid')
+export const me1_location_argos_rho_phoenix_carbonaceous_asteroid = loc('Carbonaceous Asteroid')
   .hasMissions(m.me1_mission_prothean_data_discs)
   .build();
 
@@ -58,7 +58,7 @@ export const me1_system_argos_rho_phoenix = sys('Phoenix')
   )
   .build();
 
-export const me1_cluster_argos_rho = cl('Argos Rho', 'Argos_Rho', 'Argos_Rho')
+export const me1_cluster_argos_rho = cl('Argos Rho')
   .hasSystems(
     me1_system_argos_rho_gorgon,
     me1_system_argos_rho_hydra,

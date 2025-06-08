@@ -63,7 +63,7 @@ export const me1_system_horse_head_nebula_strenuus = sys('Strenuus')
   )
   .build();
 
-export const me1_cluster_horse_head_nebula = cl('Horse Head Nebula', 'Horse_Head_Nebula', 'Horse_Head_Nebula')
+export const me1_cluster_horse_head_nebula = cl('Horse Head Nebula')
   .hasSystems(
     me1_system_horse_head_nebula_fortuna,
     me1_system_horse_head_nebula_pax,

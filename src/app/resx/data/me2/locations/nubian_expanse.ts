@@ -57,7 +57,7 @@ export const me2_system_nubian_expanse_qertassi = sys('Qertassi')
   )
   .build();
 
-export const me2_cluster_nubian_expanse = cl('Nubian Expanse', 'Nubian_Expance', 'Nubian_Expance')
+export const me2_cluster_nubian_expanse = cl('Nubian Expanse')
   .hasSystems(
     me2_system_nubian_expanse_dakka,
     me2_system_nubian_expanse_kalabsha,

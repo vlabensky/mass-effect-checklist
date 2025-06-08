@@ -1,8 +1,8 @@
-import type { MissionUrls } from '../types';
+import type { MissionUrls, ClusterUrls } from '../types';
 
 const url = (path: string) => `https://masseffect.fandom.com/wiki/${path}`;
 
-const urls: MissionUrls = {
+const missionUrls: MissionUrls = {
   me1_mission_asari_consort: url('Citadel:_Asari_Consort'),
   me1_mission_asari_diplomacy: url('UNC:_Asari_Diplomacy'),
   me1_mission_asari_writings: url('UNC:_Asari_Writings'),
@@ -97,4 +97,23 @@ const urls: MissionUrls = {
   me1_mission_xeltans_complaint: url('Citadel:_Xeltan%27s_Complaint'),
 };
 
-export default urls;
+const clusterUrls: ClusterUrls = {
+  me1_cluster_argos_rho: url('Argos_Rho'),
+  me1_cluster_armstrong_nebula: url('Armstrong_Nebula'),
+  me1_cluster_artemis_tau: url('Artemis_Tau'),
+  me1_cluster_attican_beta: url('Attican_Beta'),
+  me1_cluster_exodus: url('Exodus_Cluster'),
+  me1_cluster_gemini_sigma: url('Gemini_Sigma'),
+  me1_cluster_hades_gamma: url('Hades_Gamma'),
+  me1_cluster_hawking_eta: url('Hawking_Eta'),
+  me1_cluster_horse_head_nebula: url('Horse_Head_Nebula'),
+  me1_cluster_kepler_verge: url('Kepler_Verge'),
+  me1_cluster_local_cluster: url('Local_Cluster'),
+  me1_cluster_maroon_sea: url('Maroon_Sea'),
+  me1_cluster_pangaea_expanse: url('Pangaea_Expanse'),
+  me1_cluster_sentry_omega: url('Sentry_Omega'),
+  me1_cluster_styx_theta: url('Styx_Theta'),
+  me1_cluster_voyager_cluster: url('Voyager_Cluster'),
+};
+
+export { missionUrls, clusterUrls };

@@ -52,7 +52,7 @@ export const me2_system_local_cluster_sol = sys('Sol')
   )
   .build();
 
-export const me2_cluster_local_cluster = cl('Local Cluster', 'Local_Cluster', 'Local_Cluster')
+export const me2_cluster_local_cluster = cl('Local Cluster')
   .hasSystems(
     me2_system_local_cluster_sol,
   )

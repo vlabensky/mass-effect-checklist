@@ -32,7 +32,7 @@ export const me2_system_far_rim_ma_at = sys('Ma-at')
   )
   .build();
 
-export const me2_cluster_far_rim = cl('Far Rim', 'Far_Rim', 'Far_Rim')
+export const me2_cluster_far_rim = cl('Far Rim')
   .hasSystems(
     me2_system_far_rim_dholen,
     me2_system_far_rim_ma_at,

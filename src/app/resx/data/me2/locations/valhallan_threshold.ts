@@ -52,7 +52,7 @@ export const me2_system_valhallan_threshold_raheel_leyya = sys('Raheel-Leyya')
   )
   .build();
 
-export const me2_cluster_valhallan_threshold = cl('Valhallan Threshold', 'Valhallan_Threshold', 'Valhallan_Threshold')
+export const me2_cluster_valhallan_threshold = cl('Valhallan Threshold')
   .hasSystems(
     me2_system_valhallan_threshold_micah,
     me2_system_valhallan_threshold_paz,

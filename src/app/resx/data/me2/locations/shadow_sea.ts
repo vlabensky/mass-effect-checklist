@@ -27,7 +27,7 @@ export const me2_system_shadow_sea_iera = sys('Iera')
   )
   .build();
 
-export const me2_cluster_shadow_sea = cl('Shadow Sea', 'Shadow_Sea', 'Shadow_Sea')
+export const me2_cluster_shadow_sea = cl('Shadow Sea')
   .hasSystems(
     me2_system_shadow_sea_iera,
   )

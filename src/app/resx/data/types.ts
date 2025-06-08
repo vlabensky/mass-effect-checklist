@@ -30,10 +30,7 @@ export type Mission = {
 export type Cluster = {
   name: string;
   systems: System[];
-  urls: {
-    fandom: string;
-    ign: string;
-  };
+  urls: UrlProvider[];
   isAvailable: () => boolean;
 };
 

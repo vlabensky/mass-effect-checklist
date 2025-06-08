@@ -255,21 +255,14 @@ describe('Builders tests', () => {
     }];
 
     it('should build a cluster with default values', () => {
-      const cluster = cl('Test Cluster 1', 'Test_Fandom_Path_1', 'Test_IGN_Path_1').build();
+      const cluster = cl('Test Cluster 1').build();
 
       expect(cluster.name).toBe('Test Cluster 1');
       expect(cluster.systems).toEqual([]);
     });
 
-    it('should correctly format fandom and ign URLs', () => {
-      const cluster = cl('Artemis Tau', 'Artemis_Tau', 'Artemis_Tau_Cluster').build();
-
-      expect(cluster.urls.fandom).toBe('https://masseffect.fandom.com/wiki/Artemis_Tau');
-      expect(cluster.urls.ign).toBe('https://www.ign.com/wikis/mass-effect/Artemis_Tau_Cluster');
-    });
-
     it('should build a cluster with systems', () => {
-      const cluster = cl('Test Cluster 2', 'Test_Fandom_Path_2', 'Test_IGN_Path_2')
+      const cluster = cl('Test Cluster 2')
         .hasSystems(...mockSystems)
         .build();
 
@@ -280,7 +273,7 @@ describe('Builders tests', () => {
     });
 
     it('should set custom availability', () => {
-      const cluster = cl('Test Cluster 3', 'Test_Cluster_3', 'Test_Cluster_3')
+      const cluster = cl('Test Cluster 3')
         .availableWhen(() => false)
         .build();
 
@@ -288,7 +281,7 @@ describe('Builders tests', () => {
     });
 
     it('should set default availability', () => {
-      const cluster = cl('Test Cluster 4', 'Test_Cluster_4', 'Test_Cluster_4')
+      const cluster = cl('Test Cluster 4')
         .build();
 
       expect(cluster.isAvailable()).toBe(true);

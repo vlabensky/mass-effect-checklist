@@ -57,7 +57,7 @@ export const me2_system_sigurds_cradle_skepsis = sys('Skepsis')
   )
   .build();
 
-export const me2_cluster_sigurds_cradle = cl('Sigurd\'s Cradle', 'Sigurds_Cradle', 'Sigurds_Cradle')
+export const me2_cluster_sigurds_cradle = cl('Sigurd\'s Cradle')
   .hasSystems(
     me2_system_sigurds_cradle_decoris,
     me2_system_sigurds_cradle_skepsis,

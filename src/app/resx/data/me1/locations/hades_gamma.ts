@@ -52,7 +52,7 @@ export const me1_location_hades_gamma_dis_nearrum = loc('Nearrum')
   .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 
-export const me1_location_hades_gamma_dis_metallic_asteroid = loc('Dis - Metallic Asteroid')
+export const me1_location_hades_gamma_dis_metallic_asteroid = loc('Metallic Asteroid')
   .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 
@@ -73,7 +73,7 @@ export const me1_system_hades_gamma_dis = sys('Dis')
   )
   .build();
 
-export const me1_location_hades_gamma_farinata_rocky_asteroid = loc('Farinata - Rocky Asteroid')
+export const me1_location_hades_gamma_farinata_rocky_asteroid = loc('Rocky Asteroid')
   .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 
@@ -118,7 +118,7 @@ export const me1_system_hades_gamma_plutus = sys('Plutus')
   )
   .build();
 
-export const me1_cluster_hades_gamma = cl('Hades Gamma', 'Hades_Gamma', 'Hades_Gamma')
+export const me1_cluster_hades_gamma = cl('Hades Gamma')
   .hasSystems(
     me1_system_hades_gamma_antaeus,
     me1_system_hades_gamma_cacus,

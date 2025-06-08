@@ -73,7 +73,7 @@ export const me1_system_voyager_cluster_yangtze = sys('Yangtze')
   )
   .build();
 
-export const me1_cluster_voyager_cluster = cl('Voyager Cluster', 'Voyager', 'Voyager')
+export const me1_cluster_voyager_cluster = cl('Voyager Cluster')
   .hasSystems(
     me1_system_voyager_cluster_amazon,
     me1_system_voyager_cluster_columbia,

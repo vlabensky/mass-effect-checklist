@@ -87,7 +87,7 @@ export const me2_system_hawking_eta_thorne = sys('Thorne')
   )
   .build();
 
-export const me2_cluster_hawking_eta = cl('Hawking Eta', 'Hawking_Eta', 'Hawking_Eta')
+export const me2_cluster_hawking_eta = cl('Hawking Eta')
   .hasSystems(
     me2_system_hawking_eta_century,
     me2_system_hawking_eta_chandrasekhar,

@@ -11,6 +11,6 @@ export const me1_system_pangaea_expanse_refuge = sys('Refuge')
   .hasLocations(me1_location_pangaea_expanse_refuge_ilos)
   .build();
 
-export const me1_cluster_pangaea_expanse = cl('Pangaea Expanse', 'Pangaea_Expanse', 'Pangaea_Expanse')
+export const me1_cluster_pangaea_expanse = cl('Pangaea Expanse')
   .hasSystems(me1_system_pangaea_expanse_refuge)
   .build();

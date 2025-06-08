@@ -82,7 +82,7 @@ export const me2_system_krogan_dmz_dranek = sys('Dranek')
   )
   .build();
 
-export const me2_cluster_krogan_dmz = cl('Krogan DMZ', 'Krogan_DMZ', 'Krogan_DMZ')
+export const me2_cluster_krogan_dmz = cl('Krogan DMZ')
   .hasSystems(
     me2_system_krogan_dmz_aralakh,
     me2_system_krogan_dmz_nith,

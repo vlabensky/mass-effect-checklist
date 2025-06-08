@@ -3,14 +3,6 @@ import { Chapter, type Mission, type Cluster, type System, type Location } from 
 const always = () => true;
 const never = () => false;
 
-const fandomUrl = (path: string): string => `https://masseffect.fandom.com/wiki/${path}`;
-const ignUrl = (path: string): string => `https://www.ign.com/wikis/mass-effect/${path}`;
-
-const createUrls = (fandomPath: string, ignPath: string) => ({
-  fandom: fandomUrl(fandomPath),
-  ign: ignUrl(ignPath),
-});
-
 export class MissionBuilder {
   name: string;
   isAvailable?: () => boolean;
@@ -97,15 +89,11 @@ export const ch = (name: string) => new ChapterBuilder(name);
 
 export class ClusterBuilder {
   name: string;
-  fandomUrlPath: string;
-  ignUrlPath: string;
   systems: System[];
   isAvailable?: () => boolean;
 
-  constructor(name: string, fandomUrlPath: string, ignUrlPath: string) {
+  constructor(name: string) {
     this.name = name;
-    this.fandomUrlPath = fandomUrlPath;
-    this.ignUrlPath = ignUrlPath;
     this.systems = [];
   }
 
@@ -123,21 +111,13 @@ export class ClusterBuilder {
     return {
       name: this.name,
       systems: this.systems,
-      urls: createUrls(this.fandomUrlPath, this.ignUrlPath),
+      urls: [],
       isAvailable: this.isAvailable ?? always,
     };
   }
 }
 
-export const cl = (
-  name: string,
-  fandomUrlPath: string,
-  ignUrlPath: string,
-) => new ClusterBuilder(
-  name,
-  fandomUrlPath,
-  ignUrlPath,
-);
+export const cl = (name: string) => new ClusterBuilder(name);
 
 export class SystemBuilder {
   name: string;

@@ -92,7 +92,7 @@ export const me2_system_hourglass_nebula_ploitari = sys('Ploitari')
   )
   .build();
 
-export const me2_cluster_hourglass_nebula = cl('Hourglass Nebula', 'Hourglass_Nebula', 'Hourglass_Nebula')
+export const me2_cluster_hourglass_nebula = cl('Hourglass Nebula')
   .hasSystems(
     me2_system_hourglass_nebula_faryar,
     me2_system_hourglass_nebula_osun,

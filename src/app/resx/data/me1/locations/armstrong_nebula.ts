@@ -108,7 +108,7 @@ export const me1_system_armstrong_nebula_vamshi = sys('Vamshi')
   )
   .build();
 
-export const me1_cluster_armstrong_nebula = cl('Armstrong Nebula', 'Armstrong_Nebula', 'Armstrong_Nebula')
+export const me1_cluster_armstrong_nebula = cl('Armstrong Nebula')
   .hasSystems(
     me1_system_armstrong_nebula_gagarin,
     me1_system_armstrong_nebula_grissom,

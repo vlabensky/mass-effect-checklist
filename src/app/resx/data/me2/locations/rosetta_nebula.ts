@@ -57,7 +57,7 @@ export const me2_system_rosetta_nebula_phi_clio = sys('Phi Clio')
   )
   .build();
 
-export const me2_cluster_rosetta_nebula = cl('Rosetta Nebula', 'Rosetta_Nebula', 'Rosetta_Nebula')
+export const me2_cluster_rosetta_nebula = cl('Rosetta Nebula')
   .hasSystems(
     me2_system_rosetta_nebula_alpha_draconis,
     me2_system_rosetta_nebula_enoch,

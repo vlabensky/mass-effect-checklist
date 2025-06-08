@@ -107,7 +107,7 @@ export const me2_system_crescent_nebula_zelene = sys('Zelene')
   )
   .build();
 
-export const me2_cluster_crescent_nebula = cl('Crescent Nebula', 'Crescent_Nebula', 'Crescent_Nebula')
+export const me2_cluster_crescent_nebula = cl('Crescent Nebula')
   .hasSystems(
     me2_system_crescent_nebula_lusarn,
     me2_system_crescent_nebula_ondeste,
