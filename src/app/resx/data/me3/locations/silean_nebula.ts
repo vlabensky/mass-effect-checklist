@@ -37,7 +37,10 @@ export const me3_system_silean_nebula_teyolia = sys('Teyolia')
   .build();
 
 export const me3_location_silean_nebula_phontes_dekuuna = loc('Dekuuna')
-  .hasMissions(m.me3_mission_dekuuna_code_of_the_ancients_elcor_extraction)
+  .hasMissions(
+    m.me3_mission_dekuuna_code_of_the_ancients,
+    m.me3_mission_dekuuna_elcor_extraction,
+  )
   .build();
 
 export const me3_location_silean_nebula_phontes_oltan = loc('Oltan')
