@@ -3,19 +3,18 @@ import { ch, m, cl, sys, loc } from './builders';
 describe('Builders tests', () => {
   describe('when building a mission', () => {
     it('should build a mission with default values', () => {
-      const mission = m('Test Mission 1', 'Test_Fandom_Path_1', 'Test_IGN_Path_1').build();
+      const mission = m('Test Mission 1').build();
 
       expect(mission.name).toBe('Test Mission 1');
-      expect(mission.urls.fandom).toBe('https://masseffect.fandom.com/wiki/Test_Fandom_Path_1');
-      expect(mission.urls.ign).toBe('https://www.ign.com/wikis/mass-effect/Test_IGN_Path_1');
       expect(mission.innerMissions).toEqual([]);
+      expect(mission.urlProviders).toEqual([]);
       expect(mission.isAvailable()).toBe(true);
       expect(mission.isCompleted).toBe(false);
       expect(mission.additionalInfo).toBeUndefined();
     });
 
     it('should build a mission with custom availability', () => {
-      const mission = m('Test Mission 2', 'Test_Fandom_Path_2', 'Test_IGN_Path_2')
+      const mission = m('Test Mission 2')
         .availableWhen(() => false)
         .build();
 
@@ -23,7 +22,7 @@ describe('Builders tests', () => {
     });
 
     it('should build a mission with additional info', () => {
-      const mission = m('Test Mission 3', 'Test_Fandom_Path_3', 'Test_IGN_Path_3')
+      const mission = m('Test Mission 3')
         .withAdditionalInfo('Some additional information')
         .build();
 
@@ -32,18 +31,16 @@ describe('Builders tests', () => {
 
     it('should not allow adding mission with the same name twice', () => {
       expect(() => {
-        m('Duplicate Test Mission', 'Test_Fandom_Path', 'Test_IGN_Path')
-          .build();
-        m('Duplicate Test Mission', 'Test_Fandom_Path', 'Test_IGN_Path')
-          .build();
+        m('Duplicate Test Mission').build();
+        m('Duplicate Test Mission').build();
       }).toThrow('Mission with name Duplicate Test Mission already exists');
     });
 
     it('should build a mission with inner missions', () => {
-      const innerMission1 = m('Inner Mission 1', 'Inner_Mission_1', 'Inner_Mission_1').build();
-      const innerMission2 = m('Inner Mission 2', 'Inner_Mission_2', 'Inner_Mission_2').build();
+      const innerMission1 = m('Inner Mission 1').build();
+      const innerMission2 = m('Inner Mission 2').build();
 
-      const mission = m('Test Mission 4', 'Test_Fandom_Path_4', 'Test_IGN_Path_4')
+      const mission = m('Test Mission 4')
         .hasInnerMissions(innerMission1, innerMission2)
         .build();
 
@@ -53,7 +50,7 @@ describe('Builders tests', () => {
     });
 
     it('should default to empty inner missions array when hasInnerMissions is not called', () => {
-      const mission = m('Test Mission 5', 'Test_Fandom_Path_5', 'Test_IGN_Path_5').build();
+      const mission = m('Test Mission 5').build();
 
       expect(mission.innerMissions).toBeDefined();
       expect(Array.isArray(mission.innerMissions)).toBe(true);
@@ -63,10 +60,7 @@ describe('Builders tests', () => {
     it('should not allow adding inner missions with the same name', () => {
       const duplicateInnerMissions = [{
         name: 'Duplicate Inner Mission',
-        urls: {
-          fandom: 'url1',
-          ign: 'url2',
-        },
+        urlProviders: [],
         innerMissions: [],
         isAvailable: () => true,
         isExpired: () => false,
@@ -74,10 +68,7 @@ describe('Builders tests', () => {
         additionalInfo: undefined,
       }, {
         name: 'Duplicate Inner Mission',
-        urls: {
-          fandom: 'url3',
-          ign: 'url4',
-        },
+        urlProviders: [],
         innerMissions: [],
         isAvailable: () => true,
         isExpired: () => false,
@@ -85,7 +76,7 @@ describe('Builders tests', () => {
         additionalInfo: undefined,
       }];
 
-      const missionBuilder = m('Test Mission 6', 'Test_Fandom_Path_6', 'Test_IGN_Path_6');
+      const missionBuilder = m('Test Mission 6');
 
       expect(() => {
         missionBuilder.hasInnerMissions(...duplicateInnerMissions);
@@ -93,13 +84,13 @@ describe('Builders tests', () => {
     });
 
     it('should set default expiration to false when expiresAfter is not called', () => {
-      const mission = m('Test Mission 7', 'Test_Fandom_Path_7', 'Test_IGN_Path_7').build();
+      const mission = m('Test Mission 7').build();
 
       expect(mission.isExpired()).toBe(false);
     });
 
     it('should expire the mission when the predicate returns true', () => {
-      const mission = m('Test Mission 8', 'Test_Fandom_Path_8', 'Test_IGN_Path_8')
+      const mission = m('Test Mission 8')
         .expiresAfter(() => true)
         .build();
 
@@ -107,7 +98,7 @@ describe('Builders tests', () => {
     });
 
     it('should not expire the mission when the predicate returns false', () => {
-      const mission = m('Test Mission 9', 'Test_Fandom_Path_9', 'Test_IGN_Path_9')
+      const mission = m('Test Mission 9')
         .expiresAfter(() => false)
         .build();
 
@@ -118,10 +109,7 @@ describe('Builders tests', () => {
   describe('when building a chapter', () => {
     const mockMissions = [{
       name: 'Mock Mission 1',
-      urls: {
-        fandom: 'url1',
-        ign: 'url2',
-      },
+      urlProviders: [],
       innerMissions: [],
       isAvailable: () => true,
       isExpired: () => false,
@@ -129,10 +117,7 @@ describe('Builders tests', () => {
       additionalInfo: undefined,
     }, {
       name: 'Mock Mission 2',
-      urls: {
-        fandom: 'url3',
-        ign: 'url4',
-      },
+      urlProviders: [],
       innerMissions: [],
       isAvailable: () => true,
       isExpired: () => false,
@@ -201,10 +186,7 @@ describe('Builders tests', () => {
   describe('when building a location', () => {
     const mockMissions = [{
       name: 'Mock Mission 1',
-      urls: {
-        fandom: 'url1',
-        ign: 'url2',
-      },
+      urlProviders: [],
       innerMissions: [],
       isAvailable: () => true,
       isExpired: () => false,
@@ -212,10 +194,7 @@ describe('Builders tests', () => {
       additionalInfo: undefined,
     }, {
       name: 'Mock Mission 2',
-      urls: {
-        fandom: 'url3',
-        ign: 'url4',
-      },
+      urlProviders: [],
       innerMissions: [],
       isAvailable: () => true,
       isExpired: () => false,

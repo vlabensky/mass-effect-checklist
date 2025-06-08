@@ -19,8 +19,6 @@ const createUrls = (fandomPath: string, ignPath: string) => ({
 
 export class MissionBuilder {
   name: string;
-  fandomUrlPath: string;
-  ignUrlPath: string;
   isAvailable?: () => boolean;
   isExpired?: () => boolean;
   additionalInfo?: string;
@@ -28,15 +26,13 @@ export class MissionBuilder {
   innerMissionNames: Set<string>;
 
 
-  constructor(name: string, fandomUrlPath: string, ignUrlPath: string) {
+  constructor(name: string) {
     if (missionNames.has(name))
       throw new Error(`Mission with name ${name} already exists`);
 
     missionNames.add(name);
 
     this.name = name;
-    this.fandomUrlPath = fandomUrlPath;
-    this.ignUrlPath = ignUrlPath;
     this.innerMissionNames = new Set<string>();
   }
 
@@ -69,7 +65,7 @@ export class MissionBuilder {
   build(): Mission {
     return {
       name: this.name,
-      urls: createUrls(this.fandomUrlPath, this.ignUrlPath),
+      urlProviders: [],
       innerMissions: this.innerMissions ?? [],
       isAvailable: this.isAvailable ?? always,
       isCompleted: false,
@@ -79,15 +75,7 @@ export class MissionBuilder {
   }
 }
 
-export const m = (
-  name: string,
-  fandomUrlPath: string,
-  ignUrlPath: string,
-) => new MissionBuilder(
-  name,
-  fandomUrlPath,
-  ignUrlPath,
-);
+export const m = (name: string) => new MissionBuilder(name);
 
 export class ChapterBuilder {
   name: string;
