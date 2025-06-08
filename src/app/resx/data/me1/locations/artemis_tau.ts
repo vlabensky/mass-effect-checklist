@@ -23,11 +23,11 @@ export const me1_system_artemis_tau_athens = sys('Athens')
   )
   .build();
 
-export const me1_location_artemis_tau_knossos_metallic_asteroid = loc('Metallic Asteroid')
+export const me1_location_artemis_tau_knossos_metallic_asteroid = loc('Knossos -Metallic Asteroid')
   .hasMissions(m.me1_mission_valuable_minerals_heavy_metals)
   .build();
 
-export const me1_location_artemis_tau_knossos_carbonaceous_asteroid = loc('Carbonaceous Asteroid')
+export const me1_location_artemis_tau_knossos_carbonaceous_asteroid = loc('Artemis Tau -Carbonaceous Asteroid')
   .hasMissions(m.me1_mission_locate_signs_of_battle)
   .build();
 
@@ -51,7 +51,7 @@ export const me1_location_artemis_tau_macedon_porolan = loc('Porolan')
   .hasMissions(m.me1_mission_asari_writings)
   .build();
 
-export const me1_location_artemis_tau_macedon_metallic_asteroid = loc('Metallic Asteroid')
+export const me1_location_artemis_tau_macedon_metallic_asteroid = loc('Macedon - Metallic Asteroid')
   .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 

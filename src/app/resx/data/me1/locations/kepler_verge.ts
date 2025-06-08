@@ -3,7 +3,7 @@ import * as m from '../missions';
 
 // Kepler Verge
 
-export const me1_location_kepler_verge_herschel_rocky_asteroid = loc('Rocky Asteroid')
+export const me1_location_kepler_verge_herschel_rocky_asteroid = loc('Herschel - Rocky Asteroid')
   .hasMissions(m.me1_mission_valuable_minerals_heavy_metals)
   .build();
 

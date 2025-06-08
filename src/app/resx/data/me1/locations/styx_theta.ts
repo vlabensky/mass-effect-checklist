@@ -3,7 +3,7 @@ import * as m from '../missions';
 
 // Styx Theta
 
-export const me1_location_styx_theta_acheron_carbonaceous_asteroid = loc('Carbonaceous Asteroid')
+export const me1_location_styx_theta_acheron_carbonaceous_asteroid = loc('Styx Theta - Carbonaceous Asteroid')
   .hasMissions(m.me1_mission_turian_insignias)
   .build();
 

@@ -28,11 +28,11 @@ export const me1_system_maroon_sea_caspian = sys('Caspian')
   )
   .build();
 
-export const me1_location_maroon_sea_matano_metallic_asteroid = loc('Metallic Asteroid')
+export const me1_location_maroon_sea_matano_metallic_asteroid = loc('Matano - Metallic Asteroid')
   .hasMissions(m.me1_mission_valuable_minerals_heavy_metals)
   .build();
 
-export const me1_location_maroon_sea_matano_rocky_asteroid = loc('Rocky Asteroid')
+export const me1_location_maroon_sea_matano_rocky_asteroid = loc('Matano - Rocky Asteroid')
   .hasMissions(m.me1_mission_prothean_data_discs)
   .build();
 
@@ -53,7 +53,7 @@ export const me1_system_maroon_sea_matano = sys('Matano')
   )
   .build();
 
-export const me1_location_maroon_sea_vostok_metallic_asteroid = loc('Metallic Asteroid')
+export const me1_location_maroon_sea_vostok_metallic_asteroid = loc('Vostok - Metallic Asteroid')
   .hasMissions(m.me1_mission_valuable_minerals_heavy_metals)
   .build();
 

@@ -31,7 +31,7 @@ export const me1_location_armstrong_nebula_grissom_zaherux = loc('Zaherux')
   .hasMissions(m.me1_mission_valuable_minerals_light_metals)
   .build();
 
-export const me1_location_armstrong_nebula_grissom_rocky_asteroid = loc('Rocky Asteroid')
+export const me1_location_armstrong_nebula_grissom_rocky_asteroid = loc('Grissom - Rocky Asteroid')
   .hasMissions(m.me1_mission_valuable_minerals_rare_metals)
   .build();
 
