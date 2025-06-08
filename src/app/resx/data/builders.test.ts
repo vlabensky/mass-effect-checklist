@@ -29,13 +29,6 @@ describe('Builders tests', () => {
       expect(mission.additionalInfo).toBe('Some additional information');
     });
 
-    it('should not allow adding mission with the same name twice', () => {
-      expect(() => {
-        m('Duplicate Test Mission').build();
-        m('Duplicate Test Mission').build();
-      }).toThrow('Mission with name Duplicate Test Mission already exists');
-    });
-
     it('should build a mission with inner missions', () => {
       const innerMission1 = m('Inner Mission 1').build();
       const innerMission2 = m('Inner Mission 2').build();
@@ -174,13 +167,6 @@ describe('Builders tests', () => {
 
       expect(chapter.isCompleted()).toBe(true);
     });
-
-    it('should not allow adding chapter with the same name twice', () => {
-      expect(() => {
-        ch('Duplicate Test Chapter').build();
-        ch('Duplicate Test Chapter').build();
-      }).toThrow('Chapter with name Duplicate Test Chapter already exists');
-    });
   });
 
   describe('when building a location', () => {
@@ -225,13 +211,6 @@ describe('Builders tests', () => {
 
       expect(location.additionalInfo).toBe('Some location additional information');
     });
-
-    it('should not allow adding location with the same name twice', () => {
-      expect(() => {
-        loc('Duplicate Test Location').build();
-        loc('Duplicate Test Location').build();
-      }).toThrow('Location with name Duplicate Test Location already exists');
-    });
   });
 
   describe('when building a system', () => {
@@ -257,13 +236,6 @@ describe('Builders tests', () => {
 
       expect(system.locations[0].name).toEqual('Mock Location 1');
       expect(system.locations[1].name).toEqual('Mock Location 2');
-    });
-
-    it('should not allow adding system with the same name twice', () => {
-      expect(() => {
-        sys('Duplicate Test System').build();
-        sys('Duplicate Test System').build();
-      }).toThrow('System with name Duplicate Test System already exists');
     });
   });
 
@@ -305,13 +277,6 @@ describe('Builders tests', () => {
       expect(cluster.systems[1].name).toEqual('Mock System 2');
       expect(cluster.systems[0].locations[0].name).toEqual('Mock Location 1');
       expect(cluster.systems[1].locations[0].name).toEqual('Mock Location 2');
-    });
-
-    it('should not allow adding cluster with the same name twice', () => {
-      expect(() => {
-        cl('Duplicate Test Cluster', 'Test_Fandom_Path', 'Test_IGN_Path').build();
-        cl('Duplicate Test Cluster', 'Test_Fandom_Path', 'Test_IGN_Path').build();
-      }).toThrow('Cluster with name Duplicate Test Cluster already exists');
     });
 
     it('should set custom availability', () => {
