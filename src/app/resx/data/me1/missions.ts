@@ -31,392 +31,392 @@ export const predicates = {
 
 // Prologue
 
-export const me1_mission_prologue_find_the_beacon = m('Find the Beacon', 'Prologue:_Find_the_Beacon', 'Find_the_Beacon')
+export const me1_mission_prologue_find_the_beacon = m('Find the Beacon')
   .build();
 
 // The Citadel I
 
-export const me1_mission_expose_saren = m('Expose Saren', 'Citadel:_Expose_Saren', 'Expose_Saren')
+export const me1_mission_expose_saren = m('Expose Saren')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_asari_consort = m('Asari Consort', 'Citadel:_Asari_Consort', 'Asari_Consort')
+export const me1_mission_asari_consort = m('Asari Consort')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_doctor_michel = m('Doctor Michel', 'Citadel:_Doctor_Michel', 'Dr._Michel')
+export const me1_mission_doctor_michel = m('Doctor Michel')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_homecoming = m('Homecoming', 'Citadel:_Homecoming', 'Homecoming')
+export const me1_mission_homecoming = m('Homecoming')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_jahleeds_fears = m('Jahleed\'s Fears', 'Citadel:_Jahleed%27s_Fears', 'Jahleeds_Fears')
+export const me1_mission_jahleeds_fears = m('Jahleed\'s Fears')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_presidium_prophet = m('Presidium Prophet', 'Citadel:_Presidium_Prophet', 'Presidium_Prophet')
+export const me1_mission_presidium_prophet = m('Presidium Prophet')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_reporters_request = m('Reporter\'s Request', 'Citadel:_Reporter%27s_Request', 'Reporter%27s_Request')
+export const me1_mission_reporters_request = m('Reporter\'s Request')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_ritas_sister = m('Rita\'s Sister', 'Citadel:_Rita%27s_Sister', 'Rita%27s_Sister')
+export const me1_mission_ritas_sister = m('Rita\'s Sister')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_scan_the_keepers = m('Scan the Keepers', 'Citadel:_Scan_the_Keepers', 'Scan_the_Keepers')
+export const me1_mission_scan_the_keepers = m('Scan the Keepers')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_schells_the_gambler = m('Schells the Gambler', 'Citadel:_Schells_the_Gambler', 'Schells_the_Gambler')
+export const me1_mission_schells_the_gambler = m('Schells the Gambler')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_signal_tracking = m('Signal Tracking', 'Citadel:_Signal_Tracking', 'Signal_Tracking')
+export const me1_mission_signal_tracking = m('Signal Tracking')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_the_fan_1 = m('The Fan I', 'Citadel:_The_Fan', 'The_Fan')
+export const me1_mission_the_fan_1 = m('The Fan I')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_xeltans_complaint = m('Xeltan\'s Complaint', 'Citadel:_Xeltan%27s_Complaint', 'Xeltan%27s_Complaint')
+export const me1_mission_xeltans_complaint = m('Xeltan\'s Complaint')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_wrex = m('Wrex', 'Citadel:_Wrex', 'Citadel:_Wrex')
+export const me1_mission_wrex = m('Wrex')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_garrus = m('Garrus', 'Citadel:_Garrus', 'Citadel:_Garrus')
+export const me1_mission_garrus = m('Garrus')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_hostile_takeover = m('Hostile Takeover', 'UNC:_Hostile_Takeover', 'Hostile_Takeover')
+export const me1_mission_hostile_takeover = m('Hostile Takeover')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_privateers = m('Privateers', 'UNC:_Privateers', 'Privateers')
+export const me1_mission_privateers = m('Privateers')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_unusual_readings = m('Unusual Readings/Distress call', 'UNC:_Distress_Call', 'Distress_Call')
+export const me1_mission_unusual_readings = m('Unusual Readings/Distress call')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_strange_transmission = m('Strange Transmission/Major Kyle', 'UNC:_Major_Kyle', 'Major_Kyle')
+export const me1_mission_strange_transmission = m('Strange Transmission/Major Kyle')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
-export const me1_mission_missing_marines = m('Missing Marines', 'UNC:_Missing_Marines', 'Missing_Marines')
+export const me1_mission_missing_marines = m('Missing Marines')
   .availableWhen(predicates.isPrologueCompleted)
   .build();
 
 // Therum
 
-export const me1_mission_find_liara_t_soni = m('Find Liara T\'Soni', 'Find_Liara_T%27Soni', 'Find_Liara_T%27Soni')
+export const me1_mission_find_liara_t_soni = m('Find Liara T\'Soni')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
 // Feros
 
-export const me1_mission_geth_attack = m('Geth Attack', 'Feros:_Geth_Attack', 'Geth_Attack')
+export const me1_mission_geth_attack = m('Geth Attack')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_the_thorian = m('The Thorian', 'Feros:_The_Thorian', 'The_Thorian')
+export const me1_mission_the_thorian = m('The Thorian')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_data_recovery = m('Data Recovery', 'Feros:_Data_Recovery', 'Data_Recovery')
+export const me1_mission_data_recovery = m('Data Recovery')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_data_geth_in_the_tunnels = m('Geth in the Tunnels', 'Feros:_Geth_in_the_Tunnels', 'Geth_in_the_Tunnels')
+export const me1_mission_data_geth_in_the_tunnels = m('Geth in the Tunnels')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_power_cells = m('Power Cells', 'Feros:_Power_Cells', 'Power_Cells')
+export const me1_mission_power_cells = m('Power Cells')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_varren_meat = m('Varren Meat', 'Feros:_Varren_Meat', 'Varren_Meat')
+export const me1_mission_varren_meat = m('Varren Meat')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_water_restoration = m('Water Restoration', 'Feros:_Water_Restoration', 'Water_Restoration')
+export const me1_mission_water_restoration = m('Water Restoration')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
 // Noveria
 
-export const me1_mission_geth_interest = m('Geth Interest', 'Noveria:_Geth_Interest', 'Geth_Interest')
+export const me1_mission_geth_interest = m('Geth Interest')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_espionage = m('Espionage', 'Noveria:_Espionage', 'Espionage')
+export const me1_mission_espionage = m('Espionage')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_smuggling = m('Smuggling', 'Noveria:_Smuggling', 'Smuggling')
+export const me1_mission_smuggling = m('Smuggling')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_leave_port_hanshan = m('Leave Port Hanshan', 'Noveria:_Geth_Interest#Port_Hanshan', 'Leave_Port_Hanshan')
+export const me1_mission_leave_port_hanshan = m('Leave Port Hanshan')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_leave_port_hanshan_lorik_qui_in = m('Lorik Qui\'In', 'Noveria:_Lorik_Qui%27in', 'Lorik_Qui%27in')
+export const me1_mission_leave_port_hanshan_lorik_qui_in = m('Lorik Qui\'In')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_peak_15 = m('Peak 15', 'Noveria:_Peak_15', 'Peak_15')
+export const me1_mission_peak_15 = m('Peak 15')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_peak_15_reconnect_landlines = m('Peak 15: Reconnect Landlines', 'Noveria:_Reconnect_Landlines', 'Reconnect_Landlines')
+export const me1_mission_peak_15_reconnect_landlines = m('Peak 15: Reconnect Landlines')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_peak_15_reactor_repair = m('Peak 15: Reactor Repair', 'Noveria:_Reactor_Repair', 'Reactor_Repair')
+export const me1_mission_peak_15_reactor_repair = m('Peak 15: Reactor Repair')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_peak_15_contamination = m('Peak 15: Contamination', 'Noveria:_Contamination', 'Contamination')
+export const me1_mission_peak_15_contamination = m('Peak 15: Contamination')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_rift_station = m('Rift Station', 'Noveria:_Rift_Station', 'Rift_Station')
+export const me1_mission_rift_station = m('Rift Station')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_rift_station_quarantine = m('Rift Station: Quarantine', 'Noveria:_Quarantine', 'Quarantine')
+export const me1_mission_rift_station_quarantine = m('Rift Station: Quarantine')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_rift_station_matriarch_benezia = m('Rift Station: Matriarch Benezia', 'Noveria:_Matriarch_Benezia', 'Matriarch_Benezia')
+export const me1_mission_rift_station_matriarch_benezia = m('Rift Station: Matriarch Benezia')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_rift_station_hot_labs = m('Rift Station: Hot Labs', 'Noveria:_The_Hot_Labs', 'Hot_Labs')
+export const me1_mission_rift_station_hot_labs = m('Rift Station: Hot Labs')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_asari_diplomacy = m('Asari Diplomacy', 'UNC:_Asari_Diplomacy', 'Asari_Diplomacy')
+export const me1_mission_asari_diplomacy = m('Asari Diplomacy')
   .availableWhen(predicates.onePlotMissionCompleted)
   .build();
 
 // The Citadel II
 
-export const me1_mission_snap_inspection = m('Snap Inspection', 'Citadel:_Snap_Inspection', 'Snap_Inspection')
+export const me1_mission_snap_inspection = m('Snap Inspection')
   .availableWhen(predicates.onePlotMissionCompleted)
   .build();
 
-export const me1_mission_i_remember_me = m('I Remember Me', 'Citadel:_I_Remember_Me', 'I_Remember_Me')
+export const me1_mission_i_remember_me = m('I Remember Me')
   .availableWhen(predicates.onePlotMissionCompleted)
   .withAdditionalInfo('Only available if Shepard has the Colonist background.')
   .build();
 
-export const me1_mission_old_friends = m('Old Friends', 'Citadel:_Old_Friends', 'Old_Friends')
+export const me1_mission_old_friends = m('Old Friends')
   .availableWhen(predicates.onePlotMissionCompleted)
   .withAdditionalInfo('Only available if Shepard has the Earthborn background.')
   .build();
 
-export const me1_mission_old_unhappy_far_off_things = m('Old, Unhappy, Far-Off Things', 'Citadel:_Old,_Unhappy,_Far-Off_Things', 'Old,_Unhappy,_Far-Off_Things')
+export const me1_mission_old_unhappy_far_off_things = m('Old, Unhappy, Far-Off Things')
   .availableWhen(predicates.onePlotMissionCompleted)
   .withAdditionalInfo('Only available if Shepard has the Spacer background.')
   .build();
 
-export const me1_mission_the_fourth_estate = m('The Fourth Estate', 'Citadel:_The_Fourth_Estate', 'The_Fourth_Estate')
+export const me1_mission_the_fourth_estate = m('The Fourth Estate')
   .availableWhen(predicates.onePlotMissionCompleted)
   .build();
 
-export const me1_mission_the_fan_2 = m('The Fan II', 'Citadel:_The_Fan', 'The_Fan')
+export const me1_mission_the_fan_2 = m('The Fan II')
   .availableWhen(() => predicates.onePlotMissionCompleted() && me1_mission_the_fan_1.isCompleted)
   .build();
 
-export const me1_mission_family_matter = m('Family Matter', 'Citadel:_Family_Matter', 'Family_Matter')
+export const me1_mission_family_matter = m('Family Matter')
   .availableWhen(predicates.onePlotMissionCompleted)
   .build();
 
-export const me1_mission_planting_a_bug = m('Planting a Bug', 'Citadel:_Planting_a_Bug', 'Planting_a_Bug')
+export const me1_mission_planting_a_bug = m('Planting a Bug')
   .availableWhen(predicates.onePlotMissionCompleted)
   .build();
 
 // The Citadel III
 
-export const me1_mission_the_fan_3 = m('The Fan III', 'Citadel:_The_Fan', 'The_Fan')
+export const me1_mission_the_fan_3 = m('The Fan III')
   .availableWhen(() => predicates.twoPlotMissionsCompleted() && me1_mission_the_fan_2.isCompleted)
   .build();
 
 // Virmire
 
-export const me1_mission_virmire = m('Virmire', 'Virmire_(mission)', 'Virmire')
+export const me1_mission_virmire = m('Virmire')
   .availableWhen(predicates.twoPlotMissionsCompleted)
   .build();
 
-export const me1_mission_wrex_and_the_genophage = m('Wrex and the Genophage', 'Virmire:_Wrex_and_the_Genophage', 'How_to_Save_Wrex')
+export const me1_mission_wrex_and_the_genophage = m('Wrex and the Genophage')
   .availableWhen(predicates.twoPlotMissionsCompleted)
   .build();
 
-export const me1_mission_assault = m('Assault', 'Virmire:_Assault', 'Assault')
+export const me1_mission_assault = m('Assault')
   .availableWhen(predicates.twoPlotMissionsCompleted)
   .build();
 
-export const me1_mission_assisting_kirrahes_team = m('Assisting Kirrahe\'s Team', 'Virmire:_Assisting_Kirrahe%27s_Team', 'How_to_Save_Kirrahe')
+export const me1_mission_assisting_kirrahes_team = m('Assisting Kirrahe\'s Team')
   .availableWhen(predicates.twoPlotMissionsCompleted)
   .build();
 
 // The Citadel IV (Lockdown)
 
-export const me1_mission_our_own_worst_enemy = m('Our Own Worst Enemy', 'Citadel:_Our_Own_Worst_Enemy', 'Our_Own_Worst_Enemy')
+export const me1_mission_our_own_worst_enemy = m('Our Own Worst Enemy')
   .availableWhen(predicates.isVirmireCompleted)
   .build();
 
-export const me1_mission_negotiators_request = m('Negotiator\'s Request', 'Citadel:_Negotiator%27s_Request', 'Negotiator%27s_Request')
+export const me1_mission_negotiators_request = m('Negotiator\'s Request')
   .availableWhen(predicates.isVirmireCompleted)
   .build();
 
 // Race against time
 
-export const me1_mission_find_the_conduit = m('Ilos: Find the Conduit', 'Ilos:_Find_the_Conduit', 'Ilos')
+export const me1_mission_find_the_conduit = m('Ilos: Find the Conduit')
   .availableWhen(predicates.isVirmireCompleted)
   .withAdditionalInfo('This is the point of no return. Once the player heads to Ilos, the rest of the game proceeds in locked progression with no possibility to complete any assignments.')
   .build();
 
-export const me1_mission_final_battle = m('Final Battle', 'Race_Against_Time:_Final_Battle', 'Race_Against_Time:_Final_Battle')
+export const me1_mission_final_battle = m('Final Battle')
   .availableWhen(predicates.isIlosCompleted)
   .build();
 
 // Uncharted systems & assignments
 
-export const me1_mission_the_negotiation = m('The Negotiation', 'UNC:_The_Negotiation', 'The_Negotiation')
+export const me1_mission_the_negotiation = m('The Negotiation')
   .availableWhen(predicates.isExposeSarenCompleted)
   .withAdditionalInfo('Only available when the player hits 80% Renegade, or 90% Renegade if the player had attained 80% Paragon first.')
   .build();
 
-export const me1_mission_lost_freighter = m('Lost Freighter', 'UNC:_Lost_Freighter', 'Lost_Freighter')
+export const me1_mission_lost_freighter = m('Lost Freighter')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_missing_survey_team = m('Missing Survey Team', 'UNC:_Missing_Survey_Team', 'Missing_Survey_Team')
+export const me1_mission_missing_survey_team = m('Missing Survey Team')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_besieged_base = m('Besieged Base', 'UNC:_Besieged_Base', 'Besieged_Base')
+export const me1_mission_besieged_base = m('Besieged Base')
   .availableWhen(predicates.isExposeSarenCompleted)
   .withAdditionalInfo('Only available when the player hits 80% Paragon, or 90% Paragon if the player had attained 80% Renegade first.')
   .build();
 
-export const me1_mission_hostage = m('Hostage', 'UNC:_Hostage', 'Hostage')
+export const me1_mission_hostage = m('Hostage')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_lost_module = m('Lost Module', 'UNC:_Lost_Module', 'Lost_Module')
+export const me1_mission_lost_module = m('Lost Module')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_geth_incursions = m('Geth Incursions', 'UNC:_Geth_Incursions', 'Geth_Incursions')
+export const me1_mission_geth_incursions = m('Geth Incursions')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_cerberus = m('Cerberus', 'UNC:_Cerberus', 'Cerberus')
+export const me1_mission_cerberus = m('Cerberus')
   .availableWhen(predicates.isMissingMarinesCompleted)
   .build();
 
-export const me1_mission_hades_dogs = m('Hades Dogs\'', 'UNC:_Hades%27s_Dogs', 'Hades%27s_Dogs')
+export const me1_mission_hades_dogs = m('Hades Dogs\'')
   .availableWhen(predicates.isCerberusCompleted)
   .build();
 
-export const me1_mission_espionage_probe = m('Espionage Probe', 'UNC:_Espionage_Probe', 'Espionage_Probe')
+export const me1_mission_espionage_probe = m('Espionage Probe')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_dead_scientists = m('Dead Scientists', 'UNC:_Dead_Scientists', 'Dead_Scientists')
+export const me1_mission_dead_scientists = m('Dead Scientists')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_wrex_family_armor = m('Wrex: Family Armor', 'Wrex:_Family_Armor', 'Wrex:_Family_Armor')
+export const me1_mission_wrex_family_armor = m('Wrex: Family Armor')
   .availableWhen(predicates.isWrexRecruited)
   .build();
 
-export const me1_mission_garrus_find_dr_saleon = m('Garrus: Find Dr. Saleon', 'Garrus:_Find_Dr._Saleon', 'Garrus:_Find_Dr._Saleon')
+export const me1_mission_garrus_find_dr_saleon = m('Garrus: Find Dr. Saleon')
   .availableWhen(predicates.isGarrusRecruited)
   .build();
 
-export const me1_mission_tali_pilgrimage = m('Tali: Pilgrimage/Tali and the Geth', 'Tali_and_the_Geth', 'Tali:_Pilgrimage')
+export const me1_mission_tali_pilgrimage = m('Tali: Pilgrimage/Tali and the Geth')
   .availableWhen(predicates.isGethIncursionsCompleted)
   .build();
 
-export const me1_mission_rogue_vi = m('Rogue VI', 'UNC:_Rogue_VI', 'Rogue_VI')
+export const me1_mission_rogue_vi = m('Rogue VI')
   .availableWhen(predicates.isExposeSarenCompleted)
   .withAdditionalInfo('This assignment is triggered after reaching level 20 (or level 11 in Mass Effect Legendary Edition with Legendary Mode) when next traveling to another system.')
   .build();
 
-export const me1_mission_listening_post_alpha = m('Listening Post Alpha', 'UNC:_Listening_Post_Alpha', 'Listening_Post_Alpha')
+export const me1_mission_listening_post_alpha = m('Listening Post Alpha')
   .availableWhen(predicates.isNoveriaCompleted)
   .build();
 
-export const me1_mission_listening_post_theta = m('Listening Post Theta', 'UNC:_Listening_Post_Theta', 'Listening_Post_Theta')
+export const me1_mission_listening_post_theta = m('Listening Post Theta')
   .availableWhen(predicates.isNoveriaCompleted)
   .build();
 
-export const me1_mission_depot_sigma_23 = m('Depot Sigma-23', 'UNC:_Depot_Sigma_23', 'Depot_Sigma_23')
+export const me1_mission_depot_sigma_23 = m('Depot Sigma-23')
   .availableWhen(predicates.listeningPostsCompleted)
   .build();
 
-export const me1_mission_derelict_freighter = m('Derelict Freighter', 'UNC:_Derelict_Freighter', 'Derelict_Freighter')
+export const me1_mission_derelict_freighter = m('Derelict Freighter')
   .availableWhen(predicates.isFerosCompleted)
   .build();
 
-export const me1_mission_colony_of_the_dead = m('Colony of the Dead', 'UNC:_Colony_of_the_Dead', 'Colony_of_the_Dead')
+export const me1_mission_colony_of_the_dead = m('Colony of the Dead')
   .availableWhen(predicates.isFerosCompleted)
   .build();
 
-export const me1_mission_exogeni_facility = m('ExoGeni Facility', 'UNC:_ExoGeni_Facility', 'ExoGeni_Facility')
+export const me1_mission_exogeni_facility = m('ExoGeni Facility')
   .availableWhen(predicates.isFerosCompleted)
   .build();
 
 // Bring Down the Sky (DLC)
 
-export const me1_mission_bring_down_the_sky = m('X57: Bring Down the Sky', 'X57:_Bring_Down_the_Sky', 'X57:_Bring_Down_the_Sky')
+export const me1_mission_bring_down_the_sky = m('X57: Bring Down the Sky')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_avoid_the_blasting_caps = m('X57: Avoid the Blasting Caps', 'X57:_Avoid_the_Blasting_Caps', 'Avoid_the_Blasting_Caps')
+export const me1_mission_avoid_the_blasting_caps = m('X57: Avoid the Blasting Caps')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
-export const me1_mission_missing_engineers = m('X57: Missing Engineers', 'X57:_Missing_Engineers', 'Missing_Engineers')
+export const me1_mission_missing_engineers = m('X57: Missing Engineers')
   .availableWhen(predicates.isExposeSarenCompleted)
   .build();
 
 // Discovery Assignments
 
-export const me1_mission_asari_writings = m('Asari Writings', 'UNC:_Asari_Writings', 'Asari_Writings')
+export const me1_mission_asari_writings = m('Asari Writings')
   .build();
 
-export const me1_mission_locate_signs_of_battle = m('Locate Signs of Battle', 'UNC:_Locate_Signs_of_Battle', 'Locate_Signs_of_Battle')
+export const me1_mission_locate_signs_of_battle = m('Locate Signs of Battle')
   .build();
 
-export const me1_mission_prothean_data_discs = m('Prothean Data Discs', 'UNC:_Prothean_Data_Discs', 'Prothean_Data_Discs')
+export const me1_mission_prothean_data_discs = m('Prothean Data Discs')
   .build();
 
-export const me1_mission_turian_insignias = m('Turian Insignias', 'UNC:_Turian_Insignias', 'Turian_Insignias')
+export const me1_mission_turian_insignias = m('Turian Insignias')
   .build();
 
-export const me1_mission_valuable_minerals_light_metals = m('Valuable Minerals: Light Metals', 'UNC:_Valuable_Minerals', 'Valuable_Minerals')
+export const me1_mission_valuable_minerals_light_metals = m('Valuable Minerals: Light Metals')
   .build();
 
-export const me1_mission_valuable_minerals_rare_metals = m('Valuable Minerals: Rare Metals', 'UNC:_Valuable_Minerals', 'Valuable_Minerals')
+export const me1_mission_valuable_minerals_rare_metals = m('Valuable Minerals: Rare Metals')
   .build();
 
-export const me1_mission_valuable_minerals_heavy_metals = m('Valuable Minerals: Heavy Metals', 'UNC:_Valuable_Minerals', 'Valuable_Minerals')
+export const me1_mission_valuable_minerals_heavy_metals = m('Valuable Minerals: Heavy Metals')
   .build();
 
-export const me1_mission_valuable_minerals_gasses = m('Valuable Minerals: Gasses', 'UNC:_Valuable_Minerals', 'Valuable_Minerals')
+export const me1_mission_valuable_minerals_gasses = m('Valuable Minerals: Gasses')
   .build();
