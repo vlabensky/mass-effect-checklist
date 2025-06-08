@@ -65,7 +65,7 @@ export class MissionBuilder {
   build(): Mission {
     return {
       name: this.name,
-      urlProviders: [],
+      urls: [],
       innerMissions: this.innerMissions ?? [],
       isAvailable: this.isAvailable ?? always,
       isCompleted: false,

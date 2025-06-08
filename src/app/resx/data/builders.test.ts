@@ -7,7 +7,7 @@ describe('Builders tests', () => {
 
       expect(mission.name).toBe('Test Mission 1');
       expect(mission.innerMissions).toEqual([]);
-      expect(mission.urlProviders).toEqual([]);
+      expect(mission.urls).toEqual([]);
       expect(mission.isAvailable()).toBe(true);
       expect(mission.isCompleted).toBe(false);
       expect(mission.additionalInfo).toBeUndefined();
@@ -60,7 +60,7 @@ describe('Builders tests', () => {
     it('should not allow adding inner missions with the same name', () => {
       const duplicateInnerMissions = [{
         name: 'Duplicate Inner Mission',
-        urlProviders: [],
+        urls: [],
         innerMissions: [],
         isAvailable: () => true,
         isExpired: () => false,
@@ -68,7 +68,7 @@ describe('Builders tests', () => {
         additionalInfo: undefined,
       }, {
         name: 'Duplicate Inner Mission',
-        urlProviders: [],
+        urls: [],
         innerMissions: [],
         isAvailable: () => true,
         isExpired: () => false,
@@ -109,7 +109,7 @@ describe('Builders tests', () => {
   describe('when building a chapter', () => {
     const mockMissions = [{
       name: 'Mock Mission 1',
-      urlProviders: [],
+      urls: [],
       innerMissions: [],
       isAvailable: () => true,
       isExpired: () => false,
@@ -117,7 +117,7 @@ describe('Builders tests', () => {
       additionalInfo: undefined,
     }, {
       name: 'Mock Mission 2',
-      urlProviders: [],
+      urls: [],
       innerMissions: [],
       isAvailable: () => true,
       isExpired: () => false,
@@ -186,7 +186,7 @@ describe('Builders tests', () => {
   describe('when building a location', () => {
     const mockMissions = [{
       name: 'Mock Mission 1',
-      urlProviders: [],
+      urls: [],
       innerMissions: [],
       isAvailable: () => true,
       isExpired: () => false,
@@ -194,7 +194,7 @@ describe('Builders tests', () => {
       additionalInfo: undefined,
     }, {
       name: 'Mock Mission 2',
-      urlProviders: [],
+      urls: [],
       innerMissions: [],
       isAvailable: () => true,
       isExpired: () => false,

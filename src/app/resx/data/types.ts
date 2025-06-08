@@ -1,5 +1,5 @@
 export type UrlProvider = {
-  name: string;
+  name: 'fandom' | 'ign';
   url: string;
 };
 
@@ -19,7 +19,7 @@ export class Chapter {
 
 export type Mission = {
   name: string;
-  urlProviders: UrlProvider[];
+  urls: UrlProvider[];
   innerMissions: Mission[];
   isAvailable: () => boolean;
   isCompleted: boolean;
